@@ -1,0 +1,23 @@
+# ignore backups
+*~
+*.bak
+*.backup
+
+# ignore files that pdflatex produces
+*.adx
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pdf
+*.spl
+*.idx
+*.ilg
+*.ind
+*.toc
+
+*.synctex.gz
+
+compile.timestamp
+

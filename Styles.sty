@@ -1,0 +1,74 @@
+\ProvidesPackage{mystyle}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+
+
+% Page layout
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CE]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[CO]{\textit{\nouppercase{\rightmark}}}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+
+
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}}
+% end of pagelayout
+
+
+% The showidx  package that comes with LaTeX
+% prints out all index entries in the left margin
+% of the text. This is quite useful for proofreading
+% a document and verifying the index.
+%\usepackage{showidx}
+
+
+%%% Math environment
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{mathrsfs}
+
+\numberwithin{equation}{chapter}
+
+\theoremstyle{plain} \newtheorem{Theorem}{Theorem}[section]
+\theoremstyle{definition} \newtheorem{Definition}[Theorem]{Definition}
+\theoremstyle{plain} \newtheorem{Lemma}[Theorem]{Lemma}
+\theoremstyle{plain} \newtheorem{Proposition}[Theorem]{}
+\theoremstyle{remark} \newtheorem{Example}[Theorem]{Example}
+\theoremstyle{remark} \newtheorem{Remark}[Theorem]{Remark}
+
+
+%% Localisation
+%\usepackage[polish]{babel}
+%\usepackage[OT4,nomathsymbols]{polski}
+%\usepackage[OT4]{fontenc}
+%\selectlanguage{polish}
+%\frenchspacing \linespread{1.0}
+
+
+% multiple indeces
+\usepackage{index}
+
+% ident first line in every section
+\usepackage{indentfirst}
+% paragraph indent
+\setlength{\parindent}{12pt}
+
+
+\usepackage{hyperref}
+\hypersetup{
+   pdfborder={0 0 0}
+   citebordercolor={0 0 0}
+}
+
+

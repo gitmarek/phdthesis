@@ -1,0 +1,29 @@
+% Bibliography:
+
+%\chapter*{References}
+% \clearpage
+%\addcontentsline{toc}{chapter}{References}
+
+%\begin{btSect}[plain]{./bib/books}
+% \section*{Books}
+% \btPrintCited
+%\end{btSect}
+
+%\begin{btSect}[plain]{./bib/articles}
+% \section*{Papers}
+% \btPrintCited
+%\end{btSect}
+
+\bibliographystyle{plain}
+\bibliography{./bib/refs}
+
+
+% Print index and add to the table of content
+%\chapter*{}
+\clearpage
+\addcontentsline{toc}{chapter}{Symbols}
+\printindex[sym]
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+

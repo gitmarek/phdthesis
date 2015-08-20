@@ -1,0 +1,49 @@
+%
+% PUT twoside instead of oneside for printing!
+%
+\ifx\pdfoutput\undefined % If you are running latex then:
+\documentclass[12pt,a4paper]{book}
+
+% put here packages only for the DVI:
+\usepackage[dvips]{graphicx}
+
+\else % else, you are running pdflatex:
+
+\documentclass[pdftex,12pt,a4paper, oneside]{book}[2013/08/05]
+% put here packages only for the PDF:
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
+\fi
+
+
+
+\usepackage{Styles}
+
+
+
+\makeindex
+\newindex{sym}{adx}{and}{Symbols}
+
+
+\begin{document}
+
+% Title page and abstract
+\include{./chp/Title}
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+% chapters
+\include{./chp/Introduction}
+
+\include{./chp/Conclusion}
+
+% Appendices
+%\include{./tex/complex_measures}
+
+% Bibliographies
+\nocite{*}
+\include{./chp/BiblioIndex}
+
+\end{document}
