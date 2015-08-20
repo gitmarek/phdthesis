@@ -1,8 +1,12 @@
-\ProvidesPackage{mystyle}
+\ProvidesPackage{Styles}
 
 \usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{makeidx}
+
+% Multiple indeces
+% Specify entries like this:
+%\index{idx}{Main index entry}
+%\index{sym}{Goes to the index of symbols}
+\usepackage{multind}
 
 
 % Page layout
@@ -56,9 +60,6 @@
 %\frenchspacing \linespread{1.0}
 
 
-% multiple indeces
-\usepackage{index}
-
 % ident first line in every section
 \usepackage{indentfirst}
 % paragraph indent
@@ -67,8 +68,9 @@
 
 \usepackage{hyperref}
 \hypersetup{
-   pdfborder={0 0 0}
-   citebordercolor={0 0 0}
+   pdfborder={0 0 0},
+   citebordercolor={0 0 0},
+   colorlinks=false
 }
 
 

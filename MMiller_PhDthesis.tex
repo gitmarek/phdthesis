@@ -9,20 +9,17 @@
 
 \else % else, you are running pdflatex:
 
-\documentclass[pdftex,12pt,a4paper, oneside]{book}[2013/08/05]
+\documentclass[pdftex,12pt,a4paper,oneside]{book}[2015/08/21]
 % put here packages only for the PDF:
 \usepackage[pdftex]{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
 \fi
 
 
-
 \usepackage{Styles}
 
-
-
-\makeindex
-\newindex{sym}{adx}{and}{Symbols}
+\makeindex{idx}
+\makeindex{sym}
 
 
 \begin{document}
@@ -43,7 +40,7 @@
 %\include{./tex/complex_measures}
 
 % Bibliographies
-\nocite{*}
+% \nocite{*}
 \include{./chp/BiblioIndex}
 
 \end{document}
