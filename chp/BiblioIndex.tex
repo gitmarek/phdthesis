@@ -1,29 +1,29 @@
 % Bibliography:
 
-%\chapter*{References}
-% \clearpage
-%\addcontentsline{toc}{chapter}{References}
-
-%\begin{btSect}[plain]{./bib/books}
-% \section*{Books}
-% \btPrintCited
-%\end{btSect}
-
-%\begin{btSect}[plain]{./bib/articles}
-% \section*{Papers}
-% \btPrintCited
-%\end{btSect}
+\clearpage
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
 
 \bibliographystyle{plain}
-\bibliography{./bib/refs}
+
+\begin{btSect}[plain]{./bib/books}
+ \section*{Books}
+ \btPrintCited
+ %\btPrintAll
+\end{btSect}
+
+\begin{btSect}[plain]{./bib/papers}
+ \section*{Papers}
+ \btPrintCited
+ %\btPrintAll
+\end{btSect}
 
 
 % Print index and add to the table of content
 %\chapter*{}
 \clearpage
-%\addcontentsline{toc}{chapter}{Symbols}
+\addcontentsline{toc}{chapter}{Indeces}
 \printindex{sym}{Index of symbols}
-%\addcontentsline{toc}{chapter}{Index}
 \printindex{idx}{Index}
 
 

@@ -18,8 +18,10 @@ echo "### Compiling LaTeX sources..."
 ${LATEX} ${LATEX_CMD} ${MAIN_TEXFILE}
 
 echo "### BibTeX"
-${BIBTEX} ${BIBTEX_CMD} ${MAIN} && \
-    ${LATEX} ${LATEX_CMD} ${MAIN_TEXFILE}
+${BIBTEX} ${BIBTEX_CMD} ${MAIN}
+${BIBTEX} ${BIBTEX_CMD} "${MAIN}1"
+${BIBTEX} ${BIBTEX_CMD} "${MAIN}2" 
+${LATEX} ${LATEX_CMD} ${MAIN_TEXFILE}
 
 echo "### make index andd index of symbols"
 ${MAKEINDEX} ${MAKEINDEX_CMD} idx
