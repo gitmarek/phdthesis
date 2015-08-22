@@ -12,7 +12,7 @@ Meet all the package requirements and then run:
 
 > ./compile.sh
 
-bash script in the main directory
+script in the main directory.
 
 
 ## Copyright 
