@@ -1,7 +1,5 @@
 \ProvidesPackage{Styles}
 
-\usepackage[utf8x]{inputenc}
-
 % Multiple indeces
 % Specify entries like this:
 %\index{idx}{Main index entry}
@@ -55,11 +53,17 @@
 
 
 %% Localisation
-%\usepackage[polish]{babel}
-%\usepackage[OT4,nomathsymbols]{polski}
-%\usepackage[OT4]{fontenc}
-%\selectlanguage{polish}
-%\frenchspacing \linespread{1.0}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[OT4,nomathsymbols]{polski}
+\usepackage[OT4]{fontenc}
+\selectlanguage{polish}
+\frenchspacing \linespread{1.0}
+
+%% Custom chapter names
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\huge\bfseries}{\thechapter}{20pt}{\huge}
 
 
 % ident first line in every section
