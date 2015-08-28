@@ -1,0 +1,139 @@
+\chapter{Przygotowanie}
+\label{chp:preliminaries}
+
+\paragraph{}
+Metody matematyczne,
+niezbędne do badania kryterium splątania nieskończenie wymiarowych złożonych
+układów kwantowych, koncentrują się wokół zastosowań algebr operatorowych,
+w szczególności algebr von Neumanna,
+oraz analizy struktury tzw. dodatnich odwzorowań na tych algebrach.
+
+W tym rozdziale zajmiemy się przedstawieniem podstawowych informacji dotyczących
+wykorzystywanego w dalszym wywodzie aparatu matematycznego.
+Poczynając od prezentacji najważniejszych wyników z teorii algebr operatorowych,
+w tym algebr von Neumanna oraz algebr Jordana,
+przejdziemy
+w dalszej kolejności do omówienia podstawowych własności
+odwzorowań dodatnich na tych algebrach.
+% Na zakończenie rozdziału pokusimy się o przedstawienie podstawowych zastosowań
+% prezentowanych metod do kwantowej teorii informacji.
+Rozdział ten ma służyć również ustaleniu spójnej notacji obowiązującej poniżej.
+
+\paragraph{}
+Niech $n \in \mathbb{N}$ będzie liczbą naturalną.
+Niech także $\mathbb{C}^{n}$ oznacza zespoloną $n$-wymiarową przestrzeń liniową,
+a $\mathbb{R}^{n}$ przestrzeń rzeczywistą --
+wyposażoną w naturalny iloczyn skalarny.
+Dla ogólnej przestrzeni Hilberta,
+niekoniecznie skończenie wymiarowej,
+zarezerwujmy symbol $\mathcal{H}$.
+Wektory należące do $\mathcal{H}$ oznaczamy
+$\eta, \xi, \upsilon$ itd.
+Dla odróżnienia od wektorów należących do innej przestrzeni,
+będziemy czasem używać strzałek: $\vec{\eta}, \vec{\xi}, \vec{\upsilon}$ itd.
+Dla podprzestrzeni $\mathbb{C}^{n}$,
+$\eta, \xi$ itd. oznaczają zawsze wektory-kolumny;
+wektory-wiersze będziemy zapisywać
+$\eta^{t}, \xi^{t}$ itd.
+Kreska nad symbolem wektora: $\bar{\eta}, \bar{\xi}$ itd.,
+oznaczać będzie zawsze zespolone sprzężenie poszczególnych współrzędnych wektora.
+Naturalny iloczyn skalarny w $\mathbb{C}^{n}$ oznaczamy
+$\langle \eta , \xi \rangle = \eta^{*} \xi$,
+gdzie $\eta^{*} = \bar{\eta}^{t}$.
+Operatory liniowe na $\mathbb{C}^{n}$ lub $\mathbb{R}^{n}$,
+a więc macierze,
+będziemy oznaczać zwykle $A, B, C$ itd.
+Przestrzeń Banacha wszystkich operatorów liniowych,
+ograniczonych w standardowej normie operatorowej,
+będziemy oznaczać $\mathcal{B}(\mathcal{H})$.
+Dla $A \in \mathcal{B}(\mathcal{H})$,
+symbol $A^{*}$ oznacza sprzężenie Hermitowskie operatora.
+Przestrzeń $\mathcal{B}(\mathcal{H})$ z antyliniową operacją
+$A \mapsto A^{*}$ oraz z operacją składania operatorów
+tworzy \mbox{$^{*}$-algebrę} Banacha.
+Szczególną algebrę macierzy kwadratowych rozmiaru $n$ nad ciałem liczb
+rzeczywistych lub zespolonych,
+a więc gdy $\mathcal{H} = \mathbb{C}^{n}$ lub 
+$\mathcal{H} = \mathbb{R}^{n}$,
+będziemy dodatkowo oznaczać symbolem $\mathcal{M}_{n}(\mathbb{R})$ lub
+$\mathcal{M}_{n}(\mathbb{C})$; 
+zawsze $\mathcal{M}_{n} = \mathcal{M}_{n}(\mathbb{C})$.
+Gdy $A \in \mathcal{M}_{n}$, 
+$A^{t}$ oznacza transpozycję macierzy,
+a $\text{tr} A$ jej ślad.
+Dla ogólnych przestrzeni liniowych $V$ i $W$,
+których bazy to odpowiednio
+$\{ \eta_{i} \}_{i \in I}$ i
+$\{ \xi_{j} \}_{j \in J}$,
+algebraiczny iloczyn tensorowy
+jest przestrzenią liniową $V \! \otimes \! W$, generowaną przez wektory
+$\{\eta_{i} \otimes \xi_{j}\}_{i\in I, j \in J}$.
+Iloczyn tensorowy przestrzeni Hilberta $\mathcal{H}_{1}$ i $\mathcal{H}_{2}$
+oznaczany  przez $\mathcal{H}_{1} \overline{\otimes} \mathcal{H}_{2}$,
+jest przestrzenią Hilberta będącą domknięciem przestrzeni liniowej
+$\mathcal{H}_{1} \! \otimes \! \mathcal{H}_{2}$ w topologii indukowanej
+przez iloczyn skalarny
+$\langle \eta_{1} \otimes \xi_{1}, \eta_{2} \otimes \xi_{2} \rangle =
+\langle \eta_{1} , \eta_{2} \rangle \, \langle \xi_{1}, \xi_{2} \rangle$,
+$\eta_{1}, \eta_{2} \in \mathcal{H}_{1}$,
+$\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
+Istnieje wiele norm,
+w które można wyposażyć iloczyn tensorowy ogólnych przestrzeni Banacha $X$ i $Y$,
+tak aby uzyskać również przestrzeń Banacha.
+Tę wieloznaczność można jednak wyeliminować w przypadku niektórych algebr operatorów.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Algebry operatorowe}
+
+
+\section{Odwzorowania dodatnie}
+
+
+\paragraph{}
+W następnym rozdziale wykorzystamy przedstawione powyżej podstawowe fakty
+matematyczne do precyzyjnego sformułowania i udowodnienia wyników związanych
+z uogólnieniem kryterium Peresa-Horodeckich dla stanów złożonych układów
+kwantowych opisywanych w języku algebr von Neumanna.
+Zobaczymy,
+w jaki sposób znajomość struktury tych algebr pozwoli na przeprowadzenie
+pełnego dowodu w kilku krokach, dla obieków o coraz większym stopniu ogólności:
+poczynając od algebr skończenie wymiarowych,
+a kończąc na egzotycznych algebrach typu III.
+
+% ### Plan szczegółowy rozdziału:
+% 1. Wstęp fizyczny cz. 1: uzasadnienie opisu złożonych układów fizycznych w algebraicznym języku alg. vN.
+% 2. Wstęp fizyczny cz.2: badanie splątania nierozerwalnie związane z badaniem dodatnich odwzorowań na algebrach macierzy, kryterium P.-H.
+% 3. Wstęp mat: algebry vN; alg. Jordana;
+% 4. Odwzorowania dodatnie, kompletnie dodatnie, kompletnie ograniczone itd.; algebry operatorowe;
+% 5. Wstęp fizyczny cz.3: dalej o kryt. splątania: *entanglement wittness*, izomorfizm Choi-Jamiołkowski (odniesienie do kolejnych rozdziałów); znów zwrócenie uwagi na to, w jakim kierunku będzie zmierzać prezentacja naszych wyników.
+
+% Na początek rozdziału 3:
+% Jak już zostało wspomniane powyżej,
+% podstawowym narzędziem, dzięki któremu możemy rozstrzygnąć,
+% czy dany stan złożonego układu kwantowego jest splątany,
+% jest kryterium odkryte przez Peresa i Horodeckich
+% \cite{peres1996separability, horodecki1996separability},
+% stwierdzające, że stan kwnatowy $\phi$,
+% 
+
+
+\paragraph{}
+
