@@ -2,6 +2,7 @@
 % 1. dodać cytowania do ogólnych stwierdzeń we wstępie.
 % 2. dodać wpisy do skorowidzu
 % 3. nieco skrócić
+% 4. zamienić gdzieniegdzie ,,praca'' na ,,rozprawa''
 
 \chapter{Wstęp}
 \label{chp:intro}
@@ -9,28 +10,27 @@
 \paragraph{}
 \label{par:intro:01}
 Analiza własności kwantowych układów złożonych pociąga za sobą niejednokrotnie
-konieczność rozpatrywania szczegółów zjawiska
+konieczność rozpatrywania zjawiska
 \index{idx}{splątanie kwantowe} \emph{splątania kwantowego},
 polegającego w ogólności na występowaniu szczególnych korelacji w pomiarach 
 wielkości obserwowalnych pomiędzy poszczególnymi podukładami. 
 Jedną z cech charakterystycznych teorii kwantowej,
 w odróżnieniu od opisu klasycznego,
-jest włączenie do opisu możliwych stanów układów złożonych
-przejawiających tę na pierwszy rzut oka paradoksalną własność.
-Zjawisko splątania, odkryte jeszcze w latach trzydziestych XIX\,w.,
+jest występowanie stanów układów złożonych przejawiających tego typu korelacje.
+Zjawisko splątania, odkryte jeszcze w latach trzydziestych XX\,w.,
 stanowi jeden z najważniejszych i najintensywniej badanych działów nowoczesnej
-teorii kwantowej.
-Zapowiadające w przyszłości niezliczone praktyczne zastosowania,
-koncentrujące się w głównej mierze na potencjalnych korzyściach płynących
+teorii kwantowej:
+budzące nadzieję na niezliczone praktyczne zastosowania w przyszłości,
+w głównej mierze oparte na potencjalnych korzyściach płynących
 z wykorzystania splątania w procesach obliczeniowych i przesyłu informacji,
 zjawisko to pozostaje z punktu widzenia badań podstawowych wciąż jeszcze jednym
 z najbardziej zagadkowych elementów teorii.
 
-Podstawowym problemem w zajmującej nas dziedzinie badań,
+Podstawowym problemem zajmującej nas dziedziny badań,
 czekającym na definitywne rozstrzygnięcie,
-jest podanie tzw. kryterium splątania,
-a więc procedury,
-która pozwoliłaby w sposób jednoznaczny odpowiedzieć na pytanie,
+jest podanie tzw. \emph{kryterium splątania},
+a więc procedury czy też twierdzenia,
+które pozwoliłoby w sposób jednoznaczny odpowiedzieć na pytanie,
 czy zadany stan kwantowego układu złożonego jest splątany,
 czy też wprost przeciwnie -- jest to 
 \index{idx}{stan!separowalny} \emph{stan separowalny}.
@@ -38,7 +38,7 @@ Jednym z pierwszych prób znalezienia wyczerpującej odpowiedzi na tak postawion
 pytanie było twierdzenie zaprezentowane w swojej szczególnej postaci 
 przez A.\,Peresa
 \cite{peres1996separability}
-i w tym samym czasie nieco bardziej ogólnie przez
+i w tym samym czasie przedstawione nieco bardziej ogólnie przez
 R.,\,P.,\,M.\,Horodeckich
 \cite{horodecki1996separability},
 do którego będziemy się poniżej odnosić jako do 
@@ -62,91 +62,93 @@ zachodzi
         % \nonumber
     \text{tr} \, \rho \, F(S) \: \geq \: 0
 \end{equation}
-
-
-Ponadto, dzięki pełnej charakterystyce odwzorowań dodatnich na dwuwymiarowej
-przestrzeni Hilberta,
+Ponadto, dzięki znajomości pełnej charakterystyki odwzorowań dodatnich
+na dwuwymiarowej zespolonej przestrzeni Hilberta,
 tj. gdy $\mathcal{H}_{1} = \mathcal{H}_{2} = \mathbb{C}^{2}$,
-można omawiane kryterium znacznie uprościć,
-jeśli ograniczymy się do najprostszego nietrywialnego układu dwóch qubitów,
-i powiedzieć,
+można omawiane kryterium znacznie uprościć.
+Jeśli ograniczymy się do najprostszego nietrywialnego układu dwóch qubitów,
+powiemy,
 że stan $\rho$ jest separowalny wtedy i tylko wtedy,
 gdy $\rho^{PT}$, tzw. częściowa transpozycja macierzy $\rho$,
 jest macierzą dodatnio określoną.
-W takiej postaci kryterium jest niezwykle użyteczne jako efektywne pod względem
-obliczeniowym i stanowi definitywną odpowiedź na postawiony problem.
+W takiej postaci twierdzenie jest niezwykle użyteczne jako efektywne pod względem
+obliczeniowym i stanowi definitywną odpowiedź na postawiony pytanie.
 Ze względu na doniosłość omawianego kryterium zadaniem wartym dalszej uwagi
 byłaby z jednej strony próba uogólnienia twierdzenia,
 tak aby analogiczna teza obowiązywała dla jak najszerszej grupy układów kwantowych;
 z drugiej zaś -- przeprowadzenie szczegółowej analizy kolejnych,
 bardziej skomplikowanych przypadków,
-poczynając od układu złożonego z dwóch podukładów o trzech stopniach swobody,
-to jest opisywanych za pomocą trójwymiarowej przestrzeni Hilberta.
+poczynając od układu złożonego z dwóch podukładów 
+opisywanych za pomocą trójwymiarowej przestrzeni Hilberta,
+czyli tak zwanych ,,qutritów''.
 Nawet w tej,
 wydawałoby się niezbyt zawiłej sytuacji,
 niewiele wiadomo w ogólności na temat dodatnich odwzorowań liniowych,
-a co za tym idzie -- zastosowanie kryterium Peresa-Horodeckich do konkretnych
-obliczeń stanowi utrudnione zadanie.
-W niniejszej pracy postaramy się przedstawić rezultaty badań prowadzących
+a co za tym idzie --
+zastosowanie kryterium Peresa-Horodeckich do konkretnych obliczeń stanowi utrudnione zadanie.
+W niniejszej rozprawie postaramy się przedstawić rezultaty badań prowadzących
 do rozwiązania tych właśnie problemów.
 
 \paragraph{}
 \label{par:intro:02}
 Dostępne pomiarom wielkości obserwowalne układu kwantowego o nieskończonej
-ilości stopni swobody tworzą w naturalny sposób strukturę określaną mianem
-algebry operatorów na ośrodkowej przestrzeni Hilberta $\mathcal{H}$,
-jednak z reguły nie jest to pełna algebra operatorów ograniczonych
+ilości stopni swobody tworzą w naturalny sposób,
+wraz ze swoim algebraicznym domknięciem,
+strukturę określaną mianem algebry operatorów na ośrodkowej przestrzeni Hilberta
+$\mathcal{H}$.
+Z reguły jednak nie jest to pełna algebra operatorów ograniczonych
 $B(\mathcal{H})$,
 a jej domknięta podalgebra $\mathfrak{M}$ spełniająca aksjomaty tzw.
 algebry von Neumanna.
 Teoria algebr operatorowych,
-w szczególności algebr von Neumanna i C$^{*}$-algebr
+w szczególności algebr von Neumanna i \mbox{C$^{*}$-algebr}
 daje matematyczne narzędzie do opisu w zasadzie wszystkich rozpatrywanych
 w fizyce matematycznej przykładów układów fizycznych:
 począwszy od układów skończenie wymiarowych i klasycznych,
-opisywanych za pomocą algebr przemiennych,
+reprezentowanych za pomocą algebr przemiennych,
 poprzez nieskończone łańcuchy spinowe i algebry Araki-Woodsa reprezentujące
 nierelatywistyczny gaz bozonów,
 a skończywszy na lokalnych algebrach obserwabli w kwantowej teorii pola.
 Należy zaznaczyć,
-że mimo iż formalnie wszystkie z tych algebr można przedstawić jako
-podalgebry pełnej przestrzeni $B(\mathcal{H})$ dla ośrodkowej przestrzeni Hilberta,
-to jednak własności topologiczne każdego z wymienionych przykładów
-różnią się od siebie w sposób diametralny.
+że pomimo formalnej możliwości przedstawienia wszystkich z tych algebr jako
+podalgebr pełnej przestrzeni $B(\mathcal{H})$
+%  dla ośrodkowej przestrzeni Hilberta,
+własności topologiczne każdego z wymienionych przykładów
+różnią się jednak od siebie diametralnie.
 Dla przykładu, lokalne algebry obserwabli w kwantowej teorii pola,
 to tzw. faktory typu III,
 które nie zawierają żadnych niezerowych skończonych projektorów,
-tworząc strukturę w wysokim stopniu odmienną od struktury algebry $B(\mathcal{H})$.
+tworząc strukturę w wysokim stopniu odmienną od struktury algebry $B(\mathcal{H})$. 
 Ponieważ w swoim oryginalnym sformułowaniu kryterium Peresa-Horodeckich
 dotyczy jedynie przestrzeni skończenie wymiarowych i odwzorowań na operatorach
 na tych przestrzeniach,
 czyli \emph{de facto} macierzy,
 wydaje się zasadne,
-aby osiągnąć możliwie daleko idące uogólnienie tamtego faktu,
+aby pokusić się o możliwie daleko idące uogólnienie tamtego faktu,
 rozszerzając go na szeroką klasę algebr von Neumanna,
 mających zastosowanie do opisu rzeczywistych układów kwantowych.
 A zatem jednym z dwóch głównych nurtów niniejszej pracy będzie sformułowanie
-i dowód twierdzenia o możliwie najogólniejszych założeniach,
-które wciąż mogłoby nosić miano kryterium Peresa-Horodeckich.
+i dowód twierdzenia będącego możliwie najogólniejszą wersją
+kryterium Peresa-Horodeckich.
 Potrzeba uogólnienia kryterium znajduje swoje uzasadnienie również 
 w rosnącym zainteresowaniu na polu badań nad splątaniem układów o ciągłym
 spektrum stopni swobody (\emph{CV-entanglement})
 \cite{adesso2007entanglement}.
-Ponadto pytanie o uogólnienie omawianego twierdzenia na stany na algebrach
-von Neumanna pojawiło się w pracy E.\,St{\o}rmera
+Pytanie o możliwość uogólnienia, którego dowodzimy w niniejszej pracy,
+pojawiło się już wcześniej w publikacji E.\,St{\o}rmera
 \cite{stormer2008separable},
-który udowodnił tezę dla C*-algebr, spośród których jednak jest tak zwaną
-UHF-algebrą 
+który udowodnił tezę dla C*-algebr,
+spośród których jedna jest tak zwaną UHF-algebrą 
 (topologicznym domknięciem sumy mnogościowej algebr skończenie wymiarowych).
 W naszej pracy zakładany wynik otrzymaliśmy dla iloczynu tensorowego
 $\mathfrak{M} \bar{\otimes} \mathfrak{N}$ 
 algebr von Neumanna $\mathfrak{M}$, $\mathfrak{N}$,
-spośród których jedna jest tzw. algebrą iniektywną;
-tak sformułowane twierdzenie pokrywa w zasadzie wszystkie znane
+spośród których jedna jest algebrą iniektywną.
+Tak sformułowane twierdzenie obejmuje w zasadzie wszystkie znane
 przypadki złożonych układów kwantowych.
 
 Najważniejszym obiektem matematycznym występującym w sformułowaniu
-kryterium Peresa-Horodeckich są odwzorowania dodatnie na *-algebrach,
+kryterium Peresa-Horodeckich są odwzorowania dodatnie na $^{*}$-algebrach,
 w szczególności na algebrach operatorów,
 które pomimo intuicyjnej definicji oraz wielu ważnych zastosowań,
 stanowią obiekt stosunkowo słabo poznany.
@@ -154,17 +156,17 @@ Teoria tych odwzorowań, zapoczątkowana w pracach Kadisona
 \cite{kadison1952generalized}
 i Stinespringa
 \cite{stinespring1955positive},
-jako uogólnienie z jednej strony teorii dodatnich funkcjonałów,
-z drugiej zaś izomorfizmów tych algebr,
+jako uogólnienie z jednej strony teorii dodatnich funkcjonałów liniowych,
+z drugiej zaś izomorfizmów algebr,
 osiągnęła swój pierwszy ważny wynik w publikacjach Størmera i Woronowicza
 \cite{stormer1963positive,woronowicz1976positive}
-wraz z podaniem ich pełnej charakteryzacji w niskowymiarowym przypadku
+wraz z podaniem pełnej charakteryzacji w nisko wymiarowym przypadku
 odwzorowań pomiędzy algebrami $B(\mathbb{C}^{2})$ i $B(\mathbb{C}^{3})$
 (p. str. \ref{thm:StormerWoronowicz})
 Należy w tym miejscu wspomnieć również o osiągnięciach M.-D.\,Choi
 \cite{choi1975positive,choi1975completely,choi1977extremal},
 który w swych pracach dotyczących odwzorowań kompletnie dodatnich,
-kład podwaliny późniejszych wyników.
+kładł podwaliny późniejszych wyników.
 
 Na kryterium Peresa-Horodeckich można zatem spojrzeć jak na łącznik pomiędzy
 matematyczną teorią odwzorowań dodatnich,
@@ -173,7 +175,6 @@ a fizyczną interpretacją w zastosowaniu do teorii splątania:
 Ze wzoru \eqref{eq:PHcriterionOrig} możemy wnioskować,
 że jeśli stan kwantowy $\rho$ jest splątany,
 to istnieje przynajmniej jedno odwzorowanie dodatnie $S$,
-które nb. nie jest kompletnie dodatnie,
 takie że $\text{tr} \rho \, F(S) < 0$.
 Macierz $F(S)$ nosi w tym przypadku nazwę
 \emph{świadka splątania} (\emph{entanglement witness}).
@@ -184,37 +185,35 @@ a dodatnimi odwzorowaniami na algebrach obserwabli.
 Ten zaskakujący i głęboki związek pozostaje główną motywacją naszej pracy,
 która koncentrować się będzie na zastosowaniu metod algebr operatorowych
 do analizy odwzorowań dodatnich,
-a co za tym idzie -- do kwantowej teorii informacji,
-dziedziny skupiającej się wokół badań nad zjawiskiem splątania kwantowego.
+a więc również -- do teori splątania kwantowego.
 
-Poza wspomnianymi wcześniej szczegółowymi wynikami St{\o}rmera i Woronowicza,
+Poza wspomnianymi szczegółowymi wynikami St{\o}rmera i Woronowicza,
 ogólna charakterystyka odwzorowań dodatnich pozostaje nieznana.
-Niewiele wiadomo już nawet w najprostszym nierozwiązanym przypadku odwzorowań
+Niewiele wiadomo nawet w najprostszym nierozwiązanym przypadku odwzorowań
 na algebrze macierzy $B(\mathbb{C}^{3})$.
-W naszej pracy,
+W niniejszej pracy,
 pamiętając o fizycznej motywacji badań w tej dziedzinie,
 skupimy się właśnie na tym przypadku.
 Spróbujemy wprowadzić nowe przykłady odwzorowań,
 ,,wykrywających'' nieznane wcześniej stany splątane układu złożonego
-z dwóch ,,qutritów'', tj. podukładów o trzech stopniach swobody.
+z dwóch qutritów.
 Punktem wyjścia będzie położenie nacisku na geometryczny aspekt znanych
 już zależności,
 co pozwoli na przedstawienie uproszczonego dowodu twierdzenia St{\o}rmera
 dla odwzorowań dodatnich na $B(\mathbb{C}^{2})$.
-W dalszej części skupimy się na wyżej wymiarowych odwzorowaniach,
-prezentując oryginalne wyniki,
+W dalszej części zaprezentujemy oryginalne wyniki,
 uzupełniające teorię odwzorowań dodatnich o kilka nowych geometrycznych metod.
 Potrzeba skupienia wysiłków na przypadku nisko wymiarowym podyktowana jest
 z jednej strony brakiem ogólnej wiedzy na temat odwzorowań dodatnich,
-z drugiej zaś możliwościami zastosowań do układów aktualnie interesujących
-społeczność fizyków pracujących nad zagadnieniami kwantowej teorii informacji,
+z drugiej zaś możliwościami zastosowań do układów aktualnie w polu zainteresowania
+społeczności fizyków pracujących nad zagadnieniami kwantowej teorii informacji,
 wykorzystującej układy kwantowe o ograniczonej liczbie stopni swobody
 jako modelowe w badaniach nad kwantowym podejściem do problemów obliczeniowych,
 w szczególności kryptografii i przesyłu informacji.
 
 W kolejnych rozdziałach przedstawimy główne wyniki pracy,
 w całości pochodzące z opublikowanych wcześniej artykułów naukowych,
-przygotowanych przez autora i promotora tej pracy
+przygotowanych przez autora i promotora niniejszej rozprawy
 \cite{miller2014horodeckis,miller2015stable,miller2015topology}.
 Poczynając od rozdziału poświęconego przygotowaniu matematycznemu i ustaleniu
 obowiązującej notacji (rozdz. \ref{chp:preliminaries}),
@@ -235,39 +234,35 @@ $B(\mathbb{C}^{2})$ za pomocą geometrycznych metod znanych z analizy
 operatorów liniowych na stożkach w przestrzeniach rzeczywistych,
 przejdziemy do wyżej wymiarowego przypadku,
 próbując uogólnić wcześniejsze wyniki.
-Poza rozwiniętymi już metodami wykorzystamy podejście do badania odwzorowań
-liniowych uwzględniające asymptotykę półgrup odwzorowań będących
-kolejnymi potęgami tego wyjściowego.
-Podobnie jak w pracy
-\cite{olkiewicz1999environment},
+Poza rozwiniętymi już metodami,
+wykorzystamy podejście do badania odwzorowań
+liniowych uwzględniające asymptotykę półgrup odwzorowań.
+Podobnie jak w teorii
 zajmującej się asymptotycznymi własnościami generatorów kwantowych półgrup
-dynamicznych,
+dynamicznych \cite{olkiewicz1999environment},
 wykorzystamy tzw. stabilne podprzestrzenie tych półgrup do uzyskania
 wstępnej klasyfikacji ekstremalnych odwzorowań dodatnich 
 zachowujących ślad i operator identyczności.
-Jak się okazuję,
-można powiedzieć nie troszcząc się póki co o pełną ścisłość sformułowań,
-że dla tego rodzaju odwzorowań taka stabilna podprzestrzeń musi ograniczać się
-tylko do kilku możliwych przykładów,
-a jej wymiar pozostaje swego rodzaju niezmiennikiem na operacje składania
-z automorfizmami Jordana,
-będącymi również podstawowymi operacjami zachowującymi separowalność stanów
-kwantowych.
+Nie uściślając w pełni sformułowań na tym etapie,
+można powiedzieć,
+że dla tego rodzaju odwzorowań stabilna podprzestrzeń musi ograniczać się
+tylko do kilku możliwych przykładów.
 Otrzymany rezultat posłuży nam do zaprezentowania oryginalnego przykładu
-ekstremalnego odwzorowania dodatniego niebadanego wcześniej,
+ekstremalnego odwzorowania dodatniego, niebadanego wcześniej,
 który stanowi swego rodzaju nowy element teorii,
 być może użyteczny w dalszych zastosowaniach,
 i który już znalazł swoje uogólnienie w pracach innych fizyków
 \cite{rutkowski2015class}.
 Pracę kończy rozdział podsumowujący otrzymane rezultaty i nakreślający
-perspektywy dalszych badań w ramach zaprezentowanej tematyki.
+perspektywy dalszych badań w ramach przedstawionej tematyki.
 
 Bez wątpienia wyniki przytoczone w niniejszej pracy wpisują się w szerszy nurt
 aktualnych badań nad zjawiskiem splątania.
 Wysiłki badaczy koncentrują się także na podaniu alternatywnych kryteriów
 orzekających o splątaniu stanów mieszanych,
 wykorzystujących do tego celu podejścia takie jak korelacje kwantowe,
-miary splątania etc. (cytaty).
+miary splątania etc. 
+%(cytaty).
 Korzyścią, która płynie z alternatywnych podejść,
 jest nierzadko mniejsza złożoność obliczeniowa,
 dostępność algorytmów ułatwiających otrzymanie statystycznie istotnych wyników,
@@ -277,7 +272,8 @@ mianowicie potrzeby znajomości ogólnej struktury dodatnich odwzorowań
 na zadanej algebrze operatorów.
 Jednak twierdzenie podane przez Peresa i Horodeckich oraz 
 jego uogólnienie udowodnione w następnych rozdziałach
-jest jedynym znanym warunkiem separowalności nie tylko koniecznym, ale i wystarczającym.
+jest jedynym znanym warunkiem separowalności nie tylko koniecznym,
+ale i wystarczającym.
 Jasne jest,
 że im głębsza wiedza na temat odwzorowań dodatnich,
 tym łatwiejsze staje się zastosowanie kryterium do detekcji splątania
@@ -286,38 +282,12 @@ Jak zobaczymy poniżej,
 każde wejrzenie w matematyczną strukturę analizowanych tu obiektów,
 pozostającą po większej części wciąż niezbadaną,
 przekłada się niemal natychmiast na potencjalne zastosowania w postaci
-obserwabli wykrywających splątanie pewnych określonych stanów układów złożonych
-(\emph{entanglement witness}).
+obserwabli wykrywających splątanie szerokiej klasy stanów układów złożonych.
 Ta fascynująca i nieoczywista zależność pomiędzy z jednej strony abstrakcyjną
 teorią matematyczną,
 z drugiej zaś kwantową teorią informacji,
-bez wątpienia w przyszłości odgrywać będzie wciąż ważną rolę,
+bez wątpienia w przyszłości wciąż odgrywać będzie ważną rolę,
 inspirującą badaczy do dalszych poszukiwań w tej dziedzinie.
 
 %%%%% **** %%%%%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
