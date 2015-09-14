@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# invoke like this:
 # ./watcher.sh chp/ ./compile.sh 
 
 OUTFILE="./compile.out"

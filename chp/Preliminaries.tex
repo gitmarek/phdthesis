@@ -50,8 +50,8 @@ Dla $A \in \mathcal{B}(\mathcal{H})$,
 symbol $A^{*}$ oznacza sprzężenie Hermitowskie operatora.
 Przestrzeń $\mathcal{B}(\mathcal{H})$ z antyliniową operacją
 $A \mapsto A^{*}$ oraz z operacją składania operatorów
-tworzy \mbox{$^{*}$-algebrę} Banacha.
-Szczególną algebrę macierzy kwadratowych rozmiaru $n$ nad ciałem liczb
+tworzy szczególny przykład \mbox{$^{*}$-algebry} Banacha.
+Algebrę macierzy kwadratowych rozmiaru $n$ nad ciałem liczb
 rzeczywistych lub zespolonych,
 a więc gdy $\mathcal{H} = \mathbb{C}^{n}$ lub 
 $\mathcal{H} = \mathbb{R}^{n}$,
@@ -77,14 +77,137 @@ $\langle \eta_{1} \otimes \xi_{1}, \eta_{2} \otimes \xi_{2} \rangle =
 \langle \eta_{1} , \eta_{2} \rangle \, \langle \xi_{1}, \xi_{2} \rangle$,
 $\eta_{1}, \eta_{2} \in \mathcal{H}_{1}$,
 $\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
-Istnieje wiele norm,
-w które można wyposażyć iloczyn tensorowy ogólnych przestrzeni Banacha $X$ i $Y$,
-tak aby uzyskać również przestrzeń Banacha.
-Tę wieloznaczność można jednak wyeliminować w przypadku niektórych algebr operatorów.
+
+Dla ogólnych przestrzeni Banacha $X$ i $Y$, przez
+$\mathcal{L}(X,Y)$
+oznaczmy przestrzeń Banacha wszystkich ograniczonych odwzorowań
+liniowych pomiędzy z $X$ w $Y$.
+
+% Istnieje wiele norm,
+% w które można wyposażyć iloczyn tensorowy ogólnych przestrzeni Banacha $X$ i $Y$,
+% tak aby uzyskać również przestrzeń Banacha.
+% Tę wieloznaczność można jednak wyeliminować w przypadku niektórych algebr operatorów.
+% 
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  DO PRZYGOTOWANIA MAT %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% The pairing between $x \in X$ and $\varphi \in X^{*}$ is denoted by
+% $\langle  \varphi , x \rangle$. We say that a net $(T_{\lambda})$,
+% $T_{\lambda} \in \mathcal{L}(X, Y^{*})$, converges
+% to $T \in \mathcal{L}(X, Y^{*})$ in the \emph{weak* operator topology} \label{page:weakstaroperatortop}, if
+% $\langle T_{\lambda} x, y \rangle \rightarrow \langle Tx, y \rangle$
+% for any $x \in X$ and $y \in Y$. If $X$ and $Y$ are also operator spaces,
+% we denote by $\mathcal{CB}(X,Y)$ the operator space
+% of completely bounded linear maps equipped with the norm
+% $|| \cdot ||_{\mathcal{CB}}$. It is true that the space $\mathcal{F}(X,Y)$
+% of finite rank maps from $X$ into $Y$, i.e. the maps with their image being finite dimensional
+% subspaces of $Y$, is a subspace of $\mathcal{CB}(X,Y)$.
+% By $\mathcal{CB}(X,Y)_{+}$ we denote the cone of completely bounded positive maps from $X$ and $Y$,
+% and by $\mathcal{CP}(X,Y)$ the cone of completely positive maps.
+% It is known that $\mathcal{CP}(X,Y) \subset \mathcal{CB}(X,Y)_{+}$,
+% (see the book by Effros and Ruan \cite{Effros2000} for a general outline of the theory of completely bounded and completely positive maps).
+% 
+% 
+% 
+% Let $\mathfrak{M}$, $\mathfrak{N}$ be arbitrary von Neumann algebras. Without any loss of generality we may assume
+% that $\mathfrak{M}\subset B(\mathcal{H})$ and $\mathfrak{N}\subset B(\mathcal{K})$, where $\mathcal{H},\mathcal{K}$
+% are Hilbert spaces, not necessarily separable. Their state spaces, i.e. convex sets of normal, positive and
+% normalized functionals, we denote by $\mathcal{S}(\mathfrak{M})$ and $\mathcal{S}(\mathfrak{N})$, respectively.
+% The algebraic tensor product
+% is denoted by $\mathfrak{M}\otimes\mathfrak{N}$; whereas the spatial tensor product of
+% $\mathfrak{M}$ and $\mathfrak{N}$ by $\tmn$, i.e. $\tmn=(\mathfrak{M}\otimes\mathfrak{N})''$.
+% Notice that $(\tmn)_*$ is isometrically isomorphic with $\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*$, the completion
+% of $\mathfrak{M}_*\otimes\mathfrak{N}_*$ with respect to the projective operator norm $\|\cdot\|_\wedge$,
+% and so $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*=\tmn$, with the operator norm
+% on $\tmn$ being the dual norm on the dual space 
+% $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*$ 
+% (see again the book by Effros and Ruan \cite{Effros2000}, Theorem 7.2.4; 
+% and also Corollary 7.1.5 for the proof of the next theorem).
+% Moreover, one has the following.
+% \begin{theorem}
+% \label{thm:isometry}
+% The map $F: \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})
+% \rightarrow \mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+% given by
+% \begin{equation}
+% \langle F(T), \omega \otimes \varphi \rangle =\langle T\omega, \varphi \rangle,
+% \end{equation}
+% where $\omega \in \mathfrak{M}_{*}$, $\varphi \in \mathfrak{N}_{*}$,
+% extends to a completely isometric isomorphism between operator spaces.
+% \end{theorem}
+% Let us recall that a density matrix acting on $\mathcal{H}\otimes\mathcal{K}$, where $\mathcal{H}$ and $\mathcal{K}$
+% are finite dimensional Hilbert spaces, is separable, if it is a convex combination of tensor products of density
+% matrices in $\mathcal{H}$ and $\mathcal{K}$. The definition was next generalized by Werner \cite{Werner} to infinite
+% dimensional Hilbert spaces by taking the trace norm limits of such convex combinations. In the same spirit, we define
+% a convex set $C_1$ of separable states in $\mathcal{S}(\tmn)$ by
+% \begin{equation}
+% C_{1} = \overline{{\rm conv}}^{||\cdot||_{\wedge}}
+% \left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathfrak{M}),
+% \varphi \in \mathcal{S}(\mathfrak{N})\right \}.
+% \end{equation}
+% By $C_{1}^{*}$ we denote the dual cone: $C_{1}^{*} = \{ x \in
+% \mathfrak{M} \bar{\otimes} \mathfrak{N}:
+% \langle x , \varphi \rangle \geq 0 \,\, \forall \varphi \in C_{1} \}$, and
+% by $C_{0}^{*}$ the subcone of $C_{1}^{*}$: $C_{0}^{*} = \{ x \in
+% \mathfrak{M} \otimes \mathfrak{N}:\langle x , C_{1} \rangle \geq 0 \}$. It follows easily from Theorem \ref{thm:isometry} that
+% $F(\mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})_{+}) = C_{1}^{*}$ and
+% $F(\mathcal{CP}(\mathfrak{M}_{*}, \mathfrak{N})) = (\mathfrak{M} \bar{\otimes} \mathfrak{N})_{+}$,
+% the cone of positive elements.
+% 
+% For any von Neumann algebra $\mathfrak{M}$,
+% there is also a natural completely isometric embedding
+% \begin{equation}
+% \theta: \mathfrak{M} \check{\otimes} \mathfrak{M}_{*}\rightarrow
+% \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{M}_{*}),
+% \end{equation}
+% where $\check{\otimes}$ stands for injective operator space tensor product
+% (see again \cite{Effros2000}, Proposition 8.1.2). 
+% For instance, if
+% $u \in \mathfrak{M} \otimes \mathfrak{M}_{*}$, $u = \sum_{i = 1}^{n} a_{i} \otimes \omega_{i}$,
+% then for $\omega \in \mathfrak{M}_{*}$,
+% \begin{equation}
+% \theta(u)\omega = \sum_{i=1}^{n} \langle a_{i} , \omega \rangle \, \omega_{i}.
+% \end{equation}
+% Using the map $F$, we show the following.
+% \begin{proposition}
+% \label{prop:34523}
+% Let $\omega\in \mathcal{S}(\tmn)$. Then $\langle F(A),\omega\rangle\geq 0$ $\forall A\in\cbms_+$, if and only if $\omega$ is separable.
+% \end{proposition}
+% {\bf Proof.} $\Rightarrow$ Suppose that $\omega\notin C_1$. Because $C_1$ is norm closed and
+% convex, so there exists $x\in\tmn$ such that $\langle x,
+% \omega\rangle<0$ and $\langle x,C_1\rangle\geq 0$. Therefore, $x\in C_1^*$ and so there exists $A\in\cbms_+$
+% such that $\langle F(A),\omega\rangle<0$, a contradiction.\\
+% $\Leftarrow$ This part is clear. $\Box$\\
+% \begin{proposition}
+% Let $E\subset\cbms_+$ and let $B_{1}$ be a unit ball of $\cbms$ (with respect to the $\mathcal{CB}$-norm). Let also $E \cap B_{1}$  be dense in  $\cbms_+ \cap B_{1}$ in the
+% weak$^*$ operator topology. Suppose that $\omega_0\in \mathcal{S}(\tmn)$. If $\forall A\in E$
+% $\langle F(A),\omega_0\rangle \geq 0$, then $\omega_0\in C_1$.
+% \end{proposition}
+% {\bf Proof.} At first, we show that $F(E)$ is weak$^*$ dense in $C_1^*$. Let $x\in C_1^*$. Then $x=F(A)$, $A\in\cbms_+$.
+% By the assumption, there exists a net $(A_{\lambda})$, $A_{\lambda}\in E$, $\sup_{\lambda}\|A_{\lambda}\|_{\mathcal{CB}}\leq
+% \|A\|_{\mathcal{CB}}$ such that $A_{\lambda}\to A$ in the weak$^*$ operator topology (see p. \pageref{page:weakstaroperatortop}). 
+% The map $F$ is continuous with respect to that topology because of Theorem \ref{thm:isometry}. 
+% Therefore,  for any $\omega\in
+% \mathfrak{M}_*\otimes\mathfrak{N}_*$ $\langle F(A_{\lambda}),\omega\rangle\to\langle x,\omega\rangle$. Because
+% $\|F(A_{\lambda})\|=\|A_{\lambda}\|_{\mathcal{CB}}$ is uniformly bounded so $F(A_{\lambda})$ converges to $x$ in the
+% weak$^*$ topology of von Neumann algebra $\tmn$ . Hence $\langle x,\omega_0\rangle\geq 0$ for any $x\in C_1^*$, and so $\omega_0\in C_1$. $\Box$\\
+% It follows that a kind of positive uniform approximation in $\mathfrak{M}$ or $\mathfrak{N}$ is necessary to accomplish our task of generalising the Horodeckis' theorem.
+% This leads to the assumption about injectivity of one (say $\mathfrak{M}$) of the algebras. Let us recall that a von Neumann
+% algebra $\mathfrak{M}\subset B(\mathcal{H})$ is called injective if there is a norm-one Banach space projection (not necessarily
+% normal) $\pi :B(\mathcal{H})\to\mathfrak{M}$ onto $\mathfrak{M}$. In such an algebra, there is a net $(A_{\lambda})$ of completely
+% positive finite rank contractions on $\mathfrak{M}_*$ converging strongly to the identity map (see the Takesaki's textbook \cite{Takesaki3}, vol III, Theorem XV.3.1):
+% \begin{equation}
+% \label{RandomLabel:513684}
+%     || A_{\lambda} \omega - \omega || \stackrel{\lambda}{\longrightarrow} 0, \quad
+% \end{equation}
+% or any $\omega \in \mathfrak{M}_{*}$. 
+% This property of injective von Neumann algebras will prove itself of particular
+% use in the following.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 

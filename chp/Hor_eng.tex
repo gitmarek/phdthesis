@@ -1,0 +1,156 @@
+
+\section{Horodeckis criterion in $C^*$-algebras}
+In this section, we are going to present the result
+analogous to the Theorem \ref{thm:main}, but this time in the C*-algebra setting.
+It is expected that the previous assumption of injectivity
+will have to be retained somehow. That leads to the choice of \emph{nuclear} C*-algebras,
+i.e. algebras whose universal enveloping von Neumann algebras (the second dual spaces) are
+injective. Not only it allows us to define a tensor product of two C*-algebras
+uniquely, but also facilitates the usage of the previous result.
+Nuclear C*-algebras, among others, share also the property of
+local reflexivity, which will prove itself indispensable for
+our line of reasoning.
+
+Let $\mathcal{A}$ and $\mathcal{B}$ be C*-algebras.
+By $\mathcal{A} \otimes_{max} \mathcal{B}$
+and $\mathcal{A} \otimes_{min} \mathcal{B}$,
+we denote respectively the \emph{maximal} and \emph{minimal}
+C*-tensor product of $\mathcal{A}$ and $\mathcal{B}$.
+It is known that if at least one of the algebras, say $\mathcal{A}$,
+is nuclear, then those two tensor norms coincide and
+the tensor product C*-algebra is in fact uniquely defined.
+For a nuclear C*-algebra $\mathcal{A}$, we denote that tensor product
+by $\mathcal{A} \bar{\otimes} \mathcal{B}$.
+A C*-algebra $\mathcal{A}$ is by definition \emph{locally reflexive},
+if for every finite-dimensional operator system $E \subset \mathcal{A}^{**}$,
+i.e. a closed self-adjoint subspace containing the identity element,
+there is a net $(T_{\lambda})$ of completely positive contractions,
+$T_{\lambda}: E \rightarrow \mathcal{A}$,
+which converges to the identity map on $E$ in the weak operator
+topology. Every nuclear C*-algebra is locally reflexive
+(see Brown and Ozawa\cite{Brown2008}, 9.3.1-9.3.3).
+The algebras $\mathcal{A}$ and $\mathcal{B}$
+can be treated as operator spaces in a natural way.
+Thus, it is possible to introduce the operator space projective
+tensor norm on the dual operator spaces $\mathcal{A}^{*}$
+and $\mathcal{B}^{*}$, and the completion of the algebraic tensor product with
+respect to that norm will be denoted by
+$\mathcal{A}^{*} \hat{\otimes} \mathcal{B}^{*}$. Hence, we can introduce a cone of
+separable states with respect to $\mathcal{A}$ and $\mathcal{B}$ in the same way as
+in Section 2. Let  $\mathcal{S}(\mathcal{A})$ and $\mathcal{S}(\mathcal{B})$
+denote the state spaces of $\mathcal{A}$ and $\mathcal{B}$, respectively.
+We define a positive cone $C_{\mathcal{A},\mathcal{B}}$
+of separable states with respect to $\mathcal{A}$ and $\mathcal{B}$ by
+\begin{equation}
+C_{\mathcal{A},\mathcal{B}} =
+\overline{{\rm conv}}^{||\cdot||_{\wedge}}
+\left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathcal{A}),
+\varphi \in \mathcal{S}(\mathcal{B})\right \}.
+\end{equation}
+It is clear that a state on $\mathcal{A} \bar{\otimes} \mathcal{B}$ is separable,
+i.e. $\tilde{\phi} \in C_{\mathcal{A}, \mathcal{B}}$,
+if and only if $\tilde{\phi}$ is a separable state
+on the von Neumann algebra $\mathcal{A}^{**} \bar{\otimes} \mathcal{B}^{**}$.
+\begin{theorem}
+Let $\mathcal{A}$ and $\mathcal{B}$ be C*-algebras and suppose that
+$\mathcal{A}$ is nuclear. A state $\tilde{\phi} \in
+(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$ is separable
+with respect to $\mathcal{A}$ and $\mathcal{B}$,
+if and only if the functional $\tilde{\phi} \circ ( \mathbf{1} \otimes S )$
+is positive for any positive and finite rank map $S: \mathcal{A} \rightarrow \mathcal{B}$.
+\end{theorem}
+{\bf Proof.} Let $\mathfrak{M}=\mathcal{A}^{**}$ and $\mathfrak{N}=\mathcal{B}^{**}$.
+By the assumption, $\mathfrak{M}$ is injective. If $\tilde{\phi}$ is separable with respect to
+$\mathcal{A}$ and $\mathcal{B}$, then it is also separable on
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$. For any positive map
+$S: \mathcal{A} \rightarrow \mathcal{B}$, the second dual map
+$S^{**}:\mathfrak{M} \rightarrow \mathfrak{N}$ is positive and normal.
+It follows from the first part of Theorem \ref{thm:main} that for any positive
+$z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
+$\langle (\mathbf{1} \otimes S^{**})(z), \tilde{\phi} \rangle \geq 0$.
+Therefore, $\tilde{\phi} \circ (\mathbf{1} \otimes S)$ is a
+positive functional on $\mathcal{A} \bar{\otimes} \mathcal{A}$.
+
+Conversely, suppose that $\tilde{\phi} \circ (\mathbf{1} \otimes S) \geq 0$
+for any positive and finite rank map $S: \mathcal{A} \rightarrow \mathcal{B}$.
+We are going to show that the state $\tilde{\phi}$
+is separable on $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+Suppose on the contrary that $\tilde{\phi}$ is not separable on
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+By Theorem \ref{thm:main}, there is a positive normal and finite rank
+map $\tilde{S}: \mathfrak{M} \rightarrow \mathfrak{N}$
+and a positive element $z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
+such that
+\begin{equation}
+\label{eq:Random6347}
+\langle(\mathbf{1} \otimes \tilde{S})(z), \tilde{\phi}\rangle < 0.
+\end{equation}
+Moreover, we can choose the element $z$ from the algebraic tensor product
+$\mathfrak{M} \otimes \mathfrak{M}$, i.e. $z = \sum_{j=1}^{N} x_{j} \otimes y_{j}$,
+each $x_{j}$ and $y_{j} \in \mathfrak{M}$. Let $E \subset \mathfrak{M}$ be an
+operator system generated by $\{ x_{j}, y_{j}\}_{j=1}^{N}$.
+Since $\mathcal{A}$ is locally reflexive, there exists
+a net $(T_{\lambda})$ of completely positive contractions
+$T_{\lambda}: E \rightarrow \mathcal{A}$,
+such that $T_{\lambda}$ converges to the identity map
+on $E$ in the weak* operator topology, i.e.
+for any $\omega \in \mathcal{A}^{*}$ and $x \in E$,
+$ \langle \omega, T_{\lambda}x \rangle\stackrel{\lambda}{\rightarrow}
+\langle x, \omega \rangle$. Let $a_{\lambda}$ denote the positive element
+of $\mathcal{A} \otimes \mathcal{A}$,
+$a_{\lambda} = (T_{\lambda} \otimes T_{\lambda}) (z) =
+\sum_{j=1}^{N} T_{\lambda} x_{j} \otimes T_{\lambda} y_{j}$, and let
+$i: \mathcal{A} \rightarrow \mathcal{A}^{**}=\mathfrak{M}$
+be the canonical embedding. Then,
+$i(a_{\lambda}) \stackrel{\lambda}{\rightarrow} z$ $\sigma$-weakly.
+Since $\mathcal{B}$ is a Banach space, it has a local
+reflexivity property in the following sense (see Ryan\cite{Ryan2002}, chapter 5.5).
+For any finite-dimensional subspace $F \subset \mathcal{B}^{**}$,
+there is an operator $P_{F}: F \rightarrow \mathcal{B}$
+such that for any $y \in \mathcal{B}^{**} = \mathfrak{N}$
+and $\varphi \in \mathcal{B}^{*}$, one has
+\begin{equation}
+\label{eq:Random24093}
+\langle \varphi, P_{F}y \rangle =\langle y, \varphi \rangle.
+\end{equation}
+Let $F = \tilde{S}(\mathfrak{M})$.
+It is obvious from equation \eqref{eq:Random24093} that $P_{F}$ is positive.
+We define a positive map $S: \mathcal{A} \rightarrow \mathcal{B}$ by
+$S = P_{F} \circ \tilde{S} \circ i$. Then,
+for any $A \in \mathcal{A}$ and $\varphi \in \mathcal{B}^{*}$, we have
+\begin{eqnarray}
+\langle \varphi, SA \rangle =
+\langle \varphi, P_{F} ( \tilde{S} \circ i (A)) \rangle =
+\langle  \tilde{S} \circ i (A), \varphi \rangle \nonumber\\
+=\langle i(A), \tilde{S}_{*} \varphi \rangle =
+\langle \tilde{S}_{*} \varphi, A \rangle,
+\end{eqnarray}
+Suppose now that
+$\tilde{\phi} = \lim \limits_{n} \sum_{i=1}^{n}\omega_{i} \otimes \varphi_{i}$,
+where each $\omega_{i} \in \mathcal{A}^{*}$,
+$\varphi_{i} \in \mathcal{B}^{*}$.
+The limit is understood as the one in the projective
+operator norm $|| \cdot ||_{\wedge}$, and hence also in the weak and weak* topology on
+$(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$. Then, by the assumption,
+$\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$. Moreover,
+\begin{eqnarray}
+\sum \limits_{i=1}^{n}\langle \omega_{i} \otimes \varphi_{i},
+(\mathbf{1} \otimes S)(a_{\lambda}) \rangle =
+\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
+\langle \omega_{i} , T_{\lambda} x_{j} \rangle
+\langle \tilde{S}_{*} \varphi_{i}, T_{\lambda} y_{j}\rangle \nonumber\\
+\stackrel{\lambda}{\longrightarrow}\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
+\langle  x_{j}, \omega_{i} \rangle\langle  y_{j},  \tilde{S}_{*} \varphi_{i} \rangle =
+\langle (\mathbf{1} \otimes \tilde{S})(z),
+\sum \limits_{i=1}^{n} \omega_{i} \otimes \varphi_{i} \rangle .    
+\end{eqnarray}
+Taking the limit with respect to $n$,
+since $(T_{\lambda})$ is a net of contractions, we get that
+$\langle (\mathbf{1} \otimes \tilde{S}) (z) ,
+\tilde{\phi}\rangle \geq 0$, which contradicts \eqref{eq:Random6347},
+and so $\tilde{\phi}$ is separable on
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$. $\Box$ \\
+That essentially generalizes the result of St{\o}rmer's, who proved a similar theorem under
+additional conditions. Namely, he used all positive linear maps and assumed that $\mathcal{B}$
+was an UHF algebra \cite{Stormer2009}.
+

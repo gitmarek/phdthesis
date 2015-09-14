@@ -1,0 +1,763 @@
+\chapter{Kryterium separowalności stanów na iloczynie tensorowym
+algebr von Neumanna}
+\label{chp:PHcrit}
+
+W niniejszym rozdziale przedstawimy dowód twierdzenia
+opublikowanego pierwotnie w pracy
+\cite{miller2014horodeckis}
+i uogólniającego kryterium Peresa-Horodeckich dla układów
+kwantowych opisywanych przez algebry von Neumanna,
+spośród których jedna jest algebrą iniektywną.
+Poczynając od najprostszego przypadku algebr skończenie wymiarowych,
+będziemy w kolejnych krokach dążyć do coraz większego stopnia
+ogólności dzięki znajomości struktury algebr kolejnych typów.
+
+\begin{Theorem}
+    \label{thm:PHcrit}
+    Niech $\mathfrak{M}$ i  $\mathfrak{N}$ będą algebrami von Neumanna.
+    Niech także  $\mathfrak{M}$ będzie algebrą iniektywną.
+    Wówczas stan $\tilde{\phi} \in \mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$
+    jest separowalny wtedy i tylko wtedy, gdy funkcjonał
+    $\tilde{\phi} \circ (\mathbf{1} \otimes S)$
+    jest dodatni dla każdego dodatniego normalnego odwzorowania skończonego rzędu
+    $S\!: \mathfrak{M} \rightarrow \mathfrak{N}$.
+\end{Theorem}
+
+\begin{proof}
+
+
+Załóżmy, że $\tilde{\phi}$ jest stanem separowlnym.
+Niech $S: \mathfrak{M} \rightarrow \mathfrak{N}$ będzie
+dodatnim normalnym odwzorowaniem, a $S_*$ odwzorowaniem predualnym.
+Niech $z$ będzie dodatnim elementem
+$\mathfrak{M} \bar{\otimes} \mathfrak{M}$.
+Ponieważ
+\begin{equation}
+    \tilde{\phi} =\lim \limits_{n \rightarrow \infty}
+\sum_{i=1}^{n}\alpha_i^{(n)} \omega_{i} \otimes \varphi_{i},
+\end{equation}
+gdzie
+$\alpha_i^{(n)}\geq 0$, $\sum_{i=1}^n\alpha_i^{(n)}=1$,
+$\omega_{i}\in\mathcal{S}(\mathfrak{M})$
+oraz
+$\varphi_{i}\in\mathcal{S}(\mathfrak{N})$,
+więc
+\begin{equation}
+ \langle (\mathbf{1} \otimes S)(z), \tilde{\phi} \rangle =
+ \lim \limits_{n \rightarrow \infty}\sum \limits_{i = 1}^{n}\alpha_i^{(n)}
+ \langle z, \omega_{i} \otimes S_{*} \varphi_{i} \rangle \geq 0.
+\end{equation}
+Dowód przeciwnej implikacji rozłożymy na ciąg następujących po sobie kroków.
+\end{proof}
+
+\paragraph{}
+{\it Krok 1.}
+\begin{Lemma}
+\label{lem:netinvNalg}
+Załóżmy, że algebra $\mathfrak{M}$ jest iniektywna oraz
+$(A_{\lambda})$ to net of kompletnie dodatnich kontrakcji skończonego rzędu na
+$\mathfrak{M}_{*}$, takich że
+$A_{\lambda} \stackrel{\lambda}{\rightarrow} \mathbf{1}$ w silnej topologii.
+Jeżeli $z \in \mathfrak{M} \bar{\otimes} \mathfrak{N}$, wówczas
+$z = {\rm w}^*-\lim_{\lambda} \, (\mathbf{1} \otimes F^{-1}(z) )
+(\theta^{-1} (A_{\lambda}))$.
+\end{Lemma}
+\begin{proof}
+Ponieważ każda z norm $||A_{\lambda}||_{\mathcal{CB}} = || A_{\lambda} ||  \leq 1$,
+zatem wystarczy pokazać, że dla dowolnego $\omega \in \mathfrak{M}_{*}$
+i $\varphi \in \mathfrak{N}_{*}$,
+mamy
+$\langle z_{\lambda}, \omega \otimes \varphi\rangle{\longrightarrow}
+\langle z , \omega \otimes \varphi\rangle$,
+gdzie przez $(z_{\lambda})$ oznaczyliśmy net $z_{\lambda} = (\mathbf{1} \otimes \
+F^{-1}(z))(\theta^{-1}(A_{\lambda})) \in \mathfrak{M} \otimes \mathfrak{N}$.
+Kładąc
+$\theta^{-1}(A_{\lambda}) = \sum_{i=1}^{N_{\lambda}} \
+a_{i}^{\lambda} \otimes \omega_{i}^{\lambda}$, dostajemy
+\begin{multline}
+\langle z_{\lambda}, \omega \otimes \varphi\rangle =
+\sum \limits_{i=1}^{N_{\lambda}}
+\langle a_{i}^{\lambda} \otimes F^{-1}(z) \omega_{i}^{\lambda} ,\
+\omega \otimes \varphi \rangle 
+= \sum \limits_{i=1}^{N_{\lambda}}
+\langle  a_{i}^{\lambda}, \omega \rangle
+\langle z,  \omega_{i}^{\lambda} \otimes \varphi \rangle = \\
+= \langle z , (A_{\lambda} \omega) \otimes \varphi \rangle.
+\end{multline}
+Ponieważ $A_{\lambda} \stackrel{\lambda}{\rightarrow} \mathbf{1}$ w silnej topologii,
+otrzymujemy:
+\begin{equation}
+| \langle z - z_{\lambda}, \omega\otimes \varphi \rangle | \
+\leq || A_{\lambda} \omega - \omega || \, ||\varphi|| \, ||z|| \
+\stackrel{\lambda}{\longrightarrow} 0.
+\end{equation}
+\end{proof}
+
+\begin{Corollary}
+\label{cor:denseness}
+Powyższy lemat pokazuje, że $C_0^*$ jest $^{*}$-słabo gęsty w $C_1^*$.
+Rzeczywiście, dla
+$z \in C_{1}^{*}$, skoro $(A_{\lambda})$ jest netem kompletnie dodatnich
+odwzorowań skończonego rzędu, każde $z_{\lambda} \in C_{0}^{*}$.
+\end{Corollary}
+ 
+{\it Krok 2: Faktory skończone, iniektywne i ośrodkowe.}\\
+Załóżmy, że $\mathcal{R}$ jest iniektywnym ośrodkowym faktorem typu
+II$\phantom{}_{1}$ \cite{Takesaki3};
+niech także $\tau$ będzie znormalizowanym śladem na $\mathcal{R}$.
+Algebra von Neumanna jest z definicji \emph{ośrodkowa},
+jeśli działa na ośrodkowej przestrzeni Hilberta.
+Ponieważ $\mathcal{R}$ jest algebrą skończoną, więc istnieje zanurzenie 
+$i: \mathcal{R} \rightarrow
+\mathcal{R}_{*}$, zadane przez $i(x) = \omega_{x}$, $\omega_{x}(y) = \tau(xy)$,
+dla każdego $x,y \in \mathcal{R}$.
+Jasne jest, że $i(\mathcal{R})$
+jest zbiorem gęstym normowo w $\mathcal{R}_{*}$.
+Warto przy tym zauważyć, że to zanurzenie jest odwzorowaniem dodatnim i kompletnie
+ograniczonym, ale nie kompletnie dodatnim.
+Następująca, jawna konstrukcja reprezentacji $\mathcal{R}$
+pochodzi z książki Evansa \cite{Evans1998}, Przykład 5.16.
+
+Niech $\mathcal{A}_{0}$ będzie sumą mnogościową wstępującego ciągu algebr macierzowych:
+\begin{equation}
+M_{2}(\mathbb{C}) \subset
+M_{2}(\mathbb{C}) \otimes M_{2}(\mathbb{C}) \subset
+M_{2}(\mathbb{C}) \otimes M_{2}(\mathbb{C}) \otimes M_{2}(\mathbb{C}) \subset
+\ldots\, .
+\end{equation}
+Dla $n$-tej potęgi tensorowej $M_{2}(\mathbb{C})$,
+oznaczonej $M_{2}(\mathbb{C})^{\otimes n}$,
+definiujemy $\tau(x) = \frac{1}{2^{n}} {\rm Tr}(x)$,
+oraz zanurzenie
+$M_{2}(\mathbb{C})^{\otimes n}$ w $\mathcal{A}_{0}$,
+$x \mapsto x \otimes \mathbf{1} \otimes \mathbf{1} \otimes \ldots$.
+Wówczas $\tau$ jest dobrze zdefiniowanym stanem śladowym na $\mathcal{A}_{0}$.
+Niech $\mathcal{H}$ będzie ośrodkową przestrzenią Hilberta, powstałą jako uzupełnienie
+$\mathcal{A}_{0}$ względem iloczynu skalarnego
+$\langle x , y \rangle = \tau(y^{*} x )$.
+Możemy potraktować $\mathcal{A}_{0}$ jako
+\mbox{*-podalgebrę} $B(\mathcal{H})$
+pozwalając $\mathcal{A}_{0}$ działać na $\mathcal{H}$ poprzez mnożenie z lewej strony.
+Następnie zdefiniujmy algebrę von Neumanna 
+$\mathcal{R}$ jako domknięcie w słabej topologii algebry
+$\mathcal{A}_{0} \subset B(\mathcal{H})$.
+Wiadomo, że 
+$\mathcal{R}$ jest ośrodkowym faktorem typu II$\phantom{}_{1}$
+oraz że rozszerzenie funkcjonału $\tau$ na $\mathcal{R}$,
+które będziemy oznaczać tym samym symbolem,
+jest jedynym unormowanym śladem na $\mathcal{R}$. 
+Następnie, zdefiniujmy liniowe odwzorowanie
+$\beta_{0}$ na $\mathcal{A}_{0}$, takie że
+\begin{equation}
+\beta_{0}(x^{1} \otimes \ldots\otimes x^{n} \otimes \mathbf{1} \otimes \ldots ) =
+(x^{1})^{t} \otimes \ldots\otimes (x^{n})^{t} \otimes \mathbf{1} \otimes \ldots,
+\end{equation}
+gdzie $(x^{i})^{t}$ oznacza transpozycję $x^{i} \in M_{2}(\mathbb{C})$,
+$i = 1,2,\ldots,n$.
+Jasne jest,że $\beta_{0}$ to *-antyautomorfizm na $\mathcal{A}_{0}$,
+oraz że istnieje jego rozszerzenie do $\sigma$-słabo ciągłego (normalnego)
+*-anty-automorfizmu $\beta$ na algebrze $\mathcal{R}$.
+Pomimo że ani odwzorowanie $i$, ani $\beta$ nie są kompletnie dodatnie,
+$\beta$ nie jest nawet kompletnie ograniczone,
+pokażemy, że ich złożenie $i \circ \beta$ jest kompletnie dodatnią kontrakcją.
+Rzeczywiście, niech $x_{1}, x_{2}, \ldots x_{n}$ oraz
+$y_{1}, y_{2}, \ldots y_{n}$ będą elementami $\mathcal{R}$.
+Wówczas
+\begin{multline}
+\sum \limits_{i, j =1}^{n}
+\langle x_{i}^{*} x_{j}, i \circ \beta(y_{i}^{*} y_{j}) \rangle =
+\sum \limits_{i, j =1}^{n}
+\langle x_{i}^{*} x_{j}, i ( \beta( y_{j}) \beta(y_{i}^{*})) \rangle = \\
+=\sum \limits_{i, j =1}^{n}
+\tau \left(\beta( y_{j}) \beta(y_{i}^{*}) x_{i}^{*} x_{j}\right) =
+\sum \limits_{i, j =1}^{n} \tau \left( (x_{i} \beta(y_{i}) )^{*} \,  x_{j} \beta( y_{j})
+\right) =\\
+= \tau \left( \
+\left( \sum \limits_{i=1}^{n} x_{i} \beta(y_{i}) \right)^{*}
+\left( \sum \limits_{j=1}^{n} x_{j} \beta(y_{j}) \right)\right ) \geq 0,
+\end{multline}
+co dowodzi, że $i \circ \beta$ jest kompletnie dodatnie.
+Ponieważ oba odwzorowania, $i$ oraz $\beta$ są kontraktywne,
+zatem również $i\circ\beta$ ma normę mniejszą od jedności.
+Od tego momentu będziemy używać skrótowej notacji $i\beta$.
+
+Załóżmy obecnie, że
+$T: \mathcal{R} \rightarrow M_{2}(\mathbb{C})^{\otimes n}\subset \mathcal{R}$
+jet normalnym odwzorowaniem z $\mathcal{R}$ na $n$-tą potęgę tensorową algebry 
+$M_{2}(\mathbb{C})$, którą w naturalny sposób traktujemy jako podalgebrę $\mathcal{R}$.
+Stosując pewną wersję izomorfizmu Choi-Jamiolkowskiego
+\cite{choi1975completely,jamiolkowski1974effective},
+możemy popatrzeć na odwzorowanie predualne $T_{*}$ jako na działające na 
+iloczynie tensorowym $\mathcal{R}\otimes\mathcal{R}$.
+Mianowicie, niech $e_{ij}$ będą macierzami z $M_{2}(\mathbb{C})$
+o zerowych elementach, poza elementem $ij$, równym 1.
+Rozważmy elementy bazy w
+$M_{2}(\mathbb{C})^{\otimes n}$,
+$e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}} \
+\otimes \ldots \otimes e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots$,
+gdzie każde z indeksów $i_{1}, j_{1}, \ldots, i_{n}, j_{n}$
+przybiera wartości 1 lub 2.
+Wówczas, dla dowolnego $x \in \mathcal{R}$ i
+$\omega \in \mathcal{R}_{*}$, mamy
+\begin{eqnarray}
+\langle x, T_{*} \omega \rangle =\langle T x,  \omega \rangle
+=  2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
+\tau \left((Tx) e_{j_{1} i_{1}} \otimes \ldots \otimes e_{j_{n} i_{n}}
+\otimes \mathbf{1} \otimes \ldots \right) \times \nonumber\\
+\langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
+\otimes \mathbf{1} \otimes \ldots ,\omega \rangle\nonumber\\
+= 2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}} \tau \left((Tx)
+\beta (e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
+\otimes \mathbf{1} \otimes \ldots ) \right) \times \nonumber\\
+\langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n}j_{n}}
+\otimes \mathbf{1} \otimes \ldots  , \omega \rangle = \nonumber\\
+=  2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
+\langle Tx ,i \beta (e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
+\otimes \mathbf{1} \otimes \ldots) \rangle\times\nonumber\\
+\langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
+\otimes \mathbf{1} \otimes \ldots,\omega \rangle .
+\end{eqnarray}
+
+Stąd, jeśli zdefiniujemy dodatni element $\mathcal{R}\otimes\mathcal{R}$ poprzez
+\begin{eqnarray}
+m_{n} = 2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
+\left( e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}} \otimes \ldots \otimes
+e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots \right) \otimes \nonumber\\
+\left( e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}}\otimes \ldots \otimes
+e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots\right),
+\end{eqnarray}
+możemy napisać
+\begin{equation}
+\label{eq:thetainverse}
+\theta^{-1}(T_{*}) =(\mathbf{1} \otimes (T_{*} \circ i \beta)) (m_{n}).
+\end{equation}
+
+\begin{Lemma}
+\label{lem:netininjectivefactor}
+Niech $\mathcal{R}$
+będzie ośrodkowym iniektywnym faktorem typu II$\phantom{}_{1}$;
+niech także $z \in C_{1}^{*} \subset \mathcal{R} \bar{\otimes} \mathfrak{N}$.
+Wówczas istnieje net $S_{\lambda}$ normalnych dodatnich odwzorowań skończonego rzędu,
+$S_{\lambda}: \mathcal{R} \rightarrow \mathfrak{N}$, 
+oraz ciąg $(m_{n(\lambda)})$ dodatnich elementów $\mathcal{R} \otimes \mathcal{R}$,
+takie że
+\begin{equation}
+z = {\rm w^*-} \lim \limits_{\lambda}(\mathbf{1} \otimes S_{\lambda})(m_{n(\lambda)}).
+\end{equation}
+\end{Lemma}
+\begin{proof}
+Niech $(A_{\lambda})$ będzie netem kompletnie dodatnich kontrakcji
+skończonego rzędu na $\mathcal{R}_{*}$,
+zbiegających silnie do odwzorowania identycznościowego.
+Możemy założyć, że dualne odwzorowania $A_{\lambda}^{*}$
+mają obraz zawarty $M_{2}(\mathbb{C})^{\otimes n(\lambda)}$.
+Wtedy, ze wzoru \eqref{eq:thetainverse} wynika, że
+\begin{equation}
+\theta^{-1} (A_{\lambda}) =
+( \mathbf{1} \otimes (A_{\lambda} \circ i\beta)) (m_{n(\lambda)}).
+\end{equation}
+Zdefiniujmy net $(S_{\lambda})$ poprzez
+$S_{\lambda} = F^{-1}(z) \circ A_{\lambda} \circ i\beta$.
+Skoro $z \in C_{1}^{*}$,
+więc każde $S_{\lambda}$ jest dodatnim, normalnym odwzorowaniem skończonego rzędu
+na $\mathcal{R}$.
+Ponieważ
+\begin{equation}
+(\mathbf{1} \otimes S_{\lambda}) (m_{n(\lambda)}) =
+(\mathbf{1} \otimes F^{-1}(z)) (\theta^{-1}(A_{\lambda})),
+\end{equation}
+teza wynika wprost z Lematu \ref{lem:netinvNalg}.
+\end{proof}
+\begin{Lemma}
+\label{lem:step2}
+Niech $\tilde{\phi}$ będzie stanem na
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+gdzie $\mathfrak{M}$ jest skończonym, iniektywnym i ośrodkowym faktorem.
+Jeżeli $\tilde{\phi} \circ ( \mathbf{1} \otimes S)$ 
+jest dodatnim funkcjonałem na
+$\mathfrak{M} \bar{\otimes} \mathfrak{M}$
+dla każdego normalnego dodatniego odwzorowania skończonego rzędu
+$S: \mathfrak{M} \rightarrow \mathfrak{N}$,
+wówczas $\tilde{\phi}$ jest stanem separowalnym.
+\end{Lemma}
+\begin{proof}
+Jeżeli $\mathfrak{M}$ jest faktorem typu I, tzn. $\mathfrak{M}$ jest
+w rzeczywistości skończenie wymiarową algebrą macierzy,
+wówczas dowód tezy został podany w pracy Horodeckich
+\cite{horodecki1996separability}.
+W takim przypadku, zamiart ciągu $(m_{n(\lambda)})$,
+wystarczy rozważyć jedynie pojedynczy,
+,,maksymalnie splątany'' element iloczynu tensorowego.
+Przypuśćmy zatem, że $\mathfrak{M} = \mathcal{R}$.
+Wystarczy dowieść, że
+$\tilde{\phi}(z) \geq 0$ dla każdego
+$z \in C_{1}^{*} \subset \mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+Z Lematu \ref{lem:netininjectivefactor} wynika, że
+$z = {\rm w}^*- \lim_{\lambda} (\mathbf{1} \otimes S_{\lambda})(m_{n(\lambda)})$,
+gdzie każde $S_{\lambda}$
+jest dodatnie, normalne i skończonego rzędu,
+a każde $m_{n(\lambda)}$ jest dodatnim elementem $\mathfrak{M} \otimes \mathfrak{M}$.
+Korzystając z założeń otrzymujemy
+\begin{equation}
+\langle z , \tilde{\phi} \rangle =\lim \limits_{\lambda}
+\langle ( \mathbf{1} \otimes S_{\lambda}) (m_{n(\lambda)}), \tilde{\phi}
+\rangle \geq 0.
+\end{equation}
+\end{proof}
+
+{\it Krok 3: Skończone iniektywne algebry ośrodkowe}.\\
+W tym kroku pozbędziemy się założenia, że $\mathfrak{M}$ jest faktorem.
+Jeśli $\tilde{\phi}$ jest stanem na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+wówczas $\tilde{\phi}$ jest separowalny,
+wtedy i tylko wtedy, gdy funkcjonał
+$\tilde{\phi}_{p} (z) = \langle (p \otimes \mathbf{1}) z, \tilde{\phi}\rangle$
+jest separowalny na $p\mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+dla każdego centralnego projektora $p \in \mathfrak{M}$.
+Zatem, możemy rozpatrzeć oddzielnie algebry von Neumanna
+typu I$\phantom{}_{n}$ i II$\phantom{}_{1}$.
+\begin{Lemma}
+\label{lem:step3}
+Teza Lematu \ref{lem:step2} jest prawdziwa, gdy $\mathfrak{M}$
+jest skończoną iniektywną ośrodkową algebrą von Neumanna.
+\end{Lemma}
+\begin{proof}
+Jeśli $\mathfrak{M}$ jest algebrą von Neumanna typu I$\phantom{}_{n}$,
+wówczas $\mathfrak{M}$ jest izomorficzna z algebrą
+$M_{n}(\mathbb{C}) \bar{\otimes} \mathcal{A}$,
+gdzie $\mathcal{A}$ jest algebrą abelową
+(por. Blackaddar\cite{Blackadar2006}, III.1.5.12).
+Jeżeli zaś $\mathfrak{M}$ jest typu II$\phantom{}_{1}$,
+wówczas $\mathfrak{M} \cong  \mathcal{R}\bar{\otimes}\mathcal{C}$,
+gdzie $\mathcal{C}$ jest centrum $\mathfrak{M}$
+(por. Takesaki\cite{Takesaki3}, Theorem XVI.1.5).
+Dalsza część dowodu bierze pod uwagę jedynie fakt, że $\mathfrak{M}$
+może zostać rozbita na iloczyn tensorowy skończonego ośrodkowego faktora i
+abelowej algebry von Neumanna.
+Przedstawimy zatem dowód jedynie dla przypadku algebry typu II$\phantom{}_{1}$.
+
+Zacznijmy od przedstawienia abelowej algebry $\mathcal{C}$ jako
+$L^{\infty}(\Gamma, \mu)$, czyli algebry funkcji istotnie ograniczonych
+na lokalnie zwartej przestrzeni topologicznej $\Gamma$,
+wraz z dodatnią miarą Radona $\mu$.
+Co więcej, ponieważ $\mathcal{C}$ jest przemienna,
+$\mathfrak{M} \cong L^{\infty}_{\mathcal{R}}(\Gamma, \mu)$,
+gdzie $L^{\infty}_{\mathcal{R}}(\Gamma, \mu)$  oznacza
+funkcje istotnie ograniczone na $\Gamma$, przyjmujące wartości w $\mathcal{R}$;
+ponadto $\mathfrak{M}_{*} \cong L^{1}_{\mathcal{R}_{*}}(\Gamma, \mu)$,
+przestrzeń funkcji całkowalnych na $\Gamma$, przyjmujących wartości w $\mathcal{R}_{*}$
+(por. Takesaki \cite{Takesaki1}, Twierdzenie IV.7.17).
+Dla każdego $x \in \mathfrak{M}$ i $\omega \in \mathfrak{M}_{*}$,
+istnieją funkcje $x:\Gamma\to\mathcal{R}$ oraz
+$\omega:\Gamma\to\mathcal{R}_{*}$, takie że
+\begin{equation}
+\langle x, \omega \rangle =\int \limits_{\Gamma}
+\langle x(\gamma), \omega(\gamma) \rangle \, d \mu(\gamma),
+\end{equation}
+przy czym $||\omega|| = \int_{\Gamma} ||\omega(\gamma)|| \, d \mu(\gamma)$
+i $||x|| = \sup || x(\gamma) ||$.
+Należy zaznaczyć, że z definicji przestrzeni $L^{1}_{\mathcal{R}_{*}}(\Gamma, \mu)$,
+wynika, iż dla każdego zwartego zbioru
+$K \subset \Gamma$ and $\epsilon >0$,
+istnieje zwarty podzbiór $K^{'} \subset K$,
+taki że $\mu (K \setminus K^{'}) < \epsilon$
+oraz funkcja $\gamma \mapsto \omega(\gamma)$ jest ciągła na $K^{'}$.
+
+Dla każdego mierzalnego podzbioru $E \subset \Gamma$
+zdefiniujmy odwzorowanie
+$i_{E}: \mathcal{R} \rightarrow \mathfrak{M}$ poprzez
+$i_{E}(x_{0})(\gamma) = \chi_{E}(\gamma) \, x_{0}$,
+gdzie $x_{0} \in \mathcal{R}$
+oraz $\chi_{E}$ jest funkcją wskazującą zbioru $E$.
+Odwzorowanie to jest kompletnie dodatnie i normalne,
+a nawet jest *-homomorfizmem.
+Niech więc $\tilde{\phi}_{E} = \tilde{\phi} \circ (i_{E} \otimes \mathbf{1})$,
+dla każdego $E \subset \Gamma$, $0<\mu(E)<\infty$.
+Wówczas $\tilde{\phi}$ jest separowalny, wtedy i tylko wtedy, gdy
+każdy funkcjonał $\tilde{\phi}_{E}$ jest z dokładnością do stałej
+normującej separowalnym stanem na $\mathcal{R} \bar{\otimes} \mathfrak{N}$.
+Aby nie zaciemniać aktualnej linii rozumowania,
+odłóżmy dowód tego raczej technicznego faktu do następnego lematu.
+
+Niech $S_{0}: \mathcal{R} \rightarrow \mathfrak{N}$ będzie dodatnim normalnym
+odwzorowaniem skończonego rzędu.
+Zdefiniujmy 
+$S_{E}: \mathfrak{M} \rightarrow \mathfrak{N}$ przez
+\begin{equation}
+S_{E}(x(\cdot)) = \frac{1}{\mu(E)}
+\int \limits_{E} S_{0}x(\gamma) \, d\mu(\gamma),
+\end{equation}
+rozumiane jako całkę Bochnera w $\mathfrak{N}$.
+Całka taka istnieje na mocy następującego argumentu.
+Ponieważ $S_{0}$ ma skończony rząd, funkcja
+$\gamma \mapsto S_{0}x(\gamma)$ jest słabo mierzalna.
+Rzecz jasna obraz $S_{0}$ jest przestrzenią ośrodkową i dlatego,
+z twierdzenia Pettisa o mierzalności,
+funkcja podcałkowa jest mierzalna w sensie Bochnera.
+Jest całkowalność jest teraz oczywista.
+Ponadto, $S_{E}$ jest dodatnie, normalne i również posiada skończony rząd.
+Zauważając, że dla każdego $x_{0} \in \mathcal{R}$,
+$S_{0}x_{0} = S_{E} \circ i_{E} (x_{0})$ oraz
+biorąc dodatni element $z_{0} \in \mathcal{R} \otimes \mathcal{R}$,
+na mocy głównego założenia dostajemy
+\begin{equation}
+\langle (\mathbf{1} \otimes S_{0})(z_{0}) , \tilde{\phi}_{E} \rangle =
+\langle (\mathbf{1} \otimes S_{E})(i_{E} \otimes i_{E})(z_{0}),
+\tilde{\phi} \rangle \geq 0.
+\end{equation}
+Z Lematu 3.3, $\tilde{\phi}_{E}$ jest separowalny i dlatego również
+$\tilde{\phi}$ jest separowalny,
+zakładając jedynie, że następny lemat jest prawdziwy.
+\end{proof}
+
+\begin{Lemma}
+Stan $\tilde{\phi}$ na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$
+jest separowalny, wtedy i tylko wtedy, gdy każdy funkcjonał $\tilde{\phi}_{E}$
+jest z dokładnością do stałej normującej separowalnym stanem na
+$\mathcal{R} \bar{\otimes} \mathfrak{N}$
+dla każdego mierzalnego zbioru $E \subset \Gamma$,
+takiego że $\mu(E) < \infty$.
+\end{Lemma}
+\begin{proof}
+Z faktu, że $\tilde{\phi}$ jest separowalny, w łatwy sposób wynika, że również
+$\tilde{\phi}_{E}$ jest separowalny.
+Odwrotnie, załóżmy, że każdy funkcjonał $\tilde{\phi}_{E}$ jest separowalny.
+Niech $x(\cdot) \in \mathfrak{M}$.
+Na mocy elementarnego rozumowania,
+podobnego do konstrukcji całki Lebesgue'a,
+można pokazać, że ponieważ $\mathfrak{M}$ jest ośrodkową algebrą von Neumanna,
+istnieje ciąg funkcji prostych
+\begin{equation}
+x_{n}(\cdot) =     \sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot)\, x_{k}^{(n)},
+\end{equation}
+gdzie
+\begin{equation}
+\label{eq:integral}
+x_{k}^{(n)} = \frac{1}{\mu(B_{k}^{(n)})}
+\int \limits_{B_{k}^{(n)}} x(\gamma) \, d\mu(\gamma)\quad \in \mathcal{R},
+\end{equation}
+i każde $B_{k}^{(n)} \subset \Gamma$ jest zbiorem mierzalnym oraz
+$0< \mu(B_{k}^{(n)}) < \infty$;
+co więcej $\langle x_{n}, \omega \rangle\stackrel{n}{\rightarrow}\langle x,
+\omega \rangle$ dla każdego $\omega \in \mathfrak{M}_{*}$.
+Całka \eqref{eq:integral} odgrywa tu rolę wartości średniej $x(\cdot)$
+na zbiorze $B_{k}^{(n)}$ i jest rozumiana w następujący sposób.
+Ponieważ dla każdego $\omega_{0} \in \mathcal{R}_{*}$,
+funkcja $\gamma \mapsto \langle x(\gamma), \omega_{0} \rangle$
+jest mierzalna, więc jeśli $E \subset \Gamma$ jest zbiorem mierzalnym,
+$\mu(E) < \infty$,
+wówczas całka $\int_{E} \langle x(\gamma), \omega \rangle \, d \mu(\gamma)$
+definiuje ograniczony funkcjonał liniowy na przestrzeni $\mathcal{R}_{*}$,
+tzn. element z $\mathcal{R}$.
+
+Niech teraz $\tilde{\phi} =\lim_{n\to\infty}\sum_{i=1}^{n}\alpha_i(\omega_{i}\otimes\varphi_{i})$,
+gdzie granicę bierze się w projektywnej tensorowej normie przestrzeni operatorowych
+$|| \cdot ||_{\wedge}$ on $\mathfrak{M}_{*} \hat{\otimes} \mathfrak{N}_{*}$,
+oraz niech $z \in C_{0}^{*}$, $z = \sum_{j=1}^{M} x_{j} \otimes y_{j}$.
+Jasne jest, że rodzina zbiorów $B_{k}^{(n)}$ we wzorze \eqref{eq:integral}
+może zostać wybrana dla każdego $x_{j}$, $j = 1,2, \ldots, M$; tzn.
+istnieją ciągi $(x_{j,n})_{n=1}^{\infty}$, zadane przez
+\begin{equation}
+x_{j,n}(\cdot) =     \sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot)
+\, x_{j,k}^{(n)},
+\end{equation}
+gdzie
+\begin{equation}
+\label{eq:integralxes}
+x_{j,k}^{(n)} = \frac{1}{\mu(B_{k}^{(n)})}
+\int \limits_{B_{k}^{(n)}} x_{j}(\gamma) \, d\mu(\gamma)
+\quad \in \mathcal{R},
+\end{equation}
+takie że $x_{j,n} \stackrel{n}{\longrightarrow} x_{j}$
+w topologii *-słabej na  $\mathfrak{M}$.
+
+Zdefiniujmy następnie odwzorowanie
+$\pi_{E}: \mathcal{R}_{*} \rightarrow \mathfrak{M}_{*}$
+poprzez $\pi_{E}(\omega_{0})(\gamma) =\frac{1}{\mu(E)} \chi_{E}(\gamma)\omega_{0}$.
+Łatwo sprawdzić, że $\pi_{E}$ jest kompletnie dodatnią kontrakcją dla każdego
+mierzalnego zbioru $E \subset \Gamma$, takiego że $\mu(E) < \infty$;
+a przez to, z założenia, każdy funkcjonał
+\begin{equation}
+\tilde{\phi}_{n} = \sum \limits_{k=1}^{n}
+(\pi_{B_{k}^{(n)}} \otimes \mathbf{1})
+( \tilde{\phi}_{B_{k}^{(n)}} )
+\end{equation}
+jest separowalny na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+Pokażemy, że $\langle z , \tilde{\phi}_{n} \rangle
+\stackrel{n}{\rightarrow}\langle z , \tilde{\phi} \rangle$.
+Niech $\epsilon > 0$.
+Wybierzmy liczbę naturalną $L$, taką że
+$|| \sum_{i=L+1}^{\infty}\alpha_i(\omega_{i} \otimes \varphi_{i}) ||_{\wedge}
+\leq \frac{\epsilon}{4 ||z||}$.
+Wtedy
+\begin{eqnarray}
+\label{eq:Ineq}
+|\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle| =
+|\langle z, \tilde{\phi} -\sum \limits_{k=1}^{n} \tilde{\phi}
+\circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} \otimes \mathbf{1})
+\rangle | \nonumber\\
+\leq \Big |\langle z,\sum \limits_{i=1}^{L} \omega_{i} \otimes \varphi_{i} -
+\sum \limits_{i'=1}^{L}\sum \limits_{k=1}^{n}
+\omega_{i'} \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}})
+\otimes \varphi_{i'}
+\rangle \Big | + \frac{\epsilon}{2},
+\end{eqnarray}
+ponieważ $\sum_{k=1}^{n} i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}}$
+jest kontrakcją na $\mathfrak{M}$.
+Odwzorowanie dualne
+$\pi^{*}_{E}: \mathfrak{M} \rightarrow \mathcal{R}$
+działa na $x(\cdot) \in \mathfrak{M}$ przez
+\begin{equation}
+\label{eq:intergralpi}
+\pi^{*}_{E}(x(\cdot)) = \frac{1}{\mu(E)}
+\int \limits_{E} x(\gamma) \, d\mu(\gamma).
+\end{equation}
+Niech $N$ będzie liczbą naturalną, taką że dla każdego $i = 1, 2, \ldots, L$,
+oraz $j = 1,2, \ldots M$, jeśli tylko $n \geq N$,
+to $|\langle x_{j} - x_{j,n}, \omega_{i} \rangle| \leq
+\frac{\epsilon}{2 L M c_{L} }$, gdzie
+$c_{L} = \max \{ |\langle y_{j}, \varphi_{i} \rangle |$,
+$i = 1,2, \ldots, L$; $j = 1,2, \ldots, M \}$.
+Korzystając ze wzrorów \eqref{eq:intergralpi} i \eqref{eq:integralxes},
+obliczmy
+\begin{eqnarray}
+\sum \limits_{k=1}^{n} i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} (x_{j})
+=\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
+\pi^{*}_{B_{k}^{(n)}} (x_{j}) \nonumber\\
+=\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
+\frac{1}{\mu(B_{k}^{(n)})}
+\int \limits_{B_{k}^{(n)}} x_{j}(\gamma) \, d\mu(\gamma)
+=\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
+x_{j,k}^{(n)}=x_{j,n}.
+\end{eqnarray}
+Kontynuując nierówność \eqref{eq:Ineq}, otrzymujemy dla $n \geq N$
+\begin{eqnarray}
+|\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle|\leq \Big |\langle z,
+\sum \limits_{i=1}^{L} \omega_{i} \otimes \varphi_{i} -\sum \limits_{i'=1}^{L}
+\sum \limits_{k=1}^{n}\omega_{i'} \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}})
+\otimes \varphi_{i'}\rangle \Big | + \frac{\epsilon}{2} \nonumber\\
+= \Big |  \sum \limits_{j=1}^{M}\left( \sum \limits_{i =1}^{L}
+\langle x_{j}, \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle -
+\sum \limits_{i'=1}^{L} \sum \limits_{k=1}^{n}     
+\langle i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} (x_{j}) ,
+\omega_{i'} \rangle \langle y_{j}, \varphi_{i'} \rangle
+\right) \Big |  + \frac{\epsilon}{2}\nonumber\\
+= \Big | \sum \limits_{j=1}^{M}\left( \sum \limits_{i=1}^{L}
+\langle x_{j}, \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle  -
+\sum \limits_{i'=1}^{L}\langle x_{j,n} , \omega_{i'} \rangle \langle y_{j}, \varphi_{i'} \rangle
+\right) \Big |  + \frac{\epsilon}{2} \nonumber\\
+= \Big | \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
+\left(\langle x_{j}, \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle  -
+\langle x_{j,n} , \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle
+\right) \Big |  + \frac{\epsilon}{2} \nonumber\\
+\leq \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
+c_{L}  \, \left | \langle    x_{j}, \omega_{i} \rangle -
+\langle x_{j,n} , \omega_{i} \rangle\right | + \frac{\epsilon}{2}\nonumber\\
+\leq \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
+c_{L}  \frac{\epsilon}{2 L M c_{L}}     + \frac{\epsilon}{2}
+=  \frac{\epsilon}{2} +  \frac{\epsilon}{2} =  \epsilon.
+\end{eqnarray}
+Dla  $\langle z , \tilde{\phi} \rangle  =
+\lim_{n} \langle z , \tilde{\phi}_{n} \rangle \geq 0$,
+skoro $z$ było dowolnym elementem z $C_{0}^{*}$,
+na mocy Wniosku \ref{cor:denseness},
+że $\tilde{\phi}$ stanem separowalnym.
+\end{proof}
+
+{\it Krok 4: Skończone algebry iniektywne}.\\
+Aby nie zakładać dłużej ośrodkowości algebry $\mathfrak{M}$,
+posłużymy się następującym rozumowaniem.
+Niech $\mathfrak{M}$ będzie skończoną iniektywną algebrą von Neumanna oraz
+niech $\tilde{\phi}$ będzie stanem na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+takim że $\tilde{\phi} \circ (\mathbf{1} \otimes S) \geq 0$
+dla każdego dodatniego odwzorowania skończonego rzędu
+$S:\mathfrak{M} \rightarrow \mathfrak{N}$.
+W świetle dyskusji w książce M.\,Takesaki: \cite{Takesaki3}, s. 178,
+dla każdego skończonego zbioru
+$\{ \mathbf{1}, x_{1}, x_{2}, \ldots, x_{n} \} \subset \mathfrak{M}$,
+istnieje skończona ośrodkowa algebra iniektywna
+$\mathfrak{S} \subset \mathfrak{M}$,
+taka że dla każdego $i =1, 2, \ldots n$, $x_{i} \in \mathfrak{S}$.
+Co więcej, $\mathfrak{S}$ 
+jest obrazem normalnego odwzorowania projektywnego
+(\emph{conditional expectation}) $\mathcal{E}$ of $\mathfrak{M}$.
+Pokażmy, że $\tilde{\phi}$ jest w słabej topologii granicą ciągu stanów separowalnych.
+Rzeczywiście, niech wszystkie skończone podzbiory $\mathfrak{M}$,
+uporządkowane przez operację zawierania,
+stanowią indeksy netu $(\mathcal{E}_{\mu})$
+odwzorowań projektywnych $\mathfrak{M}$
+na ośrodkowe podalgebry $\mathfrak{S}_{\mu}$,
+zawierające właśnie te skończone zbiory.
+Wówczas, obcięcie $S|_{\mathfrak{S}_{\mu}}$ odwzorowania $S$
+do $\mathfrak{S}_{\mu}$ jest również normalne i dodatnie. 
+Z Lematu \ref{lem:step3}, obcięcie $\tilde{\phi}$ do
+$\mathfrak{S}_{\mu} \bar{\otimes} \mathfrak{N}$
+jest funkcjonałem separowalnym, a zatem każdy stan
+$\tilde{\phi}_{\mu} = \tilde{\phi}|_{\mathfrak{S}_{\mu}
+\bar{\otimes} \mathfrak{N}} \circ (\mathcal{E}_{\mu} \otimes \mathbf{1})$
+jest również separowalny.
+Łatwo dowieść, że net $(\tilde{\phi}_{\mu})$ zbiega słabo do $\tilde{\phi}$.
+Skoro zbiór stanów separowalnych jest wypukły,
+$\tilde{\phi}$ jest także granicą w normie stanów separowalnych, a zatem samo
+jest separowalne.
+
+{\it Krok 5: Iniektywne algebry półskończone}.
+
+W tym kroku osłabimy założenie, że $\mathfrak{M}$ jest algebrą skończoną.
+\begin{Lemma}
+Teza lematu \ref{lem:step2} jest słuszna, gdy
+$\mathfrak{M}$ jest iniektywną półskońcozną algebrą von Neumanna.
+\end{Lemma}
+\begin{proof}
+Dla każdego skończonego niezerowego projektora $p \in \mathfrak{M}$,
+przez $\mathfrak{M}_{p}$ oznaczmy skończoną algebrę von Neumanna
+$p \mathfrak{M} p$.
+Niech $S : \mathfrak{M}_{p} \rightarrow \mathfrak{N}$ będzie odwzorowaniem
+dodatnim i normalnym.
+Definiujemy $S_{p} : \mathfrak{M} \rightarrow \mathfrak{N}$
+przez $S_{p}(x) = S(pxp)$, $x \in \mathfrak{M}$,
+które jest również dodatnie i normalne.
+Niech $T_{p}x = p x p$, $x \in \mathfrak{M}$.
+Ponieważ odwzorowanie $T_{p}$ jest kompletnie dodatnią normalną kontrakcją,
+posiada rozszerzenie do kompletnie dodatniej kontrakcji
+$T_{p} \otimes \mathbf{1}$ na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+Zatem możemy zdefiniować dodatni funkcjonał $\tilde{\phi}_{p}$ na
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$ poprzez
+$\tilde{\phi}_{p} = \tilde{\phi} \circ (T_{p} \otimes \mathbf{1})$.
+Niech $z$ będzie dodatnim elementem $\mathfrak{M}_{p} \otimes \mathfrak{M}_{p}$.
+Ponieważ istnieje dodatni element $z' \in \mathfrak{M} \otimes \mathfrak{M}$
+taki że $z = (T_{p} \otimes T_{p})(z')$, więc na mocy założenia
+\begin{equation}
+\tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}
+\circ (\mathbf{1} \otimes S)(z) =
+\tilde{\phi} \circ (\mathbf{1} \otimes S_{p})
+\left( (T_{p} \otimes \mathbf{1})(z') \right ) \geq 0.
+\end{equation}
+A zatem, z punktu 4.,
+Therefore, by Step 4,
+$\tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}$
+jest separowalny.
+Stąd wynika, że separowalny jest również $\tilde{\phi}_{p}$.
+rzeczywiście, dla $z\in C_{0}^{*}$, mamy
+$(T_{p} \otimes \mathbf{1})(z) \in
+\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}$, a więc
+\begin{equation}
+\tilde{\phi}_{p}(z) = \tilde{\phi}_{p}((T_{p} \otimes \mathbf{1}) z) =
+\tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}
+((T_{p} \otimes \mathbf{1}) z) \geq 0,
+\end{equation}
+co dowodzi, że $\tilde{\phi}_{p}$ jest separowalny.
+
+Niech znów $z \in C_{0}^{*} \subset \mathfrak{M} \otimes \mathfrak{N}$
+będzie dowolne.
+Pokażemy, że $\langle z, \tilde{\phi} \rangle \geq 0$.
+Niech $p_{\nu}$ będize netem skończonych projektorów
+półskończonej algebry $\mathfrak{M}$,
+takich że ${\rm w}^*-\lim \limits_{\nu} p_{\nu} = \mathbf{1}$.
+Ponieważ $\mathfrak{M}$ jest algebrą operatorów działającą
+na przestrzeni Hilberta,
+możemy powiedzieć, że net $p_{\nu}$ zbiega do jedności w
+$\sigma$-słabej topologii operatorowej.
+To z kolei implikuje, że
+$p_{\nu} \stackrel{\nu}{\rightarrow} \mathbf{1}$ w topologii $\sigma$-silnej,
+ponieważ $p_{\nu} = p_{\nu}^2= p_{\nu} p_{\nu}^{*}$.
+Stąd dla każdego $x \in \mathfrak{M}$ and $\omega \in \mathfrak{M}_{*}$,
+$\langle p_{\nu} x p_{\nu}, \omega \rangle\stackrel{\nu}{\rightarrow}
+\langle x, \omega \rangle$, a ponieważ
+$(T_{p_{\nu}} \otimes \mathbf{1})(z) =
+(p_{\nu} \otimes \mathbf{1}) z (p_{\nu} \otimes \mathbf{1})$,
+dostajemy $\langle z, \tilde{\phi} \rangle
+= \lim_{\nu} \langle z, \tilde{\phi}_{p_{\nu}} \rangle \geq 0$,
+co kończy dowód.
+\end{proof}
+
+{\it Krok 6: Iniektywne algebry typu III}.
+
+\begin{Lemma}
+Teza lematu \ref{lem:step2} jest prawdziwa dla iniektywnych algebr von Neumanna
+typu III.
+\end{Lemma}
+\begin{proof}
+Ponieważ $\mathfrak{M}$ jest iniektywną algebrą typu III,
+istnieje półskończona iniektywna algebra von Neumanna
+$\mathfrak{M}_{0}$ oraz projektor on normie jednostkowej
+$\mathcal{E}: \mathfrak{M}_{0} \rightarrow \mathfrak{M}$.
+Z konstrukcji $\mathfrak{M}_{0}$, możemy potraktować
+$\mathfrak{M}$ jako podalgebrę $\mathfrak{M}_{0}$.
+Co więcej, $\mathcal{E}$ jest granicą w *-słabej topologii operatorowej
+netu $(\mathcal{E}_{\lambda})$ normalnych, jednostkowych i kompletnie dodatnich
+odwzorowań $\mathcal{E}_{\lambda} : \mathfrak{M}_{0} \rightarrow \mathfrak{M}$,
+(por. Brown, Ozawa \cite{Brown2008}, Lemat 9.3.6).
+Ponadto
+$\mathfrak{M}_{0} = \mathfrak{M} \rtimes_{\alpha} \mathbb{R}$,
+gdzie chodzi o iloczyn krzyżowy względem działania modularnego
+(\emph{modular action}) $\alpha$ na $\mathfrak{M}$.
+Ponieważ $\mathfrak{M}$ jest typu III, więc
+$(\mathfrak{M} \rtimes_{\alpha} \mathbb{R}) \rtimes_{\hat{\alpha}} \mathbb{R}
+\cong \mathfrak{M} \bar{\otimes} B(L^{2}(\mathbb{R})) \cong \mathfrak{M}$,
+gdzie $\hat{\alpha}$ jest działaniem sprzężonym do $\alpha$.
+Stąd istnieje projektor o normie jednostkowej
+$\tilde{\mathcal{E}} : \mathfrak{M} \rightarrow \mathfrak{M}_{0}$.
+Analogicznie, niech $(\tilde{\mathcal{E}}_{\mu})$
+będzie netem normalnych, jednostkowych i kompletnie dodatnich odwzorowań
+$\tilde{\mathcal{E}}_{\mu}: \mathfrak{M} \rightarrow \mathfrak{M}_{0}$,
+zbiegających do $\tilde{\mathcal{E}}$ w *-słabej topologii operatorowej.
+
+Dla każdego $\lambda$, niech $\tilde{\phi}_{\lambda}$ oznacza stan na
+$\mathfrak{M}_{0} \bar{\otimes} \mathfrak{N}$, zadany przez
+$\tilde{\phi}_{\lambda} = \tilde{\phi} \circ(\mathcal{E}_{\lambda}
+\otimes \mathbf{1})$.
+Załóżmy, że każde $\tilde{\phi}_{\lambda}$ jest separowalne.
+Wówczas, obcięcie do $\mathfrak{M} \bar{\otimes} \mathfrak{N}$ jest
+z dokładnością do stałej normującej stanem separowalnym; ponadto
+$\tilde{\phi}_{\lambda} \stackrel{\lambda}{\rightarrow}
+\tilde{\phi}$ w słabej topologii.
+Na mocy standardowego argumentu o wypukłości,
+$\tilde{\phi}$ jest również granicą stanów separowalnych w silnej topologii,
+co z definicji oznacza, że $\tilde{\phi}$ jest separowalny.
+A zatem co pozostaje pokazać, to że  $\tilde{\phi}_{\lambda}$
+jest netem stanów separowalnych na $\mathfrak{M}_{0} \bar{\otimes} \mathfrak{N}$.
+W tym celu ustalmy $\lambda$ oraz załóżmy, że $\tilde{\phi}_{\lambda}$
+nie jest separowalny.
+Na mocy tego, co zostało powiedziane powyżej,
+istnieje dodatnie normalne odwzorowanie
+$S_{0}: \mathfrak{M}_{0} \rightarrow \mathfrak{N}$
+oraz dodatni element
+$z_{0} \in \mathfrak{M}_{0} \bar{\otimes} \mathfrak{M}_{0}$,
+taki że
+\begin{equation}
+\label{eq:Random20203}
+\langle(\mathbf{1} \otimes S_{0})(z_{0}),\tilde{\phi}_{\lambda}\rangle < 0.
+\end{equation}
+Co więcej, $z_{0}$ można wybrać tak, aby należało do algebraicznego
+iloczynu tensorowego $\mathfrak{M}_{0} \otimes \mathfrak{M}_{0}$.
+Stąd, ponieważ $\tilde{\mathcal{E}}$ jest suriekcją,
+istnieje dodatnie
+$z \in \mathfrak{M} \otimes \mathfrak{M}$, takie że
+$(\tilde{\mathcal{E}} \otimes \tilde{\mathcal{E}})(z) = z_{0}$.
+Niech $S_{\mu}: \mathfrak{M} \rightarrow \mathfrak{N}$
+będzie dodatnim normalnym odwzorowaniem, zadanym przez
+$S_{\mu} = S_{0} \circ \tilde{\mathcal{E}}_{\mu}$.
+Wtedy z założenia oraz ponieważ oba odwzorowania
+$\mathcal{E}_{\lambda}$ and $\tilde{\mathcal{E}}$
+są kompletnie dodatnie, mamy
+\begin{eqnarray}
+\langle(\mathbf{1} \otimes S_{0})(z_{0}),\tilde{\phi}_{\lambda} \rangle =
+\lim \limits_{\mu} \langle(\mathbf{1} \otimes S_{\mu})(\tilde{\mathcal{E}}
+\otimes \mathbf{1})(z) ,\tilde{\phi}_{\lambda}\rangle \nonumber \\
+= \lim \limits_{\mu} \langle
+(\mathbf{1} \otimes S_{\mu})(\mathcal{E}_{\lambda}\circ
+\tilde{\mathcal{E}}\otimes \mathbf{1})(z) ,\tilde{\phi}\rangle \geq 0,
+\end{eqnarray}
+co stoi w sprzeczności z \eqref{eq:Random20203}.
+Zatem, $\tilde{\phi}_{\lambda}$
+jest separowalne.
+\end{proof}
+
+Fakt, iż dla każdej iniektywnej algebry $\mathfrak{M}$
+istnieje centralny projektor $p$, taki że $p\mathfrak{M}$
+jest półskończona i $({\bf 1}-p)\mathfrak{M}$ jest typu III,
+kończy dowód Twierdzenia \ref{thm:PHcrit}.
+
+
+
+
