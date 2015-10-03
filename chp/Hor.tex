@@ -1,7 +1,7 @@
-\chapter{Kryterium separowalności stanów na iloczynie tensorowym
-algebr von Neumanna}
+\chapter{Kryterium separowalności stanów kwantowych}
 \label{chp:PHcrit}
 
+\section{Kryterium Peresa-Horodeckich dla odwzorowań na algebrach von Neumanna}
 W niniejszym rozdziale przedstawimy dowód twierdzenia
 opublikowanego pierwotnie w pracy
 \cite{miller2014horodeckis}
@@ -759,5 +759,198 @@ jest półskończona i $({\bf 1}-p)\mathfrak{M}$ jest typu III,
 kończy dowód Twierdzenia \ref{thm:PHcrit}.
 
 
+\section{Kryterium Peresa-Horodeckich dla odwzorowań na C$^*$-algebrach}
+
+Rezultat analogiczny do przedstawionego powyżej Twierdzenia \ref{thm:PHcrit}
+można otrzymać również dla odwzorowań na C$^*$-algebrach.
+Należy się spodziewać, że poprzednie założenie o iniektywności jednej z
+algebr będzie musiało zostać w jakiś sposób zachowane i w tym przypadku.
+Stąd potrzeba wprowadzenie tzw. \emph{algebr jądrowych}.
+Z definicji $\mathcal{A}$ jest jądrową C$^{*}$-algebrą,
+jeżeli $\mathcal{A}^{**}$, druga przestrzeń dualna,
+jest algebrą von Neumanna.
+Dla algebr jądrowych iloczyn tensorowy jest zdefiniowany jednoznacznie,
+jak zobaczymy poniżej.
+Ważną własnością jądrowych C$^{*}$-algebr jest również lokalna rekfleksywność,
+która okaże się pomocna na dalszym etapie dowodu.
+
+Niech  $\mathcal{A}$ oraz $\mathcal{B}$ będą C$^{*}$-algebrami.
+Jeśli przez $\mathcal{A} \otimes_{max} \mathcal{B}$
+i $\mathcal{A} \otimes_{min} \mathcal{B}$,
+oznaczyć odpowiednio 
+\emph{maksymalny} and \emph{minimalny}
+iloczyn tensorowy C$^{*}$-algebr $\mathcal{A}$ i $\mathcal{B}$,
+wówczas wiadomo, że gdy jedna z nich, powiedzmy algebra $\mathcal{A}$,
+jest jądrowa, normy tensorowe na obu iloczynach są sobie równe,
+a co za tym idzie -- iloczyn tensorowy tych algebr jest zdefiniowany
+jednoznacznie.
+Taki iloczyn będziemy oznaczać przez
+$\mathcal{A} \bar{\otimes} \mathcal{B}$.
+C$^{*}$-algebra $\mathcal{A}$ jest ponadto z definicji \emph{localnie refleksywna},
+jeśli dla każdego skończenie wymiarowego układu operatorowego
+$E \subset \mathcal{A}^{**}$,
+tj. domkniętej przestrzeni zawierającej operator jednoskowy i zamkniętej
+na sprzężenie hermitowskie operatorów,
+istnieje net $(T_{\lambda})$ kompletnie dodatnich kontrakcji,
+$T_{\lambda}: E \rightarrow \mathcal{A}$,
+zbieżny do odwzorowanie identycznościowego na $E$
+w słabej topologii operatorowej.
+Każda jądrowa C$^{*}$-algebra jest lokalnie refleksywna
+(por. Brown, Ozawa\cite{Brown2008}, 9.3.1-9.3.3).
+Algebry $\mathcal{A}$ i $\mathcal{B}$
+można potraktować jako przestrzenie operatorowe w naturalny sposób.
+Można więc wprowadzić dla nic projektywny iloczyn tensorowy
+przestrzeni operatorowych na przestrzeniach dualnych
+$\mathcal{A}^{*}$ i $\mathcal{B}^{*}$.
+Dopełnienie algebraicznego iloczynu tensorowego w tej normie oznaczmy przez
+$\mathcal{A}^{*} \hat{\otimes} \mathcal{B}^{*}$.
+Stąd juz prosta droga do definicji stanów separowalnych względem
+algebr $\mathcal{A}$ i  $\mathcal{B}$.
+Niech
+$\mathcal{S}(\mathcal{A})$ i $\mathcal{S}(\mathcal{B})$
+oznacznają przestrzenie stanów odpowiednio dla $\mathcal{A}$ i $\mathcal{B}$.
+Zdefiniujmy dodatni stożek $C_{\mathcal{A},\mathcal{B}}$
+stanów separowalnych względem  $\mathcal{A}$ i $\mathcal{B}$ poprzez
+\begin{equation}
+C_{\mathcal{A},\mathcal{B}} =
+\overline{{\rm conv}}^{||\cdot||_{\wedge}}
+\left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathcal{A}),
+\varphi \in \mathcal{S}(\mathcal{B})\right \}.
+\end{equation}
+Jasne jest, że stan na $\mathcal{A} \bar{\otimes} \mathcal{B}$ jest separowalny,
+tzn. $\tilde{\phi} \in C_{\mathcal{A}, \mathcal{B}}$,
+wtedy i tylko wtedy, gdy $\tilde{\phi}$ jest separowalnym stanem na
+algebrze von Neumanna $\mathcal{A}^{**} \bar{\otimes} \mathcal{B}^{**}$.
+\begin{Theorem}
+Niech $\mathcal{A}$ i $\mathcal{B}$ będą C$^{*}$-algebrami; załóżmy ponadto, że
+$\mathcal{A}$ jest algebrą jądrową.
+Stan $\tilde{\phi} \in
+(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$ jest separowalny
+względem $\mathcal{A}$ i $\mathcal{B}$,
+wtedy i tylko wtedy, gdy
+funkcjonał $\tilde{\phi} \circ ( \mathbf{1} \otimes S )$
+jest dodatni dla każdego dodatniego odwzorowania skończonego rzędu
+$S: \mathcal{A} \rightarrow \mathcal{B}$.
+\end{Theorem}
+\begin{proof}
+Niech $\mathfrak{M}=\mathcal{A}^{**}$ and $\mathfrak{N}=\mathcal{B}^{**}$.    
+Z założenia $\mathfrak{M}$ jest algebrą iniektywną.
+Jeżeli stan $\tilde{\phi}$ jest separowalny względem
+$\mathcal{A}$ i $\mathcal{B}$, wówczas jest on również separowalny na
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+Dla każdego dodatniego odwzorowania
+$S: \mathcal{A} \rightarrow \mathcal{B}$, drugie dualne odwzorowanie 
+$S^{**}:\mathfrak{M} \rightarrow \mathfrak{N}$ jest dodatnie i normalne.
+Stąd na mocy Twierdzenia \ref{thm:PHcrit} dla każdego dodatniego
+$z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
+$\langle (\mathbf{1} \otimes S^{**})(z), \tilde{\phi} \rangle \geq 0$.
+Zatem, $\tilde{\phi} \circ (\mathbf{1} \otimes S)$ jest dodatnim funkcjonałem
+na $\mathcal{A} \bar{\otimes} \mathcal{A}$.
+ 
+Przypuśćmy przeciwnie, że $\tilde{\phi} \circ (\mathbf{1} \otimes S) \geq 0$
+dla każdego dodatniego odwzorowania skończonego rzędu
+$S: \mathcal{A} \rightarrow \mathcal{B}$.
+Pokażemy, że stan $\tilde{\phi}$
+jest separowalny na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+Załóżmy nie wprost, że $\tilde{\phi}$ nie jest separowalny.
+Z Twierdzenia \ref{thm:PHcrit},
+istnieje dodatnie normalne odwzrowanie skończonego rzędu
+$\tilde{S}: \mathfrak{M} \rightarrow \mathfrak{N}$
+oraz dodatni element $z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
+takie że
+\begin{equation}
+\label{eq:Random6347}
+\langle(\mathbf{1} \otimes \tilde{S})(z), \tilde{\phi}\rangle < 0.
+\end{equation}
+Co więcej, $z$ możemy wybrać z algebraicznego iloczynu tensorowego
+$\mathfrak{M} \otimes \mathfrak{M}$,
+tzn. $z = \sum_{j=1}^{N} x_{j} \otimes y_{j}$,
+oraz każde $x_{j}$ and $y_{j} \in \mathfrak{M}$.
+Niech $E \subset \mathfrak{M}$ będzie układem operatorowym generowanym przez
+$\{ x_{j}, y_{j}\}_{j=1}^{N}$.
+Ponieważ $\mathcal{A}$ jest przestrzenią lokalnie refleksywną,
+istnieje net $(T_{\lambda})$ kompletnie dodatnich kontrakcji
+$T_{\lambda}: E \rightarrow \mathcal{A}$,
+taki że $T_{\lambda}$ zbiega do odwzorowania identycznościowego na $E$
+w *-słabej topologii, tzn.
+dla każdego $\omega \in \mathcal{A}^{*}$ i $x \in E$,
+$ \langle \omega, T_{\lambda}x \rangle\stackrel{\lambda}{\rightarrow}
+\langle x, \omega \rangle$.
+Niech $a_{\lambda}$ oznacza dodatni element $\mathcal{A} \otimes \mathcal{A}$,
+$a_{\lambda} = (T_{\lambda} \otimes T_{\lambda}) (z) =
+\sum_{j=1}^{N} T_{\lambda} x_{j} \otimes T_{\lambda} y_{j}$,
+oraz niech
+$i: \mathcal{A} \rightarrow \mathcal{A}^{**}=\mathfrak{M}$
+będzie kanonicznym zanurzeniem
+Wtedy $i(a_{\lambda}) \stackrel{\lambda}{\rightarrow} z$
+$\sigma$-słabo.
+Ponieważ $\mathcal{B}$ jest przestrzenią Banacha,
+posiada ona własność lokalnej refleksywności w następującym sensie
+(por. Ryan\cite{Ryan2002}, rozdział 5.5).
+Dla każdej skończenie wymiarowej podprzestrzeni $F \subset \mathcal{B}^{**}$,
+istnieje operator $P_{F}: F \rightarrow \mathcal{B}$,
+taki że dla każdego $y \in \mathcal{B}^{**} = \mathfrak{N}$
+oraz $\varphi \in \mathcal{B}^{*}$, mamy
+\begin{equation}
+\label{eq:Random24093}
+\langle \varphi, P_{F}y \rangle =\langle y, \varphi \rangle.
+\end{equation}
+Niech $F = \tilde{S}(\mathfrak{M})$.
+Z równania \eqref{eq:Random24093} wynika w oczywisty sposób, że
+$P_{F}$ dodatnie.
+Zdefiniujmy dodatnie odwzorowanie $S: \mathcal{A} \rightarrow \mathcal{B}$ przez
+$S = P_{F} \circ \tilde{S} \circ i$.
+Wówczas dla każdego $A \in \mathcal{A}$ oraz $\varphi \in \mathcal{B}^{*}$,
+mamy
+\begin{eqnarray}
+\langle \varphi, SA \rangle =
+\langle \varphi, P_{F} ( \tilde{S} \circ i (A)) \rangle =
+\langle  \tilde{S} \circ i (A), \varphi \rangle \nonumber\\
+=\langle i(A), \tilde{S}_{*} \varphi \rangle =
+\langle \tilde{S}_{*} \varphi, A \rangle,
+\end{eqnarray}
+Załóżmy ponadto, że
+$\tilde{\phi} = \lim \limits_{n} \sum_{i=1}^{n}\omega_{i} \otimes \varphi_{i}$,
+gdzie każde $\omega_{i} \in \mathcal{A}^{*}$,
+$\varphi_{i} \in \mathcal{B}^{*}$.
+Granicę rozumie się w projektywnej normie operatorowej $|| \cdot ||_{\wedge}$, 
+a więc również i w słabej i *-słabej topologii na
+$(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$.
+Z głównego założenia wynika, że
+$\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$. Dodatkowo
+\begin{eqnarray}
+\sum \limits_{i=1}^{n}\langle \omega_{i} \otimes \varphi_{i},
+(\mathbf{1} \otimes S)(a_{\lambda}) \rangle =
+\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
+\langle \omega_{i} , T_{\lambda} x_{j} \rangle
+\langle \tilde{S}_{*} \varphi_{i}, T_{\lambda} y_{j}\rangle \nonumber\\
+\stackrel{\lambda}{\longrightarrow}\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
+\langle  x_{j}, \omega_{i} \rangle\langle  y_{j},  \tilde{S}_{*} \varphi_{i} \rangle =
+\langle (\mathbf{1} \otimes \tilde{S})(z),
+\sum \limits_{i=1}^{n} \omega_{i} \otimes \varphi_{i} \rangle .    
+\end{eqnarray}
+Biorąc granicę względem $n$,
+ponieważ $(T_{\lambda})$ jest netem kontrakcji, dostajemy
+$\langle (\mathbf{1} \otimes \tilde{S}) (z) ,
+\tilde{\phi}\rangle \geq 0$,
+co przeczy równaniu \eqref{eq:Random6347},
+a zatem stan $\tilde{\phi}$ jest separowalny na
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+\end{proof}
+
+Udowodnione powyżej twierdzenie uogólnia analogiczny wynik opublikowany przez
+E.\,St{\o}rmera; pozwala jednak opuścić wcześniejsze założenie, że występujące
+tezie twierdzenia odwzorowania to wszystkie odwzorowania dodatnie (nie tylko skończonego rzędu) oraz że jedna z algebr jest tzw. algebrą
+UHF \cite{stormer2009separable}.
+ 
+\paragraph{}
+Powyższa analiza pokazuje, że nawet w najogólniejszym przypadku złożonych
+układów kwantowych na nieskończenie wymiarowych algebrach von Neumanna
+splątanie stanów kwantowych zależy ściśle od własności dodatnich odwzorowań
+na tych algebrach.
+W następnym rozdziale zajmiemy się szczegółową analizą dodatnich odwzorowań
+na skończenie wymiarowych algebrach macierzy, skupiając się przede wszystkim
+na najprostszym, do tej pory nie rozpoznanym przypadku algebry macierzy
+rzędu 3.
 
 
