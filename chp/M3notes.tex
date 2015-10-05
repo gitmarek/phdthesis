@@ -1,0 +1,536 @@
+\chapter{Odwzorowania dodatnie na algebrach macierzowych}
+\label{chp:M3notes}
+
+\section{Charakterystyka odwzorowań na algebrze $M_{2}$}
+\label{sec:M2notes}
+
+W tym podrozdziale przestawimy główny rezultat opublikowany w pracy
+\cite{miller2015stable},
+który stanowi alternatywny dowód twierdzenia udowodnionego przez
+E\,St{\o}rmera \cite{stormer1963positive}
+i S.\,L.\,Woronowicza \cite{woronowicz1976positive},
+podającego pełną charakterystykę odwzorowań dodatnich na algebrze $M_{2}$.
+
+
+\begin{Theorem}
+\label{thm:PositiveMapsOnM2}
+    Niech $S:M_{2} \rightarrow M_{2}$ będize odwzorowaniem dodatnim.
+    Wówczas $S = \Lambda_{1}  + \Lambda_{2} \circ t$,
+    gdzie odwzorowania
+    $\Lambda_{1}, \Lambda_{2}:M_{2} \rightarrow M_{2}$
+    są kompletnie dodatnie, a
+    $t: M_{2} \rightarrow M_{2}$ oznacza transpozycję macierzy na $M_{2}$.
+\end{Theorem}
+
+
+\begin{proof}
+\label{RandomLabel:875919}
+  Odwzorowanie $S$ działa na wektory bazowe $\sigma_{\mu}$ poprzez
+\begin{equation}
+ S \sigma_{\mu} = \sum_{\nu = 0}^{3} \pi(S)_{\mu \nu} \sigma_{\nu}.
+\end{equation}
+Załóżmy na początek, że $\pi(S) \in \Theta(L_{4})$. 
+Jeżeli $\pi(S) = \rho(V) \in \text{SO}^{+}(1,3)$,
+$V \in SL_{2}(\mathbb{C})$,
+wówczas
+$S \sigma(x) = \sum_{\mu = 0}^{3}  x_{\mu} V^{*} \sigma_{\mu} V =
+ V^{*} \sigma(x) V$,
+ $x \in \mathbb{R}^{4}$,
+a więc $S$ jest kompletnie dodatnie,
+skoro każda macierz $A \in M_{2}$ jest kombinacją liniową macierzy hermitowskich.
+Z drugiej strony,
+jeśli $\pi(S) = \rho(V) J$,
+to
+\begin{multline}
+\label{RandomLabel:830200}
+S \sigma(x) =
+  x_{0} \, V^{*}V + x_{1} \, V^{*} \sigma_{1} V -
+  x_{2} \, V^{*} \sigma_{2} V +
+  x_{3} \, V^{*} \sigma_{3} V = \\
+  = x_{0} \, V^{*}V + x_{1} \, V^{*} \sigma_{1}^{t} V +
+  x_{2} \, V^{*} \sigma_{2}^{t} V +
+  x_{3} \, V^{*} \sigma_{3}^{t} V =
+  V^{*} \sigma(x)^{t} V,
+\end{multline}
+ponieważ $\sigma_{2}^{t} = - \sigma_{2}$.
+Zatem, $S$ jest złożeniem transpozycji i odwzorowania kompletnie dodatniego
+(tzn. $S$  jest kompletnie \emph{ko}dodatnie).
+Z kolei załóżmy, że $\pi(S) \in \delta(L_{4})$,
+gdzie
+$
+ \delta(L_{4}) = \left \{ u w^{t}:
+ \, u, w \in \partial L_{4}  \right \}
+$,
+jest zbiorem operatorów rzedu 1, zachowujących brzeg stożka $\partial L_{4}$.
+Z \cite[Lematu 3.2]{loewy1975positive}, 
+$S$ jest ektremalnym odwzorowaniem dodatnim, takim że $\text{rank} S = 1$,
+co implikuje, że $S$ musi być kompletnie dodatnie.
+
+Jeżeli $\pi(S)$ jest macierzą zachowującą stożek Lorentza,
+z \cite[Corollary 4.6]{loewy1975positive} wnioskujemy, że
+$\pi(S) \in \text{conv} \left ( \Theta(L_{4}) \cup \delta(L_{4}) \right)$. 
+Innymi słowy każdy operator zachowujący stożek Lorentza $L_{4}$
+jest wypukłą kombinacją tych operatorów, które dodatkowo zachowują brzeg stożka.
+Z tego, co zostało pokazane powyżej, wynika, iż
+\begin{equation}
+\label{RandomLabel:587827}
+    S = \Lambda_{1} + \Lambda_{2} \circ t,
+\end{equation}
+gdzie $\Lambda_{1}$, $\Lambda_{2}$
+są odwzorowaniami kompletnie dodatnimi.
+\end{proof}
+
+Twierdzenie \ref{thm:PositiveMapsOnM2} podaje alternatywny dowód
+znanego rezultatu \cite{stormer1963positive, woronowicz1976positive}.
+Jednak, o ile metody wykorzystywane przez autorów tamtych prac
+polegają w głównej mierze na algebraicznych manipulacjach macierzami,
+o tyle wprowadzenie odwzrorowania $\pi$ pozwoliło nam
+na podkreślenie istotnych dla problemu geometrycznych własności stożków
+zawartych w  $\mathbb{R}^{4}$.
+Dzięki temu udało się otrzymać pełną charakteryzację odwzorowań dodatnich
+na $M_{2}$,
+której źródeł należy się doszukiwać w szczególnej symetrii stożka
+$L_{4}$, reprezentującego macierze z $M_{2}$.
+W tym najprostszym przypadku mogliśmy wykorzystać głęboki wynik z
+\cite{loewy1975positive}, dotyczący
+opisu operatorów zachowujących stożek $L_{4}$.
+Jak zobaczymy poniżej, jeśli przejdziemy do kolejnego przypadku
+odwzorowań dodatnich na $M_{3}$,
+stożek wektorów $x \in \mathbb{R}^{9}$ takich że
+$\lambda(x) =  \sum_{\mu=0}^{8} x_{\mu} \lambda_{\mu}$
+jest dodatnią macierzą z $M_{3}$,
+dla dowolnej bazy $(\lambda_{\mu})_{\mu=0}^{8}$ przestrzeni liniowej $M_{3}$,
+nie jest już stożkiem Lorentza $K_{9}$ \cite{goyal2011geometry}.
+Dlatego też, kiedy przyjdzie nam zająć się tym przypadkiem,
+będziemy musieli poszerzyć metody analizy o dodatkowe narzędzia.
+
+
+Naturalne pytanie, które pojawia się w kontekście Twierdzenia
+\ref{thm:PositiveMapsOnM2},
+to kiedy dodatnie odwzorowania na $M_{2}$ jest również kompletnie dodatnie.
+
+\begin{Theorem}
+\label{thm:MapsPreservingIdentity}
+Niech $S: M_{2} \rightarrow M_{2}$ będzie dodatnim odwzorowaniem zachowującym
+macierz jednostkową. Rozważmy następujące warunki:
+\begin{enumerate}
+
+\item
+\label{lem:condProj}
+$S$ jest odwzorowaniem Schwarza oraz istnieje projektor ortogonalny $P$, rzędu 1, dla którego $S(P)^{2} = S(P)$.
+
+\item
+\label{lem:condCommut}
+Istnieje projektor ortogonalny P rzędu 1, taki że dla każdego $X \in M_{2}$,
+$S([P,X]) = [S(P), \, S(X)]$.
+
+\item
+\label{lem:condCP}
+$S$ jest kompletnie dodatnie.
+\end{enumerate}
+Wówczas pomiędzy warunkami powyżej zachodzi relacja:
+$
+\ref{lem:condProj} \Rightarrow
+    \ref{lem:condCommut} \Rightarrow \ref{lem:condCP}.
+$
+\end{Theorem}
+
+\begin{proof}
+$\ref{lem:condProj}) \Rightarrow \ref{lem:condCommut})$.
+
+Niech $A_{k} = kP + iX$, dla pewnego $X = X^{*} \in M_2$
+oraz $k \in \mathbb{N}$.
+Kładąc $A_{k}$ w nierówności Kadisona-Schwarza
+\eqref{eq:SchwarzInequality}, otrzymujemy
+\begin{equation}
+[S(P), \,  S(X)] - S([P, \, X]) \leq - \frac{i}{k} (S(X^{2}) - S(X)^{2}),
+\end{equation}
+dla każdego $k \in \mathbb{N}$.
+Zatem
+\begin{equation}
+\label{ineq:Commutators}
+[S(P), \, S(X)] - S([P, \, X]) \leq 0.
+\end{equation}
+Biorąc tym razem $A'_{k} =kP - i X$ i powtarzając rachunek,
+dostajemy nierówność odwrotną do \eqref{ineq:Commutators},
+a stąd
+\begin{equation}
+\label{eq:Commutators}
+S([P, X]) = [S(P), S(X)],
+\end{equation}
+dla każdej hermitowskiej macierzy $X$.
+Ponieważ równanie \eqref{eq:Commutators} jest liniowe w $X$,
+zachodzi również dla każdej macierzy $X \in M_{2}$.
+
+$\ref{lem:condCommut}) \Rightarrow \ref{lem:condCP})$.
+Niech $P$ będize projektorem ortogonalnym rzędu 1, takim że
+\begin{equation}
+\label{eq:Commutator}
+S([P,X]) = [S(P), \, S(X)],
+\end{equation}
+dla każdego $X \in M_{2}$.
+Jeśli $S$ jest kompletnie dodatnim odwzorowaniem, wówczas dla każdej pary
+unitarnych macierzy $U, V \in M_{2}$,
+odwzorowanie $\tilde{S}: A \mapsto U^{*} S(V^{*} A V) U$
+jest również kompletnie dodatnie.
+Możemy zatem założyć bez straty ogólności, że
+$P = P_{1} =
+\left(
+\begin{smallmatrix} 1 & 0 \\ 0 & 0 \end{smallmatrix}
+\right)$,
+i $S(P)$ jest diagonalne.
+Niech $P_{2} = \left(
+\begin{smallmatrix} 0 & 0 \\ 0 & 1 \end{smallmatrix}
+\right)$,
+$E_{12} =
+\left(
+\begin{smallmatrix} 0 & 1 \\ 0 & 0 \end{smallmatrix}
+\right)$,
+and
+$E_{21} =
+\left(
+\begin{smallmatrix} 0 & 0 \\ 1 & 0 \end{smallmatrix}
+\right)$.
+Załóżmy, że
+$S(P_{1}) = \lambda_{1} P_{1} + \lambda_{2} P_{2}$,
+$0 \leq \lambda_{2} \leq \lambda_{1} \leq 1$.
+Jeśli $S(E_{12}) = 0$,
+wówczas oczywiście również $S(E_{21}) = 0$ i w rezultacie
+$S$ odwzorowuje $M_{2}$
+w przemienną algebrę macierzy diagonalnych.
+Stąd, $S$ jest kompletnie dodatnie.
+Z drugiej strony, jeśli
+$S(E_{12}) =
+\left(
+\begin{smallmatrix} w & z \\ x & y \end{smallmatrix}
+\right) \neq 0$,
+$w, z, x, y \in \mathbb{C}$
+i gdy położymy $X = E_{12}$ we wzorze \eqref{eq:Commutator},
+pamiętając jednocześnie, że $\lambda_{1} \geq \lambda_{2}$,
+otrzymujemy $x = y = w = 0$ i $\lambda_{1} - \lambda_{2} = 1$.
+To oznacza, że $\lambda_{1} = 1$ and $\lambda_{2} = 0$ oraz
+$S(E_{12}) = z E_{12}$.
+A zatem $S$ działa na macierz
+$X \in M_{2}$, $X = (x_{ij})_{i,j=1,2}$ jak
+\begin{equation}
+S(X) = \begin{pmatrix}
+ x_{11} & z \, x_{12} \\
+\overline{z} \, x_{21} & x_{22}
+\end{pmatrix}.
+\end{equation}
+Stąd wynika już w prosty sposób, że $S$ jest kompletnie dodatnie.
+Rzeczywiście,
+z dodatniości $S$ mamy $|z| \leq 1$.
+Jeśli napiszemy
+\begin{equation}
+S(X) =
+\begin{pmatrix}
+1 & z \\ \overline{z} & 1
+\end{pmatrix} \circ X,
+\end{equation}
+gdzie symbol $\circ$ w tym przypadku oznacza iloczyn Hadamarda macierzy,
+to jest iloczyn, w którym mnoży się ze sobą macierze tego samego wymiaru
+element po elemencie.
+Ponieważ $|z| \leq 1$, macierz
+$
+\left( 
+\begin{smallmatrix} 1 & z \\ \overline{z} & 1 \end{smallmatrix}
+\right)$
+jest dodatnia.
+Ogólnie znany jest fakt, że odwzorowanie $X \mapsto A \circ X$
+jest kompletnie dodatnie wtedy i tylko wtedy, gdy $A$ 
+jest dodatnią macierzą.
+\end{proof}
+
+\begin{Example}
+Można bez trudu pokazać, że warunek \ref{lem:condProj} w
+Twierdzeniu \ref{thm:MapsPreservingIdentity} jest w istotny sposób silniejszy
+niż warunek \ref{lem:condCommut}.
+Niech $S$ będzie odwzorowaniem bistochastychnym na $M_{2}$, takim że
+\begin{equation}
+\label{RandomLabel:514431}
+    \pi(S) = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & b & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+    \end{pmatrix},
+    \quad 0 < b < 1,
+\end{equation}
+czyli $S(\sigma_{1}) = b \sigma_{1}$ oraz
+$S(\sigma_{2}) = S(\sigma_{3}) = 0$.  
+Wówczas $S\left( [P_{0}, \, X ] \right) = [ S(P_{0}), \, S(X) ]$,
+gdzie
+$P_{0}= \frac{1}{2} \left( \begin{smallmatrix}
+ 1 & 1 \\ 1 & 1
+ \end{smallmatrix} \right)$ i $X \in M_{2}$.
+Jednakże nie istnieje projektor ortogonalny $P$ rzędu 1,
+dla którego $S(P)^{2} = S(P)$.
+Rzeczywiście, skoro
+$P_{0} = \frac{1}{\sqrt{2}}(\sigma_{0} + \sigma_{1})$,
+$S(P_{0}) = \frac{1}{\sqrt{2}}(\sigma_{0} + b \sigma_{1})$.
+Niech $X$ będzie macierzą hermitowską, $X = \sigma(x)$, $x \in \mathbb{R}^{4}$,
+$S(X) = x_{0} \sigma_{0} + b x_{1} \sigma_{1}$.
+Wtedy $[S(P_{0}), \, S(X) ] =0$. 
+Co więcej,
+$[P_{0}, \, \sigma(x)] = 
+i(x_{2} \sigma_{3} - x_{3} \sigma_{2})$,
+a stąd 
+$S([P_{0}, \, \sigma(x)]) = 0$.
+Warunek \ref{lem:condCommut} w Twierdzeniu \ref{thm:MapsPreservingIdentity}
+jest prawdziwy dla każdej macierzy hermitowskiej $X$,
+a zatem również dla każdej macierzy $X \in M_{2}$.  
+Z drugiej strony, 
+$P = \sigma(a)$, $a \in \mathbb{R}^{4}$, jest projektorem ortogonalnym
+rzędu 1,
+wtedy i tylko wtedy, gdy $a_{0} = ||\vec{a}|| = \frac{1}{\sqrt{2}}$.
+Zatem $S(P) \neq \mathbf{1}$, a ponieważ $b<1$,
+więc $S(P)$ nie może być projektorem ortogonalnym \mbox{rzędu 1},
+tzn. $S(P)^{2} \neq S(P)$.    
+\end{Example}
+
+Dla odwzorowań ektremalnych warunek \ref{lem:condProj} z Twierdzenia
+\ref{thm:MapsPreservingIdentity} okazuje się również wystarczający
+do tego, aby takie odwzorowanie było kompletnie dodatnie dla każdego wymiaru.
+Bardziej ogólny problem, postawiony przez Robertsona
+\cite{robertson1983schwarz},
+czy istniej odwzorowanie Schwarza, które jest ekstremalne, ale
+nie 2-dodatnie, pozostaje otwarty.
+Zauważmy, że z \cite[Theorem 3.3]{marciniak2008extremal} wynika, iż
+każde ektremalne odwzorowanie 2-dodatnie jest kompletnie dodatnie.
+
+\begin{Theorem}
+\label{thm:ExtremalSchwarz}
+Niech $S: M_{n} \rightarrow M_{n}$
+będzie odwzorowaniem Schwarza, ekstremalnym w zbiorze wszystkich odwzorowań
+dodatnich. Załóżmy dodatkowo, że
+istnieje para projektorów ortogonalnych $P, Q \in M_{n}$, rzędu 1,
+dla których $S(P) = Q$.
+Wówczas $S$ jest kompletnie dodatnie. 
+\end{Theorem}
+\begin{proof}
+Niech $(e_{i})_{i=1}^{n}$
+będzie standardową bazą ortonormalną w $\mathbb{C}^{n}$.  
+Ponieważ chcemy pokazać, że $S$ jest kompletnie dodatnie,
+możemy założyć, że $P = Q = P_{n}$,
+gdzie $P_{n} = e_{n} e_{n}^{*}$ jest projektorem ortogonalnym na jednowymiarową
+przestrzeń rozpiętą przez wektor $e_{n} = (0,0,\ldots,0,1) \in \mathbb{C}^{n}$. 
+Z faktu, że $S$ zachowuje macierz jednostkową, wynika
+$S(P_{n}^{\perp}) = P_{n}^{\perp}$,
+gdzie $P_{n}^{\perp} = \mathbf{1}_{n} - P_{n}$. 
+Dla macierzy $X \in M_{n}$,
+zapisanej w postaci blokowej
+$X = \left( \begin{smallmatrix} A & u \\ w^{t} & z \end{smallmatrix} \right)$,
+gdzie $A \in M_{n-1}$, $u, w \in \mathbb{C}^{n-1}$ są kolumnami, a
+$z \in \mathbb{C}$, mamy
+\begin{equation}
+\label{eq:SBlockForm}
+    S (X) = \begin{pmatrix}
+        \hat{S}_{0}(A) & S_{1} u \\
+        (\overline{S}_{1} w)^{t} & z
+    \end{pmatrix},
+\end{equation}
+dla $\hat{S}_{0}: M_{n-1} \rightarrow M_{n-1}$ będącego z konieczności
+odwzorowaniem Schwarza na $M_{n-1}$, and $S_{1} \in M_{n-1}$.
+Rzeczywiście, ponieważ $S$ jest odwzorowaniem Schwarza, 
+z \cite[Proposition 2.1.5]{stormer2012positive} mamy, że
+$S(P_{n} X) = P_{n} S(X)$.
+Stąd
+$S(P_{n} X P_{n}) = P_{n} S(X) P_{n}$ i podobnie
+$S(P_{n}^{\perp} X P_{n}^{\perp}) = P_{n}^{\perp} S(X) P_{n}^{\perp}$,
+$S(P_{n}^{\perp} X P_{n}) = P_{n}^{\perp} S(X) P_{n}$,
+$S(P_{n} X P_{n}^{\perp}) = P_{n} S(X) P_{n}^{\perp}$,
+co dowodzi, że $S$ musi mieć postać jak w równaniu \eqref{eq:SBlockForm}.
+
+Jeśli weźmiemy jednowymiarowy projektor ortogonalny 
+$P_{u} = u u^{*}$, gdzie
+$u = (u_{1}, u_{2}, \ldots, u_{n}) = (\vec{u}, u_{n})$,
+$\vec{u} = (u_{1}, u_{2}, \ldots, u_{n-1}) \in \mathbb{C}^{n-1}$,
+$u_{n} \in \mathbb{C}$,
+dostaniemy
+\begin{equation}
+ SP_{u} \:=\:  S \begin{pmatrix}
+    \vec{u} \vec{u}^{\,*} & \overline{u}_{n} \vec{u} \\
+    u_{n} \vec{u}^{\,*}   & |u_{n}|^{2}
+ \end{pmatrix} \: = \: 
+ \begin{pmatrix}
+    \hat{S}_{0}(\vec{u} \vec{u}^{*}) &
+         \overline{u}_{n} S_{1} \vec{u} \\
+    u_{n} ( S_{1} \vec{u} )^{*} &
+        |u_{n}|^{2}
+ \end{pmatrix}.
+\end{equation}
+W przypadku, gdy $u_{n} \neq 0$,
+biorąc dopełnienie Schura
+(por. \cite[Twierdzenie 1.12, p.34]{zhang2006schur}),
+mamy, że $SP_{u} \geq 0$, wtedy i tylko wtedy, gdy
+\begin{equation}
+\label{ieq:SchurForS}
+  S_{1} \vec{u} \vec{u}^{*} S_{1}^{*} \leq \hat{S}_{0}(\vec{u}\vec{u}^{*}).
+\end{equation}
+To oznacza, że $S$ jest sumą dwóch dodatnich odwzorowań działających na
+jednowymiarowy projektor ortogonalny jak poniżej:
+\begin{equation}
+ SP_{u} \:=\:  
+ \begin{pmatrix}
+      S_{1} \vec{u} \vec{u}^{*} S_{1}^{*}  &
+         \overline{u}_{n} S_{1} \vec{u} \\
+    u_{n} ( S_{1} \vec{u} )^{*} &
+        |u_{n}|^{2}
+ \end{pmatrix} +   
+ \begin{pmatrix}
+    \hat{S}_{0}(\vec{u} \vec{u}^{*})  -  S_{1} \vec{u} \vec{u}^{*} S_{1}^{*} & 0 \\
+    0 & 0
+ \end{pmatrix}.
+\end{equation}
+Skoro $S$ jest z założenia ekstremalne i  $S(P_{n}) = P_{n}$,
+\begin{equation}
+ SP_{u} \:=\:  
+ \begin{pmatrix}
+      S_{1} \vec{u} \vec{u}^{*} S_{1}^{*}  &
+         \overline{u}_{n} S_{1} \vec{u} \\
+    u_{n} ( S_{1} \vec{u} )^{*} &
+        |u_{n}|^{2}
+ \end{pmatrix} = 
+    \begin{pmatrix}
+    S_{1} & 0 \\ 0 & 1
+    \end{pmatrix}
+    \, P_{u} \,
+    \begin{pmatrix}
+    S_{1} & 0 \\ 0 & 1
+    \end{pmatrix}^{*}.
+\end{equation}
+Jeśli położymy $U = \left( \begin{smallmatrix} S_{1} & 0 \\ 0 & 1 
+\end{smallmatrix} \right) \in M_{n}$,
+z faktu, że $S(P_{n}^{\perp}) = P_{n}^{\perp}$,
+dostaniemy $U U^{*} = \mathbf{1}_{n}$, tj. $U$ macierzą unitarną oraz
+$S(X) = U X U^{*}$, $X \in M_{n}$, co kończy dowód.
+\end{proof}
+
+Przedstawiwszy geometryczny dowód Twierdzenia \ref{thm:PositiveMapsOnM2}
+o rozkładzie odwzorowań dodatnich na $M_{2}$, możemy pokusić się o 
+o przedstawienie dodatkowych faktów dotyczących odwzorowań bistochastycznych.
+Odznaczmy przez $\Delta_{0}$ zbiór wszystkich bistochastycznych odwzorowań na
+$M_{2}$.
+Niech także $\Delta_{1} \subset \Delta_{0}$ oznacza zbiór tych odwzorowań
+bistochastycznych,
+które są jednoczenie kompletnie dodatnie i kompletnie kododatnie.
+Korzystając z tego samego geometrycznego przedstawienia zbioru
+odwzorowań dodatnich jako stożka Lorentza $L_{4}$,
+możemy pokazać, że $\Delta_{1}$ jest zbiorem zaskakująco dużym.
+
+Każda macierz $Y \in M_{n}(\mathbb{R})$ daje się rozłożyć względem wartości singularnych:
+$Y = O_{1} D O_{2}$, gdzie
+$O_{1}, O_{2}$ to macierze ortogonalne tego samego wymiaru, co $Y$, a
+$D = \text{diag}(t_{1}, t_{2}, \ldots, t_{n})$ jest macierzą diagonalną,
+taką że wartości singularne $Y$ dają się uporządkować:
+$t_{1} \geq t_{2} \geq \ldots t_{n} \geq 0$.
+Innymi słowy, wartości singularne $Y$ to wartości własne macierzy
+$|Y| = (Y^{t} Y)^{1/2}$.
+W przestrzeni operatorów $M_{n}(\mathbb{R})$ możemy wyróżnić wiele norm;
+jedną z nich jest norma operatorowa: $|| \cdot ||$;
+drugą nazwiemy normą śladową i zdefiniujemy przez
+$||Y||_{1} = \sqrt{\text{Tr} \, Y^{t} \, Y }$.
+domkniętą kulę o jednostkowym promieniu w normie operatorowej oznaczmy:
+$K_{0} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y|| \leq 1 \right \}$;
+natomiast kulę w normie śladowej jako
+$K_{1} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y||_{1} \leq 1 \right \}$.
+
+\begin{Theorem}
+\label{thm:Ball}
+Istnieje wypukły izomorfizm $F$, taki że $K_{0}$, $F(\Delta_{0}) = K_{0}$. 
+Ponadto, $F(\Delta_{1}) = K_{1}$.    
+\end{Theorem}
+\begin{proof}
+Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{2}$.
+Macierz $\pi(S)$ możemy zapisać w postaci blokowej
+\begin{equation}
+\label{eq:Sbistochastic}
+\pi(S) = \begin{pmatrix}
+    1  &  \vec{0}^{t} \\
+    \vec{0} & Y
+    \end{pmatrix},
+\end{equation}
+$Y \in M_{3}(\mathbb{R})$,
+a $\vec{0} \in \mathbb{R}^{3}$ jest zerowym wektorem-kolumną.
+Połóżmy $F(S) = Y$. 
+Z definicji \eqref{RandomLabel:365828} odwzorowania $\pi$,
+jasne jest, że dla  $S_{1}, S_{2} \in \Delta_{0}$,
+mamy $F \left( \lambda S_{1} + (1-\lambda) S_{2} \right) = 
+ \lambda F(S_{1}) + (1-\lambda) F(S_{2})$,
+$0 \leq \lambda \leq 1$
+oraz $F(S_{1} S_{2}) = F(S_{1}) F(S_{2})$.
+Odwzorowanie $S$ jest dodatnie wtedy i tylko wtedy, gdy
+$\pi(S)$ zachowuje stożek $L_{4}$,
+co w tym wypadku jest równoważne temu, iż $F(S) = Y \in K_{0}$.
+Co więcej, łatwo zauważyć, że oba przekształcenia, $F$ i $F^{-1}$,
+są ciągłe w topologii indukowanej przez normy na
+$\Delta_{0}$ and $K_{0}$.
+Zatem $F(\Delta_{0}) = K_{0}$, a ponadto $F$ jest homeomorfizmem.
+
+W dalszej części załóżmy, że $S \in \Delta_{1}$.
+Ponieważ $S$ jest kompletnie dodatnie,
+z \cite[Twierdzenia 1]{landau1993birkhoff} wiemy, że
+$S$ wypukłą kombinacją odwzorowań unitarnych:
+$X \mapsto U^{*} X U$, $U \in \text{U}(2)$.
+Z dowodu  \mbox{Twierdzenia \ref{thm:PositiveMapsOnM2}},
+dla kontkretnej postaci $\pi(S)$, takiej jak w równaniu \eqref{eq:Sbistochastic},
+oznacza to, że $Y$ należy do wypukłej otoczki generowanej przez elementy grupy $\text{SO}(3)$.
+Z  pracy \cite{miranda1994group} (Corollary na str. 139),
+wnioskujemy, że jeśli $t_{1} \geq t_{2} \geq t_{3} \geq 0$
+to wartości singularne macierzy $Y$,
+wówczas $Y \in \text{conv} \, \text{SO}(3)$,
+wtedy i tylko wtedy, gdy
+\begin{equation}
+\label{eq:ineqForSingVals}
+t_{1} \leq 1
+\quad \text{and} \quad
+t_{1} + t_{2} - \text{sig} (\text{det} Y) \, t_{3} \leq 1.
+\end{equation}
+Zatem $S$ jest kompletnie kododatnie, tzn.
+$S' = S \circ t$ jest kompletnie dodatnim bistochastycznym odwzorowaniem.
+Niech $F(S') = Y'$.
+Wówczas $Y' = Y \, \text{diag} (1,-1,1)$.
+Obie macierze, $Y$ i $Y'$, mają te same wartości singularne oraz
+$\text{det} \, Y' = - \text{det} \, Y$.
+Ponieważ $Y' \in  \text{conv} \, \text{SO}(3)$, mamy
+$t_{1} + t_{2} + \text{sig} (\text{det} Y) \, t_{3} \leq 1$.
+Łącząc ten fakt z równaniem \eqref{eq:ineqForSingVals},
+skoro $\text{det} \, Y = 0$, wtedy i tylko wtedy, gdy  $t_{3} = 0$,
+otrzymujemy, że $S$ jest jednocześnie kompletnie dodatnie i kompletnie kododatnie,
+wtedy i tylko wtedy, gdy
+$||Y||_{1} = t_{1} + t_{2} + t_{3} \leq 1$,
+co w rezultacie oznacza, że $F(\Delta_{1}) = K_{1}$
+i kończy dowód.
+\end{proof}
+
+Podsumowując; przedstawiliśmy powyżej geometryczne podejście do problemu
+analizy odwzorowań dodatnich, przynajmniej w najprostszym przypadku odwzorowań
+algebry macierzy $M_{2}$.
+W szczególności,
+pokazaliśmy, że dzięki tym metodom można w zwarty i elegancki sposób dowieść
+znanego twierdzenia o rozkładzie odwzorowań dodatnich na sumę przekształceń
+kompletnie dodatnich i kompletnie kododatnich,
+które okazuję się być bezpośrednio zależne od faktu, że każdy operator
+zachowujący stożek Lorentza w $\mathbb{R}^{n}$ jest wypukłą kombinacją tych
+operatorów, które dodatkowo zachowują brzeg stożka.
+Jak już wspomnieliśmy, twierdzenie dowiedzione powyżej
+przekłada się na kryterium sperowalności stanów kwantowych dla układu
+złożonego dwóch qubitów i otrzymuję formę znanego kryterium PPT
+\cite{peres1996separability,horodecki1996separability}.
+Dowód kolejnego faktu, Twierdzenia \ref{thm:MapsPreservingIdentity},
+chociaż nie posługuje się tymi samymi metodami geometrycznymi w sposób jawny,
+bazuje na wiedzy dotyczącej operatorów zachowujących stożek Lorentza i posiadających
+dodatkowo normę równą jedności.
+Stąd pochodzi założenie \ref{lem:condProj}. w Twierdzeniu \ref{thm:MapsPreservingIdentity}.
+Wreszcie, Twierdzenie \ref{thm:Ball} pokazuje, że zbiór odwzorowań bistochastycznych,
+które są jednocześnie kompletnie dodatnie i kompletnie kododatnie jest
+topologicznie tożsamy z kulą jednostkową w $M_{3}(\mathbb{R})$ w normie śladowej.
+
+W dalszej części rozwiniemy przedstawione metody na kolejny nietrywialny przypadek
+odwzorowań algebry $M_{3}$.
+
+
+\section{Stabilne podalgebry jako metoda analizy własności odwzorowań na $M_{3}$}
+\label{sec:M3notes}
+
