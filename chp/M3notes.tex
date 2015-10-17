@@ -333,7 +333,7 @@ $z \in \mathbb{C}$, mamy
 dla $\hat{S}_{0}: M_{n-1} \rightarrow M_{n-1}$ będącego z konieczności
 odwzorowaniem Schwarza na $M_{n-1}$, and $S_{1} \in M_{n-1}$.
 Rzeczywiście, ponieważ $S$ jest odwzorowaniem Schwarza, 
-z \cite[Proposition 2.1.5]{stormer2012positive} mamy, że
+z \cite[Theorem 2.1.5]{stormer2012positive} mamy, że
 $S(P_{n} X) = P_{n} S(X)$.
 Stąd
 $S(P_{n} X P_{n}) = P_{n} S(X) P_{n}$ i podobnie
@@ -533,4 +533,1708 @@ odwzorowań algebry $M_{3}$.
 
 \section{Stabilne podalgebry jako metoda analizy własności odwzorowań na $M_{3}$}
 \label{sec:M3notes}
+
+Niech $S\!: M_{n} \rightarrow M_{n}$ będzie odwzorowaniem bistochastycznym.
+Łatwo zauważyć, że $S$ jest kontrakcją w normie Hilberta-Schmidta.
+na $M_{n}$, zdefiniowanej jako
+$||A||_{HS} = \left( \text{Tr} \, A^{*} A \right)^{1/2}$.
+Rzeczywiście, skoro $S$ spełnia nierówność Kadisona-Schwarza:
+\begin{equation}
+\label{eq:SchwarzInequality}
+    S(A^{*}) \, S(A) \: \leq \: S(A^{*} A),
+\end{equation}
+dla każdej normalnej macierzy $A \in M_{n}$ 
+(por. \cite[Prop.\,3.6]{choi1980some}),
+zakładając najpierw, że $A = A^{*}$,
+mamy
+\begin{equation}
+\label{RandomLabel:712874}
+    || S(A) ||_{HS}^{2} \: = \: \text{Tr} S(A)^{2}
+    \: \leq \:  \text{Tr} S(A^{2}) \: = \:
+        \text{Tr} A^{2} \: = \: ||A||_{HS}^{2}.
+\end{equation}
+Ogólną macierz $A \in M_{n}$ można przedstawić jako sumę
+$A = A_{1} + i A_{2}$,
+gdzie oba składniki, $A_{1}$ i $A_{2}$, to macierze hermitowskie.
+Powtarzając w zasadzie ten sam rachunek, co w równaniiu
+\eqref{RandomLabel:712874},
+dostajemy, że $S$ jest kontrakcją w normie Hilberta-Schmidta.
+
+Zdefiniujmy izometryczne rozbicie (ang. \emph{isometric splitting})
+odwzorowania $S$, korzystając z wyników opublikowanych wcześniej w pracy
+\cite{olkiewicz1999environment}.
+Ponieważ $S$ jest kontrakcją na przestrzeni Hilberta $M_{n}$
+z iloczynem tensorowym Hilberta-Schmidta,
+przestrzeń tą można rozłożyć na sumę prostą przestrzeni $K_{S}$,
+zdefiniowanej jako
+\begin{equation}
+\label{def:definitionofK}
+    K_{S} \: = \: \left\{
+        A \in M_{n}: \,\,
+            || S^{k} A ||_{HS} = || S^{* k} A ||_{HS} = || A ||_{HS}, \:\:
+            \forall k \in \mathbb{N}
+        \right\}
+\end{equation}
+oraz jej ortogonalnego dopełnienia $K_{S}^{\perp}$.
+Oznaczmy przez $S^{*}$ odwzorowanie bistochastyczne na $M_{n}$,
+sprzężone do $S$ jako operator liniowy na przestrzeni Hilberta $M_{n}$,
+tj. $\text{Tr}\, S^{*} (A)\, B = \text{Tr} A \, S(B)$,
+dla każdego $A, B \in M_{n}$.
+Prawdą jest, że $A \in K_{S}$,
+wtedy i tylko wtedy, gdy
+$S^{* k} S^{k} A = S^{k} S^{* k} A = A$,
+dla dowolnego $k \in \mathbb{N}$.
+Następny lemat, przepisany z niewielkimi zmianami z
+\cite{olkiewicz1999environment},
+zbiera w jednym miejscu najważniejsze własności przestrzeni $K_{S}$.
+
+\begin{Lemma}
+\label{lem:propertiesofK}
+Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{n}$
+oraz niech $K_{S}$ będzie zdefiniowane jak w równaniu
+\eqref{def:definitionofK}.
+Wówczas:
+% %Enumerate the list like: a), b), c) etc.
+\let \oldlabelenumi \labelenumi
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+\item $\mathbf{1} \in K_{S}$;
+\item $A \in K_{S}$ implikuje $A^{*} \in K_{S}$;
+\item  $A  \in K_{S}$ implikuje
+$|A| = (A^{*}A)^{1/2} \in K_{S}$;
+\item jeśli $A, B \in K_{S}$, to $AB + BA \in K_{S}$;
+\item jeśli $A = A^{*} \in K_{S}$ oraz $A = \sum_{i=1}^{k} \lambda_{i} P_{i}$,
+gdzie każde $\lambda_{i} \neq 0$ jest różne i
+każde $P_{i}$ jest projektorem ortogonalnym w $M_{n}$,
+to $P_{i} \in K_{S}$ dla każdego $i = 1,2,\ldots,k$;
+\item jeśli $P \in K_{S}$ jest projektorem ortogonalnym,
+to $S(P)$ and $S^{*}(P)$ jest również projektorem ortogonalnym i
+$\mathrm{dim} \, S(P) = \mathrm{dim} \, S^{*}(P) = \mathrm{dim} \, P$;
+\item jeśli $P, Q \in K_{S}$ są projektorami ortogonalnymi, dla których
+$P Q = 0$,
+to $S(P) S(Q) = S^{*}(P) S^{*}(Q) = 0$.
+\end{enumerate}
+%Return to the old enumaration style
+\let \labelenumi \oldlabelenumi
+\end{Lemma}
+
+\begin{proof}
+a) oczywiste, ponieważ $S$ jest odwzorowaniem bistochastycznym;
+b), c) dowód tak jak w Prop. 5\,a) i 5\,b) w \cite{olkiewicz1999environment}.
+
+d)  Załóżmy na początku, że $A = A^{*} \in K_{S}$.
+Ponieważ $S^{*k} S^{k}(A) = S^{k} S^{*k}(A) = A$,
+a także na mocy nierówności Kadisona-Schwarza zastosowanej do odwzorowania
+$S^{*k} S^{k}$, mamy
+\begin{equation}
+A^{2} \: = \: \left( S^{*k} S^{k}(A) \right) \left( S^{*k} S^{k}(A) \right)
+    \: \leq \: S^{*k} S^{k}(A^{2}).
+\end{equation}
+Stąd
+\begin{equation}
+||A^{2}||_{HS} \: \leq \: || S^{*k} S^{k}(A^{2}) ||_{HS} \: \leq \:
+    || S^{k}(A^{2}) ||_{HS} \: \leq \: ||A^{2}||_{HS},
+\end{equation}
+tzn. $|| S^{k}(A^{2}) ||_{HS} = ||A^{2}||_{HS}$.
+Podobny argument dowodzi, że
+$|| S^{*k}(A^{2}) ||_{HS} = ||A^{2}||_{HS}$,
+i dlatego $A^{2} \in K_{S}$.
+Dla każdego $A, B \in K_{S}$, takich że $A = A^{*}$, $B = B^{*}$,
+mamy
+$AB + BA = (A + B)^{2} - A^{2} - B^{2} \in K_{S}$.
+W ogólności, dla $A \in K_{S}$, piszemy
+$A = A_{1} + i A_{2}$, gdzie $A_{1}, A_{2}$ są hermitowskie.
+Wtedy
+$A^{2} = A_{1}^{2} - A_{2}^{2} + i(A_{1} A_{2} + A_{2} A_{1}) \in K_{S}$.
+W tym miejscu jasne jest, że $AB+BA \in K_{S}$ dla ogólnych $A,B \in K_{S}$.
+
+e) tak jak Prop. 5\,d);
+f), g) tak jak Prop. 6\,a) i 6\,c) w
+\cite{olkiewicz1999environment}.
+\end{proof}
+
+
+
+Następujący fakt jest prostą konsekwencją poprzedniego.
+
+\begin{Corollary}
+\label{cor:KisJordanAlgebra}
+przestrzeń $K_{S}$, 
+z normą operatorową $|| \cdot ||$,
+i mnożeniem  $A \circ B = \frac{1}{2}(AB + BA)$,
+jest JB$^{*}$-algebrą.
+Odwzorowanie $S$ jest automorfizmem Jordana na $K_{S}$ oraz
+\begin{equation}
+\label{eq:SGoesTo0OnKOrth}
+    \lim \limits_{k\rightarrow \infty} S^{k}(A)  \: = \:
+    \lim \limits_{k\rightarrow \infty} S^{*k}(A) \: = \: 0,
+\end{equation}
+dla każdego $A \in K_{S}^{\perp}$.
+\end{Corollary}
+
+\begin{proof}
+Jest oczywiste, że $K_{S}$ jest zespoloną algebrą Banacha. 
+Z lematu \ref{lem:propertiesofK}\,b),
+$K_{S}$ posiada involucję,
+a z punktu d) wiemy, że $K_{S}$ jest algebrą Jordana.
+Ponieważ odwzorowanie $S$ jest niezmiennicze względem podprzestrzeni
+$K_{S}$ i $K_{S}^{\perp}$,
+i rzecz jasna $M_{n} = K_{S} \oplus K_{S}^{\perp}$,
+wnioskujemy, że $S$ rozbija się na sumę prostą
+$S = S_{1} \oplus S_{2}$,
+gdzie $S_{1} = S_{| K_{S}}$, $S_{2} = S_{| K_{S}^{\perp}}$.
+Z Prop. 7a) w 
+\cite{olkiewicz1999environment},
+mamy, żę $S(A^{*} A) = S(A)^{*} S(A)$,
+tzn. $S$ jest homomorfizmem Jordana na $K_{S}$.
+Co więcej, ponieważ $S^{*} S = S S^{*} = I$ na $K_{S}$,
+odwzorowanie $S_{1}$ jest odwracalne,
+a zatem jest automofizmem Jordana
+(por. Definicję 3.2.1(6) w \cite{Bratteli2003}).
+Z def. \eqref{def:definitionofK} przestrzeni $K_{S}$,
+wynika w łatwy sposób, że  
+równanie \eqref{eq:SGoesTo0OnKOrth} jest spełnione.
+\end{proof}
+
+\begin{Theorem}
+\label{thm:FromESbook}
+Niech $K \subset M_{n}$ będzie JB$^{*}$-podalgebrą $M_{n}$.
+Wówczas istnieje odwzorowanie bistochastyczne
+$S \! : M_{n} \rightarrow M_{n}$, takie że $K = K_{S}$.
+\end{Theorem}
+\begin{proof}
+Rozważmy $M_{n}$ jako przestrzeń Hilberta z iloczynem skalarnym
+Hilberta-Schmidta.
+Niech $S\!: M_{n} \rightarrow K \subset M_{n}$ będzie 
+projektorem ortogonalnym na $K$.
+Jest jasne, że $S(\mathbf{1}) = \mathbf{1}$,
+a ponieważ $S = S^{*}$, 
+odwzorowanie $S$ zachowuje również ślad oraz
+$K$ jest stabilną podprzestrzenią dla $S$,
+zakładając, że $S$ jest odwzorowaniem dodatnim.
+Niech $A \in M_{n}$  będzie dodatnią macierzą.
+Ponieważ $K$ jest JB$^{*}$-algebrą,
+$(SA)^{*} \in K$.
+Z faktu, że
+$|| A - SA ||_{HS} = || A - (SA)^{*} ||_{HS}$
+oraz $SA$ jest najlepszym przybliżeniem $A$ w przestrzeni $K$,
+mamy $(SA)^{*} = SA$.
+Zapiszmy $SA = B_{+} - B_{-}$,
+gdzie obie macierze $B_{+}, B_{-}$ są dodatnie i
+$B_{+} B_{-} = 0$.
+Z założenia $\mathbf{1} \in K$,
+a ponieważ $(SA)^{k} \in K$ dla każdego $k \in \mathbb{N}$,
+wiemy, że również moduł $|S A| \in K$
+(por. jawny wzór na pierwiastek kwadratowy z dodatniej macierz w
+\cite{Bratteli2003}, s. 34).
+Zatem oba $B_{+}, B_{-} \in K$.
+Obliczmy
+\begin{multline}
+|| A - SA ||_{HS}^{2} \: = \: \text{Tr} \, ( A - SA )^{2} \: = \:
+    \text{Tr} \, ( A - B_{+} + B_{-} )^{2} \: = \: \\
+    \text{Tr} \, ( A - B_{+} )^{2} + 
+        2 \, \text{Tr} \, ( A - B_{+} ) B_{-} + \text{Tr} \, B_{-}^{2}
+            \: = \: \\
+    || A - B_{+} ||_{HS}^{2} + 
+        2 \, \text{Tr} \,  A \, B_{-}+ \text{Tr} \, B_{-}^{2} 
+    \: \geq \: || A - B_{+} ||_{HS}^{2}.
+\end{multline}
+Ponieważ $SA$ jest najlepszym przybliżeniem $A$ in $K$,
+dostajemy, że $SA = B_{+}$, tzn. $SA \geq 0$, co kończy dowód.
+\end{proof}
+
+
+Z powyższego wynika, że $K_{S}$ posiada strukturę JB$^{*}$-algebry.
+Jak zobaczymy w dalszej części,
+z dodatkowym założeniem odnośnie odwzorowania S,
+taka algebra musi być bardzo szczególna,
+przynajmniej w nisko wymiarowym przypadku.
+
+Dla wygody oznaczmy ortogonalne projektory:
+\begin{equation}
+\label{def:OrthogonalProjections}
+    P_{1} = \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix} , \quad \quad
+    P_{2} = \begin{pmatrix}
+        0 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix} , \quad \quad
+    P_{3} = \begin{pmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 1
+    \end{pmatrix}
+\end{equation}
+oraz $P_{12} = P_{1} + P_{2}$.
+
+Ważny dla dalszego toku rozumowania jest wniosek z twierdzeń 5.3.8 i 6.2.3 
+w \cite{hanche1984jordan},
+który pozwala przyjąć, że każda JB$^{*}$-algebra zawarta w $M_{3}$
+jest izomorficzna z jedną z następujących algebr:
+$\mathbb{C}\mathbf{1}$, 
+$\mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$,
+$\mathbb{C} P_{1} \oplus \mathbb{C} P_{2} \oplus \mathbb{C} P_{3}$,
+$M_{2} \oplus \mathbb{C} P_{3}$,
+$M_{2}^{s} \oplus P_{3}$, 
+$M_{3}^{s}$
+oraz
+$M_{3}$,
+gdzie $M_{n}^{s}$ jest algebrą Jordana składającą się z symetrycznych
+macierzy rozmiaru $n$: $M_{2}^{s} = \{ A \in M_{n}: A = A^{t} \}$.  
+
+\begin{Theorem}
+\label{thm:ExposedMaps}
+Niech $S\!: M_{3} \rightarrow M_{3}$ będzie ekstremalnym odwzorowaniem
+bistochastycznym.
+Wówczas JB$^{*}$-algebra $K_{S}$ jest izomorficzna z jedną z następujących:
+$\mathbb{C}\mathbf{1}$, $\mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$
+lub
+$M_{3}$.
+\end{Theorem}
+
+\begin{proof}
+1. 
+Tezy twierdzenia dowiedziemy najpierw poprzez wykluczenie wszystkich
+pozostałych przypadków.
+Niech $K_{S}$ będzie jedną z następujących JB$^{*}$-algebr:
+$\mathbb{C} P_{1} \oplus \mathbb{C} P_{2} \oplus \mathbb{C} P_{3}$,
+$M_{2} \oplus \mathbb{C} P_{3}$,
+$M_{2}^{s} \oplus P_{3}$, or $M_{3}^{s}$.
+Wówczas $K_{S}$ zawiera projektory ortogonalne $P_{1}, P_{2}, P_{3}$,
+a ponieważ $S$ jest automorfizmem Jordana na $K_{S}$:
+\begin{multline}
+    \text{Tr} \, S(P_{i}) S(P_{j}) = \\
+= \frac{1}{2} \text{Tr} \, \left( S(P_{i}) S(P_{j}) + S(P_{j}) S(P_{i}) \right)=
+\frac{1}{2} \text{Tr} \, S(P_{i} P_{j} + P_{j} P_{i})=
+\text{Tr} \, P_{i} P_{j} = \delta_{ij},
+\end{multline}
+gdzie $i,j = 1,2,3$ oraz $\delta_{ij}$ jest deltą Kroneckera.  
+Stąd, $\left\{S(P_{i})\right\}_{i=1}^{3}$ 
+jest trójką ortogonalnych projektorów rzędu 1, prostopadłych względem siebie.
+Istnieje więc macierz unitarna $U \in M_{3}$, taka że
+$U^{*} S(P_{i}) U = P_{i}$, for $i = 1,2,3$. 
+Zdefiniujmy $\tilde{S}(A) = U^{*} S(A) U$.
+Wówczas $\tilde{S}$ jest odwzorowaniem ekstremalnym 
+\cite[Lemma 3.1.2b, p.\,27]{stormer2013positive}
+i bistochastycznym, dla którego
+$\tilde{S}(P_{i}) = P_{i}$, $i = 1,2,3$.
+Z Twierdzenia 4.1 \cite{kye1995positive},
+$\tilde{S}$ jest rozkładalne,
+co stoi w sprzeczności z faktem, że $S$ jest ektremalne albo $K_{S} \neq M_{3}$.
+
+2.
+Mimo że łatwo wyszczególnić takie odwzorowania ekstremalne, dla których
+$K_{S}=M_{3}$ (np. $S(A) = U A U^{*}$ dla macierzy unitarnej $U$)
+lub $K_{S}=\mathbb{C} \mathbf{1}$
+(weźmy np. znane odwzorowanie Choi
+\cite{choi1977extremal});
+należy jeszcze podać przykład ektremalnego odwzorowania bistochastycznego,
+dla którego
+$K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
+
+Niech więc $S\!: M_{3} \rightarrow M_{3}$ będzie odwzorowaniem liniowym
+zadanym przez
+\begin{equation}
+\label{eq:DefinitionOfS}
+S(A) \:=\: \begin{pmatrix}
+        \frac{1}{2}(a_{11} + a_{22}) & 0 & \frac{1}{\sqrt{2}} a_{13} \\
+        0 & \frac{1}{2}(a_{11} + a_{22}) & \frac{1}{\sqrt{2}} a_{32} \\
+        \frac{1}{\sqrt{2}} a_{31} & \frac{1}{\sqrt{2}} a_{23} & a_{33}
+        \end{pmatrix},
+\end{equation}
+dla
+$A = \left( a_{ij} \right)_{i,j=1}^{3}
+        \in M_{3}$.
+Jeśli posłużymy się notacją
+$A = \left( \begin{smallmatrix}
+    B & \vec{u} \\
+    \vec{w}^{t} & z
+    \end{smallmatrix} \right)$,
+dla $B \in M_{2}$, gdzie
+$\vec{u},\vec{w} \in \mathbb{C}^{2}$ są wektorami kolumnowymi,
+a $z \in \mathbb{C}$,
+odwzorowanie $S$ działa jak
+\begin{equation}
+    S(A) \:=\: S \begin{pmatrix}
+    B & \vec{u} \\
+    \vec{w}^{t} & z
+    \end{pmatrix} \: = \:
+    \begin{pmatrix}
+        \frac{1}{2} (\text{Tr} B) \, \mathbf{1}_{2} &
+            \frac{1}{\sqrt{2}}(\hat{P}_{1} \vec{u} + \hat{P}_{2} \vec{w}) \\
+        \frac{1}{\sqrt{2}}(\hat{P}_{1} \vec{w} + \hat{P}_{2} \vec{u})^{t} & z
+    \end{pmatrix},
+\end{equation}
+gdzie
+$\hat{P}_{1} = \left( \begin{smallmatrix} 1 & 0 \\ 0 & 0 \end{smallmatrix} \right)$,
+$\hat{P}_{2} = \left( \begin{smallmatrix} 0 & 0 \\ 0 & 1 \end{smallmatrix} \right)$
+oraz $\mathbf{1}_{2}$ jest macierzą jednostkową na $M_{2}$.
+Zakładając, że następny lemat jest prawdziwy,
+ten przykład kończy dowód.
+\end{proof}
+
+
+\begin{Lemma}
+\label{lem:SIsExtremal}
+$S$ jest odwzorowaniem bistochastycznym i extremalnym.
+\end{Lemma}
+
+\begin{proof}
+Aby udowodnić, że $S$ jest odwzorowaniem dodatnim,
+wystarczy pokazać, że dla każdego $\eta \in \mathbb{C}^{3}\backslash\{0\}$, 
+$SP_{\eta} \geq 0$,
+gdzie $P_{\eta}$ jest operatorem rzędu 1,
+$P_{\eta} = \eta \eta^{*}$.
+Niech więc
+$\eta = (\eta_{1}, \eta_{2}, \eta_{3}) = (\vec{\eta}, \eta_{3})$,
+$\vec{\eta} = (\eta_{1}, \eta_{2}) \in \mathbb{C}^{2}\backslash\{0\}$,
+$\eta_{3} \in \mathbb{C}$.
+Wówczas mamy
+\begin{multline}
+ SP_{\eta} \:=\:  S \begin{pmatrix}
+    \vec{\eta} \vec{\eta}^{\,*} & \overline{\eta}_{3} \vec{\eta} \\
+    \eta_{3} \vec{\eta}^{\,*}   & |\eta_{3}|^{2}
+ \end{pmatrix} \: = \: \\
+ = \begin{pmatrix}
+  \frac{||\vec{\eta}||^{2}}{2} \mathbf{1}_{2} &
+        \frac{1}{\sqrt{2}} \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+          \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right) \\
+\frac{1}{\sqrt{2}} \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+          \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)^{*} &
+        |\eta_{3}|^{2}
+ \end{pmatrix}.
+\end{multline}
+Jeżeli $\eta_{3} = 0$, wtedy oczywiście $SP_{\eta} \geq 0$.
+W przypadku, gdy $\eta_{3} \neq 0$,
+biorąc dopełnienie Schura
+(por. \cite[Theorem 1.12, p.34]{Zhang2006}),
+dostajemy, że $SP_{\eta} \geq 0$, wtedy i tylko wtedy, gdy
+\begin{equation}
+\label{ieq:SchurForS}
+   \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+    \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)
+   \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+    \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)^{*} 
+    \: \leq \:
+        |\eta_{3}|^{2} \, ||\vec{\eta}||^{2} \, \mathbf{1}_{2};
+\end{equation}
+łatwo jednak zauważyć, że ta nierówność jest spełniona:
+\begin{multline}
+   \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+    \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)
+   \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+    \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)^{*} \: \leq \:
+|| \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
+    \eta_{3} \hat{P}_{2}\overline{\vec{\eta}} ||^{2} \, \mathbf{1}_{2}
+    \: = \: \\
+\left( || \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} ||^{2} +
+    || \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} ||^{2} \right) \, \mathbf{1}_{2} 
+    \: = \:
+|\eta_{3}|^{2} \, ||\vec{\eta}||^{2} \, \mathbf{1}_{2}.
+\end{multline}
+Zatem $S$ jest odwzorowaniem bistochastycznym.
+Ponadto,
+$K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
+Rzeczywiście,
+z bezpośredniego rachunku wynika, że dla każdego $A \in M_{3}$:
+\begin{equation}
+\lim \limits_{k \rightarrow \infty} S^{k}(A) \:=\:
+\frac{1}{2} (\text{Tr} \, P_{12} A )\, P_{12} +
+    (\text{Tr} \, P_{3} A)\, P_{3} \, \in K_{S}.
+\end{equation}
+Z definicji \eqref{def:definitionofK},
+dostajemy postać JB$^{*}$-algebry $K_{S}$.
+
+W następnej kolejności pokażemy, że $S$ jest ekstremalne.
+Niech $S_{0}: M_{3} \rightarrow M_{3}$ będzie dodatnim odwzorowaniem,
+takim że
+$0 \leq S_{0} \leq S$.
+Mamy $S_{0}(P_{3}) \leq S(P_{3}) = P_{3}$,
+a stąd $S_{0}(P_{3}) = \alpha P_{3}$ for some $0 \leq \alpha \leq 1$.
+Pamiętając o zanurzeniu \eqref{RandomLabel:450031},
+chcemy pokazać, że $S_{0}(A) \in M_{2} \! \subset \! M_{3}$
+dla każdego $A \in M_{2} \! \subset \! M_{3}$.
+Niech $B \in M_{2}$; załóżmy ponadto z początku, że $B \geq 0$.
+Wówczas
+\begin{equation}
+\label{eq:SMapsM2intoM2}
+ 0 \:\leq\: S_{0} \begin{pmatrix}
+               B & \vec{0} \\ \vec{0}^{t} & 0
+              \end{pmatrix} \: = \:
+ \begin{pmatrix}
+  \hat{S}_{0}(B) & \vec{u} \\ \vec{w}^{t} & r
+ \end{pmatrix},
+\end{equation}
+dla pewnych wektorów $\vec{u}, \vec{w} \in \mathbb{C}^{2}$ oraz $r \geq 0$.
+Odwzorowanie $\hat{S}_{0}:B \mapsto \hat{S}_{0}(B) \in M_{2}$ jest
+z konieczności dodatnie na $M_{2}$, a dodatkowo
+$\hat{S}_{0}(B) \leq \frac{1}{2} (\text{Tr} B) \mathbf{1}_{2}$.
+Z drugiej strony,
+\begin{equation}
+ 0 \: \leq \:
+ \begin{pmatrix}
+  \hat{S}_{0}(B) & \vec{u} \\ \vec{w}^{t} & r
+ \end{pmatrix} \: \leq \:
+            S \begin{pmatrix}
+               B & \vec{0} \\ \vec{0}^{t} & 0
+              \end{pmatrix} \: = \:
+ \begin{pmatrix}
+  \frac{1}{2} (\text{Tr} B) \, \mathbf{1}_{2} & \vec{0} \\ \vec{0}^{t} & 0
+ \end{pmatrix},
+\end{equation}
+a zatem $r=0$, $\vec{u}=\vec{w}=\vec{0}$.
+Ponieważ każda macierz $B \in M_{2}$ jest kombinacją liniową czterech macierzy
+dodatnich, dostajemy w istocie, że
+$S_{0}(A) \in M_{2} \! \subset \! M_{3}$
+dla dowolnego $A \in M_{2} \! \subset \! M_{3}$.
+
+Niech $\{e_{i}\}_{i=1}^{3}$ będzie standardową
+bazą ortonormalną $\mathbb{C}^{3}$
+oraz $\{ E_{jk} \}_{j,k=1}^{3}$ będzie zbiorem macierzy z $M_{3}$,
+dla krórych $E_{jk} = e_{j} e_{k}^{*}$.
+Pokażemy, że dla $i = 1,2,3$ and $j=1,2$;
+$\langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle = 0$
+i $\langle e_{1}, S_{0}(E_{j3}) e_{2} \rangle = 
+    \langle e_{2}, S_{0}(E_{j3}) e_{1} \rangle = 0$.
+Ustalmy $i,j$ oraz 
+$X = |z_{1}|^{2} P_{j} + z_{1} \overline{z_{2}} E_{j3} +
+\overline{z_{1}} z_{2} E_{3j} + |z_{2}|^{2} P_{3}$,
+dla pewnych $z_{1}, z_{2} \in \mathbb{C}$.
+Jasne jest, że $X \geq 0$. 
+Ponieważ $S_{0}(E_{j3}) = S_{0}(E_{3j})^{*}$,
+\begin{equation}
+0 \: \leq \: \langle e_{i}, S_{0}(X) e_{i} \rangle \: = \:
+|z_{1}|^{2} \, \delta_{ij} +
+2 \, \text{Re} \, z_{1} \overline{z_{2}} \,
+    \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle +
+|z_{2}|^{2} \, \delta_{i3},
+\end{equation}
+gdzie $\delta_{ij}$ jest deltą Kroneckera.
+Jako że powyższe równanie jest prawdziwe dla każdej pary
+$z_{1}, z_{2} \in \mathbb{C}$ i $j \neq 3$,
+dostajemy, że $\langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle =0$. 
+Skoro $X \geq 0$, więc również $Y = P_{12} \, S_{0}(X) P_{12}$.
+A zatem $Y_{jj} = |z_{1}|^{2}$;
+jednak drugi element diagonalny $Y$ wynosi 0, a więc również
+$Y_{12} = Y_{21} = 0$,
+co oznacza, że
+$\langle e_{1}, S_{0}(E_{j3}) e_{2} \rangle
+    = \langle e_{2}, S_{0}(E_{j3}) e_{1} \rangle = 0$.
+
+Na mocy powyższego możemy napisać:
+$A  =   \left( \begin{smallmatrix}
+    B & \vec{u} \\
+    \vec{w}^{t} & z
+    \end{smallmatrix} \right) \in M_{3}$,
+\begin{equation}
+    S_{0}(A) \:=\: S_{0} \begin{pmatrix}
+    B & \vec{u} \\
+    \vec{w}^{t} & z
+    \end{pmatrix} \: = \:
+    \begin{pmatrix}
+        \hat{S}_{0}(B) & S_{1} \vec{u} + S_{2} \vec{w} \\
+        (\overline{S}_{1} \vec{w} + \overline{S}_{2} \vec{u})^{t} & \alpha z
+    \end{pmatrix}
+\end{equation}
+oraz  $S_{1}, S_{2} \in M_{2}$, których elementy macierzowe dane są przez
+\begin{equation}
+(S_{1})_{ij} = \langle e_{i}, S(E_{j3}) e_{3} \rangle, \quad \quad
+(S_{2})_{ij} = \langle e_{i}, S(E_{3j}) e_{3} \rangle.
+\end{equation}
+
+Załóżmy, że $\alpha = 0$.
+Wówczas, skoro $S_{0} P_{\eta} \geq 0$ dla każdego
+$\eta \in \mathbb{C}^{3}\backslash\{0\}$,
+mamy $S_{1} = S_{2} = 0$.
+Ponieważ
+$0 \leq (S - S_{0}) P(1,1,1)$,
+\begin{equation}
+0 \: \leq \: \hat{S}_{0} \begin{pmatrix}
+    1 & 1 \\ 1 & 1
+    \end{pmatrix} \: \leq \:
+    \mathbf{1}_{2} - \frac{1}{2} \begin{pmatrix}
+                1 & 1 \\ 1 & 1
+                \end{pmatrix} \: = \:
+    \frac{1}{2}
+    \begin{pmatrix}
+    1 & -1 \\ -1 & 1
+    \end{pmatrix},
+\end{equation}
+tzn. dla pewnego $\beta \geq 0$, 
+$
+\hat{S}_{0} \left( \begin{smallmatrix}
+    1 & 1 \\ 1 & 1
+    \end{smallmatrix} \right) =
+    \beta \left(
+    \begin{smallmatrix}
+    1 & -1 \\ -1 & 1
+    \end{smallmatrix} \right)
+$.
+Powtarzając ten sam rachunek, tym razem dla $P(i,i,1)$,
+dostajemy, że dla pewnego $\beta' \geq 0$:
+$
+\hat{S}_{0} \left( \begin{smallmatrix}
+    1 & 1 \\ 1 & 1
+    \end{smallmatrix} \right) =
+    \beta' \left(
+    \begin{smallmatrix}
+    1 & 1 \\ 1 & 1
+    \end{smallmatrix} \right)
+$,
+a zatem
+$
+\hat{S}_{0} \left( \begin{smallmatrix}
+    1 & 1 \\ 1 & 1
+    \end{smallmatrix} \right) = 0
+$.
+Podobnie:
+$
+\hat{S}_{0} \left( \begin{smallmatrix}
+    1 & -1 \\ -1 & 1
+    \end{smallmatrix} \right) = 0
+$, a stąd
+$\hat{S}_{0}(\mathbf{1}_{2}) = 0$, tzn. $\hat{S}_{0} = 0$.
+Zatem możemy założyć w dalszym toku, że $\alpha > 0$.
+
+Następnie, bezpośrednim rachunkiem dowodzimy, że dla każdego
+$\vec{\eta} \in \mathbb{C}^{2}$:
+\begin{equation}
+ \label{eq:ZeroTrace}
+ \text{Tr} \, P(-2\vec{\upsilon}, ||\vec{\eta}||^{2}) \, S P(\vec{\eta},1)
+     \:=\: 0,
+\end{equation}
+gdzie $\vec{\upsilon} =
+ \frac{1}{\sqrt{2}} \left(
+  \hat{P}_{1} \vec{\eta} + \hat{P}_{2} \overline{\vec{\eta}}
+ \right)$,
+$||\vec{\upsilon}||^{2} = \tfrac{||\vec{\eta}||^{2}}{2}$.
+Ponieważ $0 \leq S_{0} \leq S$, równanie
+\eqref{eq:ZeroTrace} zachodzi także dla $S_{0}$.
+Rozpisując to równanie oraz zakładając, że $||\vec{\eta}|| = 1$,
+dostajemy
+\begin{equation}
+ \label{eq:ZeroTraceExplicit}
+ 4 \, \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon} -
+ 4 \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} + \alpha \: = \: 0,
+\end{equation}
+gdzie $\vec{\upsilon_{0}} = S_{1} \vec{\eta} + S_{2} \overline{\vec{\eta}}$.
+Aby nie komplikować niepotrzebnie zapisu,
+pamiętajmy, że $\vec{\upsilon}$ and $\vec{\upsilon}_{0}$ zależy od$\vec{\eta}$,
+bez zaznaczania tego jawnie.
+
+Ponieważ $S_{0} P(\vec{\eta},1)$ jest macierzą dodatnią, 
+korzystając raz jeszcze z dopełnienia Schura,
+$\vec{\upsilon}_{0} \vec{\upsilon}_{0}^{\,*} \leq  \alpha \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*})$,
+a przez to
+$|\vec{\upsilon}^{\,*} \vec{\upsilon}_{0}|^{2} \leq
+  \alpha \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon}$.
+Zatem
+\begin{equation}
+4 \left( \text{Im} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} \right)^{2} +
+\left( 2 \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} - \alpha \right)^{2} 
+ \: \leq \:
+4 \alpha \, \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon}
+    - 4 \alpha \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} + \alpha^{2}  = 0,
+\end{equation}
+i.e. $\vec{\upsilon}^{\,*} \vec{\upsilon}_{0} = \frac{\alpha}{2}$.
+Podstawiając $\vec{\upsilon}$ i $\vec{\upsilon}_{0}$,
+otrzymujemy:
+\begin{equation}
+\label{eq:ComplicatedForEtaPlus}
+\vec{\eta}^{\,*} \left( \hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \right) \vec{\eta}
+    + \vec{\eta}^{\,*} \hat{P}_{1} S_{2} \overline{\vec{\eta}} 
+    + \vec{\eta}^{\,t} \hat{P}_{2} S_{1} \vec{\eta} \: = \: \frac{\alpha}{\sqrt{2}}.
+\end{equation}
+Skoro równanie jest prawdziwe dla każdego  $\vec{\eta} \in \mathbb{C}^{2}$,
+możemy powtórzyć całą argumentację, tym razem zamieniając
+$\vec{\eta} \mapsto i \vec{\eta}$,
+i otrzymać:
+\begin{equation}
+\label{eq:ComplicatedForEtaMinus}
+\vec{\eta}^{\,*} \left( \hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \right) \vec{\eta}
+    - \vec{\eta}^{\,*} \hat{P}_{1} S_{2} \overline{\vec{\eta}}
+    - \vec{\eta}^{\,t} \hat{P}_{2} S_{1} \vec{\eta} \: = \: \frac{\alpha}{\sqrt{2}}.
+\end{equation}
+Dodając do siebie
+\eqref{eq:ComplicatedForEtaPlus} i \eqref{eq:ComplicatedForEtaMinus},
+mamy:
+$
+\vec{\eta}^{\,*} \left( \hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \right) \vec{\eta} = 
+    \frac{\alpha}{\sqrt{2}},
+$
+dla dowolnego $\vec{\eta}$. 
+Stąd
+\begin{equation}
+\label{eq:S1PlusS2EqualsOne}
+\hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \: = \:
+     \frac{\alpha}{\sqrt{2}} \mathbf{1}_{2}.
+\end{equation}
+Odejmując \eqref{eq:ComplicatedForEtaMinus} od
+\eqref{eq:ComplicatedForEtaPlus},
+dostajemy
+\begin{equation}
+    \vec{\eta}^{\,*} \hat{P}_{1} S_{2} \overline{\vec{\eta}} 
+    + \vec{\eta}^{\,t} \hat{P}_{2} S_{1} \vec{\eta} \: = \: 0.
+\end{equation}
+Niech  $\vec{\eta}$ będzie po kolei jednym z następujących wektorów:
+$(1,0)$, $(0,1)$,
+$(i,0)$, $(0,i)$,
+$(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$, 
+$(\frac{1}{\sqrt{2}},\frac{i}{\sqrt{2}})$.
+Otrzymujemy, że $\hat{P}_{1} S_{2} = \hat{P}_{2} S_{1} = 0$.
+Łącząc to z \eqref{eq:S1PlusS2EqualsOne}, 
+dostajemy
+\begin{equation}
+S_{1} = \begin{pmatrix}
+    \frac{\alpha}{\sqrt{2}} & z_{0} \\ 0 & 0 
+\end{pmatrix}, \quad
+S_{2} = \begin{pmatrix}
+     0 & 0 \\ - z_{0} & \frac{\alpha}{\sqrt{2}} 
+\end{pmatrix}, \quad
+z_{0} \in \mathbb{C}.
+\end{equation}
+
+Kładąc $\vec{\upsilon}^{\,*} \vec{\upsilon}_{0} = \frac{\alpha}{2}$
+w równaniu \eqref{eq:ZeroTraceExplicit}, mamy
+$
+\vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon} = 
+\frac{\alpha}{4}
+$.
+Stąd 
+\begin{equation}
+ \vec{\upsilon}^{\,*} \left(
+    \alpha \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) -\vec{\upsilon}_{0} \vec{\upsilon}_{0}^{\,*}
+  \right) \vec{\upsilon} \: = \: 0,
+\end{equation}
+a ponieważ
+$\vec{\upsilon}_{0} \vec{\upsilon}_{0}^{\,*} \leq  \alpha \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*})$,
+musi być tak, że
+$ \alpha \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon} =
+\left( \vec{\upsilon}_{0}^{\,*} \vec{\upsilon} \right)  \vec{\upsilon}_{0}$
+lub prościej:
+$ \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon} = \frac{1}{2} \vec{\upsilon}_{0}$.
+Raz jeszcze powtórzmy całą argumentację, zamieniając
+$\vec{\eta} \mapsto i \vec{\eta}$,
+dodając otrzymany wynik i odejmując od poprzedniego.
+Ostatecznie dostajemy:
+\begin{subequations}
+    \begin{align}
+\label{eq:SZeroIsAlmostOneA}
+\eta_{1} \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{e}_{1} \: = \: 
+   \left( \frac{\alpha}{2} \eta_{1} + \frac{\sqrt{2}}{2} z_{0} \eta_{2} \right) \, \vec{e}_{1}, \\
+\label{eq:SZeroIsAlmostOneB}
+\overline{\eta}_{2} \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{e}_{2} \: = \: 
+   \left(- \frac{\sqrt{2}}{2} z_{0} \overline{\eta}_{1} + \frac{\alpha}{2} \overline{\eta}_{2} \right) 
+       \, \vec{e}_{2},
+    \end{align}
+\end{subequations}
+gdzie $\vec{\eta} = (\eta_{1}, \eta_{2})$ oraz 
+$\vec{e}_{1} = (1,0), \vec{e}_{2} = (0,1) \in \mathbb{C}^{2}$.
+Wykorzystując np. \eqref{eq:SZeroIsAlmostOneA}
+i mnożąc przez  $\overline{\eta}_{1} \vec{e}_{1}^{\,*}$,
+mamy:
+\begin{equation}
+0 \: \leq \:
+ |\eta_{1}|^{2} \, \vec{e}_{1}^{\,*} \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{e}_{1} 
+ \: = \: 
+\frac{\alpha}{2} |\eta_{1}|^{2} + \frac{\sqrt{2}}{2} z_{0} \overline{\eta}_{1} \eta_{2},
+\end{equation}
+dla dowolnego $\vec{\eta} \in \mathbb{C}^{2}$, $||\vec{\eta}|| =1$. 
+Zatem $z_{0} = 0$ i
+$S_{1} = \frac{\alpha}{2} \hat{P}_{1}$,
+$S_{2} = \frac{\alpha}{2} \hat{P}_{2}$.
+Jako wniosek z równań
+\eqref{eq:SZeroIsAlmostOneA} i \eqref{eq:SZeroIsAlmostOneB},
+$\hat{S}_{0} (\vec{\eta} \vec{\eta}^{\,*}) = \frac{\alpha}{2} \mathbf{1}_{2}$
+dla każdego $\vec{\eta}$, takiego że $\eta_{1} \neq 0$ oraz $\eta_{2} \neq 0$.
+Dla $0 \!<\!\epsilon \!<\! 1$,
+weźmy $\vec{\eta}_{\epsilon} = (\sqrt{1 - \epsilon^{2}}, \epsilon)$.
+Wówczas $\hat{S}_{0} (\hat{P}_{1}) = 
+\lim_{\epsilon \rightarrow 0} \hat{S}_{0}
+    (\vec{\eta}_{\epsilon} \vec{\eta}_{\epsilon}^{\,*}) =
+\frac{\alpha}{2} \mathbf{1}_{2}$. 
+Podobnie,
+$\hat{S}_{0} (\hat{P}_{2}) = \frac{\alpha}{2} \mathbf{1}_{2}$,
+co skutkuje tym, że
+$\hat{S}_{0} (\vec{\eta} \vec{\eta}^{\,*}) = \frac{\alpha}{2} \mathbf{1}_{2}$
+dla każdego $\vec{\eta} \in \mathbb{C}^{2}$,
+$||\vec{\eta}|| = 1$.
+To wystarczy, aby powiedzieć, że
+$\hat{S}_{0}(B) = \frac{\alpha}{2} (\text{Tr} B) \mathbf{1}_{2}$
+dla dowolnego $B \in M_{2}$.
+Pokazaliśmy, że dla każdego dodatniego odwzorowania $S_{0}$, takiego że
+$0 \leq S_{0} \leq S$, mamy
+$S_{0} = \alpha S$ dla $0 \leq \alpha \leq 1$,
+co oznacza, że $S$ jest ekstremalnym odwzorowaniem w zbiorze wszystkich
+odwzorowań dodatnich na $M_{3}$ i co kończy dowód.
+\end{proof}
+
+Interesujące może być ponadto zauważenie, że $S$ nie jest odwzorowaniem
+2-dodatnim.
+Rzeczywiście,
+możemy pokazać nawet więcej i uzasadnić, że $S$
+nie spełnia nierówności Kadisona-Schwarza dla każdej macierzy
+$B \in M_{3}$ (por. Prop.\,4.1 w \cite{choi1980some}).
+Weźmy macierz
+$B = P_{12} + E_{32}$.
+Wówczas łatwo pokazać, że
+$S(B^{*} B) - S(B)^{*} S(B)$
+nie jest dodatnie.
+Oczywiście, odwzorowanie $S$ nie jest również 2-\emph{ko}dodatnie:
+aby to zobaczyć, weźmy $B = P_{12} + E_{31}$.
+Stąd, ponieważ $S$ jest ekstremalne,
+wynika, że jest również odwzorowaniem atomowym \cite{???}.
+
+W celu udowodnienia ekstremalności $S$,
+pokazaliśmy , że $S_{0} = \alpha S$,
+dla każdego $0 \leq S_{0} \leq S$.
+W rzeczywistości wystarczyło wykorzystać słabsze założenie.
+Przyjmijmy, że $S_{0} \in \mathcal{P}(M_{3})$ oraz
+$\text{Tr} P_{\xi} \, S_{0}(P_{\eta}) = 0$,
+dla każdego $\mathbb{C}^{3} \ni \xi,\eta \neq 0$,
+takiego że $\text{Tr} P_{\xi} \, S(P_{\eta}) = 0$.
+Wówczas $\text{Tr} P_{12} \, S_{0}(P_{3}) = 0$ i
+$\text{Tr} P_{3} \, S_{0}(P_{12}) = 0$.
+Ponieważ $S_{0}$ jest dodatnie, więc $S_{0}(P_{3}) = \alpha P_{3}$
+i $S_{0}(P_{12}) \in M_{2} \! \subset \! M_{3}$.
+Dalej dowód można przeprowadzić dokładnie tak samo, jak w
+lemacie \ref{lem:SIsExtremal}, 
+poczynając od \eqref{eq:SMapsM2intoM2}.
+Dowiedliśmy zatem, że $S$ jest odwzorowaniem nie tylko ekstremalnym,
+ale również \emph{exposed}  (por. ??).
+
+\vspace{0.5cm}
+
+Mając dane odwzorowanie dodatnie $S: M_{n} \rightarrow M_{n}$,
+świadek splątania związany z $S$ to macierz $W_{S}$ na
+iloczynie tensorowym $M_{n^{2}} = M_{n} \! \otimes \! M_{n}$,
+zdefiniowana jako
+\begin{equation}
+\label{def:entanglement-witness}
+    W_{S} = \sum \limits_{i,j =1}^{n} E_{ij} \otimes S(E_{ij}),
+\end{equation}
+gdzie $\{ E_{ij}\}_{i,j=1}^{n}$ to macierze posiadające wszystkie
+zerowe elementy, oprócz elementu $ij$ równego jedności.
+Twierdzenie udowodnione przez Choi i Jamiołkowskiego
+\cite{choi1975completely,jamiolkowski1974effective}
+mówi, że macierz $W_{S}$ jest dodatnim elementem $M_{n^{2}}$,
+wtedy i tylko wtedy, gdy $S$ jest kompletnie dodatnie.
+Zatem, dla dodatniego, ale nie kompletnie dodatniego odwzorowania $S$,
+istnieje przynajmniej jedna macierz gęstości $\rho \in M_{n^{2}}$,
+taka że $\text{Tr}\, W_{S} \rho < 0$.
+Taka macierz nie może być separowalna \cite{werner1989quantum},
+a więc możemy powiedzieć, że świadek splątania \emph{detects} 
+\emph{wykrywa} stan splątany $\rho$. 
+
+Interesujące może być pokazanie, z jakiej postaci świadkiem splątania
+stowarzyszone jest odwzorowanie zadane w równaniu \eqref{eq:DefinitionOfS},
+oraz podanie rodziny stanów splątanych na 
+$M_{9} = M_{3} \! \otimes \! M_{3}$, wykrywanych przez $S$.
+W tym przypadku:
+\begin{equation}
+\label{WS-C}
+ W_S =  \left( \begin{array}{ccc|ccc|ccc}
+ \frac{1}{2} &  \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \frac{1}{\sqrt{2}} \\
+ \cdot& \frac{1}{2} &\cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot\\
+ \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& \cdot& \cdot& \cdot  \\ \hline
+ \cdot& \cdot& \cdot& \frac{1}{2} & \cdot& \cdot& \cdot& \cdot&  \cdot \\
+ \cdot& \cdot& \cdot& \cdot& \frac{1}{2} & \cdot& \cdot& \cdot&  \cdot \\
+ \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot & \frac{1}{\sqrt{2}}& \cdot  \\ \hline
+ \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& \cdot& \cdot& \cdot  \\ 
+ \cdot & \cdot& \cdot& \cdot& \cdot& \frac{1}{\sqrt{2}}& \cdot& \cdot& \cdot \\
+ \frac{1}{\sqrt{2}}& \cdot& \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& 1
+  \end{array} \right),
+\end{equation}
+gdzie dla czytelności oznaczyliśmy elementy zerowe macierzy przez kropki.
+Macierz $W_{S}$ nie jest dodatnią macierzą w
+$M_{9} = M_{3} \! \otimes \! M_{3}$.
+Niech $U \in \text{U}(9)$ będzie macierzą unitarną, dla której
+$U^{*} W_{S} U = W_{S}^{(2)} \oplus W_{S}^{(7)}$,
+gdzie
+\begin{equation}
+\label{WS-DirectSum}
+ W_{S}^{(2)} = \left(\begin{array}{cc}
+    0 & \frac{1}{\sqrt{2}}  \\ \frac{1}{\sqrt{2}}  & 0
+  \end{array}\right) \in M_{2}, \quad
+ W_S^{(7)}\ = \  \left( \begin{array}{ccccccc}
+ \frac{1}{2} &  \cdot& \cdot& \cdot& \cdot& \cdot& \frac{1}{\sqrt{2}} \\
+ \cdot& \frac{1}{2} &\cdot& \cdot& \cdot& \cdot& \cdot\\
+ \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& \cdot \\ 
+ \cdot& \cdot& \cdot& \frac{1}{2} & \cdot&  \cdot& \cdot \\
+ \cdot& \cdot& \cdot& \cdot& \frac{1}{2} & \cdot& \cdot \\
+ \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& \cdot  \\ 
+ \frac{1}{\sqrt{2}}& \cdot& \cdot& \cdot& \cdot& \cdot& 1
+  \end{array} \right) \in M_{7}.
+\end{equation}
+Jasne jest, że $W_{S}^{(7)} \geq 0$. 
+Niech także  $\vec{v}$ będzie jednym z wektorów własnych $W_{S}^{(2)}$: 
+$\vec{v} = \frac{1}{\sqrt{2}} (1,-1)^{t} \in \mathbb{C}^{2}$,
+$W_{S}^{(2)} \vec{v} = - \frac{1}{\sqrt{2}} \vec{v}$ oraz niech
+$P_{\vec{v}} = \vec{v} \vec{v}^{*}$
+będzie projektorem ortogonalnym na jedno wymiarową podprzestrzeń
+rozpiętą przez $\vec{v}$.
+Zdefiniujmy
+$\rho = \frac{1}{2} U ( P_{\vec{v}} \oplus \rho_{0} ) U^{*}$,
+dla macierzy gęstość $\rho_{0} \in M_{7}$, 
+$\rho_{0} \geq 0$, $\text{Tr} \rho_{0} = 1$, 
+takiej że
+$\text{Tr}\, W_{S}^{(7)} \rho_{0} < \frac{1}{\sqrt{2}}$.
+Wówczas $\rho \geq 0$ i $\text{Tr} \rho = 1$,
+tzn. $\rho$ jest macierzą gęstości.
+Co więcej,
+\begin{multline}
+\label{RandomLabel:851252}
+    \text{Tr}\, W_{S} \rho =
+\frac{1}{2} \text{Tr}\, W_{S} U (P_{\vec{v}} \oplus \rho_{0}) U^{*} =
+\frac{1}{2} \text{Tr}\, (W_{S}^{(2)} \oplus W_{S}^{(7)}) (P_{\vec{v}} \oplus \rho_{0}) = \\ =
+\frac{1}{2} \text{Tr}\, W_{S}^{(2)} P_{\vec{v}} + \frac{1}{2} \text{Tr}\, W_{S}^{(7)} \rho_{0}
+< 0,
+\end{multline}
+co oznacza, że $W_{S}$ wykrywa stan splątany $\rho$.
+W szczególności stan $\rho$ zadany przez
+\begin{equation}
+\label{PPTstate}
+ \rho =  \frac{1}{7} \left( \begin{array}{ccc|ccc|ccc}
+ 1 &  \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& -1 \\
+ \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot\\
+ \cdot& \cdot& 1 & \cdot& \cdot& \cdot& \cdot& \cdot& \cdot  \\ \hline
+ \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot&  \cdot \\
+ \cdot& \cdot& \cdot& \cdot& 1 & \cdot& \cdot& \cdot&  \cdot \\
+ \cdot& \cdot& \cdot& \cdot& \cdot& 1 & \cdot & -1 & \cdot  \\ \hline
+ \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& 1& \cdot& \cdot  \\ 
+ \cdot & \cdot& \cdot& \cdot& \cdot& -1 & \cdot& 1 & \cdot \\
+ -1 & \cdot& \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& 1
+  \end{array} \right)
+\end{equation}
+jest stanem PPT, tzn. $(I \otimes t)\rho$ jest wciąż macierzą gęstości,
+jednak $\text{Tr}\, W_{S} \rho = \frac{2}{7} - \frac{2\sqrt{2}}{7} < 0$.
+
+\paragraph{}
+(Komentarz)
+%----------------------------------------------------
+% Komentarz na temat nowego przykładu.
+
+% Dla odwzorowania $S$ zadanego przez \eqref{eq:DefinitionOfS}, mamy
+% $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
+% To the best of the authors' knowledge,
+% all the examples of the extremal maps of $M_{3}$
+% that are not completely or co-completely positive,
+% which have been so far specified in the literature,
+% have $K_{S} = \mathbb{C} \, \mathbf{1}$.
+% The map $S$ would be the first one
+% with a two-dimensional commutative stable algebra.
+% 
+
+
+\section{Eksteremalne odwzorowania dodatnie na $M_{3}$
+a macierze idempotentne}
+
+(Komentarz)
+
+Podobnie, jak powyżej w przypadku odwzorowań dodatnich na $M_{2}$,
+zdefiniujmy reprezentację odwzorowań na $M_{3}$ poprzez macierze
+rzeczywiste działające na wektory bazowe w przestrzeni $M_{3}$
+traktowanej jako przestrzeń Hilberta z iloczynem skalarnym Hilberta-Schmidta.
+
+Wybierzmy znormalizowany zbiór macierzy Gell-Manna
+$\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
+\begin{equation}
+\nonumber
+    \lambda_{1} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            0 & 1 & 0 \\
+            1 & 0 & 0 \\
+            0 & 0 & 0
+        \end{pmatrix}, \quad
+    \lambda_{2} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            0 & -i & 0 \\
+            i & 0 & 0 \\
+            0 & 0 & 0
+        \end{pmatrix}, \quad
+    \lambda_{3} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & -1 & 0 \\
+            0 & 0 & 0
+        \end{pmatrix},
+\end{equation}
+\begin{equation}
+\nonumber
+    \lambda_{4} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            0 & 0 & 1 \\
+            0 & 0 & 0 \\
+            1 & 0 & 0
+        \end{pmatrix}, \quad
+    \lambda_{5} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            0 & 0 & -i \\
+            0 & 0 & 0 \\
+            i & 0 & 0
+        \end{pmatrix}, \quad
+    \lambda_{6} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & 1 \\
+            0 & 1 & 0
+        \end{pmatrix},
+\end{equation}
+\begin{equation}
+\nonumber
+    \lambda_{7} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & -i \\
+            0 & i & 0
+        \end{pmatrix}, \quad
+    \lambda_{8} = \frac{1}{\sqrt{6}} \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & -2
+        \end{pmatrix}
+\end{equation}
+oraz $\lambda_{0} = \frac{1}{\sqrt{3}} \mathbf{1}_{3}$;
+który jest bazą ortonormalną w $M_{3}$ względem iloczynu skalarnego HS.
+Każda macierz hermitowska $A = A^{*} \in M_{3}$ może zostać przedstawiona
+jako $A = \lambda(a)$, gdzie
+$\lambda(a) = \sum_{\mu=0}^{8} a_{\mu} \lambda_{mu}$
+oraz 
+$a = (a_{0}, a_{1}, \ldots, a_{8}) \in \mathbb{R}^{9}$.
+Czasem będziemy używać notacji:
+$a = (a_{0}, \vec{a})$,
+gdzie $\vec{a} = (a_{1},\ldots,a_{8}) \in \mathbb{R}^{8}$,
+and $\lambda(a) = \lambda(a_{0}, \vec{a}) = a_{0} \lambda_{0} + \vec{a} \cdot \vec{\lambda}$.
+Dla odwzorowania bistochastycznego $S$,
+zdefiniujmy macierz $x \in M_{8}(\mathbb{R})$ poprzez
+$x_{ij} = \text{tr} \lambda_{i} S(\lambda_{j})$,
+$i,j = 1,2,\ldots,8$.
+Wówczas łatwo zobaczyć, że $S$ działa na macierze samosprzężone jak
+\begin{equation}
+\label{eq:isomoprhism}
+S(\lambda(a_{0}, \vec{a})) = \lambda(a_{0}, x \vec{a}).
+\end{equation}
+Dla macierzy $x \in M_{8}(\mathbb{R})$,
+oznaczmy odwzorowanie liniowe na $M_{3}$,
+zachowujące ślad i macierz jednostkową
+oraz zdefiniowane przez równanie \eqref{eq:isomoprhism},
+przez $S_{x}$.
+Niech $\Lambda \subset \mathbb{R}^{8}$ będzie zbiorem tych macierzy
+rzeczywistych $x$,
+dla których $S_{x}$ jest odwzorowaniem bistochastycznym:
+$\Lambda = \left \{ x \in M_{8}(\mathbb{R}) \: |  \: S_{x} \geq 0 \right \}$.
+Zatem, istnieje wzajemnie jednoznaczna odpowiedniość pomiędzy $\Lambda$
+i zbiorem odwzorowań bistochastycznych na $M_{3}$.
+Struktura zbioru $\Lambda$ jest skomplikowana. 
+Po pierwsze, jest to zbiór wypukły,
+tzn. dla każdego $x,y \in \Lambda$,
+$\lambda x + (1-\lambda)y \in \Lambda$,
+dla $0 \leq \lambda \leq 1$.
+Co więcej, jest to zwarta afiniczna półgrupa topologiczna
+(por. \cite{schwarz1955hausdorff,chow1975compact})
+z inwolucją zadaną przez transpozycję macierzy: $A \mapsto A^{t}$.
+
+\begin{Theorem}
+\label{thm:LambdaAndBalls}
+    Niech $\overline{K}_{r}(\hat{0})$ oznacza domkniętą kulę jednostkową
+w $M_{8}(\mathbb{R})$, względem normy operatorowej,
+o środku w $\hat{0}$ i promieniu $r > 0$.
+    Wówczas
+    \begin{equation}
+        \overline{K}_{\frac{1}{2}}(\hat{0})
+            \subset \Lambda \subset \overline{K}_{1}(\hat{0}).
+    \end{equation}
+\end{Theorem}
+\begin{proof}
+    Załóżmy, że $x \in M_{8}(\mathbb{R})$ oraz $||x|| \leq \frac{1}{2}$.
+    Niech $\vec{m}, \vec{n} \in \mathbb{R}^{8}$ będą takie że
+    $P_{\vec{m}} = \lambda(\frac{1}{\sqrt{3}}, \vec{n})$ i
+    $P_{\vec{n}} = \lambda(\frac{1}{\sqrt{3}}, \vec{m})$
+    są projektorami ortogonalnymi w $M_{3}$.
+Łatwo sprawdzić, że w tym przypadku
+    $|| \vec{m} ||_{2} = || \vec{n} ||_{2} = \sqrt{\frac{2}{3}}$,
+gdzie  $|| \cdot||_{2}$ oznacza standardową normę euklidesową.
+Ponieważ $||x|| \leq \frac{1}{2}$, mamy
+    \begin{equation}
+        \text{tr} \, P_{\vec{m}} S_{x}(P_{\vec{n}}) = 
+        \frac{1}{3} + \langle \vec{m}, x \vec{n} \rangle \geq
+        \frac{1}{3} - |\langle \vec{m}, x \vec{n} \rangle| \geq 0.
+        %\frac{1}{3} - \frac{1}{2} \frac{2}{3} = 0.       
+    \end{equation}
+Stąd $S_{x}$ jest dodatnie, co oznacza, że $x \in \Lambda$.
+    
+Niech teraz $x \in \Lambda$.
+Wtedy dla każdego $A = A^{*} \in M_{3}$, $S_{x}$
+spełnia nierówność Kadisona-Schwarza
+    \cite{choi1980some}:
+    \begin{equation}
+     \label{eq:KSineq}
+        S(A)^{2} \leq S(A^{2}).
+    \end{equation}
+Niech $\vec{n} \in \mathbb{R}^{8}$;
+ponieważ $\lambda(\frac{1}{\sqrt{3}}, \vec{n})$
+jest macierzą samosprzężoną, z \eqref{eq:KSineq}, dostajemy
+    \begin{equation}
+        \frac{1}{\sqrt{3}} + || x \vec{n} ||_{2}^{2} = \text{tr}\, 
+        \left ( S_{x}(\lambda(\frac{1}{\sqrt{3}}, \vec{n}) \right)^{2} \leq
+        \text{tr}\, \lambda(\frac{1}{\sqrt{3}}, \vec{n})^{2} =
+        \frac{1}{\sqrt{3}} + ||\vec{n}||_{2}^{2},
+    \end{equation}
+tzn. $||x\vec{n}||_{2} \leq ||\vec{n}||_{2}$
+dla każdego $\vec{n} \in \mathbb{R}^{8}$,
+co daje w rezultacie: $x \in \overline{K}_{1}(\hat{0})$.
+\end{proof}
+
+Niech $P_{8} \in M_{8}(\mathbb{R})$ oznacza macierz diagonalną
+$P_{8} = \text{diag}(0,0,0,0,0,0,0,1)$;
+i tak dalej dla pozostałych zbiorów indeksów:
+$P_{38} = \text{diag}(0,0,1,0,0,0,0,1)$.
+Prawdą jest, że każda z macierzy
+$P_{8}, P_{38}, P_{138}, P_{1238}, P_{13468}$ jest idempotentym elementem
+zbioru $\Lambda$.
+Ponadto, w $\Lambda$ nie ma elementów idempotentnych rzędu 6 i 7,
+a jedyny idempotent rzędu 8 to macierz jednostkowa $\mathbf{1}_{8}$.
+Niech także $G_{3} = \text{Ad} \, \text{SU}(3) \subset \Lambda$ oznacza
+grupę tych macierzy $g \in \Lambda$, takich że
+$S_{g}$ jest automorfizmem: $S_{g}(A) = U A U^{*}$,
+dla pewnej macierzy unitarnej $U \in \text{SU}(3)$.
+Jasne jest, że $G_{3} \subset \text{SO}(8)$,
+Zbiór tych $x$, dla których $S_{x}$ jest ekstremalnym
+odwzorowaniem w zbiorze wszystkich odwzorowań na $M_{3}$
+(niekoniecznie bistochastycznych) oznaczmy przez
+$\text{Ext}_{0}(\Lambda)$,
+a zbiór punktów ekstremalnych zwartego zbioru wypukłego
+$\Lambda$ przez: $\text{Ext}(\Lambda)$.
+Macierz $x \in \text{Ext}(\Lambda)$,
+wtedy i tylko wtedy, gdy dla każdych
+$y_{1}, y_{2} \in \Lambda$ and $0 \leq \lambda \leq 1$,
+z tego, że $x = \lambda y_{1} + (1-\lambda) y_{2}$,
+wynika: $y_{1} = y_{2} = x$.
+Oczywiście, $\text{Ext}_{0}(\Lambda) \subset \text{Ext}(\Lambda)$.
+Następny fakt wynika w prosty sposób z poprzedniego twierdzenia
+\ref{thm:LambdaAndBalls}.
+
+\begin{Theorem}
+    \label{thm:oneHalfofOrthogonal}
+    Niech $x \in \mathrm{Ext}(\Lambda)$.
+Załóżmy, że $||x|| = \frac{1}{2}$;
+wtedy $ x = \frac{1}{2} R$,  for $R \in \mathrm{O}(8)$.
+\end{Theorem}
+\begin{proof}
+Niech $x \in \mathrm{Ext}(\Lambda)$ oraz $||x|| = \frac{1}{2}$.
+Niech $x = R |x|$ będzie rozkładem biegunowym $x$,
+    $R \in \text{O}(8)$, $|x| = \sqrt{x^{t} x}$.
+Załóżmy, że $|x| \neq \frac{1}{2} \mathbf{1}_{8}$.
+Niech $y_{1} = \frac{1}{2} \mathbf{1}_{8}$ i
+    $y_{2} = 2 |x| - \frac{1}{2} \mathbf{1}_{8}$.
+Wtedy $- \frac{1}{2} \mathbf{1}_{8} \leq y_{2} \leq \frac{1}{2} \mathbf{1}_{8}$,
+a więc $|| y_{2} || \leq \frac{1}{2}$
+i z twierdzenia \ref{thm:LambdaAndBalls},
+mamy, że obie macierze, $R y_{1}, R y_{2} \in \Lambda$.
+Stąd $x = \frac{1}{2} R y_{1} + \frac{1}{2} R y_{2}$,
+i przez to $x$ nie może być punktem ekstremalnym, co oznacza sprzeczność.
+Zatem, $x = \frac{1}{2} R$.
+\end{proof}
+
+
+Na mocy twierdzenia \ref{thm:LambdaAndBalls},
+widzimy, że $x \in \text{Ext}(\Lambda)$ implikuje
+    $||x|| \geq \frac{1}{2}$.
+Zatem $x = \frac{1}{2} R$, $R \in \mathrm{O}(8)$,
+to jedyna możliwa postać elementów zbioru $\text{Ext}(\Lambda)$,
+a co za tym idzie, również zbioru $\text{Ext}_{0}(\Lambda)$,
+dla których $||x|| = \frac{1}{2}$.
+
+\paragraph{}
+(...komentarz -- wstęp...)
+Niech $x \in \Lambda$ oraz niech
+$\langle x \rangle \subset \Lambda$ będzie półgrupą generowaną przez $x$:
+$\langle x \rangle = \left \{ x^{k} \: | \: k \in \mathbb{N}, k \geq 1 \right \}$.
+Oznaczmy przez $\overline{\langle x \rangle}$,
+domknięcie $\langle x \rangle$ w zbiorze $M_{8}(\mathbb{R})$.
+Dowód następującego faktu zawarty został w Lemacie 3 w
+    \cite{schwarz1955hausdorff}.
+
+\begin{Theorem}
+    \label{prop:UniqeClusterPoint}
+    Ponieważ $\Lambda$ jest zbiorem domkniętym, $\overline{\langle x \rangle} \subset \Lambda$.
+    Zbiór $\overline{\langle x \rangle}$ zawiera jedyny element idempotentny,
+    oznaczony symbolem $e_{x}$.
+\end{Theorem}
+
+\begin{Definition}
+    Dla zbioru $\Lambda$, zdefiniujmy następujące podzbiory:
+    \begin{enumerate}
+       \item zbiór elementów idempotentnych w $\Lambda$:
+            $\mathcal{E}(\Lambda) = \left \{ e \in \Lambda \: |  \: e^{2} = e \right \}$;
+       \item zbiór elementów nilpotentnych:
+            $\mathcal{N}(\Lambda) = \left \{ x \in \Lambda \: |  \: \lim \limits_{n \rightarrow \infty} x^{n} = \hat{0} \right \}$;     
+       \item grupa elementów odwracalnych:
+            $\mathcal{G}(\Lambda) = \left \{ x \in \Lambda \: |  \: \exists \, y \in \Lambda, xy = yx = \mathbf{1}_{8} \right \}$.       
+    \end{enumerate}
+   Dla elementu idempotentnego $e \in \mathcal{E}(\Lambda)$,
+   zdefiniujmy następujące podzbiory $\Lambda$:
+   \begin{enumerate}
+        \item niech $H(e)$ będzie maksymalną podgrupą $\Lambda$ 
+            zawierającą $e \in \mathcal{E}(\Lambda)$;
+        \item $Q(e) = \left \{ x \in \Lambda \: | \: e_{x} = e \right \}$,
+        gdize $e_{x}$ jest jedynym idempotentnym elementem
+        $\overline{\langle x \rangle}$.
+   \end{enumerate}
+\end{Definition}
+
+\begin{Remark}
+\label{rem:GOfLambda}
+Na mocy znanego w teorii półgrup faktu, dla każdego elementu idempotentnego
+istniee dokładnie jedna maksymalna podgrupa zawierająca ten element.
+W szczególności, w naszym przypadku półgrupy $\Lambda$,
+$H(\hat{0}) = \left \{ \hat{0} \right \}$,
+w oczywisty sposób:
+$H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
+a także $H(P_{8}) = \left \{ P_{8} \right \}$.
+Rzeczywiście,
+jeśli $x = (x_{ij})_{i,j=1}^{8} \in H(P_{8})$,
+wówczas
+$x = x P_{8} = P_{8} x P_{8} = x_{88} P_{8}$.
+Ponieważ istnieje ciąg liczb naturalnych  $n_{k}$, $k=1,2,3,\ldots$,
+taki że $x^{n_{k}} \overset{k}{\rightarrow} P_{8}$,
+więc
+$|x_{88}| = 1$. But $- P_{8} \notin \Lambda$,
+a stąd $x = P_{8}$.
+\end{Remark}
+
+\begin{Remark}
+    \label{rem:Qof1}
+Prawdą jest, że $Q(\hat{0}) = \mathcal{N}(\Lambda)$.
+Rzeczywiśie, niech $x \in Q(\hat{0})$;
+wówczas na mocy definicji,
+istnieje ciąg liczb naturalnych $n_{k}$, taki że
+$x^{n_{k}} \overset{k}{\rightarrow} \hat{0}$.
+Dla każdego $l \in \mathbb{N}$, istnieje $k(l)$, dla którego
+$l \leq n_{k(l)}$, a ponieważ
+$||x|| \leq 1 $, na mocy twierdzenia \ref{thm:LambdaAndBalls}, mamy
+$||y^{l}|| \leq ||y^{l - n_{k(l)}}|| \, ||y^{n_{k(l)}}|| \leq ||y^{n_{k(l)}}||
+\overset{l}{\rightarrow} 0$.
+Stąd $y^{l} \overset{l}{\rightarrow} \hat{0}$
+i $Q(\hat{0}) \subset \mathcal{N}(\Lambda)$.
+Przeciwne zawieranie jest oczywiste.
+Co więcej, ponieważ mamy $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
+    z Twierdzenia 8 w \cite{schwarz1955hausdorff},
+    $H(\mathbf{1}_{8}) = Q(\mathbf{1}_{8}) \cdot \mathbf{1}_{8}$,
+    a wiec $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
+\end{Remark}
+
+Naszym zadaniem jest analiza rodziny zbiorów
+$\left \{ Q(e), e \in \mathcal{E}(\Lambda) \right \}$,
+a w szczególności pokazanie, w których spośród tych zbiorów należy szukać
+elementrów ekstremalnych z 
+$\text{Ext}_{0}(\Lambda)$.
+W tym celu, przedstawmy następujący ciąg stwierdzeń.
+
+\begin{Theorem}
+    Dla $e_{1}, e_{2} \in \mathcal{E}(\Lambda)$,
+    $e_{1} \neq e_{2}$,
+    zbiory $Q(e_{1})$ i $Q(e_{2})$ są rozłączne.
+Ponadto,
+    $\Lambda = \! \bigcup \limits_{e \in \mathcal{E}(\Lambda)} \! Q(e)$.
+\end{Theorem}
+\begin{proof}
+Jeśli $e_{1} \neq e_{2}$, na mocy twierdzenia \ref{prop:UniqeClusterPoint}
+zbiory $Q(e_{1})$ and $Q(e_{2})$ muszą być rozłączne.
+Dla $x \in \Lambda$ mamy, że $x \in Q(e_{x}) \subset \Lambda$,
+co dowodzi tezy. 
+\end{proof}
+
+\begin{Lemma}
+    \label{lem:equivClassesOfQe}
+    Niech $e \in \mathcal{E}(\Lambda)$ i $g \in \mathcal{G}(\Lambda)$.
+    Wówczas $Q(g e g^{t}) = g Q(e) g^{t} = 
+    \left \{ g x g^{t} \: | \: x \in Q(e) \right \}$.
+\end{Lemma}
+\begin{proof}
+    Jasne jest, że $g \langle x \rangle g^{t} = \langle g x g^{t} \rangle$.
+Ponieważ odwzorowanie $x \mapsto g x g^{t}$ jest homeomorfizmem,
+więc $g \overline{\langle x \rangle} g^{t} = \overline{\langle g x g^{t} \rangle}$.
+Niech $x \in Q(g e g^{t})$.
+Wtedy $g e g^{t} \in \overline{\langle x \rangle}$.
+Stąd $e \in g^{t} \overline{\langle x \rangle} g = \overline{\langle g^{t} x g \rangle}$,
+co oznacza, że $g^{t} x g \in Q(e)$, czyli
+    $x \in g Q(e) g^{t}$.
+To dowodzi, że
+    $Q(g e g^{t}) \subset g Q(e) g^{t}$.
+Zawieranie w drugą stronę dowodzi się w sposób analogiczny.
+\end{proof}
+
+W dalszej kolejności spróbujmy opisać strukturę elementów idempotentnych w $\Lambda$.
+Dla $e \in \mathcal{E}(\Lambda)$,
+niech $\mathcal{E}_{G_{3}}(e) = \left \{ g e g^{t} \: | \: g \in G_{3} \right \}$.
+Z początku, w następnym lemacie, przypomnijmy znany fakt,
+mówiący, że idempotenty operator kontraktywny na przestrzeni Hilberta
+jest projektorem ortogonalnym
+(por. np. \cite[Problem 5.3.14]{Abramovich2002}).
+\begin{Lemma}
+    \label{lem:eIsProj}
+    Niech $e \in \mathcal{E}(\Lambda)$, wówczas $e^{t} = e$ i stąd,
+    $e$ jest porjektorem ortogonalnym w $M_{8}(\mathbb{R})$. 
+\end{Lemma}
+\begin{proof}
+    Ponieważ $e^{2} = e$, so $||e|| = ||e^{2}|| \leq ||e||^{2}$,
+    zatem $||e|| \geq 1$.
+    Ponieważ $e \in \Lambda$, na mocy twierdzenia \ref{prop:LambdaAndBalls},
+    $||e|| =1$.
+Załóżmy, że $\vec{n} \in \ker e$ and $\vec{m} \in \mathcal{R}(e)$,
+gdzie $\mathcal{R}(e)$ oznancza obraz operatora $e$.
+Niech $\alpha \in \mathbb{R}$.
+Wówczas 
+\begin{equation}
+    || \alpha \vec{m} ||^{2} = || P (\vec{n} + \alpha \vec{m}) ||^{2} \leq
+    || \vec{n} + \alpha \vec{m}||^{2} \leq ||\vec{n}||^{2} + 
+        2 \alpha \langle \vec{n}, \vec{m} \rangle + || \alpha \vec{m}||^{2},
+\end{equation}
+tzn. $||\vec{n}||^{2} + 2 \alpha  \langle \vec{n}, \vec{m} \rangle \geq 0$,
+dla dowolnego $\alpha \in \mathbb{R}$.
+To z kolei oznacza 
+$\langle \vec{n}, \vec{m} \rangle = 0$,
+dla każdego  $\vec{n} \in \ker e$ and $\vec{m} \in \mathcal{R}(e)$,
+tzn.
+$\ker e \perp \mathcal{R}(e)$, co dowodzi, że $e = e^{t}$.
+\end{proof}
+ 
+\begin{Theorem}
+\label{prop:htranspose}
+Niech $e \in \mathcal{E}(\Lambda)$ i $h \in H(e)$.
+Wtedy $h^{t} \in H(e)$, and $h^{t} h = h h^{t} = e$.
+\end{Theorem}
+\begin{proof}
+    Z Twierdzenia 8  w \cite{schwarz1955hausdorff}, mamy:
+    $H(e) = Q(e) e = e \, Q(e)$.
+Jeśli $x \in Q(e)$, to $x^{t} \in Q(e)$,
+na mocy lematu \ref{lem:eIsProj}.
+Stąd, $h^{t} \in H(e)$.
+Ponieważ $e$ jest projektorem ortogonalnym, $e \leq \mathbf{1}_{8}$;
+co więcej $h^{t} h \leq \mathbf{1}_{8}$, gdyż $h \in \Lambda$.
+A wiec $\hat{0} \leq (h^{t} h)^{k} \leq h^{t} h = e h^{t} h e \leq e$,
+dla każego $k \in \mathbb{N}$.
+Jeśli $n_{k}$ jest ciągiem liczb naturalnych, takim że
+    $(h^{t} h)^{n_{k}} \overset{k}{\rightarrow} e$,
+otrzymujemy: $h^{t} h = e$.
+Na mocy takiego samego rozumowania, mamy także: $h h^{t} = e$.
+\end{proof}
+
+Przypomnijmy, że dla  bistochastycznego odwzorowania $S$
+przez $K_{S}$ oznaczamy stabilną podprzestrzeń zdefiniowaną
+\begin{equation}
+    K_{S} = \left \{ x \in M_{3} \:|\:
+            \forall k \in \mathbb{N} \,\,
+            || S^{k} x ||_{HS} = || S^{*k} x ||_{HS} =  ||x||_{HS}
+    \right \},
+\end{equation}
+gdzie $S^{*}$ oznacza odwzorowanie sprzężone.
+Fakt, że $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$
+można uogólnić do następującego twierdzenia.
+\begin{Theorem}
+    Niech $e \in \mathcal{E}(\Lambda)$ i
+    $K_{S_{e}}$ będzie stabilną podprzestrzenią dla odwzorowania $S_{e}$.
+    Wówczas $K_{S_{e}}$ jest algebrą Jordana oraz 
+    $H(e)$ jest izomorficzny z grupą $\text{Aut}_{J} \, K_{S_{e}}$
+    automorfizmów Jordana algebry $K_{S_{e}}$.
+\end{Theorem}
+
+\begin{proof}
+    Ponieważ $e$ is macierzą idempotentą, na mocy 
+    \cite[Corollary 3]{miller2015stable} (zmień na odniesienie do pracy),
+    przestrzeń $K_{S_{e}} = S_{e}(M_{3})$ jest algebrą Jordana.
+    Odzworowanie $S_{e}$ jest w rzeczywistości 'conditional expectation' na $K_{S_{e}}$.
+    Niech $h \in H(e)$.
+    Z twierdzenia \ref{prop:htranspose}, dla dowolnego $k\in \mathbb{N}$,
+    $S_{h}^{* k} S_{h}^{k} = S_{h^{t}}^{k} S_{h}^{k} =  S_{(h^{t})^{k} h^{k}} = S_{e}$,
+    i podobnie dla $S_{h}^{k} S_{h}^{* k}= S_{e}$.
+    Zatem, stabilna algebra $K_{S_{h}} = K_{S_{e}}$
+    (por. \cite{miller2015stable}, eq. (3.3) and below, (zmień na odniesienie do pracy)).   
+    Znów na mocy \cite[Corollary 3]{miller2015stable},
+    $\varphi_{h} = S_{h} \big |_{K_{S_{e}}}$
+    jest automorfizmem Jordana algebry $K_{S_{e}}$.
+
+Z drugiej strony, jeżeli $\varphi$ jest dowolnym automorfizmem Jordana na
+$K_{S_{e}} \subset M_{3}$,
+to można rozszerzyć go do odwzorowania bistochastycznego $S_{h}$ na $M_{3}$,
+dla pewnego $h \in \Lambda$,
+kładąc $S_{h} = \varphi \circ S_{e}$.
+Wtedy
+    $S_{h} S_{e} = S_{h} = S_{e} S_{h}$,
+ponieważ $S_{e}$ działa na $K_{S_{e}}$ jak odwzorowanie identycznościowe.
+Stąd, $he = eh = h$.
+Dodatkowo, ponieważ $\varphi$ jest odwracalne na $K_{S_{e}}$,
+rozszerzając $\varphi^{-1}$ do kolejnego odwzorowania bistochastycznego
+    $S_{h'}$,  $h' \in \Lambda$,
+pokazujemy, że $h' \in H(e)$ and $h' h = h h' = e$;
+co dowodzi, że $h \in H(e)$.
+\end{proof}
+\begin{Remark}
+Z powyższego twierdzenia, ponieważ $\mathcal{G}(\Lambda) = H(\mathbf{1}_{8})$,
+wnioskujemy, że grupa $\mathcal{G}(\Lambda)$ zawiera te macierze,
+które reprezentują automorfizmy Jordana na $M_{3}$,
+tzn. dla każdego $g \in \mathcal{G}(\Lambda)$,
+istnieje macierz unitarna $U \in \text{SU}(3)$, taka że
+albo $S_{g}(A) = U A U^{*}$, albo $S_{g}(A) = U A^{t} U^{*}$
+dla każdego $A \in M_{3}$.
+Jasne jest, że $G_{3} \subset \mathcal{G}(\Lambda)$.
+Elementy $G_{3}$ reprezentują dokładnie te izomorfizmy Jordana,
+które są jednocześnie zwykłymi izomorfizmami;
+dla każdego $g \in \mathcal{G}(\Lambda) \backslash G_{3}$ istnieje
+$g' \in G_{3}$, takie że $g = g' \tau$,
+gdzie $\tau \in \mathcal{G}(\Lambda)$ jest wybrane tak, aby
+$S_{\tau}(A) = A^{t}$ dla każdego $A \in M_{3}$,
+czyli
+$\tau = P_{13468} - P_{257}$.
+\end{Remark}
+
+\begin{Theorem}
+\label{thm:Idempotents}
+Zbiór $\mathcal{E}(\Lambda)$
+jest sumą mnogościową siedmiu rozłącznych zbiorów:
+    \begin{equation}
+        \mathcal{E}(\Lambda) = \bigcup \limits_{e_{0} \in J} \mathcal{E}_{G_{3}}(e_{0}),
+    \end{equation}
+    gdzie $J = \left \{ \hat{0}, P_{8}, P_{38}, P_{138}, P_{1238}, P_{13468}, \mathbf{1}_{8} \right \}$.
+\end{Theorem}
+\begin{proof}
+Jeżeli $e \in \mathcal{E}(\Lambda)$, to tak, jak powyżej, $S_{e}$
+jest 'conditional expectation' na algebrę Jordana $K_{S_{e}}$.
+Na mocy twierdzeń 5.3.8 i 6.2.3 z \cite{hanche1984jordan},
+wszystkie algebry Jordana w $M_{3}$ są izomorficzne (unitarnie równoważne) z
+jedną z następujących:
+    $\mathbb{C}\mathbf{1}$, 
+    $\mathbb{C} E_{12} \oplus \mathbb{C} E_{3}$,
+    $\mathbb{C} E_{1} \oplus \mathbb{C} E_{2} \oplus \mathbb{C} E_{3}$,
+    $M_{2}^{s} \oplus \mathbb{C} E_{3}$, 
+    $M_{2} \oplus \mathbb{C} E_{3}$,
+    $M_{3}^{s}$,
+    i
+    samą algebrą $M_{3}$;
+gdzie $M_{k}^{s}$ jest algebrą Jordana algebra macierzy symetrycznych rozmiaru
+$k$: $M_{k}^{s} = \{ A \in M_{k}: A = A^{t} \}$;
+    $E_{i}, i = 1,2,3$, to macierze diagonalne z 1 na \emph{i}-tym miescu na
+    przekątnej i 0 na pozostałych miejscach oraz $E_{12} = E_{1} + E_{2}$.
+Zatem, istnieje $g \in G_{3}$, takie że
+    $e = g e_{0} g ^{t}$, a $e_{0}$ jest projektorem ortogonalnym
+    reprezentującym odwzorowanie rzutowe na dokładnie jedną z algebr Jordana
+    wymienionych powyżej.
+Łatwo sprawdzić, że wówczas $e_{0} \in J$ oraz
+$\text{dim} \, e_{0} + 1$ jest równe wymiarowi odpowiedniej algebry Jordana.
+Zatem $e \in \mathcal{E}_{G_{3}}(e_{0})$.
+\end{proof}
+
+\begin{Corollary}
+\label{cor:q}
+    Dla $e \in \mathcal{E}(\Lambda)$, z uwagi na to, że $e$ jest projektorem,
+    $\text{dim} \, e 
+    \in \left \{ 0,1,2,3,4,5,8 \right \}$.
+\end{Corollary}
+
+W następnej kolejności dowiedziemy istnienia użytecznego rozkładu elementów
+zbioru $Q(e)$.
+
+\begin{Lemma}
+\label{lem:decomposition}
+    Niech $e \in \mathcal{E}(\Lambda)$.
+    Macierz $x$ należy do $\in Q(e)$, wtedy i tylko wtedy, gdy
+    $x = h + y$, gdzie
+    $h \in H(e)$, $H(e) y = y H(e) = \hat{0}$ oraz
+    $\lim_{k \rightarrow \infty} y^{k} = \hat{0}$. 
+    Rozkład ten jest jedyny.
+\end{Lemma}
+
+\begin{proof}
+    Załóżmy, że $h + y \in \Lambda$, $h \in H(e)$, $y^{k}  \overset{k}{\rightarrow}  \hat{0}$
+    oraz $hy = yh = \hat{0}$.
+Ponieważ $h \in H(e)$, istnieje ciąg $n_{k} \in \mathbb{N}$ for $k =1,2,3,\ldots$,
+taki że $h^{n_{k}} \overset{k}{\rightarrow} e$.
+Wówczas $x^{n_{k}}  = h^{n_{k}} + y^{n_{k}}  \overset{k}{\rightarrow}  e$, tzn.
+    $x \in Q(e)$.
+Z drugiej strony
+załóżmy, że $x \in Q(e) \subset \Lambda$.
+Niech również $h = e x e$, and $y = e^{\perp} x e^{\perp}$,
+gdzie $e^{\perp} = \mathbf{1}_{8} - e$.
+wtedy $h \in Q(e)$, a ponieważ
+    $h =  h e = e h$,
+    $h \in H(e)$, na mocy \cite[Theorem 8]{schwarz1955hausdorff}.
+Dla $h' \in H(e)$, mamy
+    $h' y = h' e y = \hat{0} = y e h' = yh'$,
+tzn. $H(e) y = y H (e) = \hat{0}$.
+Istnieje ciąg $n_{k}$ liczb naturalnych, taki że
+    $x^{n_{k}}  \overset{k}{\rightarrow}  e$.
+Stąd
+    $h^{n_{k}} = e h^{n_{k}}  = e x^{n_{k}}  \overset{k}{\rightarrow} e^{2}  = e$.
+W konsekwencji dostajemy $y^{n_{k}}  \overset{k}{\rightarrow}  \hat{0}$,
+co wystarcza, aby powiedzieć, że $y^{k} \overset{k}{\rightarrow} \hat{0}$.
+Dlalej załóżmy, że $x = h + y = h_{2} + y_{2}$,
+    gdzie $h_{2} \in H(e)$ i $y_{2}$,
+    $h_{2} y_{2} = y_{2} h_{2} = \hat{0}$.
+Dla pewnego ciągu liczb naturalnych $m_{k}$, mamy
+    $e y_{2} = \lim_{k} h_{2}^{m_{k}} y_{2} = \hat{0}$.
+Wtedy $h = e x = e h_{2} + e y_{2} = h_{2}$, a więc również $y = y_{2}$.
+\end{proof}
+
+Dla $x \in Q(e)$, ponieważ rozkład opisany powyżej jest jedyny,
+oznaczmy przez $h_{x}$ i $y_{x}$ macierze, dla których
+$x = h_{x} + y_{x}$,
+$h_{x} \in H(e)$, $H(e) y_{x} = y_{x} H(e)$ oraz
+$y_{x}^{k} \overset{k}{\rightarrow} \hat{0}$.
+Powyższy lemat uzasadnia następującą definicję.
+
+\begin{Definition}
+    Niech $e \in \mathcal{E}(\Lambda)$;
+    zdefiniujmy:
+    $Q_{0}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || < 1 \right \}$ i
+    $Q_{1}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || = 1 \right \}$.
+    dla $i = 1, 2, 3, \ldots 8$,
+    Niech także $Q_{1}^{i}(e)$ będzie zbiorem składającym się z tych
+    $x = h_{x} + y_{x} \in Q_{1}(e)$,
+    dla których wielokrotność największej wartości singularnej $y_{x}$
+    jest równa $i$.
+\end{Definition}
+
+Jasne jest, że
+$Q(e) = \bigcup \left \{ Q_{1}^{i}(e), i=1,2,\ldots,8 \right \} \cup Q_{0}(e)$
+oraz że te zbiory są rozłączne (być może niektóre z nich są również puste).
+
+\begin{Theorem}
+Niech $e \in \mathcal{E}(\Lambda)$.
+Jeżeli $\mathrm{dim} \, e \in \left \{ 5,8 \right \}$,
+wówczas
+$Q(e) = Q_{0}(e)$.
+Jeżeli zaś $\mathrm{dim} \, e \leq 4$,
+to
+$Q_{1}^{i}(e) = \emptyset$ dla $i \geq 5 - \mathrm{dim} \, e$.
+\end{Theorem}
+\begin{proof}
+    Gdy $\mathrm{dim} \, e = 8$,
+    wówczas $e = \mathbf{1}_{8}$ i na mocy uwagi \ref{rem:Qof1},
+    $Q(\mathbf{1}_{8}) = H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
+    w oczywisty sposób $Q(\mathbf{1}_{8}) = Q_{0}(\mathbf{1}_{8})$.
+    Załóżmy, że $e \neq \mathbf{1}_{8}$
+oraz $x = h_{x} + y_{x} \in Q(e)$.
+Wtedy $x^{t} x = h_{x}^{t} h_{x} + y_{x}^{t} y_{x} = e + y_{x}^{t} y_{x}$,
+z twierdzenia \ref{prop:htranspose};
+    $y_{x} e = e y_{x} = \hat{0}$, 
+a ponieważ dla każdego $k \in \mathbb{N}$, $(x^{t} x)^{k} \in \Lambda$,
+mamy, że $e + p = \lim_{k} x^{t} x \in \Lambda$,
+gdize $p$ jest projektorem ortogonalnym na podprzestrzeń rozpiętą przez wektory
+własne $y_{x}^{t} y_{x}$, odpowiadające wartości własnej 1.
+Oczywiście, $e p = p e = \hat{0}$, więc
+macierz $e + p \in \mathcal{E}(\Lambda)$.
+Musi być tak, że $e + p \neq \mathbf{1}_{8}$,
+w przeciwnym wypadku $x^{t} x = \mathbf{1}_{8}$, a ponieważ
+    $x \in \mathcal{G}(\Lambda) = Q(\mathbf{1}_{8})$, dostajemy sprzeczność.
+Jeżeli $\mathrm{dim}\,e = 5$, to $p = \hat{0}$,
+gdyż z twierdzenia \ref{thm:Idempotents}
+nie istnieją elementy idempotentne w  $\Lambda$
+rzędu $6$ lub $7$.
+Stąd $||y|| < 1$ i $x \in Q_{0}(e)$.
+Dzięki praktycznie tej samej argumentacji, dla $\textrm{dim}\, e \leq 4$,
+nie jes możliwe, aby $\mathrm{dim} \, p  + \mathrm{dim}\, e \geq 5$,
+a więc $Q_{1}^{i}(e) = \emptyset$, dla $i \geq 5 - \mathrm{dim} \, e$,
+ponieważ z definicji, $i = \textrm{dim}\,p$.        
+\end{proof}
+
+Aby nie komplikować niepotrzebnie dalszego wywodu,
+wprowadźmy ciąg elementów z $\mathcal{E}(\Lambda)$:
+$p_{0} = \hat{0}, p_{1} = P_{8}$, $p_{2} = P_{38}$,
+$p_{3} = P_{138}$, $p_{4} = P_{1238}$, $p_{5} = P_{13468}$.
+\begin{Theorem}
+\label{thm:LowerIndices}
+    Niech $i,j$ będą liczbami całkowitymi, takimi że
+    $1 \leq i \leq 4$, $0 \leq j \leq 4$ and $i+j \leq 5$.
+Jeśli $x \in Q_{1}^{i}(p_{j})$,
+wówczas istnieją $g_{1}, g_{2} \in G_{3}$ i $z \in Q_{0}(p_{i+j})$,
+dla których $x = g_{1} z g_{2}$.
+\end{Theorem}
+\begin{proof}
+    Niech $x \in Q_{1}^{i}(p_{j})$ i
+    $x = h_{x} + y_{x}$, jak wyżej.
+    Ponieważ taki rozkład jest jedyny, możemy napisać tak, jak w dowodzie
+    lematu \ref{lem:decomposition}:
+    $h_{x} = p_{j} x p_{j}$ oraz $y_{x} = p_{j}^{\perp} x p_{j}^{\perp}$,
+    gdzie $p_{j}^{\perp} = \mathbf{1}_{8} - p_{j}$.
+    Ponieważ $p_{j} = p_{j}^{t}$, więc
+    $h y^{t} = y h^{t} = \hat{0}$ i dlatego
+    $x x^{t}  = h h^{t} + y y^{t} = p_{j} + y y^{t}$,
+    na mocy \mbox{twierdzenia \ref{prop:htranspose}}.
+    Niech $R_{1} (p_{i} + y_{0}) R_{2}$ będzie rozkładem $y$ na wartości
+    singularne, tzn. $R_{1}, R_{2} \in \text{O}(8)$ są macierzami ortogonalnymi,
+    $y_{0}$ jest macierza diagonalną z jedynymi możliwymi niezerowymi elementami
+    $s_{1}, s_{2}, \ldots, s_{8-i}$, takimi że
+    $1 > s_{1} \geq s_{2} \geq \ldots \geq s_{8-i} \geq 0$
+    i $p_{i} y_{0} = y_{0} p_{i} = \hat{0}$.
+    Wówczas dla $k \in \mathbb{N}$,
+    $(x x^{t})^{k} = p_{j} + R_{1}( p_{i} + (y_{0} y_{0}^{t})^{k}) R_{1}^{t} \in \Lambda$,
+    i ponieważ $\Lambda$ jest zbiorem domkniętym:
+    $e_{1} = p_{j} + R_{1} p_{i} R_{1}^{t} = \lim_{k} (x x^{t})^{k} \in \Lambda$.
+    Ponieważ $h y^{t} = y h^{t} = \hat{0}$,
+    mamy $p_{j} R_{1} p_{i} R_{1}^{t} = R_{1} p_{i} R_{1}^{t} p_{j} = \hat{0}$.
+    Stąd wynika, że $e_{1}$ jest macierzą idempotentną i
+    $\text{rank} \, e_{1} = i+j$.
+    Z twierdzenia \ref{thm:Idempotents}, istnieje $g_{1} \in G_{3}$, takie że
+    $e_{1} = g_{1} p_{i+j} g_{1}^{t}$.
+    Podobna argumentacja,
+    tym razem zastosowana do $x^{t} x$, pokazuje,
+    że istnieje także $g_{2} \in G_{3}$,
+    takie że macierz idempotentną
+    $e_{2} = p_{j} + R_{2}^{t} p_{i} R_{2} \in \Lambda$
+    można zapisać jako $e_{2} = g_{2}^{t} p_{i+j} g_{2}$.
+    Niech $z = g_{1}^{t} x g_{2}^{t}$.
+    Pozostaje pokazać, że $z \in Q_{0}(p_{i+j})$.
+    Jasne jest, że $z \in \Lambda$.
+    Łatwo można również sprawdzić, że $p_{i+j} z = z p_{i+j}$,
+    a stąd $z = h_{z} + y_{z}$, gdzie $h_{z} = p_{i+j} z p_{i+j}$
+    oraz $y_{z} = p_{i+j}^{\perp} z p_{i+j}^{\perp}$,
+    $p_{i+j}^{\perp} = \mathbf{1}_{8} - p_{i+j}$.
+    Ponieważ $h_{z} = p_{i+j} h_{z} = h_{z} p_{i+j}$,
+    $h_{z} \in H(p_{i+j})$.
+    Oczywiście, $h y_{z} = y_{z} h = \hat{0}$, for any $h \in H(p_{i+j})$.
+    Dodatkowo mamy, że
+    $y_{z} = g_{1}^{t}R_{1} y_{0} R_{2} g_{2}^{t}$, więc
+    $||y_{z}^{k}|| \leq ||y_{0}||^{k} = s_{1}^{k} \overset{k}{\rightarrow} \hat{0}$.
+    Zatem, z lematu \ref{lem:decomposition}, $z \in Q(p_{i+j})$.
+    Ponieważ $||y_{z}|| < 1$, dostajemy, że
+    $z \in Q_{0}(p_{i+j})$, co kończy dowód.
+\end{proof}
+
+Głowny wynik tej części wywodu można sformułować w postaci następującego wniosku.
+\begin{Corollary}
+\label{cor:q0}
+    Załóżmy, że $x \in \text{Ext}_{0}(\Lambda)$ oraz $S_{x}$ nie jest
+    automorfizmem Jordana.
+    Wówczas istnieją $g_{1}, g_{2} \in G_{3}$,
+    takie że $g_{1}^{t} x g_{2}^{t} \in Q_{0}(\hat{0}) \cup Q_{0}(P_{8})$.
+    Innymi słowy, albo $||x|| < 1$,
+    albo
+    $x = g_{1} (P_{8} + y) g_{2}$,  $y P_{8} = P_{8} y = \hat{0}$
+    i $|| y || < 1$.
+\end{Corollary}
+\begin{proof}
+Niech $x \in  \text{Ext}_{0}(\Lambda)$.
+    Z lematu \ref{lem:equivClassesOfQe} i twierdzenia \ref{thm:Idempotents},
+    istnieje $g \in G_{3}$, takie że
+    $g^{t} x g \in Q(e_{0})$ i $e_{0} \in J$.
+    Ponieważ $S_{x}$ jest ekstremalnym odwzorowaniem dodatnim, więc na mocy
+    \cite[Theorem 2]{miller2015stable} (odnośnik do tej pracy),
+    $e_{0} \in \left \{ \hat{0}, P_{8}, \mathbf{1}_{8} \right \}$.
+    Z uwagi \ref{rem:Qof1}, $x \notin Q(\mathbf{1}_{8})$, a zatem
+    $z = g^{t} x g \in Q(\hat{0}) \cup Q(P_{8})$,    
+    i $z \in \text{Ext}_{0}(\Lambda)$
+    (por. \cite[Lemma 3.1.2]{Stormer2013}).
+    Załóżmy, że $z \in Q(P_{8})$.
+    Z twierdzenia \ref{thm:LowerIndices},
+    ponieważ $z \in \text{Ext}_{0}(\Lambda)$,
+    $z \notin Q_{1}^{i}(P_{8})$
+    dla $i \geq 1$ (zob.  \cite[Theorem 2]{miller2015stable} (odnośnik) ).
+    A zatem $z \in Q_{0}(P_{8})$ i połóżmy $g_{1} = g$ and $g_{2} = g^{t}$.
+    Wówczas $x = g_{1} z g_{2}$,
+    i z lematu \ref{lem:decomposition}, ponieważ
+    $H(P_{8}) = \left \{ P_{8} \right \}$
+    (por. uwaga \ref{rem:GOfLambda}),
+    $z = P_{8} + y$,  $y P_{8} = P_{8} y = \hat{0}$ i $||y|| < 1$.
+    Z drugiej strony, jeśli $z \in Q(\hat{0})$,
+    wtedy na mocy tego samego rozumowania albo $z \in Q_{0}(\hat{0})$,
+    i $||z|| < 1$, ponieważ $H(\hat{0}) = \left \{ \hat{0} \right \}$; albo
+    $z \in Q_{1}^{1}(\hat{0})$ i wówczas istnieją $g_{01}, g_{02} \in G_{3}$,
+    takie że $g_{01} z g_{02} \in Q_{0}(P_{8})$.
+    Wtedy połóżmy $g_{1} = g g_{01}^{t}$ i $g_{2} = g_{02}^{t} g^{t}$,
+    co kończy dowód.
+\end{proof}
+
+% 
+% We summarize the results presented above by saying that they allow
+% to narrow the task of finding positive extremal and bistochastic maps
+% on $M_{3}(\mathbb{C})$ to three specific groups;
+% and examples in all these groups have been found previously.
+% First, there are Jordan isomorphisms, represented by matrices from
+% $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
+% Second, there are maps that could be called \emph{strongly ergodic}
+% \cite{miller2015stable},
+% belonging to the class represented by
+% $\left \{ x \in Q_{0}(\hat{0}) \:|\: ||x|| = \frac{1}{2} \right \}$,
+% of which the celebrated Choi map
+% \cite{choi1977extremal} is an example.
+% For a generalised Choi map $\Phi[a,b,c]$:
+% \begin{equation}\label{eq:choi}
+% \Phi[a,b,c](X)=\\ 
+% \frac{1}{2}
+% \begin{pmatrix}
+% ax_{11}+bx_{22}+cx_{33} & -x_{12} & -x_{13} \\
+% -x_{21} & cx_{11}+ax_{22}+bx_{33} & -x_{23} \\
+% -x_{31} & -x_{32} & bx_{11}+cx_{22}+ax_{33}
+% \end{pmatrix},
+% \end{equation}
+% where $X = (x_{ij})_{i,j = 1}^{3}$,
+% if we parametrise:
+% \begin{equation}
+% a(t)=\dfrac{(1-t)^2}{1-t+t^2},\quad b(t)=\dfrac{t^2}{1-t+t^2},\quad c(t)=\dfrac 1{1-t+t^2},
+% \end{equation}
+% $0 \leq t < 1$,
+% then $\Phi[a(t), b(t), c(t)]$ is an extremal bistochastic map on $M_{3}$.
+% For $t = 0$, it is the map proposed originally by Choi,
+% and for $t = 1$ it is a completely positive map.
+% See the paper by 
+% K.-C.\,Ha and S.-H.\,Kye \cite{ha2011entanglement} for more details.
+% The family of matrices $x_{t}$ such that
+% $S_{x_{t}} = \Phi[a(t), b(t), c(t)]$ is given by
+% \begin{equation}
+%     x_{t} = \begin{pmatrix}
+%         - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\  
+%         0 & - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 \\
+%         0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & - \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} \\
+%         0 & 0 & 0 & - \frac{1}{2} & 0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0 & - \frac{1}{2} & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 & 0 \\  
+%         0 & 0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 \\  
+%         0 & 0 & \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} \\
+%     \end{pmatrix}.
+% \end{equation}
+% It is worth noting that each
+% $x_{t} = \frac{1}{2} R_{t}$, where $R_{t} \in \text{O}(8)$,
+% as in Proposition \ref{prop:oneHalfofOrthogonal}.
+% 
+% Lastly, there are maps represented by elements of $Q_{0}(P_{8})$,
+% one example of which was proposed in \cite{miller2015stable}:
+% \begin{equation}
+% \label{eq:DefinitionOfS}
+% S_{0}(X) \:=\: \begin{pmatrix}
+%         \frac{1}{2}(x_{11} + x_{22}) & 0 & \frac{1}{\sqrt{2}} x_{13} \\
+%         0 & \frac{1}{2}(x_{11} + x_{22}) & \frac{1}{\sqrt{2}} x_{32} \\
+%         \frac{1}{\sqrt{2}} x_{31} & \frac{1}{\sqrt{2}} x_{23} & x_{33}
+%         \end{pmatrix}.
+% \end{equation}
+% The matrix $x \in \Lambda$ such that $S_{x} = S_{0}$ is given by
+% a diagonal matrix 
+% \begin{equation}
+%  x = 
+% \text{diag}(0,0,0, 
+% \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}}, 
+% 1).
+% \end{equation}
+% 
+% We say that two elements $x, y \in \Lambda$
+% are equivalent if, and only if, there are $g_{1}, g_{2} \in G_{3}$
+% such that $x = g_{1} y g_{2}$.
+% Then the task of finding elements in $\text{Ext}_{0}(\Lambda)$,
+% up to this equivalence relation,
+% consists of:
+% \begin{enumerate}
+% \item finding all $R \in \mathrm{O}(8)$ such that
+%     $\frac{1}{2}R \in \text{Ext}_{0}(\Lambda)$;
+% \item determining which elements $x \in \Lambda$,
+%     such that $\frac{1}{2} < ||x|| < 1$, belong to $\text{Ext}_{0}(\Lambda)$;
+% \item finding all $y$, such that
+%     $y P_{8} = P_{8} y = \hat{0}$, $||y|| < 1$,
+%     and $P_{8} + y \in \text{Ext}_0(\Lambda)$.
+% \end{enumerate}
+% 
+% In the future,
+% we hope that the methods proposed,
+% together with some other, mostly geometric techniques,
+% will allow to bring the research closer to the final classification
+% of extremal positive maps on matrix algebras.
+% 
+
+
 
