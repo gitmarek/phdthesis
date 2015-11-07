@@ -1,9 +1,10 @@
 \chapter{Kryterium separowalności stanów kwantowych}
 \label{chp:PHcrit}
-
 \section{Kryterium Peresa-Horodeckich dla odwzorowań na algebrach von Neumanna}
 W niniejszym rozdziale przedstawimy dowód twierdzenia
-opublikowanego pierwotnie w pracy
+opublikowanego pierwotnie w pracy:
+Miller M., Olkiewicz, R.,
+\emph{Horodeckis criterion of separability of mixed states in von Neumann and C*-algebras}
 \cite{miller2014horodeckis}
 i uogólniającego kryterium Peresa-Horodeckich dla układów
 kwantowych opisywanych przez algebry von Neumanna,
@@ -78,7 +79,7 @@ a_{i}^{\lambda} \otimes \omega_{i}^{\lambda}$, dostajemy
 \langle z_{\lambda}, \omega \otimes \varphi\rangle =
 \sum \limits_{i=1}^{N_{\lambda}}
 \langle a_{i}^{\lambda} \otimes F^{-1}(z) \omega_{i}^{\lambda} ,\
-\omega \otimes \varphi \rangle 
+\omega \otimes \varphi \rangle
 = \sum \limits_{i=1}^{N_{\lambda}}
 \langle  a_{i}^{\lambda}, \omega \rangle
 \langle z,  \omega_{i}^{\lambda} \otimes \varphi \rangle = \\
@@ -100,14 +101,14 @@ Rzeczywiście, dla
 $z \in C_{1}^{*}$, skoro $(A_{\lambda})$ jest netem kompletnie dodatnich
 odwzorowań skończonego rzędu, każde $z_{\lambda} \in C_{0}^{*}$.
 \end{Corollary}
- 
+
 {\it Krok 2: Faktory skończone, iniektywne i ośrodkowe.}\\
 Załóżmy, że $\mathcal{R}$ jest iniektywnym ośrodkowym faktorem typu
 II$\phantom{}_{1}$ \cite{Takesaki3};
 niech także $\tau$ będzie znormalizowanym śladem na $\mathcal{R}$.
 Algebra von Neumanna jest z definicji \emph{ośrodkowa},
 jeśli działa na ośrodkowej przestrzeni Hilberta.
-Ponieważ $\mathcal{R}$ jest algebrą skończoną, więc istnieje zanurzenie 
+Ponieważ $\mathcal{R}$ jest algebrą skończoną, więc istnieje zanurzenie
 $i: \mathcal{R} \rightarrow
 \mathcal{R}_{*}$, zadane przez $i(x) = \omega_{x}$, $\omega_{x}(y) = \tau(xy)$,
 dla każdego $x,y \in \mathcal{R}$.
@@ -138,14 +139,14 @@ $\langle x , y \rangle = \tau(y^{*} x )$.
 Możemy potraktować $\mathcal{A}_{0}$ jako
 \mbox{*-podalgebrę} $B(\mathcal{H})$
 pozwalając $\mathcal{A}_{0}$ działać na $\mathcal{H}$ poprzez mnożenie z lewej strony.
-Następnie zdefiniujmy algebrę von Neumanna 
+Następnie zdefiniujmy algebrę von Neumanna
 $\mathcal{R}$ jako domknięcie w słabej topologii algebry
 $\mathcal{A}_{0} \subset B(\mathcal{H})$.
-Wiadomo, że 
+Wiadomo, że
 $\mathcal{R}$ jest ośrodkowym faktorem typu II$\phantom{}_{1}$
 oraz że rozszerzenie funkcjonału $\tau$ na $\mathcal{R}$,
 które będziemy oznaczać tym samym symbolem,
-jest jedynym unormowanym śladem na $\mathcal{R}$. 
+jest jedynym unormowanym śladem na $\mathcal{R}$.
 Następnie, zdefiniujmy liniowe odwzorowanie
 $\beta_{0}$ na $\mathcal{A}_{0}$, takie że
 \begin{equation}
@@ -183,11 +184,11 @@ Od tego momentu będziemy używać skrótowej notacji $i\beta$.
 
 Załóżmy obecnie, że
 $T: \mathcal{R} \rightarrow M_{2}(\mathbb{C})^{\otimes n}\subset \mathcal{R}$
-jet normalnym odwzorowaniem z $\mathcal{R}$ na $n$-tą potęgę tensorową algebry 
+jet normalnym odwzorowaniem z $\mathcal{R}$ na $n$-tą potęgę tensorową algebry
 $M_{2}(\mathbb{C})$, którą w naturalny sposób traktujemy jako podalgebrę $\mathcal{R}$.
 Stosując pewną wersję izomorfizmu Choi-Jamiolkowskiego
 \cite{choi1975completely,jamiolkowski1974effective},
-możemy popatrzeć na odwzorowanie predualne $T_{*}$ jako na działające na 
+możemy popatrzeć na odwzorowanie predualne $T_{*}$ jako na działające na
 iloczynie tensorowym $\mathcal{R}\otimes\mathcal{R}$.
 Mianowicie, niech $e_{ij}$ będą macierzami z $M_{2}(\mathbb{C})$
 o zerowych elementach, poza elementem $ij$, równym 1.
@@ -238,7 +239,7 @@ Niech $\mathcal{R}$
 będzie ośrodkowym iniektywnym faktorem typu II$\phantom{}_{1}$;
 niech także $z \in C_{1}^{*} \subset \mathcal{R} \bar{\otimes} \mathfrak{N}$.
 Wówczas istnieje net $S_{\lambda}$ normalnych dodatnich odwzorowań skończonego rzędu,
-$S_{\lambda}: \mathcal{R} \rightarrow \mathfrak{N}$, 
+$S_{\lambda}: \mathcal{R} \rightarrow \mathfrak{N}$,
 oraz ciąg $(m_{n(\lambda)})$ dodatnich elementów $\mathcal{R} \otimes \mathcal{R}$,
 takie że
 \begin{equation}
@@ -273,7 +274,7 @@ teza wynika wprost z Lematu \ref{lem:netinvNalg}.
 Niech $\tilde{\phi}$ będzie stanem na
 $\mathfrak{M} \bar{\otimes} \mathfrak{N}$,
 gdzie $\mathfrak{M}$ jest skończonym, iniektywnym i ośrodkowym faktorem.
-Jeżeli $\tilde{\phi} \circ ( \mathbf{1} \otimes S)$ 
+Jeżeli $\tilde{\phi} \circ ( \mathbf{1} \otimes S)$
 jest dodatnim funkcjonałem na
 $\mathfrak{M} \bar{\otimes} \mathfrak{M}$
 dla każdego normalnego dodatniego odwzorowania skończonego rzędu
@@ -380,7 +381,7 @@ odłóżmy dowód tego raczej technicznego faktu do następnego lematu.
 
 Niech $S_{0}: \mathcal{R} \rightarrow \mathfrak{N}$ będzie dodatnim normalnym
 odwzorowaniem skończonego rzędu.
-Zdefiniujmy 
+Zdefiniujmy
 $S_{E}: \mathfrak{M} \rightarrow \mathfrak{N}$ przez
 \begin{equation}
 S_{E}(x(\cdot)) = \frac{1}{\mu(E)}
@@ -537,7 +538,7 @@ Kontynuując nierówność \eqref{eq:Ineq}, otrzymujemy dla $n \geq N$
 \otimes \varphi_{i'}\rangle \Big | + \frac{\epsilon}{2} \nonumber\\
 = \Big |  \sum \limits_{j=1}^{M}\left( \sum \limits_{i =1}^{L}
 \langle x_{j}, \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle -
-\sum \limits_{i'=1}^{L} \sum \limits_{k=1}^{n}     
+\sum \limits_{i'=1}^{L} \sum \limits_{k=1}^{n}
 \langle i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} (x_{j}) ,
 \omega_{i'} \rangle \langle y_{j}, \varphi_{i'} \rangle
 \right) \Big |  + \frac{\epsilon}{2}\nonumber\\
@@ -577,7 +578,7 @@ $\{ \mathbf{1}, x_{1}, x_{2}, \ldots, x_{n} \} \subset \mathfrak{M}$,
 istnieje skończona ośrodkowa algebra iniektywna
 $\mathfrak{S} \subset \mathfrak{M}$,
 taka że dla każdego $i =1, 2, \ldots n$, $x_{i} \in \mathfrak{S}$.
-Co więcej, $\mathfrak{S}$ 
+Co więcej, $\mathfrak{S}$
 jest obrazem normalnego odwzorowania projektywnego
 (\emph{conditional expectation}) $\mathcal{E}$ of $\mathfrak{M}$.
 Pokażmy, że $\tilde{\phi}$ jest w słabej topologii granicą ciągu stanów separowalnych.
@@ -588,7 +589,7 @@ odwzorowań projektywnych $\mathfrak{M}$
 na ośrodkowe podalgebry $\mathfrak{S}_{\mu}$,
 zawierające właśnie te skończone zbiory.
 Wówczas, obcięcie $S|_{\mathfrak{S}_{\mu}}$ odwzorowania $S$
-do $\mathfrak{S}_{\mu}$ jest również normalne i dodatnie. 
+do $\mathfrak{S}_{\mu}$ jest również normalne i dodatnie.
 Z Lematu \ref{lem:step3}, obcięcie $\tilde{\phi}$ do
 $\mathfrak{S}_{\mu} \bar{\otimes} \mathfrak{N}$
 jest funkcjonałem separowalnym, a zatem każdy stan
@@ -777,7 +778,7 @@ która okaże się pomocna na dalszym etapie dowodu.
 Niech  $\mathcal{A}$ oraz $\mathcal{B}$ będą C$^{*}$-algebrami.
 Jeśli przez $\mathcal{A} \otimes_{max} \mathcal{B}$
 i $\mathcal{A} \otimes_{min} \mathcal{B}$,
-oznaczyć odpowiednio 
+oznaczyć odpowiednio
 \emph{maksymalny} and \emph{minimalny}
 iloczyn tensorowy C$^{*}$-algebr $\mathcal{A}$ i $\mathcal{B}$,
 wówczas wiadomo, że gdy jedna z nich, powiedzmy algebra $\mathcal{A}$,
@@ -833,20 +834,20 @@ jest dodatni dla każdego dodatniego odwzorowania skończonego rzędu
 $S: \mathcal{A} \rightarrow \mathcal{B}$.
 \end{Theorem}
 \begin{proof}
-Niech $\mathfrak{M}=\mathcal{A}^{**}$ and $\mathfrak{N}=\mathcal{B}^{**}$.    
+Niech $\mathfrak{M}=\mathcal{A}^{**}$ and $\mathfrak{N}=\mathcal{B}^{**}$.
 Z założenia $\mathfrak{M}$ jest algebrą iniektywną.
 Jeżeli stan $\tilde{\phi}$ jest separowalny względem
 $\mathcal{A}$ i $\mathcal{B}$, wówczas jest on również separowalny na
 $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
 Dla każdego dodatniego odwzorowania
-$S: \mathcal{A} \rightarrow \mathcal{B}$, drugie dualne odwzorowanie 
+$S: \mathcal{A} \rightarrow \mathcal{B}$, drugie dualne odwzorowanie
 $S^{**}:\mathfrak{M} \rightarrow \mathfrak{N}$ jest dodatnie i normalne.
 Stąd na mocy Twierdzenia \ref{thm:PHcrit} dla każdego dodatniego
 $z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
 $\langle (\mathbf{1} \otimes S^{**})(z), \tilde{\phi} \rangle \geq 0$.
 Zatem, $\tilde{\phi} \circ (\mathbf{1} \otimes S)$ jest dodatnim funkcjonałem
 na $\mathcal{A} \bar{\otimes} \mathcal{A}$.
- 
+
 Przypuśćmy przeciwnie, że $\tilde{\phi} \circ (\mathbf{1} \otimes S) \geq 0$
 dla każdego dodatniego odwzorowania skończonego rzędu
 $S: \mathcal{A} \rightarrow \mathcal{B}$.
@@ -913,7 +914,7 @@ Załóżmy ponadto, że
 $\tilde{\phi} = \lim \limits_{n} \sum_{i=1}^{n}\omega_{i} \otimes \varphi_{i}$,
 gdzie każde $\omega_{i} \in \mathcal{A}^{*}$,
 $\varphi_{i} \in \mathcal{B}^{*}$.
-Granicę rozumie się w projektywnej normie operatorowej $|| \cdot ||_{\wedge}$, 
+Granicę rozumie się w projektywnej normie operatorowej $|| \cdot ||_{\wedge}$,
 a więc również i w słabej i *-słabej topologii na
 $(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$.
 Z głównego założenia wynika, że
@@ -927,7 +928,7 @@ $\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$. Doda
 \stackrel{\lambda}{\longrightarrow}\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
 \langle  x_{j}, \omega_{i} \rangle\langle  y_{j},  \tilde{S}_{*} \varphi_{i} \rangle =
 \langle (\mathbf{1} \otimes \tilde{S})(z),
-\sum \limits_{i=1}^{n} \omega_{i} \otimes \varphi_{i} \rangle .    
+\sum \limits_{i=1}^{n} \omega_{i} \otimes \varphi_{i} \rangle .
 \end{eqnarray}
 Biorąc granicę względem $n$,
 ponieważ $(T_{\lambda})$ jest netem kontrakcji, dostajemy
@@ -942,7 +943,7 @@ Udowodnione powyżej twierdzenie uogólnia analogiczny wynik opublikowany przez
 E.\,St{\o}rmera; pozwala jednak opuścić wcześniejsze założenie, że występujące
 tezie twierdzenia odwzorowania to wszystkie odwzorowania dodatnie (nie tylko skończonego rzędu) oraz że jedna z algebr jest tzw. algebrą
 UHF \cite{stormer2009separable}.
- 
+
 \paragraph{}
 Powyższa analiza pokazuje, że nawet w najogólniejszym przypadku złożonych
 układów kwantowych na nieskończenie wymiarowych algebrach von Neumanna
@@ -952,5 +953,3 @@ W następnym rozdziale zajmiemy się szczegółową analizą dodatnich odwzorowa
 na skończenie wymiarowych algebrach macierzy, skupiając się przede wszystkim
 na najprostszym, do tej pory nie rozpoznanym przypadku algebry macierzy
 rzędu 3.
-
-
