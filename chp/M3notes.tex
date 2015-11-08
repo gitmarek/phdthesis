@@ -1,27 +1,35 @@
 \chapter{Odwzorowania dodatnie na algebrach macierzowych}
 \label{chp:M3notes}
 
+--------------------------------------------------------
+[Introduction]
+\begin{equation}
+\label{eq:SchwarzInequality}
+    S(A^{*}) \, S(A) \: \leq \: S(A^{*} A),
+\end{equation}
+(por. \cite[Prop.\,3.6]{choi1980some}),
+---------------------------------------------------------
+
 \section{Charakterystyka odwzorowań na algebrze $M_{2}$}
 \label{sec:M2notes}
 
 W tym podrozdziale przestawimy główny rezultat opublikowany w pracy
+M.\,Miller, R.\,Olkiewicz, \emph{Stable subspaces of positive maps of matrix algebras}
 \cite{miller2015stable},
 który stanowi alternatywny dowód twierdzenia udowodnionego przez
-E\,St{\o}rmera \cite{stormer1963positive}
+E.\,St{\o}rmera \cite{stormer1963positive}
 i S.\,L.\,Woronowicza \cite{woronowicz1976positive},
 podającego pełną charakterystykę odwzorowań dodatnich na algebrze $M_{2}$.
 
-
 \begin{Theorem}
 \label{thm:PositiveMapsOnM2}
-    Niech $S:M_{2} \rightarrow M_{2}$ będize odwzorowaniem dodatnim.
+    Niech $S:M_{2} \rightarrow M_{2}$ będzie odwzorowaniem dodatnim.
     Wówczas $S = \Lambda_{1}  + \Lambda_{2} \circ t$,
     gdzie odwzorowania
     $\Lambda_{1}, \Lambda_{2}:M_{2} \rightarrow M_{2}$
     są kompletnie dodatnie, a
     $t: M_{2} \rightarrow M_{2}$ oznacza transpozycję macierzy na $M_{2}$.
 \end{Theorem}
-
 
 \begin{proof}
 \label{RandomLabel:875919}
@@ -62,12 +70,15 @@ $
  \, u, w \in \partial L_{4}  \right \}
 $,
 jest zbiorem operatorów rzedu 1, zachowujących brzeg stożka $\partial L_{4}$.
-Z \cite[Lematu 3.2]{loewy1975positive},
+Na mocy  lematu 3.2 z pracy:
+R.\,Loewy, H.\,Schneider,
+\emph{Positive operators on the n-dimensional ice cream cone}
+\cite{loewy1975positive},
 $S$ jest ektremalnym odwzorowaniem dodatnim, takim że $\text{rank} S = 1$,
 co implikuje, że $S$ musi być kompletnie dodatnie.
 
-Jeżeli $\pi(S)$ jest macierzą zachowującą stożek Lorentza,
-z \cite[Corollary 4.6]{loewy1975positive} wnioskujemy, że
+Jeżeli $\pi(S)$ zachowuje stożek Lorentza,
+na mocy \mbox{Corollary 4.6} \cite{loewy1975positive} wnioskujemy, że
 $\pi(S) \in \text{conv} \left ( \Theta(L_{4}) \cup \delta(L_{4}) \right)$.
 Innymi słowy każdy operator zachowujący stożek Lorentza $L_{4}$
 jest wypukłą kombinacją tych operatorów, które dodatkowo zachowują brzeg stożka.
@@ -100,13 +111,13 @@ stożek wektorów $x \in \mathbb{R}^{9}$ takich że
 $\lambda(x) =  \sum_{\mu=0}^{8} x_{\mu} \lambda_{\mu}$
 jest dodatnią macierzą z $M_{3}$,
 dla dowolnej bazy $(\lambda_{\mu})_{\mu=0}^{8}$ przestrzeni liniowej $M_{3}$,
-nie jest już stożkiem Lorentza $K_{9}$ \cite{goyal2011geometry}.
+nie jest już stożkiem Lorentza $L_{9}$ \cite{goyal2011geometry}.
 Dlatego też, kiedy przyjdzie nam zająć się tym przypadkiem,
 będziemy musieli poszerzyć metody analizy o dodatkowe narzędzia.
 
 
-Naturalne pytanie, które pojawia się w kontekście Twierdzenia
-\ref{thm:PositiveMapsOnM2},
+Naturalne pytanie, które pojawia się w kontekście
+twierdzenia \ref{thm:PositiveMapsOnM2},
 to kiedy dodatnie odwzorowania na $M_{2}$ jest również kompletnie dodatnie.
 
 \begin{Theorem}
@@ -229,7 +240,7 @@ S(X) =
 \end{pmatrix} \circ X,
 \end{equation}
 gdzie symbol $\circ$ w tym przypadku oznacza iloczyn Hadamarda macierzy,
-to jest iloczyn, w którym mnoży się ze sobą macierze tego samego wymiaru
+tj. iloczyn, w którym mnoży się ze sobą macierze tego samego wymiaru
 element po elemencie.
 Ponieważ $|z| \leq 1$, macierz
 $
@@ -244,7 +255,7 @@ jest dodatnią macierzą.
 
 \begin{Example}
 Można bez trudu pokazać, że warunek \ref{lem:condProj} w
-Twierdzeniu \ref{thm:MapsPreservingIdentity} jest w istotny sposób silniejszy
+twierdzeniu \ref{thm:MapsPreservingIdentity} jest w istotny sposób silniejszy
 niż warunek \ref{lem:condCommut}.
 Niech $S$ będzie odwzorowaniem bistochastychnym na $M_{2}$, takim że
 \begin{equation}
@@ -289,14 +300,16 @@ więc $S(P)$ nie może być projektorem ortogonalnym \mbox{rzędu 1},
 tzn. $S(P)^{2} \neq S(P)$.
 \end{Example}
 
-Dla odwzorowań ektremalnych warunek \ref{lem:condProj} z Twierdzenia
-\ref{thm:MapsPreservingIdentity} okazuje się również wystarczający
+Dla odwzorowań ektremalnych warunek \ref{lem:condProj} z
+twierdzenia \ref{thm:MapsPreservingIdentity} okazuje się również wystarczający
 do tego, aby takie odwzorowanie było kompletnie dodatnie dla każdego wymiaru.
 Bardziej ogólny problem, postawiony przez Robertsona
 \cite{robertson1983schwarz},
 czy istniej odwzorowanie Schwarza, które jest ekstremalne, ale
 nie 2-dodatnie, pozostaje otwarty.
-Zauważmy, że z \cite[Theorem 3.3]{marciniak2008extremal} wynika, iż
+Zauważmy, że z twierdzenia 3.3 w pracy
+M.\,Marciniak, \emph{On extremal positive maps acting between type I factors}
+\cite{marciniak2008extremal}, wynika, iż
 każde ektremalne odwzorowanie 2-dodatnie jest kompletnie dodatnie.
 
 \begin{Theorem}
@@ -333,7 +346,7 @@ $z \in \mathbb{C}$, mamy
 dla $\hat{S}_{0}: M_{n-1} \rightarrow M_{n-1}$ będącego z konieczności
 odwzorowaniem Schwarza na $M_{n-1}$, and $S_{1} \in M_{n-1}$.
 Rzeczywiście, ponieważ $S$ jest odwzorowaniem Schwarza,
-z \cite[Theorem 2.1.5]{stormer2012positive} mamy, że
+na mocy twierdzenia 2.1.5 \cite{Stormer2013} mamy, że
 $S(P_{n} X) = P_{n} S(X)$.
 Stąd
 $S(P_{n} X P_{n}) = P_{n} S(X) P_{n}$ i podobnie
@@ -362,7 +375,7 @@ dostaniemy
 \end{equation}
 W przypadku, gdy $u_{n} \neq 0$,
 biorąc dopełnienie Schura
-(por. \cite[Twierdzenie 1.12, p.34]{zhang2006schur}),
+(por. F.\,Zhang, \emph{The Schur complement and its applications} \cite{Zhang2006}),
 mamy, że $SP_{u} \geq 0$, wtedy i tylko wtedy, gdy
 \begin{equation}
 \label{ieq:SchurForS}
@@ -407,9 +420,9 @@ dostaniemy $U U^{*} = \mathbf{1}_{n}$, tj. $U$ macierzą unitarną oraz
 $S(X) = U X U^{*}$, $X \in M_{n}$, co kończy dowód.
 \end{proof}
 
-Przedstawiwszy geometryczny dowód Twierdzenia \ref{thm:PositiveMapsOnM2}
+Przedstawiwszy geometryczny dowód twierdzenia \ref{thm:PositiveMapsOnM2}
 o rozkładzie odwzorowań dodatnich na $M_{2}$, możemy pokusić się o
-o przedstawienie dodatkowych faktów dotyczących odwzorowań bistochastycznych.
+o udowodnienie dodatkowych faktów dotyczących odwzorowań bistochastycznych.
 Odznaczmy przez $\Delta_{0}$ zbiór wszystkich bistochastycznych odwzorowań na
 $M_{2}$.
 Niech także $\Delta_{1} \subset \Delta_{0}$ oznacza zbiór tych odwzorowań
@@ -417,7 +430,7 @@ bistochastycznych,
 które są jednoczenie kompletnie dodatnie i kompletnie kododatnie.
 Korzystając z tego samego geometrycznego przedstawienia zbioru
 odwzorowań dodatnich jako stożka Lorentza $L_{4}$,
-możemy pokazać, że $\Delta_{1}$ jest zbiorem zaskakująco dużym.
+możemy pokazać, że $\Delta_{1}$ jest zbiorem zaskakująco pojemnym.
 
 Każda macierz $Y \in M_{n}(\mathbb{R})$ daje się rozłożyć względem wartości singularnych:
 $Y = O_{1} D O_{2}$, gdzie
@@ -454,7 +467,9 @@ Macierz $\pi(S)$ możemy zapisać w postaci blokowej
 $Y \in M_{3}(\mathbb{R})$,
 a $\vec{0} \in \mathbb{R}^{3}$ jest zerowym wektorem-kolumną.
 Połóżmy $F(S) = Y$.
-Z definicji \eqref{RandomLabel:365828} odwzorowania $\pi$,
+Z definicji (...)
+%\eqref{RandomLabel:365828} << ------  add correct reference!
+odwzorowania $\pi$,
 jasne jest, że dla  $S_{1}, S_{2} \in \Delta_{0}$,
 mamy $F \left( \lambda S_{1} + (1-\lambda) S_{2} \right) =
  \lambda F(S_{1}) + (1-\lambda) F(S_{2})$,
@@ -470,15 +485,17 @@ Zatem $F(\Delta_{0}) = K_{0}$, a ponadto $F$ jest homeomorfizmem.
 
 W dalszej części załóżmy, że $S \in \Delta_{1}$.
 Ponieważ $S$ jest kompletnie dodatnie,
-z \cite[Twierdzenia 1]{landau1993birkhoff} wiemy, że
+z twierdzenia 1 w pracy L.\,J.\,Landaua i R.\,F.\,Streatera
+\cite{landau1993birkhoff} wiemy, że
 $S$ wypukłą kombinacją odwzorowań unitarnych:
 $X \mapsto U^{*} X U$, $U \in \text{U}(2)$.
-Z dowodu  \mbox{Twierdzenia \ref{thm:PositiveMapsOnM2}},
+Z dowodu twierdzenia \ref{thm:PositiveMapsOnM2},
 dla kontkretnej postaci $\pi(S)$, takiej jak w równaniu \eqref{eq:Sbistochastic},
 oznacza to, że $Y$ należy do wypukłej otoczki generowanej przez elementy grupy $\text{SO}(3)$.
-Z  pracy \cite{miranda1994group} (Corollary na str. 139),
+Z  wniosku na str. 139 w pracy H.\,F.\,Miranda i R.\,C.\,Thompson
+\cite{miranda1994group},
 wnioskujemy, że jeśli $t_{1} \geq t_{2} \geq t_{3} \geq 0$
-to wartości singularne macierzy $Y$,
+są wartościami singularnymi macierzy $Y$,
 wówczas $Y \in \text{conv} \, \text{SO}(3)$,
 wtedy i tylko wtedy, gdy
 \begin{equation}
@@ -487,7 +504,7 @@ t_{1} \leq 1
 \quad \text{and} \quad
 t_{1} + t_{2} - \text{sig} (\text{det} Y) \, t_{3} \leq 1.
 \end{equation}
-Zatem $S$ jest kompletnie kododatnie, tzn.
+Skoro $S$ jest również odwzorowaniem kompletnie kododatnim, tzn.
 $S' = S \circ t$ jest kompletnie dodatnim bistochastycznym odwzorowaniem.
 Niech $F(S') = Y'$.
 Wówczas $Y' = Y \, \text{diag} (1,-1,1)$.
@@ -501,10 +518,10 @@ otrzymujemy, że $S$ jest jednocześnie kompletnie dodatnie i kompletnie kododat
 wtedy i tylko wtedy, gdy
 $||Y||_{1} = t_{1} + t_{2} + t_{3} \leq 1$,
 co w rezultacie oznacza, że $F(\Delta_{1}) = K_{1}$
-i kończy dowód.
+i co kończy dowód.
 \end{proof}
 
-Podsumowując; przedstawiliśmy powyżej geometryczne podejście do problemu
+Podsumowując, powyżej przedstawiliśmy geometryczne podejście do problemu
 analizy odwzorowań dodatnich, przynajmniej w najprostszym przypadku odwzorowań
 algebry macierzy $M_{2}$.
 W szczególności,
@@ -518,12 +535,12 @@ Jak już wspomnieliśmy, twierdzenie dowiedzione powyżej
 przekłada się na kryterium sperowalności stanów kwantowych dla układu
 złożonego dwóch qubitów i otrzymuję formę znanego kryterium PPT
 \cite{peres1996separability,horodecki1996separability}.
-Dowód kolejnego faktu, Twierdzenia \ref{thm:MapsPreservingIdentity},
+Dowód kolejnego faktu, twierdzenia \ref{thm:MapsPreservingIdentity},
 chociaż nie posługuje się tymi samymi metodami geometrycznymi w sposób jawny,
 bazuje na wiedzy dotyczącej operatorów zachowujących stożek Lorentza i posiadających
 dodatkowo normę równą jedności.
-Stąd pochodzi założenie \ref{lem:condProj}. w Twierdzeniu \ref{thm:MapsPreservingIdentity}.
-Wreszcie, Twierdzenie \ref{thm:Ball} pokazuje, że zbiór odwzorowań bistochastycznych,
+Stąd pochodzi założenie \ref{lem:condProj}. w twierdzeniu \ref{thm:MapsPreservingIdentity}.
+Wreszcie, twierdzenie \ref{thm:Ball} pokazuje, że zbiór odwzorowań bistochastycznych,
 które są jednocześnie kompletnie dodatnie i kompletnie kododatnie jest
 topologicznie tożsamy z kulą jednostkową w $M_{3}(\mathbb{R})$ w normie śladowej.
 
@@ -535,16 +552,12 @@ odwzorowań algebry $M_{3}$.
 \label{sec:M3notes}
 
 Niech $S\!: M_{n} \rightarrow M_{n}$ będzie odwzorowaniem bistochastycznym.
-Łatwo zauważyć, że $S$ jest kontrakcją w normie Hilberta-Schmidta.
+Łatwo zauważyć, że $S$ jest kontrakcją w normie Hilberta-Schmidta
 na $M_{n}$, zdefiniowanej jako
 $||A||_{HS} = \left( \text{Tr} \, A^{*} A \right)^{1/2}$.
-Rzeczywiście, skoro $S$ spełnia nierówność Kadisona-Schwarza:
-\begin{equation}
-\label{eq:SchwarzInequality}
-    S(A^{*}) \, S(A) \: \leq \: S(A^{*} A),
-\end{equation}
-dla każdej normalnej macierzy $A \in M_{n}$
-(por. \cite[Prop.\,3.6]{choi1980some}),
+Rzeczywiście, skoro $S$ spełnia nierówność Kadisona-Schwarza
+\eqref{eq:SchwarzInequality}
+dla każdej normalnej macierzy $A \in M_{n}$,
 zakładając najpierw, że $A = A^{*}$,
 mamy
 \begin{equation}
@@ -562,6 +575,7 @@ dostajemy, że $S$ jest kontrakcją w normie Hilberta-Schmidta.
 
 Zdefiniujmy izometryczne rozbicie (ang. \emph{isometric splitting})
 odwzorowania $S$, korzystając z wyników opublikowanych wcześniej w pracy
+R.\,Olkiewicz, \emph{Environment-induced superselection rules in Markovian regime}
 \cite{olkiewicz1999environment}.
 Ponieważ $S$ jest kontrakcją na przestrzeni Hilberta $M_{n}$
 z iloczynem tensorowym Hilberta-Schmidta,
@@ -585,7 +599,7 @@ wtedy i tylko wtedy, gdy
 $S^{* k} S^{k} A = S^{k} S^{* k} A = A$,
 dla dowolnego $k \in \mathbb{N}$.
 Następny lemat, przepisany z niewielkimi zmianami z
-\cite{olkiewicz1999environment},
+powyżej cytowanej pracy,
 zbiera w jednym miejscu najważniejsze własności przestrzeni $K_{S}$.
 
 \begin{Lemma}
@@ -683,15 +697,14 @@ i rzecz jasna $M_{n} = K_{S} \oplus K_{S}^{\perp}$,
 wnioskujemy, że $S$ rozbija się na sumę prostą
 $S = S_{1} \oplus S_{2}$,
 gdzie $S_{1} = S_{| K_{S}}$, $S_{2} = S_{| K_{S}^{\perp}}$.
-Z Prop. 7a) w
-\cite{olkiewicz1999environment},
+Na mocy Proposition. 7a) w \cite{olkiewicz1999environment},
 mamy, żę $S(A^{*} A) = S(A)^{*} S(A)$,
 tzn. $S$ jest homomorfizmem Jordana na $K_{S}$.
 Co więcej, ponieważ $S^{*} S = S S^{*} = I$ na $K_{S}$,
 odwzorowanie $S_{1}$ jest odwracalne,
 a zatem jest automofizmem Jordana
 (por. Definicję 3.2.1(6) w \cite{Bratteli2003}).
-Z def. \eqref{def:definitionofK} przestrzeni $K_{S}$,
+Z definicji \eqref{def:definitionofK} przestrzeni $K_{S}$,
 wynika w łatwy sposób, że
 równanie \eqref{eq:SGoesTo0OnKOrth} jest spełnione.
 \end{proof}
@@ -703,7 +716,7 @@ Wówczas istnieje odwzorowanie bistochastyczne
 $S \! : M_{n} \rightarrow M_{n}$, takie że $K = K_{S}$.
 \end{Theorem}
 \begin{proof}
-Rozważmy $M_{n}$ jako przestrzeń Hilberta z iloczynem skalarnym
+Popatrzmy na przestrzeń $M_{n}$ jak na przestrzeń Hilberta z iloczynem skalarnym
 Hilberta-Schmidta.
 Niech $S\!: M_{n} \rightarrow K \subset M_{n}$ będzie
 projektorem ortogonalnym na $K$.
@@ -772,17 +785,17 @@ Dla wygody oznaczmy ortogonalne projektory:
 oraz $P_{12} = P_{1} + P_{2}$.
 
 Ważny dla dalszego toku rozumowania jest wniosek z twierdzeń 5.3.8 i 6.2.3
-w \cite{hanche1984jordan},
-który pozwala przyjąć, że każda JB$^{*}$-algebra zawarta w $M_{3}$
+z książki
+H.\,Hanche-Olsen, E.\,St{\o}rmer,
+\emph{Jordan operator algebras} \cite{Hanche1984},
+który mówi, że każda JB$^{*}$-algebra zawarta w $M_{3}$
 jest izomorficzna z jedną z następujących algebr:
 $\mathbb{C}\mathbf{1}$,
 $\mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$,
 $\mathbb{C} P_{1} \oplus \mathbb{C} P_{2} \oplus \mathbb{C} P_{3}$,
 $M_{2} \oplus \mathbb{C} P_{3}$,
 $M_{2}^{s} \oplus P_{3}$,
-$M_{3}^{s}$
-oraz
-$M_{3}$,
+$M_{3}^{s}$ oraz $M_{3}$,
 gdzie $M_{n}^{s}$ jest algebrą Jordana składającą się z symetrycznych
 macierzy rozmiaru $n$: $M_{2}^{s} = \{ A \in M_{n}: A = A^{t} \}$.
 
@@ -797,9 +810,9 @@ $M_{3}$.
 \end{Theorem}
 
 \begin{proof}
-1.
+\emph{Krok 1.}
 Tezy twierdzenia dowiedziemy najpierw poprzez wykluczenie wszystkich
-pozostałych przypadków.
+pozostałych przypadków algebr Jordana.
 Niech $K_{S}$ będzie jedną z następujących JB$^{*}$-algebr:
 $\mathbb{C} P_{1} \oplus \mathbb{C} P_{2} \oplus \mathbb{C} P_{3}$,
 $M_{2} \oplus \mathbb{C} P_{3}$,
@@ -819,15 +832,17 @@ Istnieje więc macierz unitarna $U \in M_{3}$, taka że
 $U^{*} S(P_{i}) U = P_{i}$, for $i = 1,2,3$.
 Zdefiniujmy $\tilde{S}(A) = U^{*} S(A) U$.
 Wówczas $\tilde{S}$ jest odwzorowaniem ekstremalnym
-\cite[Lemma 3.1.2b, p.\,27]{stormer2013positive}
+(por. E.\,St{\o}rmer, \emph{Positive maps...} \cite{Stormer2013}, Lemma 3.1.2b, str.\,27)
 i bistochastycznym, dla którego
 $\tilde{S}(P_{i}) = P_{i}$, $i = 1,2,3$.
-Z Twierdzenia 4.1 \cite{kye1995positive},
+Na mocy twierdzenia 4.1 z pracy
+S.-H.\,Kye, \emph{Positive linear maps between matrix algebras}
+\cite{kye1995positive},
 $\tilde{S}$ jest rozkładalne,
 co stoi w sprzeczności z faktem, że $S$ jest ektremalne albo $K_{S} \neq M_{3}$.
 
-2.
-Mimo że łatwo wyszczególnić takie odwzorowania ekstremalne, dla których
+\emph{Krok 2.}
+Mimo że łatwo wskazać takie odwzorowania ekstremalne, dla których
 $K_{S}=M_{3}$ (np. $S(A) = U A U^{*}$ dla macierzy unitarnej $U$)
 lub $K_{S}=\mathbb{C} \mathbf{1}$
 (weźmy np. znane odwzorowanie Choi
@@ -887,7 +902,7 @@ $S$ jest odwzorowaniem bistochastycznym i extremalnym.
 Aby udowodnić, że $S$ jest odwzorowaniem dodatnim,
 wystarczy pokazać, że dla każdego $\eta \in \mathbb{C}^{3}\backslash\{0\}$,
 $SP_{\eta} \geq 0$,
-gdzie $P_{\eta}$ jest operatorem rzędu 1,
+gdzie $P_{\eta}$ jest dodatnim operatorem rzędu 1,
 $P_{\eta} = \eta \eta^{*}$.
 Niech więc
 $\eta = (\eta_{1}, \eta_{2}, \eta_{3}) = (\vec{\eta}, \eta_{3})$,
@@ -911,7 +926,7 @@ Wówczas mamy
 Jeżeli $\eta_{3} = 0$, wtedy oczywiście $SP_{\eta} \geq 0$.
 W przypadku, gdy $\eta_{3} \neq 0$,
 biorąc dopełnienie Schura
-(por. \cite[Theorem 1.12, p.34]{Zhang2006}),
+(por. Theorem 1.12, str.\,34 w \cite{Zhang2006}),
 dostajemy, że $SP_{\eta} \geq 0$, wtedy i tylko wtedy, gdy
 \begin{equation}
 \label{ieq:SchurForS}
@@ -920,9 +935,9 @@ dostajemy, że $SP_{\eta} \geq 0$, wtedy i tylko wtedy, gdy
    \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
     \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)^{*}
     \: \leq \:
-        |\eta_{3}|^{2} \, ||\vec{\eta}||^{2} \, \mathbf{1}_{2};
+        |\eta_{3}|^{2} \, ||\vec{\eta}||^{2} \, \mathbf{1}_{2}.
 \end{equation}
-łatwo jednak zauważyć, że ta nierówność jest spełniona:
+Łatwo jednak zauważyć, że ta nierówność jest spełniona:
 \begin{multline}
    \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
     \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)
@@ -955,8 +970,19 @@ takim że
 $0 \leq S_{0} \leq S$.
 Mamy $S_{0}(P_{3}) \leq S(P_{3}) = P_{3}$,
 a stąd $S_{0}(P_{3}) = \alpha P_{3}$ for some $0 \leq \alpha \leq 1$.
-Pamiętając o zanurzeniu \eqref{RandomLabel:450031},
-chcemy pokazać, że $S_{0}(A) \in M_{2} \! \subset \! M_{3}$
+Przestrzeń $M_{2}$ możemy traktować jako zanurzoną w $M_{3}$
+w następujący sposób:
+$A \in M_{2} \! \subset \! M_{3}$, o ile
+\begin{equation}
+\label{RandomLabel:450031}
+    A \: = \: \left( \begin{array}{ccc}
+    a_{11} & a_{12} & 0 \\
+    a_{21} & a_{22} & 0 \\
+    0 & 0 & 0
+    \end{array} \right), \quad
+    a_{ij} \in \mathbb{C}, \,\, i,j = 1,2.
+\end{equation}
+Chcemy pokazać, że $S_{0}(A) \in M_{2} \! \subset \! M_{3}$
 dla każdego $A \in M_{2} \! \subset \! M_{3}$.
 Niech $B \in M_{2}$; załóżmy ponadto z początku, że $B \geq 0$.
 Wówczas
@@ -1123,11 +1149,11 @@ dostajemy
 \end{equation}
 gdzie $\vec{\upsilon_{0}} = S_{1} \vec{\eta} + S_{2} \overline{\vec{\eta}}$.
 Aby nie komplikować niepotrzebnie zapisu,
-pamiętajmy, że $\vec{\upsilon}$ and $\vec{\upsilon}_{0}$ zależy od$\vec{\eta}$,
+pamiętajmy, że $\vec{\upsilon}$ and $\vec{\upsilon}_{0}$ zależy od $\vec{\eta}$,
 bez zaznaczania tego jawnie.
 
 Ponieważ $S_{0} P(\vec{\eta},1)$ jest macierzą dodatnią,
-korzystając raz jeszcze z dopełnienia Schura,
+korzystając raz jeszcze z dopełnienia Schura, mamy
 $\vec{\upsilon}_{0} \vec{\upsilon}_{0}^{\,*} \leq  \alpha \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*})$,
 a przez to
 $|\vec{\upsilon}^{\,*} \vec{\upsilon}_{0}|^{2} \leq
@@ -1140,7 +1166,7 @@ Zatem
 4 \alpha \, \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon}
     - 4 \alpha \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} + \alpha^{2}  = 0,
 \end{equation}
-i.e. $\vec{\upsilon}^{\,*} \vec{\upsilon}_{0} = \frac{\alpha}{2}$.
+tj. $\vec{\upsilon}^{\,*} \vec{\upsilon}_{0} = \frac{\alpha}{2}$.
 Podstawiając $\vec{\upsilon}$ i $\vec{\upsilon}_{0}$,
 otrzymujemy:
 \begin{equation}
@@ -1287,10 +1313,11 @@ nie jest dodatnie.
 Oczywiście, odwzorowanie $S$ nie jest również 2-\emph{ko}dodatnie:
 aby to zobaczyć, weźmy $B = P_{12} + E_{31}$.
 Stąd, ponieważ $S$ jest ekstremalne,
-wynika, że jest również odwzorowaniem atomowym \cite{???}.
+wynika, że jest również odwzorowaniem atomowym
+\cite{ha1998atomic}.
 
 W celu udowodnienia ekstremalności $S$,
-pokazaliśmy , że $S_{0} = \alpha S$,
+pokazaliśmy, że $S_{0} = \alpha S$,
 dla każdego $0 \leq S_{0} \leq S$.
 W rzeczywistości wystarczyło wykorzystać słabsze założenie.
 Przyjmijmy, że $S_{0} \in \mathcal{P}(M_{3})$ oraz
@@ -1304,13 +1331,13 @@ i $S_{0}(P_{12}) \in M_{2} \! \subset \! M_{3}$.
 Dalej dowód można przeprowadzić dokładnie tak samo, jak w
 lemacie \ref{lem:SIsExtremal},
 poczynając od \eqref{eq:SMapsM2intoM2}.
-Dowiedliśmy zatem, że $S$ jest odwzorowaniem nie tylko ekstremalnym,
-ale również \emph{exposed}  (por. ??).
+To dowodzi zatem, że $S$ jest odwzorowaniem nie tylko ekstremalnym,
+ale również typu \emph{exposed}.
 
 \vspace{0.5cm}
 
 Mając dane odwzorowanie dodatnie $S: M_{n} \rightarrow M_{n}$,
-świadek splątania związany z $S$ to macierz $W_{S}$ na
+świadek splątania związany z $S$ to macierz $W_{S}$ z
 iloczynie tensorowym $M_{n^{2}} = M_{n} \! \otimes \! M_{n}$,
 zdefiniowana jako
 \begin{equation}
@@ -1327,8 +1354,8 @@ Zatem, dla dodatniego, ale nie kompletnie dodatniego odwzorowania $S$,
 istnieje przynajmniej jedna macierz gęstości $\rho \in M_{n^{2}}$,
 taka że $\text{Tr}\, W_{S} \rho < 0$.
 Taka macierz nie może być separowalna \cite{werner1989quantum},
-a więc możemy powiedzieć, że świadek splątania \emph{detects}
-\emph{wykrywa} stan splątany $\rho$.
+a więc możemy powiedzieć, że świadek splątania \emph{wykrywa}
+stan splątany $\rho$.
 
 Interesujące może być pokazanie, z jakiej postaci świadkiem splątania
 stowarzyszone jest odwzorowanie zadane w równaniu \eqref{eq:DefinitionOfS},
@@ -1415,7 +1442,7 @@ jednak $\text{Tr}\, W_{S} \rho = \frac{2}{7} - \frac{2\sqrt{2}}{7} < 0$.
 
 \paragraph{}
 (Komentarz)
-%----------------------------------------------------
+%------------------------------------------------------------------------------
 % Komentarz na temat nowego przykładu.
 
 % Dla odwzorowania $S$ zadanego przez \eqref{eq:DefinitionOfS}, mamy
@@ -1584,7 +1611,7 @@ co daje w rezultacie: $x \in \overline{K}_{1}(\hat{0})$.
 
 Niech $P_{8} \in M_{8}(\mathbb{R})$ oznacza macierz diagonalną
 $P_{8} = \text{diag}(0,0,0,0,0,0,0,1)$;
-i tak dalej dla pozostałych zbiorów indeksów:
+i tak dalej dla pozostałych zbiorów indeksów: np.
 $P_{38} = \text{diag}(0,0,1,0,0,0,0,1)$.
 Prawdą jest, że każda z macierzy
 $P_{8}, P_{38}, P_{138}, P_{1238}, P_{13468}$ jest idempotentym elementem
@@ -1615,8 +1642,9 @@ Następny fakt wynika w prosty sposób z poprzedniego twierdzenia
     \label{thm:oneHalfofOrthogonal}
     Niech $x \in \mathrm{Ext}(\Lambda)$.
 Załóżmy, że $||x|| = \frac{1}{2}$;
-wtedy $ x = \frac{1}{2} R$,  for $R \in \mathrm{O}(8)$.
+wtedy $ x = \frac{1}{2} R$, dla $R \in \mathrm{O}(8)$.
 \end{Theorem}
+%------------------------------------------------------------------------------
 \begin{proof}
 Niech $x \in \mathrm{Ext}(\Lambda)$ oraz $||x|| = \frac{1}{2}$.
 Niech $x = R |x|$ będzie rozkładem biegunowym $x$,
@@ -1650,7 +1678,8 @@ $\langle x \rangle = \left \{ x^{k} \: | \: k \in \mathbb{N}, k \geq 1 \right \}
 Oznaczmy przez $\overline{\langle x \rangle}$,
 domknięcie $\langle x \rangle$ w zbiorze $M_{8}(\mathbb{R})$.
 Dowód następującego faktu zawarty został w Lemacie 3 w
-    \cite{schwarz1955hausdorff}.
+pracy S.\,Swarza, \emph{On Hausdorff bicompact semigroups}
+\cite{schwarz1955hausdorff}.
 
 \begin{Theorem}
     \label{prop:UniqeClusterPoint}
@@ -1675,7 +1704,7 @@ Dowód następującego faktu zawarty został w Lemacie 3 w
         \item niech $H(e)$ będzie maksymalną podgrupą $\Lambda$
             zawierającą $e \in \mathcal{E}(\Lambda)$;
         \item $Q(e) = \left \{ x \in \Lambda \: | \: e_{x} = e \right \}$,
-        gdize $e_{x}$ jest jedynym idempotentnym elementem
+        gdzie $e_{x}$ jest jedynym idempotentnym elementem
         $\overline{\langle x \rangle}$.
    \end{enumerate}
 \end{Definition}
@@ -1683,7 +1712,7 @@ Dowód następującego faktu zawarty został w Lemacie 3 w
 \begin{Remark}
 \label{rem:GOfLambda}
 Na mocy znanego w teorii półgrup faktu, dla każdego elementu idempotentnego
-istniee dokładnie jedna maksymalna podgrupa zawierająca ten element.
+istnieje dokładnie jedna maksymalna podgrupa zawierająca ten element.
 W szczególności, w naszym przypadku półgrupy $\Lambda$,
 $H(\hat{0}) = \left \{ \hat{0} \right \}$,
 w oczywisty sposób:
@@ -1696,7 +1725,7 @@ $x = x P_{8} = P_{8} x P_{8} = x_{88} P_{8}$.
 Ponieważ istnieje ciąg liczb naturalnych  $n_{k}$, $k=1,2,3,\ldots$,
 taki że $x^{n_{k}} \overset{k}{\rightarrow} P_{8}$,
 więc
-$|x_{88}| = 1$. But $- P_{8} \notin \Lambda$,
+$|x_{88}| = 1$. Jednakże $- P_{8} \notin \Lambda$,
 a stąd $x = P_{8}$.
 \end{Remark}
 
@@ -1757,7 +1786,7 @@ Wtedy $g e g^{t} \in \overline{\langle x \rangle}$.
 Stąd $e \in g^{t} \overline{\langle x \rangle} g = \overline{\langle g^{t} x g \rangle}$,
 co oznacza, że $g^{t} x g \in Q(e)$, czyli
     $x \in g Q(e) g^{t}$.
-To dowodzi, że
+To potwierdza, że
     $Q(g e g^{t}) \subset g Q(e) g^{t}$.
 Zawieranie w drugą stronę dowodzi się w sposób analogiczny.
 \end{proof}
@@ -1768,18 +1797,21 @@ niech $\mathcal{E}_{G_{3}}(e) = \left \{ g e g^{t} \: | \: g \in G_{3} \right \}
 Z początku, w następnym lemacie, przypomnijmy znany fakt,
 mówiący, że idempotenty operator kontraktywny na przestrzeni Hilberta
 jest projektorem ortogonalnym
-(por. np. \cite[Problem 5.3.14]{Abramovich2002}).
+(por. np. Problem 5.3.14 w książce
+Y.\,Abramovicha i  C.\,Aliprantisa,
+\emph{Problems in operator theory}
+\cite{Abramovich2002}).
 \begin{Lemma}
     \label{lem:eIsProj}
     Niech $e \in \mathcal{E}(\Lambda)$, wówczas $e^{t} = e$ i stąd,
-    $e$ jest porjektorem ortogonalnym w $M_{8}(\mathbb{R})$.
+    $e$ jest projektorem ortogonalnym w $M_{8}(\mathbb{R})$.
 \end{Lemma}
 \begin{proof}
-    Ponieważ $e^{2} = e$, so $||e|| = ||e^{2}|| \leq ||e||^{2}$,
+    Ponieważ $e^{2} = e$, więc $||e|| = ||e^{2}|| \leq ||e||^{2}$,
     zatem $||e|| \geq 1$.
-    Ponieważ $e \in \Lambda$, na mocy twierdzenia \ref{prop:LambdaAndBalls},
+    Ponieważ $e \in \Lambda$, na mocy twierdzenia \ref{thm:LambdaAndBalls},
     $||e|| =1$.
-Załóżmy, że $\vec{n} \in \ker e$ and $\vec{m} \in \mathcal{R}(e)$,
+Załóżmy, że $\vec{n} \in \ker e$ oraz $\vec{m} \in \mathcal{R}(e)$,
 gdzie $\mathcal{R}(e)$ oznancza obraz operatora $e$.
 Niech $\alpha \in \mathbb{R}$.
 Wówczas
@@ -1790,7 +1822,7 @@ Wówczas
 \end{equation}
 tzn. $||\vec{n}||^{2} + 2 \alpha  \langle \vec{n}, \vec{m} \rangle \geq 0$,
 dla dowolnego $\alpha \in \mathbb{R}$.
-To z kolei oznacza
+To z kolei oznacza, że
 $\langle \vec{n}, \vec{m} \rangle = 0$,
 dla każdego  $\vec{n} \in \ker e$ and $\vec{m} \in \mathcal{R}(e)$,
 tzn.
@@ -1800,7 +1832,7 @@ $\ker e \perp \mathcal{R}(e)$, co dowodzi, że $e = e^{t}$.
 \begin{Theorem}
 \label{prop:htranspose}
 Niech $e \in \mathcal{E}(\Lambda)$ i $h \in H(e)$.
-Wtedy $h^{t} \in H(e)$, and $h^{t} h = h h^{t} = e$.
+Wtedy $h^{t} \in H(e)$, a także $h^{t} h = h h^{t} = e$.
 \end{Theorem}
 \begin{proof}
     Z Twierdzenia 8  w \cite{schwarz1955hausdorff}, mamy:
@@ -1819,7 +1851,7 @@ Na mocy takiego samego rozumowania, mamy także: $h h^{t} = e$.
 \end{proof}
 
 Przypomnijmy, że dla  bistochastycznego odwzorowania $S$
-przez $K_{S}$ oznaczamy stabilną podprzestrzeń zdefiniowaną
+przez $K_{S}$ oznaczamy stabilną podprzestrzeń zdefiniowaną przez
 \begin{equation}
     K_{S} = \left \{ x \in M_{3} \:|\:
             \forall k \in \mathbb{N} \,\,
@@ -1838,17 +1870,19 @@ można uogólnić do następującego twierdzenia.
 \end{Theorem}
 
 \begin{proof}
-    Ponieważ $e$ is macierzą idempotentą, na mocy
-    \cite[Corollary 3]{miller2015stable} (zmień na odniesienie do pracy),
+    Ponieważ $e$ jest macierzą idempotentą, na mocy
+    wniostku 3. z pracy \cite{miller2015stable},
     przestrzeń $K_{S_{e}} = S_{e}(M_{3})$ jest algebrą Jordana.
-    Odzworowanie $S_{e}$ jest w rzeczywistości 'conditional expectation' na $K_{S_{e}}$.
+    Odzworowanie $S_{e}$ jest w rzeczywistości
+    projektorem o normie jednostowej (\emph{conditional expectation})
+    na $K_{S_{e}}$.
     Niech $h \in H(e)$.
     Z twierdzenia \ref{prop:htranspose}, dla dowolnego $k\in \mathbb{N}$,
     $S_{h}^{* k} S_{h}^{k} = S_{h^{t}}^{k} S_{h}^{k} =  S_{(h^{t})^{k} h^{k}} = S_{e}$,
     i podobnie dla $S_{h}^{k} S_{h}^{* k}= S_{e}$.
     Zatem, stabilna algebra $K_{S_{h}} = K_{S_{e}}$
-    (por. \cite{miller2015stable}, eq. (3.3) and below, (zmień na odniesienie do pracy)).
-    Znów na mocy \cite[Corollary 3]{miller2015stable},
+    (por. \cite{miller2015stable}, równ. (3.3) i poniżej).
+    Znów na mocy wniosku 3. z \cite{miller2015stable},
     $\varphi_{h} = S_{h} \big |_{K_{S_{e}}}$
     jest automorfizmem Jordana algebry $K_{S_{e}}$.
 
@@ -1864,7 +1898,7 @@ Stąd, $he = eh = h$.
 Dodatkowo, ponieważ $\varphi$ jest odwracalne na $K_{S_{e}}$,
 rozszerzając $\varphi^{-1}$ do kolejnego odwzorowania bistochastycznego
     $S_{h'}$,  $h' \in \Lambda$,
-pokazujemy, że $h' \in H(e)$ and $h' h = h h' = e$;
+pokazujemy, że $h' \in H(e)$ i $h' h = h h' = e$;
 co dowodzi, że $h \in H(e)$.
 \end{proof}
 \begin{Remark}
@@ -1897,8 +1931,8 @@ jest sumą mnogościową siedmiu rozłącznych zbiorów:
 \end{Theorem}
 \begin{proof}
 Jeżeli $e \in \mathcal{E}(\Lambda)$, to tak, jak powyżej, $S_{e}$
-jest 'conditional expectation' na algebrę Jordana $K_{S_{e}}$.
-Na mocy twierdzeń 5.3.8 i 6.2.3 z \cite{hanche1984jordan},
+jest projektorem o normie jednostkowej na algebrę Jordana $K_{S_{e}}$.
+Na mocy twierdzeń 5.3.8 i 6.2.3 z \cite{Hanche1984},
 wszystkie algebry Jordana w $M_{3}$ są izomorficzne (unitarnie równoważne) z
 jedną z następujących:
     $\mathbb{C}\mathbf{1}$,
@@ -1945,7 +1979,7 @@ zbioru $Q(e)$.
 \begin{proof}
     Załóżmy, że $h + y \in \Lambda$, $h \in H(e)$, $y^{k}  \overset{k}{\rightarrow}  \hat{0}$
     oraz $hy = yh = \hat{0}$.
-Ponieważ $h \in H(e)$, istnieje ciąg $n_{k} \in \mathbb{N}$ for $k =1,2,3,\ldots$,
+Ponieważ $h \in H(e)$, istnieje ciąg $n_{k} \in \mathbb{N}$ dla $k =1,2,3,\ldots$,
 taki że $h^{n_{k}} \overset{k}{\rightarrow} e$.
 Wówczas $x^{n_{k}}  = h^{n_{k}} + y^{n_{k}}  \overset{k}{\rightarrow}  e$, tzn.
     $x \in Q(e)$.
@@ -1955,7 +1989,8 @@ Niech również $h = e x e$, and $y = e^{\perp} x e^{\perp}$,
 gdzie $e^{\perp} = \mathbf{1}_{8} - e$.
 wtedy $h \in Q(e)$, a ponieważ
     $h =  h e = e h$,
-    $h \in H(e)$, na mocy \cite[Theorem 8]{schwarz1955hausdorff}.
+    $h \in H(e)$, na mocy twierdzenia 8 z cytowanej wcześniej pracy
+    \cite{schwarz1955hausdorff}.
 Dla $h' \in H(e)$, mamy
     $h' y = h' e y = \hat{0} = y e h' = yh'$,
 tzn. $H(e) y = y H (e) = \hat{0}$.
@@ -1985,7 +2020,7 @@ Powyższy lemat uzasadnia następującą definicję.
     zdefiniujmy:
     $Q_{0}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || < 1 \right \}$ i
     $Q_{1}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || = 1 \right \}$.
-    dla $i = 1, 2, 3, \ldots 8$,
+    dla $i = 1, 2, 3, \ldots 8$.
     Niech także $Q_{1}^{i}(e)$ będzie zbiorem składającym się z tych
     $x = h_{x} + y_{x} \in Q_{1}(e)$,
     dla których wielokrotność największej wartości singularnej $y_{x}$
@@ -2030,12 +2065,12 @@ nie istnieją elementy idempotentne w  $\Lambda$
 rzędu $6$ lub $7$.
 Stąd $||y|| < 1$ i $x \in Q_{0}(e)$.
 Dzięki praktycznie tej samej argumentacji, dla $\textrm{dim}\, e \leq 4$,
-nie jes możliwe, aby $\mathrm{dim} \, p  + \mathrm{dim}\, e \geq 5$,
+nie jest możliwe, aby $\mathrm{dim} \, p  + \mathrm{dim}\, e \geq 5$,
 a więc $Q_{1}^{i}(e) = \emptyset$, dla $i \geq 5 - \mathrm{dim} \, e$,
 ponieważ z definicji, $i = \textrm{dim}\,p$.
 \end{proof}
 
-Aby nie komplikować niepotrzebnie dalszego wywodu,
+Aby uprościć notację w dalszej części wywodu,
 wprowadźmy ciąg elementów z $\mathcal{E}(\Lambda)$:
 $p_{0} = \hat{0}, p_{1} = P_{8}$, $p_{2} = P_{38}$,
 $p_{3} = P_{138}$, $p_{4} = P_{1238}$, $p_{5} = P_{13468}$.
@@ -2116,17 +2151,17 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
     istnieje $g \in G_{3}$, takie że
     $g^{t} x g \in Q(e_{0})$ i $e_{0} \in J$.
     Ponieważ $S_{x}$ jest ekstremalnym odwzorowaniem dodatnim, więc na mocy
-    \cite[Theorem 2]{miller2015stable} (odnośnik do tej pracy),
+    twierdzenia 2. z \cite{miller2015stable},
     $e_{0} \in \left \{ \hat{0}, P_{8}, \mathbf{1}_{8} \right \}$.
     Z uwagi \ref{rem:Qof1}, $x \notin Q(\mathbf{1}_{8})$, a zatem
     $z = g^{t} x g \in Q(\hat{0}) \cup Q(P_{8})$,
     i $z \in \text{Ext}_{0}(\Lambda)$
-    (por. \cite[Lemma 3.1.2]{Stormer2013}).
+    (por. Lemat 3.1.2 w \cite{Stormer2013}).
     Załóżmy, że $z \in Q(P_{8})$.
     Z twierdzenia \ref{thm:LowerIndices},
     ponieważ $z \in \text{Ext}_{0}(\Lambda)$,
     $z \notin Q_{1}^{i}(P_{8})$
-    dla $i \geq 1$ (zob.  \cite[Theorem 2]{miller2015stable} (odnośnik) ).
+    dla $i \geq 1$ (zob.  twierdzenie 2. w \cite{miller2015stable}).
     A zatem $z \in Q_{0}(P_{8})$ i połóżmy $g_{1} = g$ and $g_{2} = g^{t}$.
     Wówczas $x = g_{1} z g_{2}$,
     i z lematu \ref{lem:decomposition}, ponieważ
@@ -2205,7 +2240,7 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
 %         \end{pmatrix}.
 % \end{equation}
 % The matrix $x \in \Lambda$ such that $S_{x} = S_{0}$ is given by
-% a diagonal matrix 
+% a diagonal matrix
 % \begin{equation}
 %  x =
 % \text{diag}(0,0,0,
