@@ -13,6 +13,40 @@ Poczynając od najprostszego przypadku algebr skończenie wymiarowych,
 będziemy w kolejnych krokach dążyć do coraz większego stopnia
 ogólności dzięki znajomości struktury algebr kolejnych typów.
 
+\vspace{0.5cm}
+Dla ogólnych przestrzeni Banacha $X$ i $Y$, przez
+$\mathcal{L}(X,Y)$
+oznaczmy przestrzeń Banacha wszystkich ograniczonych odwzorowań
+liniowych pomiędzy z $X$ w $Y$.
+Niech także $X^{*}$ oznacza przestrzeń funkcjonałów liniowych na $X$,
+$X^{*} = \mathcal{L}(X, \mathbb{C})$.
+Działanie funkcjonału $\varphi \in X^{*}$ na $x \in X$
+oznaczmy przez $\langle  \varphi , x \rangle = \varphi(x)$.
+Powiemy, że net operatorów $(T_{\lambda})$,
+$T_{\lambda} \in \mathcal{L}(X, Y^{*})$, zbiega do
+$T \in \mathcal{L}(X, Y^{*})$ w \emph{*słabej topologii operatorowej}, jeśli
+\label{page:weakstaroperatortop}
+$\langle T_{\lambda} x, y \rangle \rightarrow \langle Tx, y \rangle$
+dla każdego $x \in X$ i $y \in Y$.
+Jeśli $X$ i $Y$ są również przestrzeniami operatorowymi,
+tzn.
+(por. E.\,G.\,Effros, Z.-J.\,Ruan, \emph{Operator spaces} \cite{Effros2000})
+przez $\mathcal{CB}(X,Y)$ oznaczymy przestrzeń operatorową
+kompletnie ograniczonych odwzorowań pomiędzy $X$ i $Y$,
+wyposażoną w normę
+$|| \cdot ||_{\mathcal{CB}}$.
+Prawdą jest, że przestrzeń $\mathcal{F}(X,Y)$
+odwzorowań skończonego rzędu z $X$ w $Y$,
+tzn. odwzorowań, których obraz jest poprzestrzenią liniową skończonego wymiaru
+przestrzeni $Y$, zawiera się w $\mathcal{CB}(X,Y)$.
+Przez $\mathcal{CB}(X,Y)_{+}$
+oznaczmy stożek kompletnie ograniczonych dodatnich odwzorowań
+z $X$ w $Y$, a przez $\mathcal{CP}(X,Y)$ stożek odwzorowań kompletnie dodatnich.
+Wiadomo, że $\mathcal{CP}(X,Y) \subset \mathcal{CB}(X,Y)_{+}$.
+
+\paragraph{}
+Zacznijmy od sformułowania twierdzenia, którego dowód przedstawimy.
+
 \begin{Theorem}
     \label{thm:PHcrit}
     Niech $\mathfrak{M}$ i  $\mathfrak{N}$ będą algebrami von Neumanna.
@@ -51,7 +85,143 @@ więc
 Dowód przeciwnej implikacji rozłożymy na ciąg następujących po sobie kroków.
 \end{proof}
 
+Na początek przedstawmy kilka faktów, które okażą się użyteczne w dalszej
+części wywodu.
+
+Niech  $\mathfrak{M}$, $\mathfrak{N}$
+będą dowolnymi algebrami von Neumanna.
+Bez straty ogólności możemy założyć, że
+$\mathfrak{M}\subset B(\mathcal{H})$ oraz $\mathfrak{N}\subset B(\mathcal{K})$,
+gdzie  $\mathcal{H},\mathcal{K}$
+są przestrzeniami Hilberta, niekoniecznie ośrodkowymi.
+Ich zbiory stanów, tj. wypukłe zbiory normalnych, dodatnich i znormalizowanych
+funkcjonałów, oznaczyliśmy odpowiednio przez
+$\mathcal{S}(\mathfrak{M})$ i $\mathcal{S}(\mathfrak{N})$.
+% The algebraic tensor product
+% is denoted by $\mathfrak{M}\otimes\mathfrak{N}$; whereas the spatial tensor product of
+% $\mathfrak{M}$ and $\mathfrak{N}$ by $\tmn$, i.e. $\tmn=(\mathfrak{M}\otimes\mathfrak{N})''$.
+Zauważmy, że przestrzeń predualna do iloczynu tensorowy algebr von Neumanna
+$(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{*}$
+jest izometrycznie izomorficzna z
+$\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*$, dopełnieniem
+$\mathfrak{M}_*\otimes\mathfrak{N}_*$ w rzutowej normie operatorowej
+$\|\cdot\|_\wedge$,
+a więc $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*= \mathfrak{M} \bar{\otimes} \mathfrak{N}$
+%w normie operatorowej na
+% on $\tmn$ being the dual norm on the dual space
+% $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*$
+(por. raz jeszcze: Effros, Ruan \cite{Effros2000}, twierdzenie 7.2.4;
+a także Corollary 7.1.5 w związku z dowodem następnego lematu).
+\begin{Lemma}
+\label{thm:isometry}
+Odwzorowanie $F: \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})
+\rightarrow \mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+zadane przez
+\begin{equation}
+\langle F(T), \omega \otimes \varphi \rangle =\langle T\omega, \varphi \rangle,
+\end{equation}
+gdzie $\omega \in \mathfrak{M}_{*}$, $\varphi \in \mathfrak{N}_{*}$,
+rozszerza się do kompletnie izometrycznego izomorfizmu pomiędzy przestrzeniami
+operatorowymi.
+\end{Lemma}
+
+Przypomnijmy, że macierz gęstości na $\mathcal{H}\otimes\mathcal{K}$,
+gdzie $\mathcal{H}$ i $\mathcal{K}$
+są skończenie wymiarowymi przestrzeniami Hilberta,
+jest \emph{separowalna},
+jeśeli jest kombinacją wypukłą prostych iloczynów tensorowych macierzy gęstości
+z $\mathcal{H}$ i $\mathcal{K}$.
+Ta definicja została potem uogólniona przez Wernera
+The definition was next generalized by Werner \cite{werner1989quantum}
+na nieskończenie wymiarowe przestrzenie Hilberta poprzez
+przejście do granicy w normie śladowej takich właśnie kombinacji wypukłych.
+W tym samym duchu, zdefiniujmy wypukły zbiór $C_1$
+stanów separowalnych w
+$\mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$ przez
+\begin{equation}
+C_{1} = \overline{{\rm conv}}^{||\cdot||_{\wedge}}
+\left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathfrak{M}),
+\varphi \in \mathcal{S}(\mathfrak{N})\right \}.
+\end{equation}
+Niech także $C_{1}^{*}$ oznacza stożek dualny:
+$C_{1}^{*} = \{ x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}:
+ \langle x , \varphi \rangle \geq 0 \,\, \forall \varphi \in C_{1} \}$ oraz
+niech $C_{0}^{*}$ będzie stożkiem zawartym w
+$C_{1}^{*}$:
+$C_{0}^{*} = \{ x \in \mathfrak{M} \otimes \mathfrak{N}:\langle x , C_{1} \rangle \geq 0 \}$.
+Z Lematu \ref{thm:isometry} w prosty sposób wynika, że
+$F(\mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})_{+}) = C_{1}^{*}$ oraz
+$F(\mathcal{CP}(\mathfrak{M}_{*}, \mathfrak{N})) = (\mathfrak{M} \bar{\otimes} \mathfrak{N})_{+}$,
+gdzie $(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{+}$
+jest stożkiem dodatnich elementów algebry.
+
+Dla każdej algebry von Neumanna $\mathfrak{M}$,
+istnieje kompletnie izometryczne zanurzenie
+\begin{equation}
+\theta: \mathfrak{M} \check{\otimes} \mathfrak{M}_{*}\rightarrow
+\mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{M}_{*}),
+\end{equation}
+gdzie $\check{\otimes}$ oznacza iniektywny iloczyn tensorowy przestrzeni operatorowych.
+(por. \cite{Effros2000}, Proposition 8.1.2).
+Dla przykładu, jeśli
+$u \in \mathfrak{M} \otimes \mathfrak{M}_{*}$, $u = \sum_{i = 1}^{n} a_{i} \otimes \omega_{i}$,
+wówczas dla $\omega \in \mathfrak{M}_{*}$,
+\begin{equation}
+\theta(u)\omega = \sum_{i=1}^{n} \langle a_{i} , \omega \rangle \, \omega_{i}.
+\end{equation}
+Posiłkując się izomorfizmem $F$,
+udowodnijmy następujący
+\begin{Lemma}
+\label{prop:34523}
+Niech $\omega\in \mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$.
+Wówczas $\langle F(A),\omega\rangle\geq 0$ $\forall A\in
+\mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})_+$,
+wtedy i tylko wtedy, gdy $\omega$ jest separowalne.
+\end{Lemma}
+\begin{proof}
+$\Rightarrow$ Załóżmy, że $\omega\notin C_1$.
+Ponieważ $C_1$ jest zbiorem normowo domkniętym i wypukłym,
+istnieje $x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}$,
+takie że $\langle x, \omega\rangle<0$ oraz $\langle x,C_1\rangle\geq 0$.
+Zatem $x\in C_1^*$, a więc istnieje $A \in \mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})_+$,
+dla którego $\langle F(A),\omega\rangle<0$, co pociąga za sobą sprzeczność.\\
+$\Leftarrow$ Dowód przeciwnej implikacji jest oczywisty.
+\end{proof}
+
+%\begin{Lemma}
+%Niech $E\subset \mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})_+$
+%oraz $B_{1}$ będzie kulą jednostkową w $\mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})$
+%(względem tzw. $\mathcal{CB}$-normy, tj. naturalnej normy odwzorowań kompletnie ograniczonych).
+%Niech także zbiór $E \cap B_{1}$ będzie gęsty w  be dense in  $\cbms_+ \cap B_{1}$ in the
+%weak$^*$ operator topology. Suppose that $\omega_0\in \mathcal{S}(\tmn)$. If $\forall A\in E$
+%$\langle F(A),\omega_0\rangle \geq 0$, then $\omega_0\in C_1$.
+%\end{Lemma}
+% {\bf Proof.} At first, we show that $F(E)$ is weak$^*$ dense in $C_1^*$. Let $x\in C_1^*$. Then $x=F(A)$, $A\in\cbms_+$.
+% By the assumption, there exists a net $(A_{\lambda})$, $A_{\lambda}\in E$, $\sup_{\lambda}\|A_{\lambda}\|_{\mathcal{CB}}\leq
+% \|A\|_{\mathcal{CB}}$ such that $A_{\lambda}\to A$ in the weak$^*$ operator topology (see p. \pageref{page:weakstaroperatortop}).
+% The map $F$ is continuous with respect to that topology because of Theorem \ref{thm:isometry}.
+% Therefore,  for any $\omega\in
+% \mathfrak{M}_*\otimes\mathfrak{N}_*$ $\langle F(A_{\lambda}),\omega\rangle\to\langle x,\omega\rangle$. Because
+% $\|F(A_{\lambda})\|=\|A_{\lambda}\|_{\mathcal{CB}}$ is uniformly bounded so $F(A_{\lambda})$ converges to $x$ in the
+% weak$^*$ topology of von Neumann algebra $\tmn$ . Hence $\langle x,\omega_0\rangle\geq 0$ for any $x\in C_1^*$, and so $\omega_0\in C_1$. $\Box$\\
+% It follows that a kind of positive uniform approximation in $\mathfrak{M}$ or $\mathfrak{N}$ is necessary to accomplish our task of generalising the Horodeckis' theorem.
+% This leads to the assumption about injectivity of one (say $\mathfrak{M}$) of the algebras. Let us recall that a von Neumann
+% algebra $\mathfrak{M}\subset B(\mathcal{H})$ is called injective if there is a norm-one Banach space projection (not necessarily
+% normal) $\pi :B(\mathcal{H})\to\mathfrak{M}$ onto $\mathfrak{M}$. In such an algebra, there is a net $(A_{\lambda})$ of completely
+% positive finite rank contractions on $\mathfrak{M}_*$ converging strongly to the identity map (see the Takesaki's textbook \cite{Takesaki3}, vol III, Theorem XV.3.1):
+% \begin{equation}
+% \label{RandomLabel:513684}
+%     || A_{\lambda} \omega - \omega || \stackrel{\lambda}{\longrightarrow} 0, \quad
+% \end{equation}
+% or any $\omega \in \mathfrak{M}_{*}$.
+% This property of injective von Neumann algebras will prove itself of particular
+% use in the following.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \paragraph{}
+Przejdźmy teraz do dalszej części dowodu twierdzenie \ref{thm:PHcrit}.
+
 {\it Krok 1.}
 \begin{Lemma}
 \label{lem:netinvNalg}
