@@ -44,6 +44,41 @@ oznaczmy stożek kompletnie ograniczonych dodatnich odwzorowań
 z $X$ w $Y$, a przez $\mathcal{CP}(X,Y)$ stożek odwzorowań kompletnie dodatnich.
 Wiadomo, że $\mathcal{CP}(X,Y) \subset \mathcal{CB}(X,Y)_{+}$.
 
+Aby dowieść twierdzenia uogólniającego kryterium Peresa-Horodeckich
+na stany na algebrach von Neumanna,
+potrzebne nam będzie możliwość jednostajnego przybliżania elementów z algebry
+za pomocą dodatnich operatorów skończonego rzędu.
+To prowadzi do założenia iniektywności przynajmniej jednej z rozpatrywanych algebr.
+Algebra von Neumanna $\mathfrak{M}\subset B(\mathcal{H})$ jest z definicji iniektywna,
+jeśli isnitje odwzorowanie rzutowe o normie jednostkowej (niekoniecznie normalne)
+$\pi :B(\mathcal{H})\to\mathfrak{M}$ na $\mathfrak{M}$.
+Dla takich algebr, istnieje net $(A_{\lambda})$ kompletnie dodatnich
+kontrakcji skończonego rzędu na  $\mathfrak{M}_*$,
+zbiegających w silnej topologi do odwzorowania identycznościowego:
+\begin{equation}
+\label{RandomLabel:513684}
+ || A_{\lambda} \omega - \omega || \stackrel{\lambda}{\longrightarrow} 0, \quad
+\end{equation}
+dla każdego $\omega \in \mathfrak{M}_{*}$
+(por. M.\,Takesaki, \emph{Theory of operator algebras}  \cite{Takesaki3},
+\mbox{t. III}, twierdzenie XV.3.1).
+Ta właśnie cecha iniektywnych algebr von Neumanna okaże się bardzo przydatna
+w dalszej części.
+Należy tu zaznaczyć, że w zasadzie wszystkie rozpatrywane w ramach analizy
+własności układów kwantowych algebry von Neumanna są iniektywne.
+Dla przykładu: algebry przemienne (reprezentujące układy klasyczne),
+skończenie wymiarowe,
+algebra $B(\mathcal{H})$ dla dowolnej przestrzeni Hilberta $\mathcal{H}$,
+faktory typu $II_1$ reprezentujące nieskończone łańcuchy spinów,
+algebry Araki-Woodsa reprezentujące nierelatywistyczny gaz bozonów w nieskończonej objętości
+\cite{araki1968classification},
+faktory typu $III_1$ reprezentujące localne algebry $\mathcal{M}(O)$
+w algebraicznej kwantowej teorii pola \cite{yngwason2005role}.
+Ponieważ iloczyn tensorowy algebr iniektywnych pozostaje wciąż algebrą iniektywną,
+a więc nawet algebry o nietrywialnym centrum, wciąż należą do klasy algebr iniektywnych.
+Możemy więc powiedzieć, że zaproponowane poniżej uogólnienie kryterium Peresa-Horodeckich
+pokrywa wszystkie z fizycznego punktu widzenia interesujące przypadki.
+
 \paragraph{}
 Zacznijmy od sformułowania twierdzenia, którego dowód przedstawimy.
 
@@ -204,20 +239,6 @@ $\Leftarrow$ Dowód przeciwnej implikacji jest oczywisty.
 % \mathfrak{M}_*\otimes\mathfrak{N}_*$ $\langle F(A_{\lambda}),\omega\rangle\to\langle x,\omega\rangle$. Because
 % $\|F(A_{\lambda})\|=\|A_{\lambda}\|_{\mathcal{CB}}$ is uniformly bounded so $F(A_{\lambda})$ converges to $x$ in the
 % weak$^*$ topology of von Neumann algebra $\tmn$ . Hence $\langle x,\omega_0\rangle\geq 0$ for any $x\in C_1^*$, and so $\omega_0\in C_1$. $\Box$\\
-% It follows that a kind of positive uniform approximation in $\mathfrak{M}$ or $\mathfrak{N}$ is necessary to accomplish our task of generalising the Horodeckis' theorem.
-% This leads to the assumption about injectivity of one (say $\mathfrak{M}$) of the algebras. Let us recall that a von Neumann
-% algebra $\mathfrak{M}\subset B(\mathcal{H})$ is called injective if there is a norm-one Banach space projection (not necessarily
-% normal) $\pi :B(\mathcal{H})\to\mathfrak{M}$ onto $\mathfrak{M}$. In such an algebra, there is a net $(A_{\lambda})$ of completely
-% positive finite rank contractions on $\mathfrak{M}_*$ converging strongly to the identity map (see the Takesaki's textbook \cite{Takesaki3}, vol III, Theorem XV.3.1):
-% \begin{equation}
-% \label{RandomLabel:513684}
-%     || A_{\lambda} \omega - \omega || \stackrel{\lambda}{\longrightarrow} 0, \quad
-% \end{equation}
-% or any $\omega \in \mathfrak{M}_{*}$.
-% This property of injective von Neumann algebras will prove itself of particular
-% use in the following.
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \paragraph{}
 Przejdźmy teraz do dalszej części dowodu twierdzenie \ref{thm:PHcrit}.
