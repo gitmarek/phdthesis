@@ -1,10 +1,5 @@
-% Do zrobienia:
-% 1. dodać cytowania do ogólnych stwierdzeń we wstępie.
-% 2. dodać wpisy do skorowidzu
-% 3. nieco skrócić
-% 4. zamienić gdzieniegdzie ,,praca'' na ,,rozprawa''
-
-\chapter{Wstęp}
+\chapter*{Wstęp}
+\addcontentsline{toc}{chapter}{Wstęp}
 \label{chp:intro}
 
 \paragraph{}
@@ -12,8 +7,8 @@
 Analiza własności kwantowych układów złożonych pociąga za sobą niejednokrotnie
 konieczność rozpatrywania zjawiska
 \index{idx}{splątanie kwantowe} \emph{splątania kwantowego},
-polegającego na występowaniu szczególnych korelacji w pomiarach 
-wielkości obserwowalnych pomiędzy poszczególnymi podukładami. 
+polegającego na występowaniu szczególnych korelacji w pomiarach
+wielkości obserwowalnych pomiędzy poszczególnymi podukładami.
 Jedną z cech charakterystycznych teorii kwantowej,
 w odróżnieniu od opisu klasycznego,
 jest występowanie stanów układów złożonych przejawiających tego typu korelacje.
@@ -34,22 +29,22 @@ jest podanie tzw. \emph{kryterium splątania},
 a więc procedury czy też twierdzenia,
 które pozwoliłoby w sposób jednoznaczny odpowiedzieć na pytanie,
 czy zadany stan kwantowego układu złożonego jest splątany,
-czy też wprost przeciwnie -- jest to 
+czy też wprost przeciwnie -- jest to
 \index{idx}{stan!separowalny} \emph{stan separowalny}.
 Jednym z pierwszych prób znalezienia wyczerpującej odpowiedzi na tak postawione
-pytanie było twierdzenie zaprezentowane w swojej szczególnej postaci 
+pytanie było twierdzenie zaprezentowane w swojej szczególnej postaci
 przez A.\,Peresa
 \cite{peres1996separability}
 i w tym samym czasie przedstawione nieco bardziej ogólnie przez
 R.,\,P.,\,M.\,Horodeckich
 \cite{horodecki1996separability},
-do którego będziemy się odnosić poniżej jako do 
+do którego będziemy się odnosić poniżej jako do
 \index{idx}{Peresa-Horodeckich kryterium} \emph{kryterium Peresa-Horodeckich}.
 Odkładając precyzyjne zdefiniowanie niezbędnych pojęć do następnego rozdziału,
 przypomnijmy jedynie, że twierdzenie głosi,
 iż stan mieszany $\rho$ złożonego układu kwantowego o skończonej ilości
 stopni swobody,
-traktowany jako macierz gęstości na skończenie wymiarowej przestrzeni 
+traktowany jako macierz gęstości na skończenie wymiarowej przestrzeni
 Hilberta $\mathcal{H}_{1} \otimes \mathcal{H}_{2}$,
 gdzie przestrzenie $\mathcal{H}_{1}$ i $\mathcal{H}_{2}$ odpowiadają dwóm podukładom,
 jest separowalny wtedy i tylko wtedy,
@@ -81,7 +76,7 @@ byłaby z jednej strony próba uogólnienia twierdzenia,
 tak aby analogiczna teza obowiązywała dla jak najszerszej grupy układów kwantowych;
 z drugiej zaś -- przeprowadzenie szczegółowej analizy kolejnych,
 bardziej skomplikowanych przypadków,
-poczynając od układu złożonego z dwóch podukładów 
+poczynając od układu złożonego z dwóch podukładów
 opisywanych za pomocą trójwymiarowej przestrzeni Hilberta,
 czyli tak zwanych ,,qutritów''.
 Nawet w tej,
@@ -125,7 +120,7 @@ różnią się jednak od siebie diametralnie.
 Dla przykładu, lokalne algebry obserwabli w kwantowej teorii pola,
 to tzw. faktory typu III,
 które nie zawierają żadnych niezerowych skończonych projektorów,
-tworząc strukturę w wysokim stopniu odmienną od struktury algebry $\mathcal{B}(\mathcal{H})$. 
+tworząc strukturę w wysokim stopniu odmienną od struktury algebry $\mathcal{B}(\mathcal{H})$.
 Ponieważ w swoim oryginalnym sformułowaniu kryterium Peresa-Horodeckich
 dotyczy jedynie przestrzeni skończenie wymiarowych i odwzorowań na operatorach
 na tych przestrzeniach,
@@ -137,7 +132,7 @@ mających zastosowanie do opisu rzeczywistych układów kwantowych.
 A zatem jednym z dwóch głównych nurtów niniejszej pracy będzie sformułowanie
 i dowód twierdzenia będącego możliwie najogólniejszą wersją
 kryterium Peresa-Horodeckich.
-Potrzeba uogólnienia kryterium znajduje swoje uzasadnienie również 
+Potrzeba uogólnienia kryterium znajduje swoje uzasadnienie również
 w rosnącym zainteresowaniu na polu badań nad splątaniem układów o ciągłym
 spektrum stopni swobody (\emph{CV-entanglement})
 \cite{adesso2007entanglement}.
@@ -145,10 +140,10 @@ Pytanie o możliwość uogólnienia, którego dowodzimy w niniejszej pracy,
 pojawiło się już wcześniej w publikacji E.\,St{\o}rmera
 \cite{stormer2008separable},
 który udowodnił tezę dla C*-algebr,
-spośród których jedna jest tak zwaną UHF-algebrą 
+spośród których jedna jest tak zwaną UHF-algebrą
 (topologicznym domknięciem sumy mnogościowej algebr skończenie wymiarowych).
 W naszej pracy zakładany wynik otrzymaliśmy dla iloczynu tensorowego
-$\mathfrak{M} \bar{\otimes} \mathfrak{N}$ 
+$\mathfrak{M} \bar{\otimes} \mathfrak{N}$
 algebr von Neumanna $\mathfrak{M}$ i $\mathfrak{N}$,
 spośród których jedna jest algebrą iniektywną.
 Tak sformułowane twierdzenie obejmuje w zasadzie wszystkie znane
@@ -158,7 +153,7 @@ Najważniejszym obiektem matematycznym występującym w sformułowaniu
 kryterium Peresa-Horodeckich są odwzorowania dodatnie na $^{*}$-algebrach,
 w szczególności na algebrach operatorów,
 które pomimo intuicyjnej definicji oraz wielu ważnych zastosowań,
-stanowią obiekty stosunkowo słabo 
+stanowią obiekty stosunkowo słabo
 \mbox{poznane \cite{Stormer2013}}.
 Teoria tych odwzorowań, zapoczątkowana w pracach
 Kadisona \cite{kadison1952generalized}
@@ -250,7 +245,7 @@ Podobnie jak w teorii
 zajmującej się asymptotycznymi własnościami generatorów kwantowych półgrup
 dynamicznych \cite{olkiewicz1999environment},
 wykorzystamy tzw. stabilne podprzestrzenie tych półgrup do uzyskania
-wstępnej klasyfikacji ekstremalnych odwzorowań dodatnich 
+wstępnej klasyfikacji ekstremalnych odwzorowań dodatnich
 zachowujących ślad i operator identyczności,
 czyli tzw. odwzorrowań \emph{bistochastycznych}.
 Nie uściślając w pełni sformułowań na tym etapie,
@@ -271,7 +266,7 @@ aktualnych badań nad zjawiskiem splątania.
 Wysiłki badaczy koncentrują się także na podaniu alternatywnych kryteriów
 orzekających o splątaniu stanów mieszanych,
 wykorzystujących do tego celu podejścia takie jak korelacje kwantowe,
-miary splątania etc. 
+miary splątania etc.
 \cite{modi2010unified,ollivier2001quantum}.
 Korzyścią, która płynie z alternatywnych podejść,
 jest nierzadko mniejsza złożoność obliczeniowa,
@@ -280,9 +275,9 @@ a także możliwość uniknięcia największej trudności związanej z kryterium
 Peresa-Horodeckich,
 mianowicie potrzeby znajomości ogólnej struktury dodatnich odwzorowań
 na zadanej algebrze operatorów.
-Jednak twierdzenie podane przez Peresa i Horodeckich oraz 
+Jednak twierdzenie podane przez Peresa i Horodeckich oraz
 jego uogólnienie udowodnione w następnych rozdziałach
-jest jedynym znanym warunkiem separowalności 
+jest jedynym znanym warunkiem separowalności
 koniecznym i wystarczającym zarazem.
 Jasne jest,
 że im głębsza wiedza na temat odwzorowań dodatnich,
@@ -300,4 +295,3 @@ bez wątpienia w przyszłości wciąż odgrywać będzie ważną rolę,
 inspirującą badaczy do dalszych poszukiwań w tej dziedzinie.
 
 %%%%% **** %%%%%
-
