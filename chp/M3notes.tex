@@ -1,14 +1,33 @@
 \chapter{Odwzorowania dodatnie na algebrach macierzowych}
 \label{chp:M3notes}
 
---------------------------------------------------------
-[Introduction]
+Po wykazaniu w poprzednim rozdziale znaczenia odwzorowań dodatnich dla kryterium
+splątania w najogólniejszym z fizycznego punktu widzenia znaczącym przypadku
+iniektywnych algebr von Neumanna, przedźmy do analizy samych odwzorowań dodatnich.
+
+Powiemy że dodatnie odwzorowanie $S$ na algebrze macierzy $M_{n}$ spełnia nierówność
+Kadisona-Schwarza, jeśli
 \begin{equation}
 \label{eq:SchwarzInequality}
-    S(A^{*}) \, S(A) \: \leq \: S(A^{*} A),
+    S(X^{*}) \, S(X) \: \leq \: S(X^{*} X),
 \end{equation}
-(por. \cite[Prop.\,3.6]{choi1980some}),
----------------------------------------------------------
+dla każdej macierzy $X \in M_{n}$.
+W ogólności dodatnie odwzorowanie $S$, które zachowuje macierz jednostkową,
+tzn. $S(\mathbf{1}) = \mathbf{1}$,
+spełnia nierówność Kadisona-Schwarza dla macierzy normalnych,
+to jest takich macierzy
+$X$, dla których  $X X^{*} = X^{*} X$
+\cite{choi1974some}.
+Odwzorowanie dodatnie, które spełnia tę nierówność dla wszystkich macierzy
+nazwiemy \emph{odwzorowaniem Schwarza} \cite{robertson1983schwarz}.
+Przypomnijmy także, że odwzorowanie $S$ nazywamy bistochastycznym,
+jeśli jest ono dodatnie oraz zachowuje ślad i macierz jednostkową,
+tzn.
+$S(\mathbf{1}) = \mathbf{1}$
+i
+$\text{Tr} \, S(X) = \text{Tr} \, X$
+dla każdego $X \in M_{n}$.
+
 
 \section{Charakterystyka odwzorowań na algebrze $M_{2}$}
 \label{sec:M2notes}
@@ -544,13 +563,28 @@ Wreszcie, twierdzenie \ref{thm:Ball} pokazuje, że zbiór odwzorowań bistochast
 które są jednocześnie kompletnie dodatnie i kompletnie kododatnie jest
 topologicznie tożsamy z kulą jednostkową w $M_{3}(\mathbb{R})$ w normie śladowej.
 
-W dalszej części rozwiniemy przedstawione metody na kolejny nietrywialny przypadek
-odwzorowań algebry $M_{3}$.
-
 
 \section{Stabilne podalgebry jako metoda analizy własności odwzorowań na $M_{3}$}
 \label{sec:M3notes}
 
+W następnym podrozdziale skupimy się na próbie pokazania,
+jak geometryczne metody analizy odwzorowań dodatnich,
+ukazane powyżej,
+dają się ugólnić na kolejny nietrywialny przypadek odwzorowań algebry $M_{3}$.
+W tej części zajmijmy się zbudowaniem niezbędnego aparatu matematycznego,
+opartego na istnieniu stabilnych podprzestrzeni odwzorowań bistochastycznych
+i ich klasyfikacji pod kątem struktury algebr Jordana.
+To pozwoli nam na wskazanie interesującego przykładu ekstremalnych odwzorowań
+dodatnich, który później postaramy zaklasyfikować, mając już do dyspozycji
+geometryczne metody z następnego podrozdziału.
+
+Przypomnijmy tylko, że przez JB$^{*}$-algebrę $K$ rozumiemy zespoloną
+przestrzeń Banacha, która jest jednocześnie algebrą Jordana.
+Będziemy zawsze zakładać, że $\mathbf{1} \in K$.
+Dokładne przedstawienie teorii JB$^{*}$-algebr znajduje się w książce
+H.\,Hanche-Olsen, E.\,St{\o}rmer, \emph{Jordan operator algebras} \cite{Hanche1984}.
+
+\vspace{0.5cm}
 Niech $S\!: M_{n} \rightarrow M_{n}$ będzie odwzorowaniem bistochastycznym.
 Łatwo zauważyć, że $S$ jest kontrakcją w normie Hilberta-Schmidta
 na $M_{n}$, zdefiniowanej jako
@@ -666,8 +700,6 @@ e) tak jak Prop. 5\,d);
 f), g) tak jak Prop. 6\,a) i 6\,c) w
 \cite{olkiewicz1999environment}.
 \end{proof}
-
-
 
 Następujący fakt jest prostą konsekwencją poprzedniego.
 
@@ -1441,26 +1473,22 @@ jest stanem PPT, tzn. $(I \otimes t)\rho$ jest wciąż macierzą gęstości,
 jednak $\text{Tr}\, W_{S} \rho = \frac{2}{7} - \frac{2\sqrt{2}}{7} < 0$.
 
 \paragraph{}
-(Komentarz)
-%------------------------------------------------------------------------------
-% Komentarz na temat nowego przykładu.
 
-% Dla odwzorowania $S$ zadanego przez \eqref{eq:DefinitionOfS}, mamy
-% $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
-% To the best of the authors' knowledge,
-% all the examples of the extremal maps of $M_{3}$
-% that are not completely or co-completely positive,
-% which have been so far specified in the literature,
-% have $K_{S} = \mathbb{C} \, \mathbf{1}$.
-% The map $S$ would be the first one
-% with a two-dimensional commutative stable algebra.
-%
+Dla odwzorowania $S$ zadanego przez \eqref{eq:DefinitionOfS}, mamy
+$K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
+Według autora, jest to jak dotąd jedyny znany przykład ekstremalnego
+odwzorowania na $M_{3}$,
+które posiada tę właśnie stabilną podprzestrzeń $K_S$
+(por. komentarz poniżej na str. \ref{com:onlyOneExample}).
 
+W następnym podrozdziale spróbujemy wskazać na topologiczne własności
+odwzorowań dodatnich na $M_3$, które pochodzą z uogólnienia wprowadzonych
+powyżej metod dla dwuwymiarowego przypadku
+i które pozwolą nam przeprowadzić wstępną klasyfikację ekstremalnych
+odwzorowań bistochastychnych.
 
 \section{Eksteremalne odwzorowania dodatnie na $M_{3}$
 a macierze idempotentne}
-
-(Komentarz)
 
 Podobnie, jak powyżej w przypadku odwzorowań dodatnich na $M_{2}$,
 zdefiniujmy reprezentację odwzorowań na $M_{3}$ poprzez macierze
@@ -2177,96 +2205,86 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
     co kończy dowód.
 \end{proof}
 
-%
-% We summarize the results presented above by saying that they allow
-% to narrow the task of finding positive extremal and bistochastic maps
-% on $M_{3}(\mathbb{C})$ to three specific groups;
-% and examples in all these groups have been found previously.
-% First, there are Jordan isomorphisms, represented by matrices from
-% $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
-% Second, there are maps that could be called \emph{strongly ergodic}
-% \cite{miller2015stable},
-% belonging to the class represented by
-% $\left \{ x \in Q_{0}(\hat{0}) \:|\: ||x|| = \frac{1}{2} \right \}$,
-% of which the celebrated Choi map
-% \cite{choi1977extremal} is an example.
-% For a generalised Choi map $\Phi[a,b,c]$:
-% \begin{equation}\label{eq:choi}
-% \Phi[a,b,c](X)=\\
-% \frac{1}{2}
-% \begin{pmatrix}
-% ax_{11}+bx_{22}+cx_{33} & -x_{12} & -x_{13} \\
-% -x_{21} & cx_{11}+ax_{22}+bx_{33} & -x_{23} \\
-% -x_{31} & -x_{32} & bx_{11}+cx_{22}+ax_{33}
-% \end{pmatrix},
-% \end{equation}
-% where $X = (x_{ij})_{i,j = 1}^{3}$,
-% if we parametrise:
-% \begin{equation}
-% a(t)=\dfrac{(1-t)^2}{1-t+t^2},\quad b(t)=\dfrac{t^2}{1-t+t^2},\quad c(t)=\dfrac 1{1-t+t^2},
-% \end{equation}
-% $0 \leq t < 1$,
-% then $\Phi[a(t), b(t), c(t)]$ is an extremal bistochastic map on $M_{3}$.
-% For $t = 0$, it is the map proposed originally by Choi,
-% and for $t = 1$ it is a completely positive map.
-% See the paper by
-% K.-C.\,Ha and S.-H.\,Kye \cite{ha2011entanglement} for more details.
-% The family of matrices $x_{t}$ such that
-% $S_{x_{t}} = \Phi[a(t), b(t), c(t)]$ is given by
-% \begin{equation}
-%     x_{t} = \begin{pmatrix}
-%         - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-%         0 & - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 \\
-%         0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & - \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} \\
-%         0 & 0 & 0 & - \frac{1}{2} & 0 & 0 & 0 & 0 \\
-%         0 & 0 & 0 & 0 & - \frac{1}{2} & 0 & 0 & 0 \\
-%         0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 & 0 \\
-%         0 & 0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 \\
-%         0 & 0 & \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} \\
-%     \end{pmatrix}.
-% \end{equation}
-% It is worth noting that each
-% $x_{t} = \frac{1}{2} R_{t}$, where $R_{t} \in \text{O}(8)$,
-% as in Proposition \ref{prop:oneHalfofOrthogonal}.
-%
-% Lastly, there are maps represented by elements of $Q_{0}(P_{8})$,
-% one example of which was proposed in \cite{miller2015stable}:
-% \begin{equation}
-% \label{eq:DefinitionOfS}
-% S_{0}(X) \:=\: \begin{pmatrix}
-%         \frac{1}{2}(x_{11} + x_{22}) & 0 & \frac{1}{\sqrt{2}} x_{13} \\
-%         0 & \frac{1}{2}(x_{11} + x_{22}) & \frac{1}{\sqrt{2}} x_{32} \\
-%         \frac{1}{\sqrt{2}} x_{31} & \frac{1}{\sqrt{2}} x_{23} & x_{33}
-%         \end{pmatrix}.
-% \end{equation}
-% The matrix $x \in \Lambda$ such that $S_{x} = S_{0}$ is given by
-% a diagonal matrix
-% \begin{equation}
-%  x =
-% \text{diag}(0,0,0,
-% \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}},
-% 1).
-% \end{equation}
-%
-% We say that two elements $x, y \in \Lambda$
-% are equivalent if, and only if, there are $g_{1}, g_{2} \in G_{3}$
-% such that $x = g_{1} y g_{2}$.
-% Then the task of finding elements in $\text{Ext}_{0}(\Lambda)$,
-% up to this equivalence relation,
-% consists of:
-% \begin{enumerate}
-% \item finding all $R \in \mathrm{O}(8)$ such that
-%     $\frac{1}{2}R \in \text{Ext}_{0}(\Lambda)$;
-% \item determining which elements $x \in \Lambda$,
-%     such that $\frac{1}{2} < ||x|| < 1$, belong to $\text{Ext}_{0}(\Lambda)$;
-% \item finding all $y$, such that
-%     $y P_{8} = P_{8} y = \hat{0}$, $||y|| < 1$,
-%     and $P_{8} + y \in \text{Ext}_0(\Lambda)$.
-% \end{enumerate}
-%
-% In the future,
-% we hope that the methods proposed,
-% together with some other, mostly geometric techniques,
-% will allow to bring the research closer to the final classification
-% of extremal positive maps on matrix algebras.
-%
+\label{com:onlyOneExample}
+Podsumujmy wyniki przedstawione powyżej zuważając, że pozwalają nam one
+na sprecyzowanie problemu znalezienia ektremalnych odwzorowań bistochastycznych
+no $M_{3}(\mathbb{C})$ poprzez skupienie uwagi na trzech szczególnych
+przypadkach.
+Po pierwsze, są to izomorfizmy Jordana, reprezentowane przez macierze z
+$Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
+Następnie, odwzorowania, które możemy nazwać \emph{silnie ergodycznymi}
+\cite{miller2015stable},
+należące do klasy reprezentowanej przez elementy zbioru
+$\left \{ x \in Q_{0}(\hat{0}) \:|\: ||x|| = \frac{1}{2} \right \}$.
+Jednym z przykładów takich odwzorowań jest znane przekształcenie podane
+po raz pierwszy przez M.-D.\,Choi \cite{choi1977extremal}.
+Uogólnione odwzorowanie tego typu ma postać
+\begin{equation}\label{eq:choi}
+\Phi[a,b,c](X)=\\
+\frac{1}{2}
+\begin{pmatrix}
+ax_{11}+bx_{22}+cx_{33} & -x_{12} & -x_{13} \\
+-x_{21} & cx_{11}+ax_{22}+bx_{33} & -x_{23} \\
+-x_{31} & -x_{32} & bx_{11}+cx_{22}+ax_{33}
+\end{pmatrix},
+\end{equation}
+gzie $X = (x_{ij})_{i,j = 1}^{3}$,
+jeżeli wprowadzimy parametryzację:
+\begin{equation}
+ a(t)=\dfrac{(1-t)^2}{1-t+t^2},\quad b(t)=\dfrac{t^2}{1-t+t^2},\quad c(t)=\dfrac 1{1-t+t^2},
+\end{equation}
+$0 \leq t < 1$,
+wówczas $\Phi[a(t), b(t), c(t)]$ jest odwzorowaniem bistochastycznym, ekstremalnym
+w zbiorze wszystkich odwzorowań dodatnich na $M_{3}$.
+Dla $t = 0$, otrzymujemy przekształcenie zaproponowane oryginalnie przez Choi,
+a dla $t = 1$ -- przekształcenie kompletnie dodatnie
+(por.
+K.-C.\,Ha, S.-H.\,Kye \cite{ha2011entanglement}).
+Rodzina macierzy $x_{t}$, dla której
+$S_{x_{t}} = \Phi[a(t), b(t), c(t)]$ jest zadana przez
+\begin{equation}
+ x_{t} = \begin{pmatrix}
+     - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+     0 & - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 \\
+     0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & - \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} \\
+     0 & 0 & 0 & - \frac{1}{2} & 0 & 0 & 0 & 0 \\
+     0 & 0 & 0 & 0 & - \frac{1}{2} & 0 & 0 & 0 \\
+     0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 & 0 \\
+     0 & 0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 \\
+     0 & 0 & \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} \\
+ \end{pmatrix}.
+\end{equation}
+Warto zaznaczyć, że każde
+$x_{t} = \frac{1}{2} R_{t}$, gdzie $R_{t} \in \text{O}(8)$,
+tak jak w twierdzeniu \ref{thm:oneHalfofOrthogonal}.
+
+Ostatnią grupą są odwzorowania reprezentowane przez elementy z $Q_{0}(P_{8})$,
+gdzie jednym spośród nich jest odwzorowanie zadane przez równanie
+\eqref{eq:DefinitionOfS} z poprzedniego podrozdziału.
+Macierz
+$x \in \Lambda$ w tym przypadku ma postać diagonalną:
+\begin{equation}
+  x =
+ \text{diag}(0,0,0,
+ \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}},
+ 1).
+\end{equation}
+
+Powiemy, że dwie macierze $x, y \in \Lambda$ są równoważne,
+wtedy i tylko wtedy, gdy istnieją $g_{1}, g_{2} \in G_{3}$
+takie, że $x = g_{1} y g_{2}$.
+Wóczas zadanie znalezienia elementów zbioru $\text{Ext}_{0}(\Lambda)$,
+z dokładnością do tej właśnie relacji równoważności,
+sprowadza się po pierwsze do znalezienia wszystkich $R \in \mathrm{O}(8)$,
+takich że
+ $\frac{1}{2}R \in \text{Ext}_{0}(\Lambda)$;
+po drugie do rozstrzygnięcia, które macierze  $x \in \Lambda$,
+ takie że $\frac{1}{2} < ||x|| < 1$, należą do $\text{Ext}_{0}(\Lambda)$.
+Po trzecie zaś do  znalezienia wszystkich $y$, dla których
+ $y P_{8} = P_{8} y = \hat{0}$, $||y|| < 1$
+ oraz $P_{8} + y \in \text{Ext}_0(\Lambda)$.
+Doprowadzenie tak naszkicowanego programu do końca pozwoliłoby
+na podanie pełnej klasyfikacji dodatnich odwzorowań bistochastycznych
+na algebrze $M_3$ i z pewnością przyniosłoby wymierne korzyści w
+postaci zastosowań do kwantowej teorii informacji.
+% * * *

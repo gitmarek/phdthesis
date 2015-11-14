@@ -80,7 +80,7 @@ $\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
 
 
 \section{Algebry operatorowe}
-
+(...)
 % Wykorzystane Definicje i twierdzenia:
 %
 % 1. Algebry operatorów, przestrzenie operatorowe.
@@ -99,7 +99,7 @@ $\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
 %
 
 \section{Odwzorowania dodatnie}
-
+(...)
 % Wykorzystane Definicje i twierdzenia:
 %
 % 1. definicja
@@ -112,6 +112,79 @@ $\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
 % 7. Przygotowanie do dowodu twierdzenia w rozdz. M3notes (w tym rozdziale)
 % 8. JB* algebry
 % 9. Odwzorowania rozkładalne
+
+% Dla $k \in \mathbb{N}$, a positive map $S$,
+% such that the map
+% $I_{k} \otimes S :  M_{k} \! \otimes \! M_{n}
+%  \rightarrow  M_{k} \! \otimes \! M_{n}$
+% is positive,
+% is called $k$-positive.
+% If a map is a $k$-positive map for every $k$,
+% it is called completely positive.
+% Similarly, a map is $k$-\emph{co}positive,
+% or completely copositive,
+% if $I_{k} \otimes (S \circ t)$ is positive for
+% some $k$, or for every $k$, respectively,
+% where $t \! : A \mapsto A^{t}$,
+% $A \in M_{n}$, is the transposition map.
+% A positive map $S$ is called decomposable,
+% if it can be written in the form
+% $S(A) = \Lambda_{1}(A) + \Lambda_{2} (A^{t})$,
+% where both maps $\Lambda_{1}, \Lambda_{2}$ are completely positive,
+% possibly zero
+% (see \cite{choi1975completely} for more details on completely positive maps).
+% By an extremal positive map on $M_{n}$,
+% we exclusively mean an extremal element of the cone of all positive maps on $M_{n}$,
+% as defined below.
+% The convex cone of all positive maps of $M_{n}$ is denoted
+% by $\mathcal{P}(M_{n})$.
+% For $k \in \mathbb{N}$, a map $S \in \mathcal{P}(M_{n})$,
+% such that the map
+% $I_{k} \otimes S :  M_{k} \! \otimes \! M_{n}
+%  \rightarrow  M_{k} \! \otimes \! M_{n}$
+% is positive,
+% is called $k$-positive.
+% If a map is a $k$-positive map for every $k$,
+% it is called completely positive.
+% Similarly, a map is $k$-\emph{co}positive,
+% or completely copositive,
+% if $I_{k} \otimes (S \circ t)$ is positive for
+% some $k$, or for every $k$, respectively,
+% where $t \! : A \mapsto A^{t}$,
+% $A \in M_{n}$, is the transposition map.
+% A positive map $S$ is called decomposable,
+% if it can be written in the form
+% $S(A) = \Lambda_{1}(A) + \Lambda_{2} (A^{t})$,
+% where both maps $\Lambda_{1}, \Lambda_{2}$ are completely positive,
+% possibly zero
+% (see \cite{choi1975completely} for more details on completely positive maps).
+% It is called atomic \cite{ha1998atomic},
+% if it cannot be written as a sum of 2-positive and 2-copositive maps.
+% A positive map $S$ is extremal,
+% if for any positive map $T: M_{n} \rightarrow M_{n}$ such that
+% $S - T \in \mathcal{P}(M_{n})$,
+% i.e. $0 \leq T \leq S$,
+% we have $T = \alpha S$ for some number $0 \leq \alpha \leq 1$.
+% We denote the set of extremal maps of $\mathcal{P}(M_{n})$
+% by $\text{Ext}(M_{n})$.
+% It is true that every positive map
+% can be written as a convex combination of extremal ones.
+% Nevertheless, it could be of use to specify a dense subset
+% of $\text{Ext}(M_{n})$,
+% such that it is easier to handle its elements instead of
+% general extremal maps.
+% Hence, we say that a positive map $S$ of the matrix algebra
+% $M_{n}$ is exposed
+% \cite{marciniak2013rank},
+% if for all $T \in \mathcal{P}(M_{n})$ such that
+% $\text{Tr}\, P_{\xi} \, T(P_{\eta}) = 0$,
+% where $\mathbb{C}^{n} \ni \eta, \xi \neq 0$ is any pair for which
+% $\text{Tr}\, P_{\xi} \, S(P_{\eta}) = 0$,
+% we have that $T = \alpha S$, $\alpha \geq 0$.
+% Due to the Straszewicz theorem \cite{straszewicz1935exponierte},
+% the set of exposed maps of $M_{n}$ is indeed dense in $\text{Ext}(M_{n})$.
+
+
 
 \paragraph{}
 W następnym rozdziale wykorzystamy przedstawione powyżej podstawowe fakty
