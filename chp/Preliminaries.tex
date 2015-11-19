@@ -160,14 +160,6 @@ Jeżeli dodatkowo $||\omega|| = 1$, to $\omega$ nazywamy \emph{stanem}.
 Zbiór stanów algebry $\mathcal{A}$ oznaczamy przez $\mathcal{S}(\mathcal{A})$.
 \end{Definition}
 
-\subsection{Algebry von Neumanna}
-% 3. Algebry von Neumanna,
-% 4. przestrzeń predualna, funkcjonały i odwzorowania normalne i predualne
-% 8. projektory w alg vN., centrum alg.
-% 9. klasyfikacja alg. vN.,  algebry skończone (nie: skończenie wymiarowe), półskończone, typu III
-% 13. centrum algebry
-
-
 \subsection{Topologie algebr operatorów}
 Niech $\mathcal{H}$ oznacza ośrodkową przestrzeń Hilberta, a $\mathcal{B}(\mathcal{H})$ przestrzeń
 Banacha ograniczonych operatorów liniowych na $\mathcal{H}$
@@ -209,6 +201,13 @@ $A \rightarrow \left| \sum \limits_{n=1}^{\infty} (\xi_{n}, A
 $\sum \limits_{n=1}^{\infty} ||\xi_{n}||^{2} < \infty$ i
 $\sum \limits_{n=1}^{\infty} ||\eta_{n}||^{2} < \infty$.
 
+\subsection{Algebry von Neumanna}
+% 3. Algebry von Neumanna,
+% 4. przestrzeń predualna, funkcjonały i odwzorowania normalne i predualne
+% 8. projektory w alg vN., centrum alg.
+% 9. klasyfikacja alg. vN.,  algebry skończone (nie: skończenie wymiarowe), półskończone, typu III
+% 13. centrum algebry
+
 \subsection{Iloczyny tensorowe algebr operatorów}
 Dla dwóch zespolonych przestrzeni liniowycg $V$ i $W$ przez
 $V \! \otimes \! W$ oznaczmy algebraiczny iloczyn tensorowy tych przestrzeni,
@@ -224,12 +223,39 @@ dopóki nie założy się czegoś więcej o przynajmniej jednym składniku ilocz
 Definicję iloczynu tensorowego C*-algebr odłóżmy zatem do momentu,
 kiedy będziemy próbowali przenieść na ten grunt wyniki udowodnione już
 wcześniej dla algebr von Neumanna (p. str. \pageref{sec:HorCstar}).
+
 Z kolei algebry von Neumann mają tę własność, że ich iloczyn
 tensorowy można zdefiniować jednoznacznie,
 co czyni je wydodnym narzędziem do opisu złożonych układów kwantowych
 o nieskończonej ilości stopni swobody.
+Niech $\mathfrak{M}$, $\mathfrak{N}$ będą jak zwykle algebrami von Neumanna,
+a $\mathfrak{M}_{*}$, $\mathfrak{N}_{*}$ ich przestrzeniami predualnymi.
+Wówczas istnieje dokładnie jedna algebra von Neumanna $\mathcal{A}$,
+dla której
+$\mathcal{A}_{*} = \mathfrak{M}_{*} \bar{\otimes} \mathfrak{N}_{*}$,
+gdzie przestrzeń
+$\mathfrak{M}_{*} \bar{\otimes} \mathfrak{N}_{*}$ jest domknięciem
+algebraicznego iloczynu tensorowego przestrzeni
+$\mathfrak{M}_{*}$, $\mathfrak{N}_{*}$ w naturalnej normie na iloczynie
+tensorowym $\mathfrak{M}^{*} \otimes \mathfrak{N}^{*}$,
+dokładniej w normie sprzężonej do normy iniketywnej
+(por. \cite{Takesaki1}, definicja 5.1, str. 220).
 
-% 7. iloczyny tensorowe alg. vN.
+\begin{Definition}
+ \label{def:TensorProductOfvN}
+    Algebrę von Neumanna $\mathcal{A}$, dla której
+    $\mathcal{A}_{*} = \mathfrak{M}_{*} \bar{\otimes} \mathfrak{N}_{*}$,
+    nazywamy iloczynem tensorowym algebr $\mathfrak{M}$, $\mathfrak{N}$
+    i oznaczamy symbolem
+    $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
+\end{Definition}
+
+%W następnym rozdziale będziemy zakładać, że przynajmniej jedna spośród algebr
+%von Neumanna jest algebrą iniektywną (por. str. \pageref{def:injectivevNalg}).
+%W tym miejscu przywołajmy jedynie twierdzenie, którego dowód można odnaleść
+%w książce M.\,Takesaki, \emph{Theory of operator algebras}, t.\,3,
+%twierdzenie , str.  \cite{Takesaki3}
+
 
 % Wykorzystane Definicje i twierdzenia:
 % 8. JB* algebry
