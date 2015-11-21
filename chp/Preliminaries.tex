@@ -264,12 +264,60 @@ udało się scharakteryzować algebry von Neumanna.
 Ta wiedza okaże się dla nas niezwykle przydatna, gdy przystąpimy do próby
 uogólnienia kryterium Peresa-Horodeckich na szeroką klase iniektywnych alebr von Neumanna.
 
-% 9. klasyfikacja alg. vN.,  algebry skończone (nie: skończenie wymiarowe), półskończone, typu III
+\begin{Definition}
+Dwa projektory $p, q \in \mathfrak{M}$ są równoważne,
+jeśli istnieje $u \in \mathfrak{M}$, takie że
+$p = u^{*} u$ oraz $ q = u u^{*}$
+Wówczas piszemy $p \sim q$.
+\end{Definition}
+%Wprowadźmy relację częściowego porządku w zbiorze projektorów algebry $\mathfrak{M}$
+%i napiszmy $p \preceq q$,
+%jeżeli $p$ jest równoważne projektorowi $q_{1} \leq q$.
 
-Posługując się przedstawionymi powyżej twierdzeniami klasyfikującymi faktory
+Następujący ciąg definicji i twierdzeń, podanych tutaj bez dowodu,
+pochodzi z podręcznika M.\,Takesaki, \emph{Theory of operator algebras}, t.\,1,
+\cite{Takesaki1} (p. rozdz. V).
+
+\begin{Definition}
+    \label{def:projectionsInvN}
+    Projektor $p \in \mathfrak{M}$ nazywamy \emph{skończonym}, jeśli
+    dla każdego projektora $q$, takiego że $p \sim q \leq p$, mamy $p = q$.
+    W przeciwnym wypadku projektor nazwiemy \emph{nieskończonym}.
+    Jeżeli algebra $p \mathfrak{M} p$ jest przemienna,
+    projektor $p$ również nazwiemy \emph{przemiennym}.
+    Projektor $p$ jest \emph{minimalny}, jeśli $p \mathfrak{M} p = \mathbb{C} p$.
+\end{Definition}
+
+Jest jasne, że projektor przemienny jest skończony, a projetor minimalny jest przemienny.
+
+\begin{Definition}
+    \label{def:typesofvNalg}
+    Algebra von Neumanna jest \emph{typu I}, jeżeli każdy niezerowy centralny
+    projektor w $\mathfrak{M}$ majoryzuje pewien niezerowy projektor abelowy
+    w $\mathfrak{M}$.
+    Jeżeli dla algebry $\mathfrak{M}$ nie istnieją niezerowe skończone projektory,
+    wówczas $\mathfrak{M}$ jest \emph{typu III}.
+    Jeżeli $\mathfrak{M}$ nie posiada niezerowych przemiennych projektorów
+    i jeśli każdy niezerowy centralny projektor w $\mathfrak{M}$ majoryzuje
+    pewien niezerowy skończony projektor w $\mathfrak{M}$, wówczas
+    $\mathfrak{M}$ jest \emph{typu II}.
+    Jeżeli $\mathbf{1} \in \mathfrak{M}$ jest projetorem skończonym i
+    $\mathfrak{M}$ jest typu II, wówczas mówimy, że $\mathfrak{M}$ jest \emph{typu II$_{1}$}.
+    Jeżeli $\mathfrak{M}$ jest typu II i nie posiada niezerowych centralnych skończonych
+    projetorów, wówczas mówimy, że $\mathfrak{M}$ jest \emph{typu II$_{\infty}$}.
+\end{Definition}
+
+\begin{Theorem}
+    \label{thm:decompositionofvNalg}
+    Każda algebra von Neumanna $\mathfrak{M}$ rozkłada się w sposób
+    jednoznaczy na sumę prostą algebr typu I, II$_{1}$, II$_{\infty}$ oraz typu III.
+    Jeżeli $\mathfrak{M}$ jest faktorem, wówczas $\mathfrak{M}$ jest dokładnie
+    jednego z typów: I, II$_{1}$, II$_{\infty}$ albo III.
+\end{Theorem}
+
+Posługując się przedstawionymi powyżej definicjami i twierdzeniami klasyfikującymi
+algebry von Neumanna
 względem własności ich projektorów,
-a także przedstawiającymi rozkład dowolnej algebry von Neumanna na swego rodzaju
-sumę prostą (całkę) faktorów,
 będziemy mogli przeprowadzić dowód uogólnienia kryterium Peresa-Horodeckich
 od przypadku algebr skończenie wymiarowych,
 aż do egzotycznych faktorów typu III,
