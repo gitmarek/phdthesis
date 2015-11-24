@@ -11,19 +11,15 @@ oraz analizy struktury tzw. dodatnich odwzorowań na tych algebrach.
 W tym rozdziale zajmiemy się przedstawieniem podstawowych informacji dotyczących
 wykorzystywanego w dalszym wywodzie aparatu matematycznego.
 Poczynając od prezentacji najważniejszych wyników z teorii algebr operatorowych,
-w tym algebr von Neumanna oraz algebr Jordana,
-przejdziemy
-w dalszej kolejności do omówienia podstawowych własności
+przejdziemy w dalszej kolejności do omówienia podstawowych własności
 odwzorowań dodatnich na tych algebrach.
-% Na zakończenie rozdziału pokusimy się o przedstawienie podstawowych zastosowań
-% prezentowanych metod do kwantowej teorii informacji.
 Rozdział ten ma służyć również ustaleniu spójnej notacji obowiązującej poniżej.
 
 \paragraph{}
 Niech $n \in \mathbb{N}$ będzie liczbą naturalną.
 Niech także $\mathbb{C}^{n}$ oznacza zespoloną $n$-wymiarową przestrzeń liniową,
-a $\mathbb{R}^{n}$ przestrzeń rzeczywistą --
-wyposażoną w naturalny iloczyn skalarny.
+a $\mathbb{R}^{n}$ przestrzeń rzeczywistą,
+obie wyposażone w naturalny iloczyn skalarny.
 Dla ogólnej przestrzeni Hilberta,
 niekoniecznie skończenie wymiarowej,
 zarezerwujmy symbol $\mathcal{H}$.
@@ -50,7 +46,7 @@ Dla $A \in \mathcal{B}(\mathcal{H})$,
 symbol $A^{*}$ oznacza sprzężenie Hermitowskie operatora.
 Przestrzeń $\mathcal{B}(\mathcal{H})$ z antyliniową operacją
 $A \mapsto A^{*}$ oraz z operacją składania operatorów
-tworzy szczególny przykład \mbox{$^{*}$-algebry} Banacha.
+tworzy szczególny przykład \mbox{$^{*}$-algebry} Banacha (p. niżej).
 Algebrę macierzy kwadratowych rozmiaru $n$ nad ciałem liczb
 rzeczywistych lub zespolonych,
 a więc gdy $\mathcal{H} = \mathbb{C}^{n}$ lub
@@ -68,8 +64,8 @@ $\{ \xi_{j} \}_{j \in J}$,
 algebraiczny iloczyn tensorowy
 jest przestrzenią liniową $V \! \otimes \! W$, generowaną przez wektory
 $\{\eta_{i} \otimes \xi_{j}\}_{i\in I, j \in J}$.
-Iloczyn tensorowy przestrzeni Hilberta $\mathcal{H}_{1}$ i $\mathcal{H}_{2}$
-oznaczany  przez $\mathcal{H}_{1} \overline{\otimes} \mathcal{H}_{2}$,
+Iloczyn tensorowy przestrzeni Hilberta $\mathcal{H}_{1}$ i $\mathcal{H}_{2}$,
+oznaczany przez $\mathcal{H}_{1} \bar{\otimes} \mathcal{H}_{2}$,
 jest przestrzenią Hilberta będącą domknięciem przestrzeni liniowej
 $\mathcal{H}_{1} \! \otimes \! \mathcal{H}_{2}$ w topologii indukowanej
 przez iloczyn skalarny
@@ -82,9 +78,9 @@ $\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
 \section{Algebry operatorowe}
 W niniejszym podrozdziale w celu przytoczenia ogólnie przyjętych definicji
 i znanych twierdzeń z teorii algebr operatorów posłużymy się kilkoma wybranymi
-publikacjami, m.in.
-M.\,Takesaki, \emph{Theory of operator algebras} \cite{Takesaki1} oraz
-O.\,Bratteli, \emph{Operator Algebras and Quantum Statistical Mechanics}, t.1
+publikacjami, między innymi
+M.\,Takesaki, \emph{Theory of operator algebras}, t.\,1. \cite{Takesaki1} oraz
+O.\,Bratteli, \emph{Operator Algebras and Quantum Statistical Mechanics}, t.\,1
 \cite{Bratteli2003}.
 
 \paragraph{C*-algebry.}
@@ -123,9 +119,8 @@ algebry, nazywamy *-algebrą Banacha.
 dla każdego $A \in \mathcal{A}$.
 \end{Definition}
 
-Jedną z najważniejszych klas pośród elementów każdej C*-algebry są
-elementy dodatnie, dzięki którym możemy wprowadzić relację
-porządku, a także oprzeć na nich definicję stanu algebry.
+Definiując elementy dodatnie C*-algebry $\mathcal{A}$,
+możemy wprowadzić relację częściowego porządku w $\mathcal{A}$.
 
 \begin{Definition}
  Niech $\mathcal{A}$ będzie C*-algebrą. Element $A \in \mathcal{A}$ jest z
@@ -136,12 +131,6 @@ $A = B^{*}B$ dla pewnego $B \in \mathcal{A}$.
 Opierając się na powyższej definicji, powiemy, że dla $A, B \in \mathcal{A}$,
 $A \geq B$ wtedy i tylko wtedy, gdy $A-B \geq 0$. Ponadto jeżeli $-A
 \geq 0$, to piszemy $A \leq 0$.
-Taka relacja porządku ma dwie
-pożądane własności:
-\begin{enumerate}
- \item $A \geq 0$ oraz $A \leq 0$ implikuje, że $A =0$;
- \item jeśli $A \geq B$ i $B \geq C$, to $A \geq C$.
-\end{enumerate}
 
 W przestrzeni $\mathcal{A}^{*}$ wszystkich ciągłych funkcjonałów na
 C*-algebrze $\mathcal{A}$ możemy wyróżnić unormowane funkcjonały dodatnie,
@@ -162,7 +151,7 @@ Zbiór stanów algebry $\mathcal{A}$ oznaczamy przez $\mathcal{S}(\mathcal{A})$.
 
 \paragraph{Topologie algebr operatorów.}
 Niech $\mathcal{H}$ oznacza ośrodkową przestrzeń Hilberta, a $\mathcal{B}(\mathcal{H})$ przestrzeń
-Banacha ograniczonych operatorów liniowych na $\mathcal{H}$
+Banacha ograniczonych operatorów liniowych na $\mathcal{H}$.
 Naturalną topologią na $\mathcal{B}(\mathcal{H})$ jest \emph{topologia jednostajna}, zadana
 przez normę operatorową
 \begin{equation}
@@ -173,8 +162,7 @@ przez normę operatorową
 \end{equation}
 
 Jeżeli $\xi \in \mathcal{H}$,
-$\dim \mathcal{H} \!=\! \infty$, to odwzorowanie $A \rightarrow
-||A\xi||$ zadaje
+to odwzorowanie $A \rightarrow ||A\xi||$ zadaje
 półnormę na $\mathcal{B}(\mathcal{H})$ dla każdego $\xi$.
 Lokalnie wypukła topologia zdefiniowana za
 pomocą rodziny tych półnorm nosi nazwę \emph{mocnej topologii}
@@ -254,7 +242,7 @@ takie że $(S_{*} \varphi) (x) = \varphi(Sx)$ dla każdego
 $x \in \mathfrak{M}$ i $\varphi \in \mathfrak{N}_*$.
 Odwzorowanie $S_{*}$ nazwiemy \emph{predualnym} do $S$.
 
-Ważnym narzędziem w teorii algebr von Neumanna są projektory; powiemy, że
+Ważnym obiektem w teorii algebr von Neumanna są projektory; powiemy, że
 $p \in \mathfrak{M}$ jest projektorem, jeśli $p = p^{*} = p^{2}$.
 Projektor $p$ jest \emph{centralny}, jeśli
 $p$ należy do centrum algebry $\mathfrak{M}$, tzn.
@@ -302,7 +290,8 @@ Jest jasne, że projektor przemienny jest skończony, a projektor minimalny jest
     pewien niezerowy skończony projektor w $\mathfrak{M}$, wówczas
     $\mathfrak{M}$ jest \emph{typu II}.
     Jeżeli $\mathbf{1} \in \mathfrak{M}$ jest projektorem skończonym i
-    $\mathfrak{M}$ jest typu II, wówczas mówimy, że $\mathfrak{M}$ jest \emph{typu II$_{1}$}.
+    $\mathfrak{M}$ jest typu II, wówczas mówimy, że $\mathfrak{M}$ jest
+    \mbox{\emph{typu II$_{1}$}}.
     Jeżeli $\mathfrak{M}$ jest typu II i nie posiada niezerowych centralnych skończonych
     projektorów, wówczas mówimy, że $\mathfrak{M}$ jest \emph{typu II$_{\infty}$}.
 \end{Definition}
@@ -310,7 +299,7 @@ Jest jasne, że projektor przemienny jest skończony, a projektor minimalny jest
 \begin{Theorem}
     \label{thm:decompositionofvNalg}
     Każda algebra von Neumanna $\mathfrak{M}$ rozkłada się w sposób
-    jednoznaczny na sumę prostą algebr typu I, II$_{1}$, II$_{\infty}$ oraz typu III.
+    jednoznaczny na sumę prostą algebr typu I, II$_{1}$, II$_{\infty}$ lub typu III.
     Jeżeli $\mathfrak{M}$ jest faktorem, wówczas $\mathfrak{M}$ jest dokładnie
     jednego z typów: I, II$_{1}$, II$_{\infty}$ albo III.
 \end{Theorem}
@@ -321,16 +310,16 @@ względem własności ich projektorów,
 będziemy mogli przeprowadzić dowód uogólnienia kryterium Peresa-Horodeckich
 od przypadku algebr skończenie wymiarowych,
 aż do egzotycznych faktorów typu III,
-w kilku krokach -- za każdym razem sprowadzając kolejny stopień ogólności
-w pewnym sensie do poprzedniego.
+w kilku krokach -- za każdym razem w pewnym sensie
+sprowadzając kolejny stopień ogólności do poprzedniego.
 Pomocne w przeprowadzeniu tego typu dowodu okaże się założenie iniektywności
 algebry von Neumanna, zapewniające możliwość przybliżania odwzorowań
 elementów algebry przez odwzorowania skończonego rzędu
-(p. str. \pageref{def:injectivevNalg})
+(p. str. \pageref{def:injectivevNalg}).
 
 \paragraph{Iloczyny tensorowe algebr operatorów.}
-Dla dwóch zespolonych przestrzeni liniowych $V$ i $W$ przez
-$V \! \otimes \! W$ oznaczmy algebraiczny iloczyn tensorowy tych przestrzeni,
+Dla dwóch zespolonych przestrzeni liniowych $V$ i $W$,
+przez $V \! \otimes \! W$ oznaczmy algebraiczny iloczyn tensorowy tych przestrzeni,
 rozpięty przez skończone kombinacje liniowe wektorów postaci
 $v \otimes w$, $v \in V$, $w \in W$.
 
@@ -338,7 +327,7 @@ W nieskończenie wymiarowych zupełnych przestrzeniach unormowanych,
 jakimi są w ogólności algebry operatorów,
 pojęcie iloczynu tensorowego musi zostać doprecyzowane, tak aby
 był on na nowo unormowaną algebrą operatorów.
-W przypadku C*-algebr nie można mówić o jedynym tego typu rozszerzeniu
+W przypadku C*-algebr nie można mówić o jedynym tego typu rozszerzeniu,
 dopóki nie założy się czegoś więcej o przynajmniej jednym składniku iloczynu.
 Definicję iloczynu tensorowego C*-algebr odłóżmy zatem do momentu,
 kiedy będziemy próbowali przenieść na ten grunt wyniki udowodnione już
@@ -380,10 +369,10 @@ tej rozprawy.
 Jak już zostało wspomniane powyżej, znaczenie tego typu odwzorowań dla kwantowej
 teorii informacji kryje się w nieoczekiwanym związku pomiędzy z jednej strony
 odwzorowaniami dodatnimi,
-z drugiej zaś -- obserwablami umożliwiającymi niejako wykrycie splątania w
+z drugiej zaś obserwablami umożliwiającymi niejako wykrycie splątania w
 danym stanie kwantowego układu złożonego.
-Precyzyjne sformułowanie tej zależności nosi nazwę \emph{kryterium Peresa-Horodeckich}
-i brzmi następująco.
+Precyzyjne sformułowanie tej zależności nosi nazwę
+\emph{kryterium Peresa-Horodeckich} i brzmi następująco.
 Jeżeli $\varphi \in (\mathfrak{M} \bar{\otimes} \mathfrak{N})_{*}$ jest stanem
 na iloczynie tensorowym algebr von Neumanna
 $\mathfrak{M}$ i $\mathfrak{N}$,
@@ -441,8 +430,8 @@ znanego jako izomorfizm Choi-Jamiołkowskiego
             (E_{ij}^{*} \otimes E_{ij}) \in M_{m} \otimes M_{n}
     \end{equation}
     jest macierzą dodatnią.
-W następnym rozdziale zobaczymy, jak twierdzenie analogiczne do powyższego
 \end{Theorem}
+W następnym rozdziale zobaczymy, jak twierdzenie analogiczne do powyższego
 uogólnia się na odwzorowania liniowe na algebrach von Neumanna
 (zob. lemat \ref{lem:netininjectivefactor}).
 
@@ -459,10 +448,11 @@ które nie dają się sprowadzić do postaci odwzorowań rozkładalnych.
 
 W części poświęconej odwzorowaniom dodatnim na algebrach macierzy (p. rozdz. 3.)
 będziemy zajmować się analizą ekstremalnych odwzorowań dodatnich.
-Powiemy, że dotnie odwzorowanie $S: M_{m} \rightarrow M_{n}$ jest \emph{ekstremalne},
+Dla uproszczenia,
+skupmy uwagę na odwzorowaniach na jednej tylko algebrze macierzowej $M_{n}$.
+Powiemy, że dodatnie odwzorowanie $S: M_{n} \rightarrow M_{n}$ jest \emph{ekstremalne},
 jeżeli dla każdego dodatniego $T: M_{n} \rightarrow M_{n}$, takiego że
-$S - T \in \mathcal{P}(M_{n})$,
-tzn. $0 \leq T \leq S$,
+$S - T \geq 0$, tzn. $0 \leq T \leq S$,
 mamy $T = \alpha S$ oraz $0 \leq \alpha \leq 1$.
 Jest prawdą, że każde dodatnie odwzorowanie na algebrze macierzy można zapisać
 jako skończoną kombinację wypukłą odwzorowań ekstremalnych.
@@ -473,16 +463,16 @@ Mimo wszystko wygodnie będzie móc podać gęsty podzbiór odwzorowań ekstrema
 którego elementy dało by się łatwiej poddać analizie.
 Dlatego wprowadźmy dodatkową definicję odwzorowań ,,wystających''
 (ang. \emph{exposed}).
-Odwzorowanie dodatnie $S$ jest wystające, jeżeli dla każdego dodatniego odwzorowania
-$T$ takiego że
-$\text{Tr}\, P_{\xi} \, T(P_{\eta}) = 0$,
-gdzie
-$\mathbb{C}^{n} \ni \eta, \xi \neq 0$ jest parą wektorów,
+Odwzorowanie dodatnie $S: M_{n} \rightarrow M_{n}$ jest wystające,
+jeżeli dla każdego dodatniego odwzorowania $T: M_{n} \rightarrow M_{n}$,
+takiego że $\text{Tr}\, P_{\xi} \, T(P_{\eta}) = 0$,
+gdzie $\mathbb{C}^{n} \ni \eta, \xi \neq 0$ jest parą wektorów,
 dla których projektory ortogonalne $P_{\xi}, P_{\eta}$ na jednowymiarowe
 podprzestrzenie rozpięte przez $\xi$ i $\eta$ dają
 $\text{Tr}\, P_{\xi} \, S(P_{\eta}) = 0$;
 wówczas mamy $T = \alpha S$, $\alpha \geq 0$.
-Dzięki twierdzeniu udowodnionemu przez Straszewicza \cite{straszewicz1935exponierte},
+Dzięki ogólnemu twierdzeniu udowodnionemu przez Straszewicza
+\cite{straszewicz1935exponierte},
 zbiór odwzorowań wystających jest gęstym podzbiorem pośród zbioru odwzorowań
 ekstremalnych na $M_{n}$.
 
@@ -495,4 +485,4 @@ Zobaczymy,
 w jaki sposób znajomość struktury tych algebr pozwoli na przeprowadzenie
 pełnego dowodu w kilku krokach, dla obiektów o coraz większym stopniu ogólności:
 poczynając od algebr skończenie wymiarowych,
-a kończąc na egzotycznych algebrach typu III.
+a kończąc na algebrach typu III.
