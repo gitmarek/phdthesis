@@ -7,7 +7,7 @@
 Analiza własności kwantowych układów złożonych pociąga za sobą niejednokrotnie
 konieczność rozpatrywania zjawiska
 \index{idx}{splątanie kwantowe} \emph{splątania kwantowego},
-polegającego na występowaniu szczególnych korelacji w pomiarach
+polegającego na występowaniu korelacji w pomiarach
 wielkości obserwowalnych pomiędzy poszczególnymi podukładami.
 Jedną z cech charakterystycznych teorii kwantowej,
 w odróżnieniu od opisu klasycznego,
@@ -70,9 +70,10 @@ powiemy,
 że stan $\rho$ jest separowalny wtedy i tylko wtedy,
 gdy $\rho^{PT}$, tzw. częściowa transpozycja macierzy $\rho$,
 jest macierzą dodatnio określoną.
-W takiej postaci twierdzenie jest niezwykle użyteczne jako efektywne pod względem
-obliczeniowym i stanowi definitywną odpowiedź na postawione pytanie.
-Ze względu na doniosłość omawianego kryterium zadaniem wartym dalszej uwagi
+W takiej postaci twierdzenie jest niezwykle użyteczne, efektywne pod względem
+obliczeniowym i stanowiące definitywną odpowiedź na postawione pytanie.
+Ze względu na doniosłość omawianego kryterium,
+zadaniem wartym dalszej uwagi
 byłaby z jednej strony próba uogólnienia twierdzenia,
 tak aby analogiczna teza obowiązywała dla jak najszerszej grupy układów kwantowych;
 z drugiej zaś -- przeprowadzenie szczegółowej analizy kolejnych,
@@ -86,8 +87,8 @@ sytuacji,
 niewiele wiadomo w ogólności na temat dodatnich odwzorowań liniowych,
 a co za tym idzie --
 zastosowanie kryterium Peresa-Horodeckich do konkretnych obliczeń stanowi utrudnione zadanie.
-W niniejszej rozprawie postaramy się przedstawić rezultaty badań prowadzących
-do rozwiązania tych właśnie problemów.
+W niniejszej rozprawie postaramy się przedstawić rezultaty badań
+rzucających nieco światła na te właśnie problemy.
 
 \paragraph{}
 \label{par:intro:02}
@@ -103,7 +104,7 @@ algebry von Neumanna
 \cite{Takesaki1}.
 Teoria algebr operatorowych,
 w szczególności algebr von Neumanna i \mbox{C$^{*}$-algebr},
-daje matematyczne narzędzie do opisu w zasadzie wszystkich rozpatrywanych
+daje narzędzie do opisu w zasadzie wszystkich rozpatrywanych
 w fizyce matematycznej przykładów układów fizycznych:
 począwszy od układów skończenie wymiarowych i klasycznych,
 reprezentowanych za pomocą algebr przemiennych,
@@ -114,11 +115,11 @@ a skończywszy na lokalnych algebrach obserwabli w kwantowej teorii pola
 \cite{Nielsen2010}.
 Należy zaznaczyć,
 że pomimo formalnej możliwości przedstawienia wszystkich z tych algebr jako
-podalgebr pełnej przestrzeni $\mathcal{B}(\mathcal{H})$
+podalgebr pełnej przestrzeni $\mathcal{B}(\mathcal{H})$,
 %  dla ośrodkowej przestrzeni Hilberta,
-własności topologiczne każdego z wymienionych przykładów
+własności topologiczne każdego z wymienionych przypadków
 różnią się jednak od siebie diametralnie.
-Dla przykładu, lokalne algebry obserwabli w kwantowej teorii pola,
+Dla przykładu, lokalne algebry obserwabli w kwantowej teorii pola
 to tzw. faktory typu III,
 które nie zawierają żadnych niezerowych skończonych projektorów,
 tworząc strukturę w wysokim stopniu odmienną od struktury algebry $\mathcal{B}(\mathcal{H})$.
@@ -127,8 +128,8 @@ dotyczy jedynie przestrzeni skończenie wymiarowych i odwzorowań na operatorach
 na tych przestrzeniach,
 czyli \emph{de facto} macierzy,
 wydaje się zasadne,
-aby pokusić się o możliwie daleko idące uogólnienie tamtego faktu,
-rozszerzając go na szeroką klasę algebr von Neumanna,
+aby pokusić się o możliwie daleko idące uogólnienie,
+rozszerzając kryterium na szeroką klasę algebr von Neumanna,
 mających zastosowanie do opisu rzeczywistych układów kwantowych.
 A zatem jednym z dwóch głównych nurtów niniejszej pracy będzie sformułowanie
 i dowód twierdzenia będącego możliwie najogólniejszą wersją
@@ -151,8 +152,7 @@ Tak sformułowane twierdzenie obejmuje w zasadzie wszystkie znane
 przypadki złożonych układów kwantowych.
 
 Najważniejszym obiektem matematycznym występującym w sformułowaniu
-kryterium Peresa-Horodeckich są odwzorowania dodatnie na $^{*}$-algebrach,
-w szczególności na algebrach operatorów,
+kryterium Peresa-Horodeckich są odwzorowania dodatnie na $^{*}$-algebrach operatorów,
 które pomimo intuicyjnej definicji oraz wielu ważnych zastosowań,
 stanowią obiekty stosunkowo słabo
 \mbox{poznane \cite{Stormer2013}}.
@@ -168,7 +168,7 @@ wraz z podaniem pełnej charakteryzacji w nisko wymiarowym przypadku
 odwzorowań pomiędzy algebrami $\mathcal{B}(\mathbb{C}^{2})$ i $\mathcal{B}(\mathbb{C}^{3})$
 (por. str. \pageref{thm:PositiveMapsOnM2})
 Należy w tym miejscu wspomnieć również o osiągnięciach M.-D.\,Choi
-\cite{choi1975positive,choi1975completely,choi1977extremal},
+\cite{choi1975completely,choi1975positive,choi1980some,choi1977extremal},
 który w swych pracach dotyczących odwzorowań kompletnie dodatnich
 kładł podwaliny późniejszych wyników.
 
@@ -191,7 +191,7 @@ a dodatnimi odwzorowaniami na algebrach obserwabli.
 Ten zaskakujący i głęboki związek pozostaje główną motywacją naszej pracy,
 która koncentrować się będzie na zastosowaniu metod algebr operatorowych
 do analizy odwzorowań dodatnich,
-a więc również -- do teorii splątania kwantowego.
+a więc również do teorii splątania kwantowego.
 
 Poza wspomnianymi szczegółowymi wynikami St{\o}rmera i Woronowicza,
 ogólna charakterystyka odwzorowań dodatnich pozostaje nieznana.
@@ -200,7 +200,7 @@ na algebrze macierzy $\mathcal{B}(\mathbb{C}^{3})$.
 W niniejszej pracy,
 pamiętając o fizycznej motywacji badań w tej dziedzinie,
 skupimy się właśnie na tym przypadku.
-Spróbujemy wprowadzić nowe przykłady odwzorowań,
+Spróbujemy wprowadzić nowe przykłady odwzorowań
 ,,wykrywających'' nieznane wcześniej stany splątane układu złożonego
 z dwóch qutritów.
 Punktem wyjścia będzie położenie nacisku na geometryczny aspekt znanych
@@ -220,17 +220,18 @@ w szczególności kryptografii i przesyłu informacji.
 W kolejnych rozdziałach przedstawimy główne wyniki pracy,
 w całości pochodzące z opublikowanych wcześniej artykułów naukowych,
 przygotowanych przez autora i promotora niniejszej rozprawy
-\cite{miller2014horodeckis,miller2015stable,miller2015topology}.
-Poczynając od rozdziału \ref{chp:preliminaries} poświęconego przygotowaniu
-matematycznemu i ustaleniu obowiązującej,
-gdzie spróbujemy przybliżyć najważniejsze fakty dotyczące algebr operatorów,
+\cite{miller2015extremal,miller2014horodeckis,miller2015stable,miller2015topology}.
+Zaczynając od rozdziału \ref{chp:preliminaries}.,
+poświęconego przygotowaniu
+matematycznemu i ustaleniu obowiązującej notacji,
+spróbujemy przybliżyć najważniejsze fakty dotyczące algebr operatorów,
 w szczególności algebr von Neumanna,
 oraz odwzorowań dodatnich i kompletnie dodatnich,
 włączając w to geometryczne aspekty teorii,
 takie jak teoria zbiorów wypukłych w przestrzeniach rzeczywistych,
 punkty ekstremalne, ,,wystające'' (\emph{exposed}) i ich własności.
 Następnie,
-w rodz. \ref{chp:PHcrit},
+w rodziale \ref{chp:PHcrit}.,
 przejdziemy do pełnego sformułowania i udowodnienia twierdzenia
 uogólniającego kryterium Peresa-Horodeckich na przypadek algebr von Neumanna.
 W kolejnym rozdziale zajmiemy się analizą struktury odwzorowań dodatnich na
@@ -268,7 +269,7 @@ aktualnych badań nad zjawiskiem splątania.
 Wysiłki badaczy koncentrują się także na podaniu alternatywnych kryteriów
 orzekających o splątaniu stanów mieszanych,
 wykorzystujących do tego celu podejścia takie jak korelacje kwantowe,
-miary splątania etc.
+miary splątania itd.
 \cite{modi2010unified,ollivier2001quantum}.
 Korzyścią, która płynie z alternatywnych podejść,
 jest nierzadko mniejsza złożoność obliczeniowa,
