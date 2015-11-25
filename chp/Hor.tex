@@ -752,24 +752,23 @@ niech $\tilde{\phi}$ będzie stanem na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$
 takim że $\tilde{\phi} \circ (\mathbf{1} \otimes S) \geq 0$
 dla każdego dodatniego odwzorowania skończonego rzędu
 $S:\mathfrak{M} \rightarrow \mathfrak{N}$.
-W świetle dyskusji w: M.\,Takesaki, \emph{Theory of operator algebras, vol. III}
-\cite{Takesaki3}, s. 178,
+Wiadomo (por. \cite{Takesaki3}, s. 178), że
 dla każdego skończonego zbioru
 $\{ \mathbf{1}, x_{1}, x_{2}, \ldots, x_{n} \} \subset \mathfrak{M}$,
 istnieje skończona ośrodkowa algebra iniektywna
 $\mathfrak{S} \subset \mathfrak{M}$,
-taka że dla każdego $i =1, 2, \ldots n$, $x_{i} \in \mathfrak{S}$.
+taka że $x_{i} \in \mathfrak{S}$, $i =1, 2, \ldots n$.
 Co więcej, $\mathfrak{S}$
 jest obrazem normalnego odwzorowania projektywnego
-(\emph{conditional expectation}) $\mathcal{E}$ of $\mathfrak{M}$.
+(\emph{conditional expectation}) $\mathcal{E}$ na $\mathfrak{M}$.
 Pokażmy, że $\tilde{\phi}$ jest w słabej topologii granicą ciągu stanów separowalnych.
 Rzeczywiście, niech wszystkie skończone podzbiory $\mathfrak{M}$,
 częściowo uporządkowane ze względu na mnogościowe zawieranie,
 stanowią indeksy netu $(\mathcal{E}_{\mu})$
 odwzorowań projektywnych $\mathfrak{M}$
 na ośrodkowe podalgebry $\mathfrak{S}_{\mu}$,
-zawierające właśnie te skończone zbiory.
-Wówczas, obcięcie $S|_{\mathfrak{S}_{\mu}}$ odwzorowania $S$
+zawierające właśnie te skończone podzbiory.
+Wówczas obcięcie $S|_{\mathfrak{S}_{\mu}}$ odwzorowania $S$
 do $\mathfrak{S}_{\mu}$ jest również normalne i dodatnie.
 Z \mbox{lematu \ref{lem:step3}}, obcięcie $\tilde{\phi}$ do
 $\mathfrak{S}_{\mu} \bar{\otimes} \mathfrak{N}$
@@ -779,9 +778,10 @@ $\tilde{\phi}_{\mu} = \tilde{\phi}|_{\mathfrak{S}_{\mu}
 jest również separowalny.
 Łatwo dowieść, że net $(\tilde{\phi}_{\mu})$ zbiega słabo do $\tilde{\phi}$.
 Skoro zbiór stanów separowalnych jest wypukły,
-$\tilde{\phi}$ jest także granicą w normie stanów separowalnych, a zatem samo
-jest separowalne.
+$\tilde{\phi}$ jest także granicą w normie stanów separowalnych,
+a zatem samo $\tilde{\phi}$ jest stanem separowalnym.
 
+\vspace{0.3cm}
 {\it Krok 5: Iniektywne algebry półskończone}.
 
 W tym kroku osłabimy założenie, że $\mathfrak{M}$ jest algebrą skończoną.
@@ -800,7 +800,7 @@ przez $S_{p}(x) = S(pxp)$, $x \in \mathfrak{M}$,
 które jest również dodatnie i normalne.
 Niech $T_{p}x = p x p$, $x \in \mathfrak{M}$.
 Ponieważ odwzorowanie $T_{p}$ jest kompletnie dodatnią normalną kontrakcją,
-posiada rozszerzenie do kompletnie dodatniej kontrakcji
+posiada rozszerzenie do dodatniej kontrakcji
 $T_{p} \otimes \mathbf{1}$ na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
 Zatem możemy zdefiniować dodatni funkcjonał $\tilde{\phi}_{p}$ na
 $\mathfrak{M} \bar{\otimes} \mathfrak{N}$ poprzez
@@ -814,7 +814,7 @@ taki że $z = (T_{p} \otimes T_{p})(z')$, więc na mocy założenia
 \tilde{\phi} \circ (\mathbf{1} \otimes S_{p})
 \left( (T_{p} \otimes \mathbf{1})(z') \right ) \geq 0.
 \end{equation}
-A zatem, tak jak w kroku 4. dowodu,
+A zatem, tak jak w dowodzie kroku 4.,
 $\tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}$
 jest funkcjonałem separowalnym.
 Stąd wynika, że separowalny jest również funkcjonał $\tilde{\phi}_{p}$.
@@ -861,14 +861,14 @@ typu III.
 \begin{proof}
 Ponieważ $\mathfrak{M}$ jest iniektywną algebrą typu III,
 istnieje półskończona iniektywna algebra von Neumanna
-$\mathfrak{M}_{0}$ oraz projektor o normie jednostkowej
+$\mathfrak{M}_{0}$ oraz odwzorowanie rzutowe o normie jednostkowej
 $\mathcal{E}: \mathfrak{M}_{0} \rightarrow \mathfrak{M}$.
 Z konstrukcji $\mathfrak{M}_{0}$, możemy potraktować
 $\mathfrak{M}$ jako podalgebrę $\mathfrak{M}_{0}$.
 Co więcej, $\mathcal{E}$ jest granicą w *-słabej topologii operatorowej
 netu $(\mathcal{E}_{\lambda})$ normalnych, jednostkowych i kompletnie dodatnich
 odwzorowań $\mathcal{E}_{\lambda} : \mathfrak{M}_{0} \rightarrow \mathfrak{M}$,
-(por. Brown, Ozawa \cite{Brown2008}, Lemat 9.3.6).
+(por. Brown, Ozawa \cite{Brown2008}, lemat 9.3.6).
 Ponadto
 $\mathfrak{M}_{0} = \mathfrak{M} \rtimes_{\alpha} \mathbb{R}$,
 gdzie chodzi o iloczyn krzyżowy względem działania modularnego
@@ -935,7 +935,7 @@ Zatem, $\tilde{\phi}_{\lambda}$
 jest separowalne.
 \end{proof}
 
-Fakt, iż dla każdej iniektywnej algebry $\mathfrak{M}$
+Fakt, że dla każdej iniektywnej algebry $\mathfrak{M}$
 istnieje centralny projektor $p$, taki że $p\mathfrak{M}$
 jest półskończona i $({\bf 1}-p)\mathfrak{M}$ jest typu III,
 kończy dowód twierdzenia \ref{thm:PHcrit}.
@@ -951,8 +951,7 @@ Stąd potrzeba wprowadzenie tzw. algebr jądrowych (\emph{nuclear algebras}).
 Z definicji $\mathcal{A}$ jest jądrową C$^{*}$-algebrą,
 jeżeli $\mathcal{A}^{**}$, druga przestrzeń dualna,
 jest algebrą von Neumanna.
-Dla algebr jądrowych iloczyn tensorowy jest zdefiniowany jednoznacznie,
-jak zobaczymy poniżej.
+Dla algebr jądrowych iloczyn tensorowy jest zdefiniowany jednoznacznie.
 Ważną własnością jądrowych C$^{*}$-algebr jest również lokalna rekfleksywność,
 która okaże się pomocna na dalszym etapie dowodu.
 
@@ -970,7 +969,7 @@ iloczyn tensorowy C$^{*}$-algebr $\mathcal{A}$ i $\mathcal{B}$,
 wówczas wiadomo, że gdy jedna z nich, powiedzmy algebra $\mathcal{A}$,
 jest jądrowa, normy tensorowe na obu iloczynach są sobie równe,
 a co za tym idzie -- iloczyn tensorowy tych algebr jest zdefiniowany
-jednoznacznie (por. Brown, Ozawa \cite{Brown2008}, Theorem 3.8.7).
+jednoznacznie (por. Brown, Ozawa \cite{Brown2008}, twierdzenie 3.8.7).
 Taki iloczyn będziemy oznaczać przez
 $\mathcal{A} \bar{\otimes} \mathcal{B}$.
 C$^{*}$-algebra $\mathcal{A}$ jest ponadto z definicji \emph{lokalnie refleksywna},
@@ -981,9 +980,9 @@ na sprzężenie hermitowskie operatorów,
 istnieje net $(T_{\lambda})$ kompletnie dodatnich kontrakcji,
 $T_{\lambda}: E \rightarrow \mathcal{A}$,
 zbieżny do odwzorowanie identycznościowego na $E$
-w słabej topologii operatorowej.
+w $^{*}$-słabej topologii operatorowej.
 Każda jądrowa C$^{*}$-algebra jest lokalnie refleksywna
-(por. Brown, Ozawa \cite{Brown2008}, 9.3.1-3).
+(por. \cite{Brown2008}, 9.3.1-3).
 Algebry $\mathcal{A}$ i $\mathcal{B}$
 można potraktować jako przestrzenie operatorowe w naturalny sposób.
 Można więc wprowadzić dla nich projektywny iloczyn tensorowy
@@ -1029,7 +1028,7 @@ $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
 Dla każdego dodatniego odwzorowania
 $S: \mathcal{A} \rightarrow \mathcal{B}$, drugie dualne odwzorowanie
 $S^{**}:\mathfrak{M} \rightarrow \mathfrak{N}$ jest dodatnie i normalne.
-Stąd na mocy twierdzenia \ref{thm:PHcrit} dla każdego dodatniego
+Stąd na mocy twierdzenia \ref{thm:PHcrit}, dla każdego dodatniego
 $z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
 $\langle (\mathbf{1} \otimes S^{**})(z), \tilde{\phi} \rangle \geq 0$.
 Zatem, $\tilde{\phi} \circ (\mathbf{1} \otimes S)$ jest dodatnim funkcjonałem
@@ -1140,4 +1139,4 @@ na tych algebrach.
 W następnym rozdziale zajmiemy się szczegółową analizą dodatnich odwzorowań
 na skończenie wymiarowych algebrach macierzy, skupiając się przede wszystkim
 na najprostszym, do tej pory nierozpoznanym przypadku algebry macierzy
-rzędu 3.
+$M_{3}$.
