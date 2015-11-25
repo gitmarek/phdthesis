@@ -15,16 +15,16 @@ ogólności dzięki znajomości struktury algebr kolejnych typów.
 
 \vspace{0.5cm}
 Dla ogólnych przestrzeni Banacha $X$ i $Y$, przez
-$\mathcal{L}(X,Y)$
+$\mathcal{B}(X,Y)$
 oznaczmy przestrzeń Banacha wszystkich ograniczonych odwzorowań
 liniowych pomiędzy z $X$ w $Y$.
-Niech także $X^{*}$ oznacza przestrzeń funkcjonałów liniowych na $X$,
-$X^{*} = \mathcal{L}(X, \mathbb{C})$.
+Przez $X^{*}$ oznaczyliśmy przestrzeń funkcjonałów liniowych na $X$,
+$X^{*} = \mathcal{B}(X, \mathbb{C})$.
 Działanie funkcjonału $\varphi \in X^{*}$ na $x \in X$
 oznaczmy przez $\langle  \varphi , x \rangle = \varphi(x)$.
 Powiemy, że net operatorów $(T_{\lambda})$,
-$T_{\lambda} \in \mathcal{L}(X, Y^{*})$, zbiega do
-$T \in \mathcal{L}(X, Y^{*})$ w \emph{*słabej topologii operatorowej}, jeśli
+$T_{\lambda} \in \mathcal{B}(X, Y^{*})$, zbiega do
+$T \in \mathcal{B}(X, Y^{*})$ w \emph{$^{*}$-słabej topologii operatorowej}, jeśli
 \label{page:weakstaroperatortop}
 $\langle T_{\lambda} x, y \rangle \rightarrow \langle Tx, y \rangle$
 dla każdego $x \in X$ i $y \in Y$.
@@ -39,19 +39,46 @@ i odwzorowań kompletnie ograniczonych tych przestrzeni,
 zaznaczmy jedynie, że zarówno algebry von Neumanna, jak i
 ich przestrzenie predualne są przestrzeniami operatorowymi.
 Podobnie rzecz ma się z C*-algebrami i ich przestrzeniami dualnymi.
-Ponadto ważny dla nas będzie jedynie fakt, iż
+Ponadto instotny będzie dla nas fakt, iż
 przestrzeń $\mathcal{F}(X,Y)$
 odwzorowań skończonego rzędu z $X$ w $Y$,
 tzn. odwzorowań, których obraz jest podprzestrzenią liniową skończonego wymiaru
 przestrzeni $Y$, zawiera się w $\mathcal{CB}(X,Y)$.
+Pamiętajmy, że dla przekształcenia $T$ skończonego rzędu
+$||T||_{CB}|| = ||T||$
 Przez $\mathcal{CB}(X,Y)_{+}$
 oznaczmy stożek kompletnie ograniczonych dodatnich odwzorowań
 z $X$ w $Y$, a przez $\mathcal{CP}(X,Y)$ stożek odwzorowań kompletnie dodatnich.
 Wiadomo, że $\mathcal{CP}(X,Y) \subset \mathcal{CB}(X,Y)_{+}$.
 
+Przypomnijmy, że macierz gęstości na $\mathcal{H}\otimes\mathcal{K}$,
+gdzie $\mathcal{H}$ i $\mathcal{K}$
+są skończenie wymiarowymi przestrzeniami Hilberta,
+jest \emph{separowalna},
+jeśli jest kombinacją wypukłą prostych iloczynów tensorowych macierzy gęstości
+z $\mathcal{H}$ i $\mathcal{K}$.
+Ta definicja została potem uogólniona przez Wernera \cite{werner1989quantum}
+na nieskończenie wymiarowe przestrzenie Hilberta poprzez
+przejście do granicy w normie śladowej takich właśnie kombinacji wypukłych.
+W tym samym duchu, zdefiniujmy wypukły zbiór $C_1$
+stanów separowalnych w
+$\mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$ przez
+\begin{equation}
+    \label{def:SeparableStates}
+C_{1} = \overline{{\rm conv}}^{||\cdot||_{\wedge}}
+\left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathfrak{M}),
+\varphi \in \mathcal{S}(\mathfrak{N})\right \}.
+\end{equation}
+Niech także $C_{1}^{*}$ oznacza stożek dualny:
+$C_{1}^{*} = \{ x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}:
+ \langle x , \varphi \rangle \geq 0 \,\, \forall \varphi \in C_{1} \}$ oraz
+niech $C_{0}^{*}$ będzie stożkiem zawartym w
+$C_{1}^{*}$:
+$C_{0}^{*} = \{ x \in \mathfrak{M} \otimes \mathfrak{N}:\langle x , C_{1} \rangle \geq 0 \}$.
+
 Aby dowieść twierdzenia uogólniającego kryterium Peresa-Horodeckich
 na stany na algebrach von Neumanna,
-potrzebne nam będzie możliwość jednostajnego przybliżania elementów z algebry
+potrzebna nam będzie możliwość jednostajnego przybliżania elementów z algebry
 za pomocą dodatnich operatorów skończonego rzędu.
 To prowadzi do założenia iniektywności przynajmniej jednej z rozpatrywanych algebr.
 \label{def:injectivevNalg}
@@ -67,7 +94,7 @@ zbiegających w silnej topologi do odwzorowania identycznościowego:
 \end{equation}
 dla każdego $\omega \in \mathfrak{M}_{*}$
 (por. M.\,Takesaki, \emph{Theory of operator algebras}  \cite{Takesaki3},
-\mbox{t. III}, twierdzenie XV.3.1).
+\mbox{t.\,3.}, twierdzenie XV.3.1).
 Ta właśnie cecha iniektywnych algebr von Neumanna okaże się bardzo przydatna
 w dalszej części.
 Należy tu zaznaczyć, że w zasadzie wszystkie rozpatrywane w ramach analizy
@@ -81,12 +108,12 @@ algebry Araki-Woodsa reprezentujące nierelatywistyczny gaz bozonów w nieskońc
 faktory typu $III_1$ reprezentujące lokalne algebry $\mathcal{M}(O)$
 w algebraicznej kwantowej teorii pola \cite{yngwason2005role}.
 Ponieważ iloczyn tensorowy algebr iniektywnych pozostaje wciąż algebrą iniektywną,
-a więc nawet algebry o nietrywialnym centrum, wciąż należą do klasy algebr iniektywnych.
+a więc również algebry o nietrywialnym centrum, wciąż należą do klasy algebr iniektywnych.
 Możemy więc powiedzieć, że zaproponowane poniżej uogólnienie kryterium Peresa-Horodeckich
 pokrywa wszystkie z fizycznego punktu widzenia interesujące przypadki.
 
 \paragraph{}
-Zacznijmy od sformułowania twierdzenia, którego dowód przedstawimy.
+Zacznijmy od sformułowania twierdzenia, którego dowód przedstawimy poniżej.
 
 \begin{Theorem}
     \label{thm:PHcrit}
@@ -128,29 +155,23 @@ Na początek przedstawmy kilka faktów, które okażą się użyteczne w dalszej
 części wywodu.
 
 Niech  $\mathfrak{M}$, $\mathfrak{N}$
-będą dowolnymi algebrami von Neumanna.
-Bez straty ogólności możemy założyć, że
+będą dowolnymi algebrami von Neumanna,
 $\mathfrak{M}\subset B(\mathcal{H})$ oraz $\mathfrak{N}\subset B(\mathcal{K})$,
 gdzie  $\mathcal{H},\mathcal{K}$
 są przestrzeniami Hilberta, niekoniecznie ośrodkowymi.
 Ich zbiory stanów, tj. wypukłe zbiory normalnych, dodatnich i znormalizowanych
 funkcjonałów, oznaczyliśmy odpowiednio przez
 $\mathcal{S}(\mathfrak{M})$ i $\mathcal{S}(\mathfrak{N})$.
-% The algebraic tensor product
-% is denoted by $\mathfrak{M}\otimes\mathfrak{N}$; whereas the spatial tensor product of
-% $\mathfrak{M}$ and $\mathfrak{N}$ by $\tmn$, i.e. $\tmn=(\mathfrak{M}\otimes\mathfrak{N})''$.
-Zauważmy, że przestrzeń predualna do iloczynu tensorowy algebr von Neumanna
+Pamiętajmy, że przestrzeń predualna do iloczynu tensorowy algebr von Neumanna
 $(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{*}$
 jest izometrycznie izomorficzna z
 $\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*$, dopełnieniem
 $\mathfrak{M}_*\otimes\mathfrak{N}_*$ w rzutowej normie operatorowej
+\label{def:projectiveoperatornorm}
 $\|\cdot\|_\wedge$,
 a więc $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*= \mathfrak{M} \bar{\otimes} \mathfrak{N}$
-%w normie operatorowej na
-% on $\tmn$ being the dual norm on the dual space
-% $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*$
 (por. raz jeszcze: Effros, Ruan \cite{Effros2000}, twierdzenie 7.2.4;
-a także Corollary 7.1.5 w związku z dowodem następnego lematu).
+a także wniosek 7.1.5 w związku z dowodem następnego lematu).
 \begin{Lemma}
 \label{thm:isometry}
 Odwzorowanie $F: \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})
@@ -164,31 +185,7 @@ rozszerza się do kompletnie izometrycznego izomorfizmu pomiędzy przestrzeniami
 operatorowymi.
 \end{Lemma}
 
-Przypomnijmy, że macierz gęstości na $\mathcal{H}\otimes\mathcal{K}$,
-gdzie $\mathcal{H}$ i $\mathcal{K}$
-są skończenie wymiarowymi przestrzeniami Hilberta,
-jest \emph{separowalna},
-jeśli jest kombinacją wypukłą prostych iloczynów tensorowych macierzy gęstości
-z $\mathcal{H}$ i $\mathcal{K}$.
-Ta definicja została potem uogólniona przez Wernera \cite{werner1989quantum}
-na nieskończenie wymiarowe przestrzenie Hilberta poprzez
-przejście do granicy w normie śladowej takich właśnie kombinacji wypukłych.
-W tym samym duchu, zdefiniujmy wypukły zbiór $C_1$
-stanów separowalnych w
-$\mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$ przez
-\begin{equation}
-    \label{def:SeparableStates}
-C_{1} = \overline{{\rm conv}}^{||\cdot||_{\wedge}}
-\left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathfrak{M}),
-\varphi \in \mathcal{S}(\mathfrak{N})\right \}.
-\end{equation}
-Niech także $C_{1}^{*}$ oznacza stożek dualny:
-$C_{1}^{*} = \{ x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}:
- \langle x , \varphi \rangle \geq 0 \,\, \forall \varphi \in C_{1} \}$ oraz
-niech $C_{0}^{*}$ będzie stożkiem zawartym w
-$C_{1}^{*}$:
-$C_{0}^{*} = \{ x \in \mathfrak{M} \otimes \mathfrak{N}:\langle x , C_{1} \rangle \geq 0 \}$.
-Z Lematu \ref{thm:isometry} w prosty sposób wynika, że
+Z powyższego lematu w prosty sposób wynika, że
 $F(\mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})_{+}) = C_{1}^{*}$ oraz
 $F(\mathcal{CP}(\mathfrak{M}_{*}, \mathfrak{N})) = (\mathfrak{M} \bar{\otimes} \mathfrak{N})_{+}$,
 gdzie $(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{+}$
@@ -201,7 +198,7 @@ istnieje kompletnie izometryczne zanurzenie
 \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{M}_{*}),
 \end{equation}
 gdzie $\check{\otimes}$ oznacza iniektywny iloczyn tensorowy przestrzeni operatorowych.
-(por. \cite{Effros2000}, Proposition 8.1.2).
+(por. \cite{Effros2000}, stwierdzenie 8.1.2).
 Dla przykładu, jeśli
 $u \in \mathfrak{M} \otimes \mathfrak{M}_{*}$, $u = \sum_{i = 1}^{n} a_{i} \otimes \omega_{i}$,
 wówczas dla $\omega \in \mathfrak{M}_{*}$,
@@ -227,25 +224,7 @@ dla którego $\langle F(A),\omega\rangle<0$, co pociąga za sobą sprzeczność.
 $\Leftarrow$ Dowód przeciwnej implikacji jest oczywisty.
 \end{proof}
 
-%\begin{Lemma}
-%Niech $E\subset \mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})_+$
-%oraz $B_{1}$ będzie kulą jednostkową w $\mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})$
-%(względem tzw. $\mathcal{CB}$-normy, tj. naturalnej normy odwzorowań kompletnie ograniczonych).
-%Niech także zbiór $E \cap B_{1}$ będzie gęsty w  be dense in  $\cbms_+ \cap B_{1}$ in the
-%weak$^*$ operator topology. Suppose that $\omega_0\in \mathcal{S}(\tmn)$. If $\forall A\in E$
-%$\langle F(A),\omega_0\rangle \geq 0$, then $\omega_0\in C_1$.
-%\end{Lemma}
-% {\bf Proof.} At first, we show that $F(E)$ is weak$^*$ dense in $C_1^*$. Let $x\in C_1^*$. Then $x=F(A)$, $A\in\cbms_+$.
-% By the assumption, there exists a net $(A_{\lambda})$, $A_{\lambda}\in E$, $\sup_{\lambda}\|A_{\lambda}\|_{\mathcal{CB}}\leq
-% \|A\|_{\mathcal{CB}}$ such that $A_{\lambda}\to A$ in the weak$^*$ operator topology (see p. \pageref{page:weakstaroperatortop}).
-% The map $F$ is continuous with respect to that topology because of Theorem \ref{thm:isometry}.
-% Therefore,  for any $\omega\in
-% \mathfrak{M}_*\otimes\mathfrak{N}_*$ $\langle F(A_{\lambda}),\omega\rangle\to\langle x,\omega\rangle$. Because
-% $\|F(A_{\lambda})\|=\|A_{\lambda}\|_{\mathcal{CB}}$ is uniformly bounded so $F(A_{\lambda})$ converges to $x$ in the
-% weak$^*$ topology of von Neumann algebra $\tmn$ . Hence $\langle x,\omega_0\rangle\geq 0$ for any $x\in C_1^*$, and so $\omega_0\in C_1$. $\Box$\\
-
-\paragraph{}
-Przejdźmy teraz do dalszej części dowodu twierdzenie \ref{thm:PHcrit}.
+Przejdźmy teraz do dalszej części dowodu twierdzenia \ref{thm:PHcrit}.
 
 {\it Krok 1.}
 \begin{Lemma}
@@ -300,7 +279,10 @@ odwzorowań skończonego rzędu, każde $z_{\lambda} \in C_{0}^{*}$.
 {\it Krok 2: Faktory skończone, iniektywne i ośrodkowe.}\\
 Załóżmy, że $\mathcal{R}$ jest iniektywnym ośrodkowym faktorem typu
 II$\phantom{}_{1}$ \cite{Takesaki3};
-niech także $\tau$ będzie znormalizowanym śladem na $\mathcal{R}$.
+niech także $\tau$ będzie znormalizowanym śladem na $\mathcal{R}$,
+a więc normalnym funckjonałem, dla którego
+$\tau(xy) = \tau(yx)$, dla każdych $x,y \mathcal{R}$
+oraz $\tau(\mathbf{1}) = 1$.
 Algebra von Neumanna jest z definicji \emph{ośrodkowa},
 jeśli działa na ośrodkowej przestrzeni Hilberta.
 Ponieważ $\mathcal{R}$ jest algebrą skończoną, więc istnieje zanurzenie
@@ -313,7 +295,7 @@ Warto przy tym zauważyć, że to zanurzenie jest odwzorowaniem dodatnim i kompl
 ograniczonym, ale nie kompletnie dodatnim.
 Następująca, jawna konstrukcja reprezentacji $\mathcal{R}$
 pochodzi z podręcznika autorstwa D.\,Evansa  i Y.\,Kawahigashi
-\cite{Evans1998}, Przykład 5.16.
+\cite{Evans1998}, przykład 5.16.
 
 Niech $\mathcal{A}_{0}$ będzie sumą mnogościową wstępującego ciągu algebr macierzowych:
 \begin{equation}
@@ -396,24 +378,24 @@ gdzie każdy z indeksów $i_{1}, j_{1}, \ldots, i_{n}, j_{n}$
 przybiera wartości 1 lub 2.
 Wówczas, dla dowolnego $x \in \mathcal{R}$ i
 $\omega \in \mathcal{R}_{*}$, mamy
-\begin{eqnarray}
+\begin{multline}
 \langle x, T_{*} \omega \rangle =\langle T x,  \omega \rangle
 =  2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
 \tau \left((Tx) e_{j_{1} i_{1}} \otimes \ldots \otimes e_{j_{n} i_{n}}
-\otimes \mathbf{1} \otimes \ldots \right) \times \nonumber\\
+\otimes \mathbf{1} \otimes \ldots \right) \times \\
 \langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
-\otimes \mathbf{1} \otimes \ldots ,\omega \rangle\nonumber\\
+\otimes \mathbf{1} \otimes \ldots ,\omega \rangle\\
 = 2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}} \tau \left((Tx)
 \beta (e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
-\otimes \mathbf{1} \otimes \ldots ) \right) \times \nonumber\\
+\otimes \mathbf{1} \otimes \ldots ) \right) \times \\
 \langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n}j_{n}}
-\otimes \mathbf{1} \otimes \ldots  , \omega \rangle = \nonumber\\
+\otimes \mathbf{1} \otimes \ldots  , \omega \rangle = \\
 =  2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
 \langle Tx ,i \beta (e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
-\otimes \mathbf{1} \otimes \ldots) \rangle\times\nonumber\\
+\otimes \mathbf{1} \otimes \ldots) \rangle\times\\
 \langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
-\otimes \mathbf{1} \otimes \ldots,\omega \rangle .
-\end{eqnarray}
+\otimes \mathbf{1} \otimes \ldots,\omega \rangle.
+\end{multline}
 
 Stąd, jeśli zdefiniujemy dodatni element $\mathcal{R}\otimes\mathcal{R}$ poprzez
 \begin{eqnarray}
@@ -528,7 +510,7 @@ gdzie $\mathcal{A}$ jest algebrą abelową
 Jeżeli zaś $\mathfrak{M}$ jest typu II$\phantom{}_{1}$,
 wówczas $\mathfrak{M} \cong  \mathcal{R}\bar{\otimes}\mathcal{C}$,
 gdzie $\mathcal{C}$ jest centrum $\mathfrak{M}$
-(por. Takesaki \cite{Takesaki3}, Theorem XVI.1.5).
+(por. Takesaki \cite{Takesaki3}, twierdzenie XVI.1.5).
 Dalsza część dowodu bierze pod uwagę jedynie fakt, że $\mathfrak{M}$
 może zostać rozbita na iloczyn tensorowy skończonego ośrodkowego faktora i
 abelowej algebry von Neumanna.
@@ -545,7 +527,7 @@ funkcje istotnie ograniczone na $\Gamma$, przyjmujące wartości w $\mathcal{R}$
 Ponadto $\mathfrak{M}_{*} \cong L^{1}_{\mathcal{R}_{*}}(\Gamma, \mu)$,
 gdzie ostatni symbol oznacza
 przestrzeń funkcji całkowalnych na $\Gamma$, przyjmujących wartości w $\mathcal{R}_{*}$
-(por. Takesaki \cite{Takesaki1}, Twierdzenie IV.7.17).
+(por. Takesaki \cite{Takesaki1}, twierdzenie IV.7.17).
 Dla każdego $x \in \mathfrak{M}$ i $\omega \in \mathfrak{M}_{*}$,
 istnieją funkcje $x:\Gamma\to\mathcal{R}$ oraz
 $\omega:\Gamma\to\mathcal{R}_{*}$, takie że
@@ -557,7 +539,7 @@ przy czym $||\omega|| = \int_{\Gamma} ||\omega(\gamma)|| \, d \mu(\gamma)$
 i $||x|| = \sup || x(\gamma) ||$.
 Należy zaznaczyć, że z definicji przestrzeni $L^{1}_{\mathcal{R}_{*}}(\Gamma, \mu)$
 wynika, iż dla każdego zwartego zbioru
-$K \subset \Gamma$ and $\epsilon >0$,
+$K \subset \Gamma$ i $\epsilon >0$,
 istnieje zwarty podzbiór $K^{'} \subset K$,
 taki że $\mu (K \setminus K^{'}) < \epsilon$
 oraz funkcja $\gamma \mapsto \omega(\gamma)$ jest ciągła na $K^{'}$.
@@ -567,7 +549,7 @@ zdefiniujmy odwzorowanie
 $i_{E}: \mathcal{R} \rightarrow \mathfrak{M}$ poprzez
 $i_{E}(x_{0})(\gamma) = \chi_{E}(\gamma) \, x_{0}$,
 gdzie $x_{0} \in \mathcal{R}$
-oraz $\chi_{E}$ jest funkcją wskazującą zbioru $E$.
+oraz $\chi_{E}$ jest funkcją charakterystyczną zbioru $E$.
 Odwzorowanie to jest kompletnie dodatnie i normalne,
 a nawet jest *-homomorfizmem.
 Niech więc $\tilde{\phi}_{E} = \tilde{\phi} \circ (i_{E} \otimes \mathbf{1})$,
@@ -759,9 +741,9 @@ c_{L}  \frac{\epsilon}{2 L M c_{L}}     + \frac{\epsilon}{2}
 Dla  $\langle z , \tilde{\phi} \rangle  =
 \lim_{n} \langle z , \tilde{\phi}_{n} \rangle \geq 0$,
 skoro $z$ było dowolnym elementem z $C_{0}^{*}$,
-na mocy Wniosku \ref{cor:denseness} $\tilde{\phi}$ stanem separowalnym.
+na mocy Wniosku \ref{cor:denseness}, $\tilde{\phi}$ stanem separowalnym.
 \end{proof}
-%------------------------------------------------------------------------------
+
 {\it Krok 4: Skończone algebry iniektywne}.\\
 Aby nie zakładać dłużej ośrodkowości algebry $\mathfrak{M}$,
 posłużymy się następującym rozumowaniem.

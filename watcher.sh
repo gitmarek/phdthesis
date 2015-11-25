@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# ./watcher.sh chp/ ./compile.sh 
+# ./watcher.sh chp/ ./compile.sh
 
 OUTFILE="./compile.out"
 
@@ -19,4 +19,3 @@ check() {
 }
 
 while true ; do check $* ; done
-
