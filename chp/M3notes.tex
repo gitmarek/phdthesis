@@ -40,6 +40,99 @@ E.\,St{\o}rmera \cite{stormer1963positive}
 i S.\,L.\,Woronowicza \cite{woronowicz1976positive},
 podającego pełną charakterystykę odwzorowań dodatnich na algebrze $M_{2}$.
 
+Niech $\mu,\nu = 0,1,2,3$ oraz $i,j = 1,2,3$.
+Niech także $(\sigma_{\mu})$, $\mu = 0, 1, 2, 3$;
+będzie bazą w  $M_{2}$, taką że
+$\sigma_{0} = \tfrac{1}{\sqrt{2}}  \mathbf{1}$ oraz
+$\sigma_{i}$
+są znormalizowanymi macierzami Pauliego dla $i=1,2,3$:
+\begin{equation}
+ \sigma_{1} = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        0 & 1 \\ 1 & 0
+           \end{pmatrix},
+\quad
+\sigma_{2} = \frac{1}{\sqrt{2}}  \begin{pmatrix}
+        0 & -i \\ i & 0
+           \end{pmatrix},
+\quad
+\sigma_{3} = \frac{1}{\sqrt{2}}  \begin{pmatrix}
+        1 & 0 \\ 0 & -1
+           \end{pmatrix}.
+\end{equation}
+Macierz hermitowska $\sigma(x) \in M_{2}$,
+$\sigma(x) = \sum_{\mu =0}^{3} x_{\mu} \sigma_{\mu}$,
+dla $x = (x_{\mu}) = (x_{0}, \vec{x}) \in \mathbb{R}^{4}$,
+jest dodatnia, wtedy i tylko wtedy, gdy
+$x \in L_{4}$,
+gdzie
+$ L_{4} = \left \{
+            x \in \mathbb{R}^{4} :
+            x_{0} \geq \sqrt{(x_{1})^{2} + (x_{2})^{2} + (x_{3})^{2}} \,
+        \right \}$.
+Niech $\vec{x} = (x_{1}, x_{2}, x_{3}) \in \mathbb{R}^{3}$,
+a także niech $||\vec{x}||$ będzie normą euklidesową wektora.
+
+Jeśli $S: M_{2} \rightarrow M_{2}$ jest odwzorowaniem hermitowskim,
+możemy zdefiniować macierz rzeczywistą $\pi(S) \in M_{4}(\mathbb{R})$ poprzez
+\begin{equation}
+\label{def:PiofSiso}
+  \sigma(\pi(S) x) = S \sigma(x), \quad x \in \mathbb{R}^{4}
+\end{equation}
+lub też $\pi(S)_{\mu \nu} = \text{Tr} \sigma_{\mu} S(\sigma_{\nu})$.
+Rzecz jasna, dla dwóch takich odwzorowań: $S_{1}, S_{2}$, mamy
+$\pi(S_{1} S_{2}) = \pi(S_{1}) \pi(S_{2})$
+oraz $\pi(S^{-1}) = \pi(S)^{-1}$, jeśli tylko $S^{-1}$ istnieje.
+Odwzorowanie $S$ jest dodatnie, wtedy i tylko wtedy, gdy
+$\pi(S)$ przekształca $L_{4}$ w siebie.
+
+Przypomnijmy, że zbiór $\mathcal{P} \subset \mathbb{R}^{n}$
+jest z definicji stożkiem (wypukłym), jeśli
+$\alpha x + \beta y \in \mathcal{P}$,
+gdy tylko $x, y \in \mathcal{P}$ i $\alpha, \beta \geq 0$.
+Element $x \in \mathcal{P}$ nazywamy ekstremalnym, gdy
+z faktu, że $x - y \in \mathcal{P}$,
+dla pewnego $y \in \mathcal{P}$,
+wynika $y = \alpha x$, $\alpha \geq 0$.
+Zbiór elementów ekstremalnych stożka $\mathcal{P}$ oznaczmy przez
+Ext\,$\mathcal{P}$.
+
+Stożek $L_{4}$ nazwiemy \emph{stożkiem Lorentza} w $\mathbb{R}^{4}$.
+Topologiczny brzeg $\partial L_{4}$ stożka $L_{4}$ to zbiór
+$\partial L_{4} = \{ x \in L_{4} : x_{0} = || \vec{x} || \}$.
+Prawdą jest, że w tym przypadku $\partial L_{4} = \text{Ext}\,L_{4}$.
+Symbolem $\Theta(L_{4})$ oznaczmy grupę operatorów z $M_{4}(\mathbb{R})$,
+które odwzorowują $\partial L_{4}$ na siebie.
+Z twierdzenia 2.4 w pracy
+R.\,Loewy, H.\,Schneider,
+\emph{Positive operators on the n-dimensional ice cream cone}
+\cite{loewy1975positive},
+dla każdego $\tilde{A} \in \Theta(L_{4})$,
+$\tilde{A} = r \tilde{O}$,
+gdzie $r > 0$, a $\tilde{O}$ należy do
+podgrupy grupy Lorentza $\mathrm{O}^{+}(1,3)$.
+Niech $\rho: SL_{2}(\mathbb{C}) \rightarrow \text{SO}^{+}(1,3)$
+bedzie standardowym izomorfizmem pomiędzy grupą macierzy z $M_{2}$
+o wyznaczniku równym jedności, a elementami grupy $\text{SO}^{+}(1,3) \subset \text{O}^{+}(1,3)$
+(por. np. G.\,L.\,Naber, \emph{The Geometry of Minkowski Spacetime}
+\cite{Naber1992}).
+Z definicji
+\begin{equation}
+\sigma(\rho(V) x) = V^{*} \sigma(x) V,
+\end{equation}
+dla dowolnego $V \in SL_{2}(\mathbb{C})$ i $x \in \mathbb{R}^{4}$.
+Zatem dla odwzorowania $S_{V}: M_{2} \rightarrow M_{2}$,
+takiego, że $S_{V} A = V^{*} A V$, $V \in \text{SL}_{2}(\mathbb{C})$,
+mamy $\rho(V) = \pi(S_{V})$.
+Jasne jest, że każdy element grupy $\text{O}^{+}(1,3)$,
+który nie należy do  $\text{SO}^{+}(1,3)$,
+jest równy $\Lambda J$,
+gdzie $\Lambda \in \text{SO}^{+}(1,3)$ oraz $J$ jest macierzą diagonalną,
+$J = \mathrm{diag}(1,1,-1,1)$.
+Taka postać macierzy $J$ została wybrana tylko z uwagi na wygodę zastosowania
+w dowodzie twierdzenia poniżej.
+Istotne jest jedynie to, że
+$J \in \text{O}^{+}(1,3)$ i $\mathrm{det} \, J = -1$.
+
 \begin{Theorem}
 \label{thm:PositiveMapsOnM2}
     Niech $S:M_{2} \rightarrow M_{2}$ będzie odwzorowaniem dodatnim.
