@@ -2,7 +2,7 @@
 \label{chp:M3notes}
 
 Po wykazaniu w poprzednim rozdziale znaczenia odwzorowań dodatnich dla kryterium
-splątania w najogólniejszym z fizycznego punktu widzenia znaczącym przypadku
+splątania w najogólniejszym z fizycznego punktu widzenia przypadku
 iniektywnych algebr von Neumanna, przejdźmy do analizy samych odwzorowań dodatnich.
 
 Powiemy że dodatnie odwzorowanie $S$ na algebrze macierzy $M_{n}$ spełnia nierówność
@@ -17,7 +17,7 @@ tzn. $S(\mathbf{1}) = \mathbf{1}$,
 spełnia nierówność Kadisona-Schwarza dla macierzy normalnych,
 to jest takich macierzy
 $X$, dla których  $X X^{*} = X^{*} X$
-\cite{choi1974some}.
+\cite{choi1980some}.
 Odwzorowanie dodatnie, które spełnia tę nierówność dla wszystkich macierzy
 nazwiemy \emph{odwzorowaniem Schwarza} \cite{robertson1983schwarz}.
 Przypomnijmy także, że odwzorowanie $S$ nazywamy bistochastycznym,
@@ -29,7 +29,7 @@ $\text{Tr} \, S(X) = \text{Tr} \, X$
 dla każdego $X \in M_{n}$.
 
 
-\section{Charakterystyka odwzorowań na algebrze $M_{2}$}
+\section{Charakterystyka odwzorowań algebry $M_{2}$}
 \label{sec:M2notes}
 
 W tym podrozdziale przestawimy główny rezultat opublikowany w pracy
@@ -93,11 +93,11 @@ Na mocy  lematu 3.2 z pracy:
 R.\,Loewy, H.\,Schneider,
 \emph{Positive operators on the n-dimensional ice cream cone}
 \cite{loewy1975positive},
-$S$ jest ekstremalnym odwzorowaniem dodatnim, takim że $\text{rank} S = 1$,
+$S$ jest ekstremalnym odwzorowaniem dodatnim, takim że $\text{rank}\,S = 1$,
 co implikuje, że $S$ musi być kompletnie dodatnie.
 
 Jeżeli $\pi(S)$ zachowuje stożek Lorentza,
-na mocy \mbox{Corollary 4.6} \cite{loewy1975positive} wnioskujemy, że
+na mocy \mbox{twierdzenia 4.5} \cite{loewy1975positive},
 $\pi(S) \in \text{conv} \left ( \Theta(L_{4}) \cup \delta(L_{4}) \right)$.
 Innymi słowy każdy operator zachowujący stożek Lorentza $L_{4}$
 jest wypukłą kombinacją tych operatorów, które dodatkowo zachowują brzeg stożka.
@@ -117,12 +117,15 @@ polegają w głównej mierze na algebraicznych manipulacjach macierzami,
 o tyle wprowadzenie odwzorowania $\pi$ pozwoliło nam
 na podkreślenie istotnych dla problemu geometrycznych własności stożków
 zawartych w  $\mathbb{R}^{4}$.
+Należy również dodać, że podobne metody zostały już wprowadzone wcześniej
+(por. J.\,M.\,Leinaas \emph{et al.}, \emph{Geometrical aspects of entanglement}
+\cite{leinaas2006geometrical}).
 Dzięki temu udało się otrzymać pełną charakteryzację odwzorowań dodatnich
 na $M_{2}$,
 której źródeł należy się doszukiwać w szczególnej symetrii stożka
 $L_{4}$, reprezentującego macierze z $M_{2}$.
-W tym najprostszym przypadku mogliśmy wykorzystać głęboki wynik z
-\cite{loewy1975positive}, dotyczący
+W tym najprostszym przypadku mogliśmy wykorzystać znany wcześniej
+\cite{loewy1975positive} wynik, dotyczący
 opisu operatorów zachowujących stożek $L_{4}$.
 Jak zobaczymy poniżej, jeśli przejdziemy do kolejnego przypadku
 odwzorowań dodatnich na $M_{3}$,
@@ -173,13 +176,13 @@ oraz $k \in \mathbb{N}$.
 Kładąc $A_{k}$ w nierówności Kadisona-Schwarza
 \eqref{eq:SchwarzInequality}, otrzymujemy
 \begin{equation}
-[S(P), \,  S(X)] - S([P, \, X]) \leq - \frac{i}{k} (S(X^{2}) - S(X)^{2}),
+i [S(P), \,  S(X)] - i S([P, \, X])  \leq \frac{1}{k} \left( S(X^{2}) - S(X)^{2} \right),
 \end{equation}
 dla każdego $k \in \mathbb{N}$.
 Zatem
 \begin{equation}
 \label{ineq:Commutators}
-[S(P), \, S(X)] - S([P, \, X]) \leq 0.
+i [S(P), \, S(X)] - i S([P, \, X]) \leq 0.
 \end{equation}
 Biorąc tym razem $A'_{k} =kP - i X$ i powtarzając rachunek,
 dostajemy nierówność odwrotną do \eqref{ineq:Commutators},
@@ -269,11 +272,12 @@ $
 jest dodatnia.
 Ogólnie znany jest fakt, że odwzorowanie $X \mapsto A \circ X$
 jest kompletnie dodatnie wtedy i tylko wtedy, gdy $A$
-jest dodatnią macierzą.
+jest dodatnią macierzą
+(por. np. \cite{besenyei2011completely}, lemmat 1).
 \end{proof}
 
 \begin{Example}
-Można bez trudu pokazać, że warunek \ref{lem:condProj} w
+Można bez trudu pokazać, że warunek \ref{lem:condProj}. w
 twierdzeniu \ref{thm:MapsPreservingIdentity} jest w istotny sposób silniejszy
 niż warunek \ref{lem:condCommut}.
 Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{2}$, takim że
@@ -287,7 +291,7 @@ Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{2}$, takim że
     \end{pmatrix},
     \quad 0 < b < 1,
 \end{equation}
-czyli $S(\sigma_{1}) = b \sigma_{1}$ oraz
+czyli $S(\sigma_{1}) = b \sigma_{1}$, a także
 $S(\sigma_{2}) = S(\sigma_{3}) = 0$.
 Wówczas $S\left( [P_{0}, \, X ] \right) = [ S(P_{0}), \, S(X) ]$,
 gdzie
@@ -307,7 +311,7 @@ $[P_{0}, \, \sigma(x)] =
 i(x_{2} \sigma_{3} - x_{3} \sigma_{2})$,
 a stąd
 $S([P_{0}, \, \sigma(x)]) = 0$.
-Warunek \ref{lem:condCommut} w Twierdzeniu \ref{thm:MapsPreservingIdentity}
+Warunek \ref{lem:condCommut}. w Twierdzeniu \ref{thm:MapsPreservingIdentity}
 jest prawdziwy dla każdej macierzy hermitowskiej $X$,
 a zatem również dla każdej macierzy $X \in M_{2}$.
 Z drugiej strony,
@@ -363,9 +367,9 @@ $z \in \mathbb{C}$, mamy
     \end{pmatrix},
 \end{equation}
 dla $\hat{S}_{0}: M_{n-1} \rightarrow M_{n-1}$ będącego z konieczności
-odwzorowaniem Schwarza na $M_{n-1}$, and $S_{1} \in M_{n-1}$.
+odwzorowaniem Schwarza na $M_{n-1}$ i $S_{1} \in M_{n-1}$.
 Rzeczywiście, ponieważ $S$ jest odwzorowaniem Schwarza,
-na mocy twierdzenia 2.1.5 \cite{Stormer2013} mamy, że
+na mocy twierdzenia 2.1.5 \cite{Stormer2013},
 $S(P_{n} X) = P_{n} S(X)$.
 Stąd
 $S(P_{n} X P_{n}) = P_{n} S(X) P_{n}$ i podobnie
@@ -442,14 +446,18 @@ $S(X) = U X U^{*}$, $X \in M_{n}$, co kończy dowód.
 Przedstawiwszy geometryczny dowód twierdzenia \ref{thm:PositiveMapsOnM2}
 o rozkładzie odwzorowań dodatnich na $M_{2}$, możemy pokusić się o
 o udowodnienie dodatkowych faktów dotyczących odwzorowań bistochastycznych.
-Odznaczmy przez $\Delta_{0}$ zbiór wszystkich bistochastycznych odwzorowań na
+Odznaczmy przez $\Delta_{\infty}$ zbiór wszystkich bistochastycznych odwzorowań na
 $M_{2}$.
-Niech także $\Delta_{1} \subset \Delta_{0}$ oznacza zbiór tych odwzorowań
+Niech także $\Delta_{1} \subset \Delta_{\infty}$ oznacza zbiór tych odwzorowań
 bistochastycznych,
 które są jednoczenie kompletnie dodatnie i kompletnie kododatnie.
 Korzystając z tego samego geometrycznego przedstawienia zbioru
 odwzorowań dodatnich jako stożka Lorentza $L_{4}$,
 możemy pokazać, że $\Delta_{1}$ jest zbiorem zaskakująco pojemnym.
+Dodajmy, że wyniki odnośnie tego problemu można znaleść również w innych
+publikacjach
+(por. E\,{St{\o}rmer, \emph{A decomposition theorem for positive maps, and the projection onto a spin factor}
+\cite{stormer2013decomposition}).
 
 Każda macierz $Y \in M_{n}(\mathbb{R})$ daje się rozłożyć względem wartości singularnych:
 $Y = O_{1} D O_{2}$, gdzie
@@ -464,13 +472,13 @@ jedną z nich jest norma operatorowa: $|| \cdot ||$;
 drugą nazwiemy normą śladową i zdefiniujemy przez
 $||Y||_{1} = \sqrt{\text{Tr} \, Y^{t} \, Y }$.
 domkniętą kulę o jednostkowym promieniu w normie operatorowej oznaczmy:
-$K_{0} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y|| \leq 1 \right \}$;
+$K_{\infty} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y|| \leq 1 \right \}$;
 natomiast kulę w normie śladowej jako
 $K_{1} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y||_{1} \leq 1 \right \}$.
 
 \begin{Theorem}
 \label{thm:Ball}
-Istnieje wypukły izomorfizm $F$, taki że $K_{0}$, $F(\Delta_{0}) = K_{0}$.
+Istnieje wypukły izomorfizm $F$, taki że $K_{\infty}$, $F(\Delta_{\infty}) = K_{\infty}$.
 Ponadto, $F(\Delta_{1}) = K_{1}$.
 \end{Theorem}
 \begin{proof}
@@ -486,21 +494,20 @@ Macierz $\pi(S)$ możemy zapisać w postaci blokowej
 $Y \in M_{3}(\mathbb{R})$,
 a $\vec{0} \in \mathbb{R}^{3}$ jest zerowym wektorem-kolumną.
 Połóżmy $F(S) = Y$.
-Z definicji (...)
-%\eqref{RandomLabel:365828} << ------  add correct reference!
+Z definicji \eqref{def:PiofSiso}
 odwzorowania $\pi$,
-jasne jest, że dla  $S_{1}, S_{2} \in \Delta_{0}$,
+jasne jest, że dla  $S_{1}, S_{2} \in \Delta_{\infty}$,
 mamy $F \left( \lambda S_{1} + (1-\lambda) S_{2} \right) =
  \lambda F(S_{1}) + (1-\lambda) F(S_{2})$,
 $0 \leq \lambda \leq 1$
 oraz $F(S_{1} S_{2}) = F(S_{1}) F(S_{2})$.
 Odwzorowanie $S$ jest dodatnie wtedy i tylko wtedy, gdy
 $\pi(S)$ zachowuje stożek $L_{4}$,
-co w tym wypadku jest równoważne temu, iż $F(S) = Y \in K_{0}$.
+co w tym wypadku jest równoważne temu, iż $F(S) = Y \in K_{\infty}$.
 Co więcej, łatwo zauważyć, że oba przekształcenia, $F$ i $F^{-1}$,
 są ciągłe w topologii indukowanej przez normy na
-$\Delta_{0}$ and $K_{0}$.
-Zatem $F(\Delta_{0}) = K_{0}$, a ponadto $F$ jest homeomorfizmem.
+$\Delta_{\infty}$ and $K_{\infty}$.
+Zatem $F(\Delta_{\infty}) = K_{\infty}$, a ponadto $F$ jest homeomorfizmem.
 
 W dalszej części załóżmy, że $S \in \Delta_{1}$.
 Ponieważ $S$ jest kompletnie dodatnie,
