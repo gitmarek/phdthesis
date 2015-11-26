@@ -810,9 +810,9 @@ Następujący fakt jest prostą konsekwencją poprzedniego.
 
 \begin{Corollary}
 \label{cor:KisJordanAlgebra}
-przestrzeń $K_{S}$,
-z normą operatorową $|| \cdot ||$,
-i mnożeniem  $A \circ B = \frac{1}{2}(AB + BA)$,
+Przestrzeń $K_{S}$,
+z normą operatorową $|| \cdot ||$
+i mnożeniem $A \circ B = \frac{1}{2}(AB + BA)$,
 jest JB$^{*}$-algebrą.
 Odwzorowanie $S$ jest automorfizmem Jordana na $K_{S}$ oraz
 \begin{equation}
@@ -921,6 +921,7 @@ Dla wygody oznaczmy ortogonalne projektory:
 \end{equation}
 oraz $P_{12} = P_{1} + P_{2}$.
 
+\label{page:allpossibleJalg}
 Ważny dla dalszego toku rozumowania jest wniosek z twierdzeń 5.3.8 i 6.2.3
 z książki
 H.\,Hanche-Olsen, E.\,St{\o}rmer,
@@ -1713,9 +1714,9 @@ o środku w $\hat{0}$ i promieniu $r > 0$.
 Łatwo sprawdzić, że w tym przypadku
     $|| \vec{m} ||_{2} = || \vec{n} ||_{2} = \sqrt{\frac{2}{3}}$,
 gdzie  $|| \cdot||_{2}$ oznacza standardową normę euklidesową.
-Ponieważ $||x|| \leq \frac{1}{2}$, mamy
+Ponieważ $||x|| \leq \frac{1}{2}$, więc
     \begin{equation}
-        \text{tr} \, P_{\vec{m}} S_{x}(P_{\vec{n}}) =
+        \text{Tr} \, P_{\vec{m}} S_{x}(P_{\vec{n}}) =
         \frac{1}{3} + \langle \vec{m}, x \vec{n} \rangle \geq
         \frac{1}{3} - |\langle \vec{m}, x \vec{n} \rangle| \geq 0.
         %\frac{1}{3} - \frac{1}{2} \frac{2}{3} = 0.
@@ -1724,8 +1725,7 @@ Stąd $S_{x}$ jest dodatnie, co oznacza, że $x \in \Lambda$.
 
 Niech teraz $x \in \Lambda$.
 Wtedy dla każdego $A = A^{*} \in M_{3}$, $S_{x}$
-spełnia nierówność Kadisona-Schwarza
-    \cite{choi1980some}:
+spełnia nierówność Kadisona-Schwarza \eqref{eq:SchwarzInequality}:
     \begin{equation}
      \label{eq:KSineq}
         S(A)^{2} \leq S(A^{2}).
@@ -1734,9 +1734,9 @@ Niech $\vec{n} \in \mathbb{R}^{8}$;
 ponieważ $\lambda(\frac{1}{\sqrt{3}}, \vec{n})$
 jest macierzą samosprzężoną, z \eqref{eq:KSineq}, dostajemy
     \begin{equation}
-        \frac{1}{\sqrt{3}} + || x \vec{n} ||_{2}^{2} = \text{tr}\,
+        \frac{1}{\sqrt{3}} + || x \vec{n} ||_{2}^{2} = \text{Tr}\,
         \left ( S_{x}(\lambda(\frac{1}{\sqrt{3}}, \vec{n}) \right)^{2} \leq
-        \text{tr}\, \lambda(\frac{1}{\sqrt{3}}, \vec{n})^{2} =
+        \text{Tr}\, \lambda(\frac{1}{\sqrt{3}}, \vec{n})^{2} =
         \frac{1}{\sqrt{3}} + ||\vec{n}||_{2}^{2},
     \end{equation}
 tzn. $||x\vec{n}||_{2} \leq ||\vec{n}||_{2}$
@@ -1754,7 +1754,7 @@ zbioru $\Lambda$.
 Ponadto, w $\Lambda$ nie ma elementów idempotentnych rzędu 6 i 7,
 a jedyny idempotent rzędu 8 to macierz jednostkowa $\mathbf{1}_{8}$.
 Niech także $G_{3} = \text{Ad} \, \text{SU}(3) \subset \Lambda$ oznacza
-grupę tych macierzy $g \in \Lambda$, takich że
+grupę tych macierzy $g \in \Lambda$, dla których
 $S_{g}$ jest automorfizmem: $S_{g}(A) = U A U^{*}$,
 dla pewnej macierzy unitarnej $U \in \text{SU}(3)$.
 Jasne jest, że $G_{3} \subset \text{SO}(8)$,
@@ -1770,7 +1770,7 @@ $y_{1}, y_{2} \in \Lambda$ and $0 \leq \lambda \leq 1$,
 z tego, że $x = \lambda y_{1} + (1-\lambda) y_{2}$,
 wynika: $y_{1} = y_{2} = x$.
 Oczywiście, $\text{Ext}_{0}(\Lambda) \subset \text{Ext}(\Lambda)$.
-Następny fakt wynika w prosty sposób z poprzedniego twierdzenia
+Następny fakt wynika w prosty sposób z twierdzenia
 \ref{thm:LambdaAndBalls}.
 
 \begin{Theorem}
@@ -1779,7 +1779,6 @@ Następny fakt wynika w prosty sposób z poprzedniego twierdzenia
 Załóżmy, że $||x|| = \frac{1}{2}$;
 wtedy $ x = \frac{1}{2} R$, dla $R \in \mathrm{O}(8)$.
 \end{Theorem}
-%------------------------------------------------------------------------------
 \begin{proof}
 Niech $x \in \mathrm{Ext}(\Lambda)$ oraz $||x|| = \frac{1}{2}$.
 Niech $x = R |x|$ będzie rozkładem biegunowym $x$,
@@ -1805,14 +1804,12 @@ to jedyna możliwa postać elementów zbioru $\text{Ext}(\Lambda)$,
 a co za tym idzie, również zbioru $\text{Ext}_{0}(\Lambda)$,
 dla których $||x|| = \frac{1}{2}$.
 
-\paragraph{}
-(...komentarz -- wstęp...)
 Niech $x \in \Lambda$ oraz niech
 $\langle x \rangle \subset \Lambda$ będzie półgrupą generowaną przez $x$:
 $\langle x \rangle = \left \{ x^{k} \: | \: k \in \mathbb{N}, k \geq 1 \right \}$.
 Oznaczmy przez $\overline{\langle x \rangle}$,
 domknięcie $\langle x \rangle$ w zbiorze $M_{8}(\mathbb{R})$.
-Dowód następującego faktu zawarty został w Lemacie 3 w
+Dowód następującego faktu zawarty został w lemacie 3 w
 pracy S.\,Schwarza, \emph{On Hausdorff bicompact semigroups}
 \cite{schwarz1955hausdorff}.
 
@@ -1828,7 +1825,7 @@ pracy S.\,Schwarza, \emph{On Hausdorff bicompact semigroups}
     \begin{enumerate}
        \item zbiór elementów idempotentnych w $\Lambda$:
             $\mathcal{E}(\Lambda) = \left \{ e \in \Lambda \: |  \: e^{2} = e \right \}$;
-       \item zbiór elementów nilpotentnych:
+       \item zbiór uogólnionych elementów nilpotentnych:\\
             $\mathcal{N}(\Lambda) = \left \{ x \in \Lambda \: |  \: \lim \limits_{n \rightarrow \infty} x^{n} = \hat{0} \right \}$;
        \item grupa elementów odwracalnych:
             $\mathcal{G}(\Lambda) = \left \{ x \in \Lambda \: |  \: \exists \, y \in \Lambda, xy = yx = \mathbf{1}_{8} \right \}$.
@@ -1880,9 +1877,9 @@ Stąd $y^{l} \overset{l}{\rightarrow} \hat{0}$
 i $Q(\hat{0}) \subset \mathcal{N}(\Lambda)$.
 Przeciwne zawieranie jest oczywiste.
 Co więcej, ponieważ mamy $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
-    z Twierdzenia 8 w \cite{schwarz1955hausdorff},
-    $H(\mathbf{1}_{8}) = Q(\mathbf{1}_{8}) \cdot \mathbf{1}_{8}$,
-    a wiec $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
+z twierdzenia 8 w \cite{schwarz1955hausdorff},
+$H(\mathbf{1}_{8}) = Q(\mathbf{1}_{8}) \cdot \mathbf{1}_{8}$,
+a wiec $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
 \end{Remark}
 
 Naszym zadaniem jest analiza rodziny zbiorów
@@ -1890,7 +1887,7 @@ $\left \{ Q(e), e \in \mathcal{E}(\Lambda) \right \}$,
 a w szczególności pokazanie, w których spośród tych zbiorów należy szukać
 elementów ekstremalnych z
 $\text{Ext}_{0}(\Lambda)$.
-W tym celu, przedstawmy następujący ciąg stwierdzeń.
+W tym celu przedstawmy następujący ciąg stwierdzeń.
 
 \begin{Theorem}
     Dla $e_{1}, e_{2} \in \mathcal{E}(\Lambda)$,
@@ -1932,7 +1929,7 @@ niech $\mathcal{E}_{G_{3}}(e) = \left \{ g e g^{t} \: | \: g \in G_{3} \right \}
 Z początku, w następnym lemacie, przypomnijmy znany fakt,
 mówiący, że idempotenty operator kontraktywny na przestrzeni Hilberta
 jest projektorem ortogonalnym
-(por. np. Problem 5.3.14 w książce
+(por. np. zadanie 5.3.14 w książce
 Y.\,Abramovicha i  C.\,Aliprantisa,
 \emph{Problems in operator theory}
 \cite{Abramovich2002}).
@@ -1959,7 +1956,7 @@ tzn. $||\vec{n}||^{2} + 2 \alpha  \langle \vec{n}, \vec{m} \rangle \geq 0$,
 dla dowolnego $\alpha \in \mathbb{R}$.
 To z kolei oznacza, że
 $\langle \vec{n}, \vec{m} \rangle = 0$,
-dla każdego  $\vec{n} \in \ker e$ and $\vec{m} \in \mathcal{R}(e)$,
+dla każdego  $\vec{n} \in \ker e$ i $\vec{m} \in \mathcal{R}(e)$,
 tzn.
 $\ker e \perp \mathcal{R}(e)$, co dowodzi, że $e = e^{t}$.
 \end{proof}
@@ -1970,7 +1967,7 @@ Niech $e \in \mathcal{E}(\Lambda)$ i $h \in H(e)$.
 Wtedy $h^{t} \in H(e)$, a także $h^{t} h = h h^{t} = e$.
 \end{Theorem}
 \begin{proof}
-    Z Twierdzenia 8  w \cite{schwarz1955hausdorff}, mamy:
+    Z twierdzenia 8  w \cite{schwarz1955hausdorff}, mamy:
     $H(e) = Q(e) e = e \, Q(e)$.
 Jeśli $x \in Q(e)$, to $x^{t} \in Q(e)$,
 na mocy lematu \ref{lem:eIsProj}.
@@ -2005,25 +2002,24 @@ można uogólnić do następującego twierdzenia.
 \end{Theorem}
 
 \begin{proof}
-    Ponieważ $e$ jest macierzą idempotentną, na mocy
-    wniosku 3. z pracy \cite{miller2015stable},
-    przestrzeń $K_{S_{e}} = S_{e}(M_{3})$ jest algebrą Jordana.
-    Odwzorowanie $S_{e}$ jest w rzeczywistości
-    projektorem o normie jednostkowej (\emph{conditional expectation})
-    na $K_{S_{e}}$.
-    Niech $h \in H(e)$.
-    Z twierdzenia \ref{prop:htranspose}, dla dowolnego $k\in \mathbb{N}$,
-    $S_{h}^{* k} S_{h}^{k} = S_{h^{t}}^{k} S_{h}^{k} =  S_{(h^{t})^{k} h^{k}} = S_{e}$,
-    i podobnie dla $S_{h}^{k} S_{h}^{* k}= S_{e}$.
-    Zatem, stabilna algebra $K_{S_{h}} = K_{S_{e}}$
-    (por. \cite{miller2015stable}, równ. (3.3) i poniżej).
-    Znów na mocy wniosku 3. z \cite{miller2015stable},
-    $\varphi_{h} = S_{h} \big |_{K_{S_{e}}}$
-    jest automorfizmem Jordana algebry $K_{S_{e}}$.
+Ponieważ $e$ jest macierzą idempotentną, na mocy
+Wniosku \ref{cor:KisJordanAlgebra},
+przestrzeń $K_{S_{e}} = S_{e}(M_{3})$ jest algebrą Jordana.
+Odwzorowanie $S_{e}$ jest w rzeczywistości
+projektorem o normie jednostkowej (\emph{conditional expectation})
+na $K_{S_{e}}$.
+Niech $h \in H(e)$.
+Z twierdzenia \ref{prop:htranspose}, dla dowolnego $k\in \mathbb{N}$,
+$S_{h}^{* k} S_{h}^{k} = S_{h^{t}}^{k} S_{h}^{k} =  S_{(h^{t})^{k} h^{k}} = S_{e}$,
+i podobnie dla $S_{h}^{k} S_{h}^{* k}= S_{e}$.
+Zatem, stabilna algebra $K_{S_{h}} = K_{S_{e}}$.
+Znów na mocy Wniosku \ref{cor:KisJordanAlgebra},
+$\varphi_{h} = S_{h} \big |_{K_{S_{e}}}$
+jest automorfizmem Jordana algebry $K_{S_{e}}$.
 
 Z drugiej strony, jeżeli $\varphi$ jest dowolnym automorfizmem Jordana na
 $K_{S_{e}} \subset M_{3}$,
-to można rozszerzyć go do odwzorowania bistochastycznego $S_{h}$ na $M_{3}$,
+można rozszerzyć go do odwzorowania bistochastycznego $S_{h}$ na $M_{3}$,
 dla pewnego $h \in \Lambda$,
 kładąc $S_{h} = \varphi \circ S_{e}$.
 Wtedy
@@ -2067,7 +2063,8 @@ jest sumą mnogościową siedmiu rozłącznych zbiorów:
 \begin{proof}
 Jeżeli $e \in \mathcal{E}(\Lambda)$, to tak, jak powyżej, $S_{e}$
 jest projektorem o normie jednostkowej na algebrę Jordana $K_{S_{e}}$.
-Na mocy twierdzeń 5.3.8 i 6.2.3 z \cite{Hanche1984},
+Tak jak na str. \pageref{page:allpossibleJalg},
+na mocy twierdzeń 5.3.8 i 6.2.3 z \cite{Hanche1984},
 wszystkie algebry Jordana w $M_{3}$ są izomorficzne (unitarnie równoważne) z
 jedną z następujących:
     $\mathbb{C}\mathbf{1}$,
@@ -2120,7 +2117,7 @@ Wówczas $x^{n_{k}}  = h^{n_{k}} + y^{n_{k}}  \overset{k}{\rightarrow}  e$, tzn.
     $x \in Q(e)$.
 Z drugiej strony
 załóżmy, że $x \in Q(e) \subset \Lambda$.
-Niech również $h = e x e$, and $y = e^{\perp} x e^{\perp}$,
+Niech $h = e x e$ oraz $y = e^{\perp} x e^{\perp}$,
 gdzie $e^{\perp} = \mathbf{1}_{8} - e$.
 wtedy $h \in Q(e)$, a ponieważ
     $h =  h e = e h$,
@@ -2155,7 +2152,6 @@ Powyższy lemat uzasadnia następującą definicję.
     zdefiniujmy:
     $Q_{0}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || < 1 \right \}$ i
     $Q_{1}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || = 1 \right \}$.
-    dla $i = 1, 2, 3, \ldots 8$.
     Niech także $Q_{1}^{i}(e)$ będzie zbiorem składającym się z tych
     $x = h_{x} + y_{x} \in Q_{1}(e)$,
     dla których wielokrotność największej wartości singularnej $y_{x}$
@@ -2212,7 +2208,7 @@ $p_{3} = P_{138}$, $p_{4} = P_{1238}$, $p_{5} = P_{13468}$.
 \begin{Theorem}
 \label{thm:LowerIndices}
     Niech $i,j$ będą liczbami całkowitymi, takimi że
-    $1 \leq i \leq 4$, $0 \leq j \leq 4$ and $i+j \leq 5$.
+    $1 \leq i \leq 4$, $0 \leq j \leq 4$ oraz $i+j \leq 5$.
 Jeśli $x \in Q_{1}^{i}(p_{j})$,
 wówczas istnieją $g_{1}, g_{2} \in G_{3}$ i $z \in Q_{0}(p_{i+j})$,
 dla których $x = g_{1} z g_{2}$.
@@ -2220,7 +2216,7 @@ dla których $x = g_{1} z g_{2}$.
 \begin{proof}
     Niech $x \in Q_{1}^{i}(p_{j})$ i
     $x = h_{x} + y_{x}$, jak wyżej.
-    Ponieważ taki rozkład jest jedyny, możemy napisać tak, jak w dowodzie
+    Ponieważ taki rozkład jest jedyny, możemy napisać jak w dowodzie
     lematu \ref{lem:decomposition}:
     $h_{x} = p_{j} x p_{j}$ oraz $y_{x} = p_{j}^{\perp} x p_{j}^{\perp}$,
     gdzie $p_{j}^{\perp} = \mathbf{1}_{8} - p_{j}$.
@@ -2286,25 +2282,25 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
     istnieje $g \in G_{3}$, takie że
     $g^{t} x g \in Q(e_{0})$ i $e_{0} \in J$.
     Ponieważ $S_{x}$ jest ekstremalnym odwzorowaniem dodatnim, więc na mocy
-    twierdzenia 2. z \cite{miller2015stable},
+    Twierdzenia \ref{thm:ExposedMaps},
     $e_{0} \in \left \{ \hat{0}, P_{8}, \mathbf{1}_{8} \right \}$.
     Z uwagi \ref{rem:Qof1}, $x \notin Q(\mathbf{1}_{8})$, a zatem
     $z = g^{t} x g \in Q(\hat{0}) \cup Q(P_{8})$,
     i $z \in \text{Ext}_{0}(\Lambda)$
-    (por. Lemat 3.1.2 w \cite{Stormer2013}).
+    (por. lemat 3.1.2 w \cite{Stormer2013}).
     Załóżmy, że $z \in Q(P_{8})$.
-    Z twierdzenia \ref{thm:LowerIndices},
+    Z Twierdzenia \ref{thm:LowerIndices},
     ponieważ $z \in \text{Ext}_{0}(\Lambda)$,
     $z \notin Q_{1}^{i}(P_{8})$
-    dla $i \geq 1$ (zob.  twierdzenie 2. w \cite{miller2015stable}).
-    A zatem $z \in Q_{0}(P_{8})$ i połóżmy $g_{1} = g$ and $g_{2} = g^{t}$.
+    dla $i \geq 1$.
+    A zatem $z \in Q_{0}(P_{8})$ i połóżmy $g_{1} = g$ i $g_{2} = g^{t}$.
     Wówczas $x = g_{1} z g_{2}$,
-    i z lematu \ref{lem:decomposition}, ponieważ
+    a z Lematu \ref{lem:decomposition}, ponieważ
     $H(P_{8}) = \left \{ P_{8} \right \}$
-    (por. uwaga \ref{rem:GOfLambda}),
+    (por. Uwaga \ref{rem:GOfLambda}),
     $z = P_{8} + y$,  $y P_{8} = P_{8} y = \hat{0}$ i $||y|| < 1$.
     Z drugiej strony, jeśli $z \in Q(\hat{0})$,
-    wtedy na mocy tego samego rozumowania albo $z \in Q_{0}(\hat{0})$,
+    wtedy na mocy tego samego rozumowania albo $z \in Q_{0}(\hat{0})$
     i $||z|| < 1$, ponieważ $H(\hat{0}) = \left \{ \hat{0} \right \}$; albo
     $z \in Q_{1}^{1}(\hat{0})$ i wówczas istnieją $g_{01}, g_{02} \in G_{3}$,
     takie że $g_{01} z g_{02} \in Q_{0}(P_{8})$.
@@ -2315,27 +2311,26 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
 \label{com:onlyOneExample}
 Podsumujmy wyniki przedstawione powyżej zauważając, że pozwalają nam one
 na sprecyzowanie problemu znalezienia ekstremalnych odwzorowań bistochastycznych
-no $M_{3}(\mathbb{C})$ poprzez skupienie uwagi na trzech szczególnych
+na $M_{3}(\mathbb{C})$ poprzez skupienie uwagi na trzech szczególnych
 przypadkach.
 Po pierwsze, są to izomorfizmy Jordana, reprezentowane przez macierze z
 $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
-Następnie, odwzorowania, które możemy nazwać \emph{silnie ergodycznymi}
-\cite{miller2015stable},
+Następnie, odwzorowania, które możemy nazwać \emph{silnie ergodycznymi},
 należące do klasy reprezentowanej przez elementy zbioru
 $\left \{ x \in Q_{0}(\hat{0}) \:|\: ||x|| = \frac{1}{2} \right \}$.
 Jednym z przykładów takich odwzorowań jest znane przekształcenie podane
 po raz pierwszy przez M.-D.\,Choi \cite{choi1977extremal}.
 Uogólnione odwzorowanie tego typu ma postać
-\begin{equation}\label{eq:choi}
+\begin{multline}\label{eq:choi}
 \Phi[a,b,c](X)=\\
 \frac{1}{2}
 \begin{pmatrix}
-aa_{11}+ba_{22}+ca_{33} & -a_{12} & -a_{13} \\
--a_{21} & ca_{11}+aa_{22}+ba_{33} & -a_{23} \\
--a_{31} & -a_{32} & ba_{11}+ca_{22}+aa_{33}
+ax_{11}+bx_{22}+cx_{33} & -x_{12} & -x_{13} \\
+-x_{21} & cx_{11}+ax_{22}+bx_{33} & -x_{23} \\
+-x_{31} & -x_{32} & bx_{11}+cx_{22}+ax_{33}
 \end{pmatrix},
-\end{equation}
-gzie $X = (a_{ij})_{i,j = 1}^{3}$,
+\end{multline}
+gdzie $X = (x_{ij})_{i,j = 1}^{3}$,
 jeżeli wprowadzimy parametryzację:
 \begin{equation}
  a(t)=\dfrac{(1-t)^2}{1-t+t^2},\quad b(t)=\dfrac{t^2}{1-t+t^2},\quad c(t)=\dfrac 1{1-t+t^2},
@@ -2346,7 +2341,8 @@ w zbiorze wszystkich odwzorowań dodatnich na $M_{3}$.
 Dla $t = 0$, otrzymujemy przekształcenie zaproponowane oryginalnie przez Choi,
 a dla $t = 1$ -- przekształcenie kompletnie dodatnie
 (por.
-K.-C.\,Ha, S.-H.\,Kye \cite{ha2011entanglement}).
+K.-C.\,Ha, S.-H.\,Kye \emph{Entanglement witnesses arising from exposed positive linear maps}
+\cite{ha2011entanglement}).
 Rodzina macierzy $a_{t}$, dla której
 $S_{a_{t}} = \Phi[a(t), b(t), c(t)]$ jest zadana przez
 \begin{equation}
