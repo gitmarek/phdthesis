@@ -1,22 +1,19 @@
 % Bibliography:
-
 \clearpage
-\chapter*{Bibliografia}
 \addcontentsline{toc}{chapter}{Bibliografia}
-
 {\footnotesize \bibliographystyle{plain}
+\renewcommand{\bibname}{Bibliografia}
 
-\begin{btSect}[plain]{./bib/books}
- \section*{Książki}
- \btPrintCited
- %\btPrintAll
-\end{btSect}
+\begin{thebibliography}{9}
 
-\begin{btSect}[plain]{./bib/papers}
- \section*{Artykuły\,naukowe}
- \btPrintCited
- %\btPrintAll
-\end{btSect}
+
+\end{thebibliography}
+
+% Add a second set of references, if you wish...
+%\renewcommand{\bibname}{Bibliografia 2}
+%\begin{thebibliography}{99}
+%
+%\end{thebibliography}
 
 
 % Print index and add to the table of content
