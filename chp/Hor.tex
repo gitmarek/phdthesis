@@ -63,12 +63,14 @@ przejście do granicy w normie śladowej takich właśnie kombinacji wypukłych.
 W tym samym duchu, zdefiniujmy wypukły zbiór $C_1$
 stanów separowalnych w
 $\mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$ przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     \label{def:SeparableStates}
 C_{1} = \overline{{\rm conv}}^{||\cdot||_{\wedge}}
 \left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathfrak{M}),
 \varphi \in \mathcal{S}(\mathfrak{N})\right \}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Niech także $C_{1}^{*}$ oznacza stożek dualny:
 $C_{1}^{*} = \{ x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}:
  \langle x , \varphi \rangle \geq 0 \,\, \forall \varphi \in C_{1} \}$ oraz
@@ -88,10 +90,12 @@ $\pi :B(\mathcal{H})\to\mathfrak{M}$ na $\mathfrak{M}$.
 Dla takich algebr, istnieje net $(A_{\lambda})$ kompletnie dodatnich
 kontrakcji skończonego rzędu na  $\mathfrak{M}_*$,
 zbiegających w silnej topologi do odwzorowania identycznościowego:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{RandomLabel:513684}
  || A_{\lambda} \omega - \omega || \stackrel{\lambda}{\longrightarrow} 0, \quad
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdego $\omega \in \mathfrak{M}_{*}$
 (por. M.\,Takesaki, \emph{Theory of operator algebras}  \cite{Takesaki3},
 \mbox{t.\,3.}, twierdzenie XV.3.1).
@@ -133,21 +137,25 @@ dodatnim normalnym odwzorowaniem, a $S_*$ odwzorowaniem predualnym.
 Niech $z$ będzie dodatnim elementem
 $\mathfrak{M} \bar{\otimes} \mathfrak{M}$.
 Ponieważ
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     \tilde{\phi} =\lim \limits_{n \rightarrow \infty}
 \sum_{i=1}^{n}\alpha_i^{(n)} \omega_{i} \otimes \varphi_{i},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie
 $\alpha_i^{(n)}\geq 0$, $\sum_{i=1}^n\alpha_i^{(n)}=1$,
 $\omega_{i}\in\mathcal{S}(\mathfrak{M})$
 oraz
 $\varphi_{i}\in\mathcal{S}(\mathfrak{N})$,
 więc
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \langle (\mathbf{1} \otimes S)(z), \tilde{\phi} \rangle =
  \lim \limits_{n \rightarrow \infty}\sum \limits_{i = 1}^{n}\alpha_i^{(n)}
  \langle z, \omega_{i} \otimes S_{*} \varphi_{i} \rangle \geq 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Dowód przeciwnej implikacji rozłożymy na ciąg następujących po sobie kroków.
 \end{proof}
 
@@ -177,9 +185,11 @@ a także wniosek 7.1.5 w związku z dowodem następnego lematu).
 Odwzorowanie $F: \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})
 \rightarrow \mathfrak{M} \bar{\otimes} \mathfrak{N}$,
 zadane przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \langle F(T), \omega \otimes \varphi \rangle =\langle T\omega, \varphi \rangle,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\omega \in \mathfrak{M}_{*}$, $\varphi \in \mathfrak{N}_{*}$,
 rozszerza się do kompletnie izometrycznego izomorfizmu pomiędzy przestrzeniami
 operatorowymi.
@@ -193,18 +203,22 @@ jest stożkiem dodatnich elementów algebry.
 
 Dla każdej algebry von Neumanna $\mathfrak{M}$,
 istnieje kompletnie izometryczne zanurzenie
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \theta: \mathfrak{M} \check{\otimes} \mathfrak{M}_{*}\rightarrow
 \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{M}_{*}),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\check{\otimes}$ oznacza iniektywny iloczyn tensorowy przestrzeni operatorowych.
 (por. \cite{Effros2000}, stwierdzenie 8.1.2).
 Dla przykładu, jeśli
 $u \in \mathfrak{M} \otimes \mathfrak{M}_{*}$, $u = \sum_{i = 1}^{n} a_{i} \otimes \omega_{i}$,
 wówczas dla $\omega \in \mathfrak{M}_{*}$,
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \theta(u)\omega = \sum_{i=1}^{n} \langle a_{i} , \omega \rangle \, \omega_{i}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Posiłkując się izomorfizmem $F$,
 udowodnijmy następujący
 \begin{Lemma}
@@ -249,7 +263,8 @@ F^{-1}(z))(\theta^{-1}(A_{\lambda})) \in \mathfrak{M} \otimes \mathfrak{N}$.
 Kładąc
 $\theta^{-1}(A_{\lambda}) = \sum_{i=1}^{N_{\lambda}} \
 a_{i}^{\lambda} \otimes \omega_{i}^{\lambda}$, dostajemy
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 \langle z_{\lambda}, \omega \otimes \varphi\rangle =
 \sum \limits_{i=1}^{N_{\lambda}}
 \langle a_{i}^{\lambda} \otimes F^{-1}(z) \omega_{i}^{\lambda} ,\
@@ -258,14 +273,17 @@ a_{i}^{\lambda} \otimes \omega_{i}^{\lambda}$, dostajemy
 \langle  a_{i}^{\lambda}, \omega \rangle
 \langle z,  \omega_{i}^{\lambda} \otimes \varphi \rangle = \\
 = \langle z , (A_{\lambda} \omega) \otimes \varphi \rangle.
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 Ponieważ $A_{\lambda} \stackrel{\lambda}{\rightarrow} \mathbf{1}$ w silnej topologii,
 otrzymujemy:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 | \langle z - z_{\lambda}, \omega\otimes \varphi \rangle | \
 \leq || A_{\lambda} \omega - \omega || \, ||\varphi|| \, ||z|| \
 \stackrel{\lambda}{\longrightarrow} 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 \end{proof}
 
 \begin{Corollary}
@@ -298,12 +316,14 @@ pochodzi z podręcznika autorstwa D.\,Evansa  i Y.\,Kawahigashi
 \cite{Evans1998}, przykład 5.16.
 
 Niech $\mathcal{A}_{0}$ będzie sumą mnogościową wstępującego ciągu algebr macierzowych:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 M_{2}(\mathbb{C}) \subset
 M_{2}(\mathbb{C}) \otimes M_{2}(\mathbb{C}) \subset
 M_{2}(\mathbb{C}) \otimes M_{2}(\mathbb{C}) \otimes M_{2}(\mathbb{C}) \subset
 \ldots\, .
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Dla $n$-tej potęgi tensorowej $M_{2}(\mathbb{C})$,
 oznaczonej $M_{2}(\mathbb{C})^{\otimes n}$,
 definiujemy $\tau(x) = \frac{1}{2^{n}} {\rm Tr}(x)$,
@@ -327,10 +347,12 @@ które będziemy oznaczać tym samym symbolem,
 jest jedynym unormowanym śladem na $\mathcal{R}$.
 Następnie zdefiniujmy liniowe odwzorowanie
 $\beta_{0}$ na $\mathcal{A}_{0}$, takie że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \beta_{0}(x^{1} \otimes \ldots\otimes x^{n} \otimes \mathbf{1} \otimes \ldots ) =
 (x^{1})^{t} \otimes \ldots\otimes (x^{n})^{t} \otimes \mathbf{1} \otimes \ldots,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $(x^{i})^{t}$ oznacza transpozycję $x^{i} \in M_{2}(\mathbb{C})$,
 $i = 1,2,\ldots,n$.
 Jasne jest, że $\beta_{0}$ to *-antyautomorfizm na $\mathcal{A}_{0}$
@@ -342,7 +364,8 @@ pokażemy, że ich złożenie $i \circ \beta$ jest kompletnie dodatnią kontrakc
 Rzeczywiście, niech $x_{1}, x_{2}, \ldots x_{n}$ oraz
 $y_{1}, y_{2}, \ldots y_{n}$ będą elementami $\mathcal{R}$.
 Wówczas
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 \sum \limits_{i, j =1}^{n}
 \langle x_{i}^{*} x_{j}, i \circ \beta(y_{i}^{*} y_{j}) \rangle =
 \sum \limits_{i, j =1}^{n}
@@ -354,7 +377,8 @@ Wówczas
 = \tau \left( \
 \left( \sum \limits_{i=1}^{n} x_{i} \beta(y_{i}) \right)^{*}
 \left( \sum \limits_{j=1}^{n} x_{j} \beta(y_{j}) \right)\right ) \geq 0,
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 co dowodzi, że $i \circ \beta$ jest kompletnie dodatnie.
 Ponieważ oba odwzorowania, $i$ oraz $\beta$ są kontraktywne,
 zatem również $i\circ\beta$ ma normę mniejszą od jedności.
@@ -378,7 +402,8 @@ gdzie każdy z indeksów $i_{1}, j_{1}, \ldots, i_{n}, j_{n}$
 przybiera wartości 1 lub 2.
 Wówczas, dla dowolnego $x \in \mathcal{R}$ i
 $\omega \in \mathcal{R}_{*}$, mamy
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 \langle x, T_{*} \omega \rangle =\langle T x,  \omega \rangle
 =  2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
 \tau \left((Tx) e_{j_{1} i_{1}} \otimes \ldots \otimes e_{j_{n} i_{n}}
@@ -395,21 +420,26 @@ $\omega \in \mathcal{R}_{*}$, mamy
 \otimes \mathbf{1} \otimes \ldots) \rangle\times\\
 \langle e_{i_{1} j_{1}} \otimes \ldots \otimes e_{i_{n} j_{n}}
 \otimes \mathbf{1} \otimes \ldots,\omega \rangle.
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 
 Stąd, jeśli zdefiniujemy dodatni element $\mathcal{R}\otimes\mathcal{R}$ poprzez
-\begin{eqnarray}
+\begin{linenomath*}
+ \begin{multline}
 m_{n} = 2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
 \left( e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}} \otimes \ldots \otimes
 e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots \right) \otimes \nonumber\\
 \left( e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}}\otimes \ldots \otimes
 e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots\right),
-\end{eqnarray}
+ \end{multline}
+\end{linenomath*}
 możemy napisać
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:thetainverse}
 \theta^{-1}(T_{*}) =(\mathbf{1} \otimes (T_{*} \circ i \beta)) (m_{n}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 
 \begin{Lemma}
 \label{lem:netininjectivefactor}
@@ -420,9 +450,11 @@ Wówczas istnieje net $S_{\lambda}$ normalnych dodatnich odwzorowań skończoneg
 $S_{\lambda}: \mathcal{R} \rightarrow \mathfrak{N}$,
 oraz ciąg $(m_{n(\lambda)})$ dodatnich elementów $\mathcal{R} \otimes \mathcal{R}$,
 dla których
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 z = {\rm w^*-} \lim \limits_{\lambda}(\mathbf{1} \otimes S_{\lambda})(m_{n(\lambda)}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 \end{Lemma}
 \begin{proof}
 Niech $(A_{\lambda})$ będzie netem kompletnie dodatnich kontrakcji
@@ -431,20 +463,24 @@ zbiegających silnie do odwzorowania identycznościowego.
 Możemy założyć, że dualne odwzorowania $A_{\lambda}^{*}$
 mają obraz zawarty $M_{2}(\mathbb{C})^{\otimes n(\lambda)}$.
 Wtedy, ze wzoru \eqref{eq:thetainverse} wynika, że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \theta^{-1} (A_{\lambda}) =
 ( \mathbf{1} \otimes (A_{\lambda} \circ i\beta)) (m_{n(\lambda)}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Zdefiniujmy net $(S_{\lambda})$ poprzez
 $S_{\lambda} = F^{-1}(z) \circ A_{\lambda} \circ i\beta$.
 Skoro $z \in C_{1}^{*}$,
 więc każde $S_{\lambda}$ jest dodatnim, normalnym odwzorowaniem skończonego rzędu
 na $\mathcal{R}$.
 Ponieważ
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 (\mathbf{1} \otimes S_{\lambda}) (m_{n(\lambda)}) =
 (\mathbf{1} \otimes F^{-1}(z)) (\theta^{-1}(A_{\lambda})),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 teza wynika wprost z Lematu \ref{lem:netinvNalg}.
 \end{proof}
 \begin{Lemma}
@@ -478,11 +514,13 @@ jest dodatnie, normalne i skończonego rzędu,
 a każde $m_{n(\lambda)}$ jest dodatnim elementem $\mathfrak{M} \otimes \mathfrak{M}$
 oraz granica dotyczy *-słabej topologii.
 Korzystając z założeń, otrzymujemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \langle z , \tilde{\phi} \rangle =\lim \limits_{\lambda}
 \langle ( \mathbf{1} \otimes S_{\lambda}) (m_{n(\lambda)}), \tilde{\phi}
 \rangle \geq 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 \end{proof}
 
 {\it Krok 3: Skończone iniektywne algebry ośrodkowe}.\\
@@ -531,10 +569,12 @@ przestrzeń funkcji całkowalnych na $\Gamma$, przyjmujących wartości w $\math
 Dla każdego $x \in \mathfrak{M}$ i $\omega \in \mathfrak{M}_{*}$,
 istnieją funkcje $x:\Gamma\to\mathcal{R}$ oraz
 $\omega:\Gamma\to\mathcal{R}_{*}$, takie że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \langle x, \omega \rangle =\int \limits_{\Gamma}
 \langle x(\gamma), \omega(\gamma) \rangle \, d \mu(\gamma),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 przy czym $||\omega|| = \int_{\Gamma} ||\omega(\gamma)|| \, d \mu(\gamma)$
 i $||x|| = \sup || x(\gamma) ||$.
 Należy zaznaczyć, że z definicji przestrzeni $L^{1}_{\mathcal{R}_{*}}(\Gamma, \mu)$
@@ -564,10 +604,12 @@ Niech $S_{0}: \mathcal{R} \rightarrow \mathfrak{N}$ będzie dodatnim normalnym
 odwzorowaniem skończonego rzędu.
 Zdefiniujmy
 $S_{E}: \mathfrak{M} \rightarrow \mathfrak{N}$ przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 S_{E}(x(\cdot)) = \frac{1}{\mu(E)}
 \int \limits_{E} S_{0}x(\gamma) \, d\mu(\gamma),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 rozumiane jako całkę Bochnera w $\mathfrak{N}$.
 Całka taka istnieje na mocy następującego argumentu.
 Ponieważ $S_{0}$ ma skończony rząd, funkcja
@@ -581,11 +623,13 @@ Zauważając, że dla każdego $x_{0} \in \mathcal{R}$,
 $S_{0}x_{0} = S_{E} \circ i_{E} (x_{0})$ oraz
 biorąc dodatni element $z_{0} \in \mathcal{R} \otimes \mathcal{R}$,
 na mocy głównego założenia dostajemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \langle (\mathbf{1} \otimes S_{0})(z_{0}) , \tilde{\phi}_{E} \rangle =
 \langle (\mathbf{1} \otimes S_{E})(i_{E} \otimes i_{E})(z_{0}),
 \tilde{\phi} \rangle \geq 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Z Lematu 3.3, $\tilde{\phi}_{E}$ jest separowalny i dlatego również
 $\tilde{\phi}$ jest separowalny,
 pod warunkiem, że następny lemat jest prawdziwy.
@@ -608,15 +652,19 @@ Na mocy elementarnego rozumowania,
 podobnego do konstrukcji całki Lebesgue'a,
 można pokazać, że ponieważ $\mathfrak{M}$ jest ośrodkową algebrą von Neumanna,
 istnieje ciąg funkcji prostych
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 x_{n}(\cdot) =     \sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot)\, x_{k}^{(n)},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:integral}
 x_{k}^{(n)} = \frac{1}{\mu(B_{k}^{(n)})}
 \int \limits_{B_{k}^{(n)}} x(\gamma) \, d\mu(\gamma)\quad \in \mathcal{R},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 i każde $B_{k}^{(n)} \subset \Gamma$ jest zbiorem mierzalnym oraz
 $0< \mu(B_{k}^{(n)}) < \infty$;
 co więcej $\langle x_{n}, \omega \rangle\stackrel{n}{\rightarrow}\langle x,
@@ -638,17 +686,21 @@ oraz niech $z \in C_{0}^{*}$, $z = \sum_{j=1}^{M} x_{j} \otimes y_{j}$.
 Jasne jest, że rodzina zbiorów $B_{k}^{(n)}$ we wzorze \eqref{eq:integral}
 może zostać wybrana dla każdego $x_{j}$, $j = 1,2, \ldots, M$; tzn.
 istnieją ciągi $(x_{j,n})_{n=1}^{\infty}$, zadane przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 x_{j,n}(\cdot) =     \sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot)
 \, x_{j,k}^{(n)},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:integralxes}
 x_{j,k}^{(n)} = \frac{1}{\mu(B_{k}^{(n)})}
 \int \limits_{B_{k}^{(n)}} x_{j}(\gamma) \, d\mu(\gamma)
 \quad \in \mathcal{R},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 takie że $x_{j,n} \stackrel{n}{\longrightarrow} x_{j}$
 w topologii *-słabej na  $\mathfrak{M}$.
 
@@ -658,11 +710,13 @@ poprzez $\pi_{E}(\omega_{0})(\gamma) =\frac{1}{\mu(E)} \chi_{E}(\gamma)\omega_{0
 Łatwo sprawdzić, że $\pi_{E}$ jest kompletnie dodatnią kontrakcją dla każdego
 mierzalnego zbioru $E \subset \Gamma$, takiego że $\mu(E) < \infty$;
 a przez to, z założenia, każdy funkcjonał
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \tilde{\phi}_{n} = \sum \limits_{k=1}^{n}
 (\pi_{B_{k}^{(n)}} \otimes \mathbf{1})
 ( \tilde{\phi}_{B_{k}^{(n)}} )
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 jest separowalny na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
 Pokażemy, że $\langle z , \tilde{\phi}_{n} \rangle
 \stackrel{n}{\rightarrow}\langle z , \tilde{\phi} \rangle$.
@@ -671,7 +725,8 @@ Wybierzmy liczbę naturalną $L$, taką że
 $|| \sum_{i=L+1}^{\infty}\alpha_i(\omega_{i} \otimes \varphi_{i}) ||_{\wedge}
 \leq \frac{\epsilon}{4 ||z||}$.
 Wtedy
-\begin{eqnarray}
+\begin{linenomath*}
+ \begin{multline}
 \label{eq:Ineq}
 |\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle| =
 |\langle z, \tilde{\phi} -\sum \limits_{k=1}^{n} \tilde{\phi}
@@ -682,17 +737,20 @@ Wtedy
 \omega_{i'} \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}})
 \otimes \varphi_{i'}
 \rangle \Big | + \frac{\epsilon}{2},
-\end{eqnarray}
+ \end{multline}
+\end{linenomath*}
 ponieważ $\sum_{k=1}^{n} i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}}$
 jest kontrakcją na $\mathfrak{M}$.
 Odwzorowanie dualne
 $\pi^{*}_{E}: \mathfrak{M} \rightarrow \mathcal{R}$
 działa na $x(\cdot) \in \mathfrak{M}$ przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:intergralpi}
 \pi^{*}_{E}(x(\cdot)) = \frac{1}{\mu(E)}
 \int \limits_{E} x(\gamma) \, d\mu(\gamma).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Niech $N$ będzie liczbą naturalną, taką że dla każdego $i = 1, 2, \ldots, L$
 oraz $j = 1,2, \ldots M$, jeśli tylko $n \geq N$,
 to $|\langle x_{j} - x_{j,n}, \omega_{i} \rangle| \leq
@@ -701,7 +759,8 @@ $c_{L} = \max \{ |\langle y_{j}, \varphi_{i} \rangle |$,
 $i = 1,2, \ldots, L$; $j = 1,2, \ldots, M \}$.
 Korzystając ze wzorów \eqref{eq:intergralpi} i \eqref{eq:integralxes},
 obliczmy
-\begin{eqnarray}
+\begin{linenomath*}
+ \begin{multline}
 \sum \limits_{k=1}^{n} i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} (x_{j})
 =\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
 \pi^{*}_{B_{k}^{(n)}} (x_{j}) = \nonumber\\
@@ -710,9 +769,11 @@ obliczmy
 \int \limits_{B_{k}^{(n)}} x_{j}(\gamma) \, d\mu(\gamma)
 =\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
 x_{j,k}^{(n)}=x_{j,n}.
-\end{eqnarray}
+ \end{multline}
+\end{linenomath*}
 Kontynuując nierówność \eqref{eq:Ineq}, otrzymujemy dla $n \geq N$:
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 |\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle|\leq \Big |\langle z,
 \sum \limits_{i=1}^{L} \omega_{i} \otimes \varphi_{i} -\sum \limits_{i'=1}^{L}
 \sum \limits_{k=1}^{n}\omega_{i'} \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}})
@@ -737,7 +798,8 @@ c_{L}  \, \left | \langle    x_{j}, \omega_{i} \rangle -
 \leq \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
 c_{L}  \frac{\epsilon}{2 L M c_{L}}     + \frac{\epsilon}{2}
 =  \frac{\epsilon}{2} +  \frac{\epsilon}{2} =  \epsilon.
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 Dla  $\langle z , \tilde{\phi} \rangle  =
 \lim_{n} \langle z , \tilde{\phi}_{n} \rangle \geq 0$,
 skoro $z$ było dowolnym elementem z $C_{0}^{*}$,
@@ -808,12 +870,14 @@ $\tilde{\phi}_{p} = \tilde{\phi} \circ (T_{p} \otimes \mathbf{1})$.
 Niech $z$ będzie dodatnim elementem $\mathfrak{M}_{p} \otimes \mathfrak{M}_{p}$.
 Ponieważ istnieje dodatni element $z' \in \mathfrak{M} \otimes \mathfrak{M}$,
 taki że $z = (T_{p} \otimes T_{p})(z')$, więc na mocy założenia
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}
 \circ (\mathbf{1} \otimes S)(z) =
 \tilde{\phi} \circ (\mathbf{1} \otimes S_{p})
 \left( (T_{p} \otimes \mathbf{1})(z') \right ) \geq 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 A zatem, tak jak w dowodzie kroku 4.,
 $\tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}$
 jest funkcjonałem separowalnym.
@@ -821,11 +885,13 @@ Stąd wynika, że separowalny jest również funkcjonał $\tilde{\phi}_{p}$.
 Rzeczywiście, dla $z\in C_{0}^{*}$, mamy
 $(T_{p} \otimes \mathbf{1})(z) \in
 \mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}$, a więc
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \tilde{\phi}_{p}(z) = \tilde{\phi}_{p}((T_{p} \otimes \mathbf{1}) z) =
 \tilde{\phi}_{p} \big|_{\mathfrak{M}_{p} \bar{\otimes} \mathfrak{N}}
 ((T_{p} \otimes \mathbf{1}) z) \geq 0,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 co dowodzi, że $\tilde{\phi}_{p}$ jest separowalny.
 
 Niech znów $z \in C_{0}^{*} \subset \mathfrak{M} \otimes \mathfrak{N}$
@@ -906,10 +972,12 @@ $S_{0}: \mathfrak{M}_{0} \rightarrow \mathfrak{N}$
 oraz dodatni element
 $z_{0} \in \mathfrak{M}_{0} \bar{\otimes} \mathfrak{M}_{0}$,
 taki że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:Random20203}
 \langle(\mathbf{1} \otimes S_{0})(z_{0}),\tilde{\phi}_{\lambda}\rangle < 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Co więcej, $z_{0}$ można wybrać tak, aby należało do algebraicznego
 iloczynu tensorowego $\mathfrak{M}_{0} \otimes \mathfrak{M}_{0}$.
 Stąd, ponieważ $\tilde{\mathcal{E}}$ jest suriekcją,
@@ -922,14 +990,16 @@ $S_{\mu} = S_{0} \circ \tilde{\mathcal{E}}_{\mu}$.
 Wtedy z założenia oraz ponieważ oba odwzorowania
 $\mathcal{E}_{\lambda}$ i $\tilde{\mathcal{E}}$
 są kompletnie dodatnie, mamy
-\begin{eqnarray}
+\begin{linenomath*}
+ \begin{multline}
 \langle(\mathbf{1} \otimes S_{0})(z_{0}),\tilde{\phi}_{\lambda} \rangle =
 \lim \limits_{\mu} \langle(\mathbf{1} \otimes S_{\mu})(\tilde{\mathcal{E}}
 \otimes \mathbf{1})(z) ,\tilde{\phi}_{\lambda}\rangle \nonumber \\
 = \lim \limits_{\mu} \langle
 (\mathbf{1} \otimes S_{\mu})(\mathcal{E}_{\lambda}\circ
 \tilde{\mathcal{E}}\otimes \mathbf{1})(z) ,\tilde{\phi}\rangle \geq 0,
-\end{eqnarray}
+ \end{multline}
+\end{linenomath*}
 co stoi w sprzeczności z \eqref{eq:Random20203}.
 Zatem, $\tilde{\phi}_{\lambda}$
 jest separowalne.
@@ -997,12 +1067,14 @@ $\mathcal{S}(\mathcal{A})$ i $\mathcal{S}(\mathcal{B})$
 oznaczają przestrzenie stanów odpowiednio dla $\mathcal{A}$ i $\mathcal{B}$.
 Zdefiniujmy dodatni stożek $C_{\mathcal{A},\mathcal{B}}$
 stanów separowalnych względem  $\mathcal{A}$ i $\mathcal{B}$ poprzez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 C_{\mathcal{A},\mathcal{B}} =
 \overline{{\rm conv}}^{||\cdot||_{\wedge}}
 \left \{\omega \otimes \varphi: \, \,\omega \in \mathcal{S}(\mathcal{A}),
 \varphi \in \mathcal{S}(\mathcal{B})\right \}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Jasne jest, że stan na $\mathcal{A} \bar{\otimes} \mathcal{B}$ jest separowalny,
 tzn. $\tilde{\phi} \in C_{\mathcal{A}, \mathcal{B}}$,
 wtedy i tylko wtedy, gdy $\tilde{\phi}$ jest separowalnym stanem na
@@ -1045,10 +1117,12 @@ istnieje dodatnie normalne odwzorowanie skończonego rzędu
 $\tilde{S}: \mathfrak{M} \rightarrow \mathfrak{N}$
 oraz dodatni element $z \in \mathfrak{M} \bar{\otimes} \mathfrak{M}$,
 takie że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:Random6347}
 \langle(\mathbf{1} \otimes \tilde{S})(z), \tilde{\phi}\rangle < 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Co więcej, $z$ możemy wybrać z algebraicznego iloczynu tensorowego
 $\mathfrak{M} \otimes \mathfrak{M}$,
 tzn. $z = \sum_{j=1}^{N} x_{j} \otimes y_{j}$,
@@ -1078,10 +1152,12 @@ Dla każdej skończenie wymiarowej podprzestrzeni $F \subset \mathcal{B}^{**}$,
 istnieje operator $P_{F}: F \rightarrow \mathcal{B}$,
 taki że dla każdego $y \in \mathcal{B}^{**} = \mathfrak{N}$
 oraz $\varphi \in \mathcal{B}^{*}$, mamy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:Random24093}
 \langle \varphi, P_{F}y \rangle =\langle y, \varphi \rangle.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Niech $F = \tilde{S}(\mathfrak{M})$.
 Z równania \eqref{eq:Random24093} wynika w oczywisty sposób, że
 $P_{F}$ jest dodatnie.
@@ -1089,13 +1165,15 @@ Zdefiniujmy dodatnie odwzorowanie $S: \mathcal{A} \rightarrow \mathcal{B}$ przez
 $S = P_{F} \circ \tilde{S} \circ i$.
 Wówczas dla każdego $A \in \mathcal{A}$ oraz $\varphi \in \mathcal{B}^{*}$,
 mamy
-\begin{eqnarray}
+\begin{linenomath*}
+ \begin{multline}
 \langle \varphi, SA \rangle =
 \langle \varphi, P_{F} ( \tilde{S} \circ i (A)) \rangle =
 \langle  \tilde{S} \circ i (A), \varphi \rangle \nonumber\\
 =\langle i(A), \tilde{S}_{*} \varphi \rangle =
 \langle \tilde{S}_{*} \varphi, A \rangle,
-\end{eqnarray}
+ \end{multline}
+\end{linenomath*}
 Załóżmy ponadto, że
 $\tilde{\phi} = \lim \limits_{n} \sum_{i=1}^{n}\omega_{i} \otimes \varphi_{i}$,
 gdzie każde $\omega_{i} \in \mathcal{A}^{*}$,
@@ -1105,7 +1183,8 @@ a więc również w słabej i *-słabej topologii na
 $(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$.
 Z głównego założenia wynika, że
 $\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$. Dodatkowo
-\begin{eqnarray}
+\begin{linenomath*}
+ \begin{multline}
 \sum \limits_{i=1}^{n}\langle \omega_{i} \otimes \varphi_{i},
 (\mathbf{1} \otimes S)(a_{\lambda}) \rangle =
 \sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
@@ -1115,7 +1194,8 @@ $\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$. Doda
 \langle  x_{j}, \omega_{i} \rangle\langle  y_{j},  \tilde{S}_{*} \varphi_{i} \rangle =
 \langle (\mathbf{1} \otimes \tilde{S})(z),
 \sum \limits_{i=1}^{n} \omega_{i} \otimes \varphi_{i} \rangle .
-\end{eqnarray}
+ \end{multline}
+\end{linenomath*}
 Biorąc granicę względem $n$,
 ponieważ $(T_{\lambda})$ jest netem kontrakcji, dostajemy
 $\langle (\mathbf{1} \otimes \tilde{S}) (z) ,

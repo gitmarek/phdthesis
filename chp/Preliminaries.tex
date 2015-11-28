@@ -91,10 +91,12 @@ Algebrą Banacha nazywamy przestrzeń Banacha $\mathcal{A}$,
 tj. unormowaną przestrzeń
 liniową zupełną \cite{Rudin1991}, dla której mnożenie jest
 operacją ciągłą, a więc
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \label{eq:algBanachMultiplication}
 || A B || \leq ||A|| \, ||B||,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla wszystkich $A, B \in \mathcal{A}$.
 Odwzorowanie $A \in \mathcal{A} \rightarrow A^{*} \in \mathcal{A}$ nazywamy
 \emph{inwolucją} \index{inwolucja} lub
@@ -113,9 +115,11 @@ algebry, nazywamy *-algebrą Banacha.
 \begin{Definition}
  \label{def:c*alg}
   \emph{C*-algebrą} nazywamy *-algebrę Banacha $\mathcal{A}$, dla której
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  || A^{*} A || = ||A||^{2},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdego $A \in \mathcal{A}$.
 \end{Definition}
 
@@ -140,10 +144,12 @@ czyli \emph{stany}.
  \label{def:stateOnCalg}
   Funkcjonał liniowy $\omega$ na C*-algebrze $\mathcal{A}$ nazywamy
 \emph{dodatnim}, jeżeli
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \label{eq:stateOnCalg}
   \omega(A^{*}A) \geq 0
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla wszystkich $A \in \mathcal{A}$.
 Jeżeli dodatkowo $||\omega|| = 1$, to $\omega$ nazywamy \emph{stanem}.
 Zbiór stanów algebry $\mathcal{A}$ oznaczamy przez $\mathcal{S}(\mathcal{A})$.
@@ -154,12 +160,14 @@ Niech $\mathcal{H}$ oznacza ośrodkową przestrzeń Hilberta, a $\mathcal{B}(\ma
 Banacha ograniczonych operatorów liniowych na $\mathcal{H}$.
 Naturalną topologią na $\mathcal{B}(\mathcal{H})$ jest \emph{topologia jednostajna}, zadana
 przez normę operatorową
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \label{eq:operatorNorm}
   ||A|| = %
   \sup \{ ||A\xi||; \, \, \xi \in \mathcal{H}, %
 	    ||\xi|| = 1 \}, \quad A \in \mathcal{B}(\mathcal{H}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 
 Jeżeli $\xi \in \mathcal{H}$,
 to odwzorowanie $A \rightarrow ||A\xi||$ zadaje
@@ -205,9 +213,11 @@ dla których $x y = y x$ dla każdego $x \in \mathfrak{M}$.
     \label{def:vNalgebras}
     Algebrą von Neumanna na $\mathcal{H}$ nazywamy $^{*}$-podalgebrę
     $\mathcal{B}(\mathcal{H})$, dla której
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
         \mathfrak{M} = \mathfrak{M}^{\prime \prime}.
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
     \emph{Faktorem} nazwiemy taką algebrę von Neumanna, która posiada
     trywialne \emph{centrum}, tzn.
     $\mathfrak{M} \cap \mathfrak{M}^{\prime} = \mathbb{C} \mathbf{1}$.
@@ -358,7 +368,7 @@ algebraicznego iloczynu tensorowego przestrzeni
 $\mathfrak{M}_{*}$, $\mathfrak{N}_{*}$ w naturalnej normie na iloczynie
 tensorowym $\mathfrak{M}^{*} \otimes \mathfrak{N}^{*}$,
 dokładniej w normie sprzężonej do normy iniektywnej
-(por. \cite{Takesaki1}, definicja 5.1, str. 220 oraz niżej,
+(por. \cite{Takesaki1}, definicja 5.1, str. 220, oraz niżej,
 str.\,\pageref{def:projectiveoperatornorm}).
 
 \begin{Definition}
@@ -423,9 +433,11 @@ Jeżeli $S$ jest odwzorowaniem kompletnie dodatnim pomiędzy algebrami macierzy,
 $S: M_{m} \rightarrow M_{n}$, wówczas istnieją macierze prostokątne
 $V_{i} \in M_{m \times n}$ rozmiaru ,,$m$ na $n$'', dla $i = 1,2,\ldots,N$,
 takie że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     S(A) = \sum \limits_{i = 1}^{N} V_{i}^{*} A V_{i}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Dowód tego faktu wykorzystuje istnienie izomorfizmu,
 znanego jako izomorfizm Choi-Jamiołkowskiego
 \cite{choi1975completely, jamiolkowski1974effective}:
@@ -436,10 +448,12 @@ znanego jako izomorfizm Choi-Jamiołkowskiego
     $(E_{ij})_{kl} = \delta_{ik} \delta_{jl}$.
     Wówczas $S$ jest odwzorowaniem kompletnie dodatnim,
     wtedy i tylko wtedy, gdy macierz
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
         \sum \limits_{i,j=1}^{m} (\mathbf{1}_{m} \otimes S)
             (E_{ij}^{*} \otimes E_{ij}) \in M_{m} \otimes M_{n}
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
     jest macierzą dodatnią.
 \end{Theorem}
 W następnym rozdziale zobaczymy, jak twierdzenie analogiczne do powyższego

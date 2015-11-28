@@ -7,10 +7,12 @@ iniektywnych algebr von Neumanna, przejdźmy do analizy samych odwzorowań dodat
 
 Powiemy że dodatnie odwzorowanie $S$ na algebrze macierzy $M_{n}$ spełnia nierówność
 Kadisona-Schwarza, jeśli
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:SchwarzInequality}
     S(X^{*}) \, S(X) \: \leq \: S(X^{*} X),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdej macierzy $X \in M_{n}$.
 W ogólności dodatnie odwzorowanie $S$, które zachowuje macierz jednostkową,
 tzn. $S(\mathbf{1}) = \mathbf{1}$,
@@ -46,7 +48,8 @@ będzie bazą w  $M_{2}$, taką że
 $\sigma_{0} = \tfrac{1}{\sqrt{2}}  \mathbf{1}$ oraz
 $\sigma_{i}$
 są znormalizowanymi macierzami Pauliego dla $i=1,2,3$:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \sigma_{1} = \frac{1}{\sqrt{2}} \begin{pmatrix}
         0 & 1 \\ 1 & 0
            \end{pmatrix},
@@ -58,7 +61,8 @@ są znormalizowanymi macierzami Pauliego dla $i=1,2,3$:
 \sigma_{3} = \frac{1}{\sqrt{2}}  \begin{pmatrix}
         1 & 0 \\ 0 & -1
            \end{pmatrix}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Macierz hermitowska $\sigma(a) \in M_{2}$,
 $\sigma(a) = \sum_{\mu =0}^{3} a_{\mu} \sigma_{\mu}$,
 dla $x = (a_{\mu}) = (a_{0}, \vec{a}) \in \mathbb{R}^{4}$,
@@ -74,10 +78,12 @@ a także niech $||\vec{a}||_{2}$ będzie normą euklidesową wektora.
 
 Jeśli $S: M_{2} \rightarrow M_{2}$ jest odwzorowaniem hermitowskim,
 możemy zdefiniować macierz rzeczywistą $\pi(S) \in M_{4}(\mathbb{R})$ poprzez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{def:PiofSiso}
   \sigma(\pi(S) x) = S \sigma(a), \quad x \in \mathbb{R}^{4}
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 lub też $\pi(S)_{\mu \nu} = \text{Tr} \sigma_{\mu} S(\sigma_{\nu})$.
 Rzecz jasna, dla dwóch takich odwzorowań: $S_{1}, S_{2}$, mamy
 $\pi(S_{1} S_{2}) = \pi(S_{1}) \pi(S_{2})$
@@ -116,9 +122,11 @@ o wyznaczniku równym jedności, a elementami grupy $\text{SO}^{+}(1,3) \subset 
 (por. np. G.\,L.\,Naber, \emph{The Geometry of Minkowski Spacetime}
 \cite{Naber1992}).
 Z definicji
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \sigma(\rho(V) x) = V^{*} \sigma(a) V,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla dowolnego $V \in SL_{2}(\mathbb{C})$ i $x \in \mathbb{R}^{4}$.
 Zatem dla odwzorowania $S_{V}: M_{2} \rightarrow M_{2}$,
 takiego, że $S_{V} A = V^{*} A V$, $V \in \text{SL}_{2}(\mathbb{C})$,
@@ -146,9 +154,11 @@ $J \in \text{O}^{+}(1,3)$ i $\mathrm{det} \, J = -1$.
 \begin{proof}
 \label{RandomLabel:875919}
   Odwzorowanie $S$ działa na wektory bazowe $\sigma_{\mu}$ poprzez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  S \sigma_{\mu} = \sum_{\nu = 0}^{3} \pi(S)_{\mu \nu} \sigma_{\nu}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Załóżmy na początek, że $\pi(S) \in \Theta(L_{4})$.
 Jeżeli $\pi(S) = \rho(V) \in \text{SO}^{+}(1,3)$,
 $V \in SL_{2}(\mathbb{C})$,
@@ -161,7 +171,8 @@ skoro każda macierz $A \in M_{2}$ jest kombinacją liniową macierzy hermitowsk
 Z drugiej strony,
 jeśli $\pi(S) = \rho(V) J$,
 to
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 \label{RandomLabel:830200}
 S \sigma(a) =
   a_{0} \, V^{*}V + a_{1} \, V^{*} \sigma_{1} V -
@@ -171,7 +182,8 @@ S \sigma(a) =
   a_{2} \, V^{*} \sigma_{2}^{t} V +
   a_{3} \, V^{*} \sigma_{3}^{t} V =
   V^{*} \sigma(a)^{t} V,
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 ponieważ $\sigma_{2}^{t} = - \sigma_{2}$.
 Zatem, $S$ jest złożeniem transpozycji i odwzorowania kompletnie dodatniego
 (tzn. $S$  jest kompletnie \emph{ko}dodatnie).
@@ -195,10 +207,12 @@ $\pi(S) \in \text{conv} \left ( \Theta(L_{4}) \cup \delta(L_{4}) \right)$.
 Innymi słowy każdy operator zachowujący stożek Lorentza $L_{4}$
 jest wypukłą kombinacją tych operatorów, które dodatkowo zachowują brzeg stożka.
 Z tego, co zostało pokazane powyżej, wynika, iż
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{RandomLabel:587827}
     S = \Lambda_{1} + \Lambda_{2} \circ t,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\Lambda_{1}$, $\Lambda_{2}$
 są odwzorowaniami kompletnie dodatnimi.
 \end{proof}
@@ -268,32 +282,40 @@ Niech $A_{k} = kP + iX$, dla pewnego $X = X^{*} \in M_2$
 oraz $k \in \mathbb{N}$.
 Kładąc $A_{k}$ w nierówności Kadisona-Schwarza
 \eqref{eq:SchwarzInequality}, otrzymujemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 i [S(P), \,  S(X)] - i S([P, \, X])  \leq \frac{1}{k} \left( S(X^{2}) - S(X)^{2} \right),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdego $k \in \mathbb{N}$.
 Zatem
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{ineq:Commutators}
 i [S(P), \, S(X)] - i S([P, \, X]) \leq 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Biorąc tym razem $A'_{k} =kP - i X$ i powtarzając rachunek,
 dostajemy nierówność odwrotną do \eqref{ineq:Commutators},
 a stąd
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:Commutators}
 S([P, X]) = [S(P), S(X)],
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdej hermitowskiej macierzy $X$.
 Ponieważ równanie \eqref{eq:Commutators} jest liniowe w $X$,
 zachodzi również dla każdej macierzy $X \in M_{2}$.
 
 $\ref{lem:condCommut}) \Rightarrow \ref{lem:condCP})$.
 Niech $P$ będzie projektorem ortogonalnym rzędu 1, takim że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:Commutator}
 S([P,X]) = [S(P), \, S(X)],
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdego $X \in M_{2}$.
 Jeśli $S$ jest kompletnie dodatnim odwzorowaniem, wówczas dla każdej pary
 unitarnych macierzy $U, V \in M_{2}$,
@@ -338,22 +360,26 @@ To oznacza, że $\lambda_{1} = 1$ i $\lambda_{2} = 0$ oraz
 $S(E_{12}) = z E_{12}$.
 A zatem $S$ działa na macierz
 $X \in M_{2}$, $X = (x_{ij})_{i,j=1,2}$ jak
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 S(X) = \begin{pmatrix}
  x_{11} & z \, x_{12} \\
 \overline{z} \, x_{21} & x_{22}
 \end{pmatrix}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Stąd wynika już w prosty sposób, że $S$ jest kompletnie dodatnie.
 Rzeczywiście,
 z dodatniości $S$ mamy $|z| \leq 1$.
 Jeśli napiszemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 S(X) =
 \begin{pmatrix}
 1 & z \\ \overline{z} & 1
 \end{pmatrix} \circ X,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie symbol $\circ$ w tym przypadku oznacza iloczyn Hadamarda macierzy,
 tj. iloczyn, w którym mnoży się ze sobą macierze tego samego wymiaru
 element po elemencie.
@@ -374,7 +400,8 @@ Można bez trudu pokazać, że warunek \ref{lem:condProj}. w
 twierdzeniu \ref{thm:MapsPreservingIdentity} jest w istotny sposób silniejszy
 niż warunek \ref{lem:condCommut}.
 Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{2}$, takim że
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{RandomLabel:514431}
     \pi(S) = \begin{pmatrix}
     1 & 0 & 0 & 0 \\
@@ -383,7 +410,8 @@ Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{2}$, takim że
     0 & 0 & 0 & 0
     \end{pmatrix},
     \quad 0 < b < 1,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 czyli $S(\sigma_{1}) = b \sigma_{1}$, a także
 $S(\sigma_{2}) = S(\sigma_{3}) = 0$.
 Wówczas $S\left( [P_{0}, \, X ] \right) = [ S(P_{0}), \, S(X) ]$,
@@ -452,13 +480,15 @@ zapisanej w postaci blokowej
 $X = \left( \begin{smallmatrix} A & u \\ w^{t} & z \end{smallmatrix} \right)$,
 gdzie $A \in M_{n-1}$, $u, w \in \mathbb{C}^{n-1}$ są kolumnami, a
 $z \in \mathbb{C}$, mamy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:SBlockForm}
     S (X) = \begin{pmatrix}
         \hat{S}_{0}(A) & S_{1} u \\
         (\overline{S}_{1} w)^{t} & z
     \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla $\hat{S}_{0}: M_{n-1} \rightarrow M_{n-1}$ będącego z konieczności
 odwzorowaniem Schwarza na $M_{n-1}$ i $S_{1} \in M_{n-1}$.
 Rzeczywiście, ponieważ $S$ jest odwzorowaniem Schwarza,
@@ -477,7 +507,8 @@ $u = (u_{1}, u_{2}, \ldots, u_{n}) = (\vec{u}, u_{n})$,
 $\vec{u} = (u_{1}, u_{2}, \ldots, u_{n-1}) \in \mathbb{C}^{n-1}$,
 $u_{n} \in \mathbb{C}$,
 dostaniemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  SP_{u} \:=\:  S \begin{pmatrix}
     \vec{u} \vec{u}^{\,*} & \overline{u}_{n} \vec{u} \\
     u_{n} \vec{u}^{\,*}   & |u_{n}|^{2}
@@ -488,18 +519,22 @@ dostaniemy
     u_{n} ( S_{1} \vec{u} )^{*} &
         |u_{n}|^{2}
  \end{pmatrix}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 W przypadku, gdy $u_{n} \neq 0$,
 biorąc dopełnienie Schura
 (por. F.\,Zhang, \emph{The Schur complement and its applications} \cite{Zhang2006}),
 mamy, że $SP_{u} \geq 0$, wtedy i tylko wtedy, gdy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{ieq:SchurForS}
   S_{1} \vec{u} \vec{u}^{*} S_{1}^{*} \leq \hat{S}_{0}(\vec{u}\vec{u}^{*}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 To oznacza, że $S$ jest sumą dwóch dodatnich odwzorowań działających na
 jednowymiarowy projektor ortogonalny jak poniżej:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  SP_{u} \:=\:
  \begin{pmatrix}
       S_{1} \vec{u} \vec{u}^{*} S_{1}^{*}  &
@@ -511,9 +546,11 @@ jednowymiarowy projektor ortogonalny jak poniżej:
     \hat{S}_{0}(\vec{u} \vec{u}^{*})  -  S_{1} \vec{u} \vec{u}^{*} S_{1}^{*} & 0 \\
     0 & 0
  \end{pmatrix}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Skoro $S$ jest z założenia ekstremalne i  $S(P_{n}) = P_{n}$,
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  SP_{u} \:=\:
  \begin{pmatrix}
       S_{1} \vec{u} \vec{u}^{*} S_{1}^{*}  &
@@ -528,7 +565,8 @@ Skoro $S$ jest z założenia ekstremalne i  $S(P_{n}) = P_{n}$,
     \begin{pmatrix}
     S_{1} & 0 \\ 0 & 1
     \end{pmatrix}^{*}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Jeśli położymy $U = \left( \begin{smallmatrix} S_{1} & 0 \\ 0 & 1
 \end{smallmatrix} \right) \in M_{n}$,
 z faktu, że $S(P_{n}^{\perp}) = P_{n}^{\perp}$,
@@ -577,13 +615,15 @@ Ponadto, $F(\Delta_{1}) = K_{1}$.
 \begin{proof}
 Niech $S$ będzie odwzorowaniem bistochastycznym na $M_{2}$.
 Macierz $\pi(S)$ możemy zapisać w postaci blokowej
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:Sbistochastic}
 \pi(S) = \begin{pmatrix}
     1  &  \vec{0}^{t} \\
     \vec{0} & Y
     \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 $Y \in M_{3}(\mathbb{R})$,
 a $\vec{0} \in \mathbb{R}^{3}$ jest zerowym wektorem-kolumną.
 Połóżmy $F(S) = Y$.
@@ -617,12 +657,14 @@ wnioskujemy, że jeśli $t_{1} \geq t_{2} \geq t_{3} \geq 0$
 są wartościami singularnymi macierzy $Y$,
 wówczas $Y \in \text{conv} \, \text{SO}(3)$,
 wtedy i tylko wtedy, gdy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:ineqForSingVals}
 t_{1} \leq 1
 \quad \text{and} \quad
 t_{1} + t_{2} - \text{sig} (\text{det} Y) \, t_{3} \leq 1.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Skoro $S$ jest również odwzorowaniem kompletnie kododatnim, tzn.
 $S' = S \circ t$ jest kompletnie dodatnim bistochastycznym odwzorowaniem.
 Niech $F(S') = Y'$.
@@ -699,12 +741,14 @@ Rzeczywiście, skoro $S$ spełnia nierówność Kadisona-Schwarza
 dla każdej normalnej macierzy $A \in M_{n}$,
 zakładając najpierw, że $A = A^{*}$,
 mamy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{RandomLabel:712874}
     || S(A) ||_{HS}^{2} \: = \: \text{Tr} S(A)^{2}
     \: \leq \:  \text{Tr} S(A^{2}) \: = \:
         \text{Tr} A^{2} \: = \: ||A||_{HS}^{2}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Ogólną macierz $A \in M_{n}$ można przedstawić jako sumę
 $A = A_{1} + i A_{2}$,
 gdzie oba składniki, $A_{1}$ i $A_{2}$, to macierze hermitowskie.
@@ -720,14 +764,16 @@ Ponieważ $S$ jest kontrakcją na przestrzeni Hilberta $M_{n}$
 z iloczynem tensorowym Hilberta-Schmidta,
 przestrzeń tą można rozłożyć na sumę prostą przestrzeni $K_{S}$,
 zdefiniowanej jako
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{def:definitionofK}
     K_{S} \: = \: \left\{
         A \in M_{n}: \,\,
             || S^{k} A ||_{HS} = || S^{* k} A ||_{HS} = || A ||_{HS}, \:\:
             \forall k \in \mathbb{N}
         \right\}
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 oraz jej ortogonalnego dopełnienia $K_{S}^{\perp}$.
 Oznaczmy przez $S^{*}$ odwzorowanie bistochastyczne na $M_{n}$,
 sprzężone do $S$ jako operator liniowy na przestrzeni Hilberta $M_{n}$,
@@ -779,15 +825,19 @@ d)  Załóżmy na początku, że $A = A^{*} \in K_{S}$.
 Ponieważ $S^{*k} S^{k}(A) = S^{k} S^{*k}(A) = A$,
 a także na mocy nierówności Kadisona-Schwarza zastosowanej do odwzorowania
 $S^{*k} S^{k}$, mamy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 A^{2} \: = \: \left( S^{*k} S^{k}(A) \right) \left( S^{*k} S^{k}(A) \right)
     \: \leq \: S^{*k} S^{k}(A^{2}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Stąd
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 ||A^{2}||_{HS} \: \leq \: || S^{*k} S^{k}(A^{2}) ||_{HS} \: \leq \:
     || S^{k}(A^{2}) ||_{HS} \: \leq \: ||A^{2}||_{HS},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 tzn. $|| S^{k}(A^{2}) ||_{HS} = ||A^{2}||_{HS}$.
 Podobny argument dowodzi, że
 $|| S^{*k}(A^{2}) ||_{HS} = ||A^{2}||_{HS}$,
@@ -815,11 +865,13 @@ z normą operatorową $|| \cdot ||$
 i mnożeniem $A \circ B = \frac{1}{2}(AB + BA)$,
 jest JB$^{*}$-algebrą.
 Odwzorowanie $S$ jest automorfizmem Jordana na $K_{S}$ oraz
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:SGoesTo0OnKOrth}
     \lim \limits_{k\rightarrow \infty} S^{k}(A)  \: = \:
     \lim \limits_{k\rightarrow \infty} S^{*k}(A) \: = \: 0,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla każdego $A \in K_{S}^{\perp}$.
 \end{Corollary}
 
@@ -879,7 +931,8 @@ wiemy, że również moduł $|S A| \in K$
 \cite{Bratteli2003}, s. 34).
 Zatem oba $B_{+}, B_{-} \in K$.
 Obliczmy
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 || A - SA ||_{HS}^{2} \: = \: \text{Tr} \, ( A - SA )^{2} \: = \:
     \text{Tr} \, ( A - B_{+} + B_{-} )^{2} \: = \: \\
     \text{Tr} \, ( A - B_{+} )^{2} +
@@ -888,7 +941,8 @@ Obliczmy
     || A - B_{+} ||_{HS}^{2} +
         2 \, \text{Tr} \,  A \, B_{-}+ \text{Tr} \, B_{-}^{2}
     \: \geq \: || A - B_{+} ||_{HS}^{2}.
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 Ponieważ $SA$ jest najlepszym przybliżeniem $A$ in $K$,
 dostajemy, że $SA = B_{+}$, tzn. $SA \geq 0$, co kończy dowód.
 \end{proof}
@@ -901,7 +955,8 @@ taka algebra musi być bardzo szczególna,
 przynajmniej w nisko wymiarowym przypadku.
 
 Dla wygody oznaczmy ortogonalne projektory:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{def:OrthogonalProjections}
     P_{1} = \begin{pmatrix}
         1 & 0 & 0 \\
@@ -918,7 +973,8 @@ Dla wygody oznaczmy ortogonalne projektory:
         0 & 0 & 0 \\
         0 & 0 & 1
     \end{pmatrix}
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 oraz $P_{12} = P_{1} + P_{2}$.
 
 \label{page:allpossibleJalg}
@@ -957,12 +1013,14 @@ $M_{2} \oplus \mathbb{C} P_{3}$,
 $M_{2}^{s} \oplus P_{3}$ albo $M_{3}^{s}$.
 Wówczas $K_{S}$ zawiera projektory ortogonalne $P_{1}, P_{2}, P_{3}$,
 a ponieważ $S$ jest automorfizmem Jordana na $K_{S}$ i $S$ zachowuje ślad:
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
     \text{Tr} \, S(P_{i}) S(P_{j}) = \\
 = \frac{1}{2} \text{Tr} \, \left( S(P_{i}) S(P_{j}) + S(P_{j}) S(P_{i}) \right)=
 \frac{1}{2} \text{Tr} \, S(P_{i} P_{j} + P_{j} P_{i})=
 \text{Tr} \, P_{i} P_{j} = \delta_{ij},
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 gdzie $i,j = 1,2,3$ oraz $\delta_{ij}$ jest deltą Kroneckera.
 Stąd, $\left\{S(P_{i})\right\}_{i=1}^{3}$
 jest trójką ortogonalnych projektorów rzędu 1, prostopadłych względem siebie.
@@ -991,14 +1049,16 @@ $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
 
 Niech więc $S\!: M_{3} \rightarrow M_{3}$ będzie odwzorowaniem liniowym
 zadanym przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:DefinitionOfS}
 S(A) \:=\: \begin{pmatrix}
         \frac{1}{2}(a_{11} + a_{22}) & 0 & \frac{1}{\sqrt{2}} a_{13} \\
         0 & \frac{1}{2}(a_{11} + a_{22}) & \frac{1}{\sqrt{2}} a_{32} \\
         \frac{1}{\sqrt{2}} a_{31} & \frac{1}{\sqrt{2}} a_{23} & a_{33}
         \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla
 $A = \left( a_{ij} \right)_{i,j=1}^{3}
         \in M_{3}$.
@@ -1011,7 +1071,8 @@ dla $B \in M_{2}$, gdzie
 $\vec{u},\vec{w} \in \mathbb{C}^{2}$ są wektorami kolumnowymi,
 a $z \in \mathbb{C}$,
 odwzorowanie $S$ działa jak
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     S(A) \:=\: S \begin{pmatrix}
     B & \vec{u} \\
     \vec{w}^{t} & z
@@ -1021,7 +1082,8 @@ odwzorowanie $S$ działa jak
             \frac{1}{\sqrt{2}}(\hat{P}_{1} \vec{u} + \hat{P}_{2} \vec{w}) \\
         \frac{1}{\sqrt{2}}(\hat{P}_{1} \vec{w} + \hat{P}_{2} \vec{u})^{t} & z
     \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie
 $\hat{P}_{1} = \left( \begin{smallmatrix} 1 & 0 \\ 0 & 0 \end{smallmatrix} \right)$,
 $\hat{P}_{2} = \left( \begin{smallmatrix} 0 & 0 \\ 0 & 1 \end{smallmatrix} \right)$
@@ -1047,7 +1109,8 @@ $\eta = (\eta_{1}, \eta_{2}, \eta_{3}) = (\vec{\eta}, \eta_{3})$,
 $\vec{\eta} = (\eta_{1}, \eta_{2}) \in \mathbb{C}^{2}\backslash\{0\}$,
 $\eta_{3} \in \mathbb{C}$.
 Wówczas mamy
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
  SP_{\eta} \:=\:  S \begin{pmatrix}
     \vec{\eta} \vec{\eta}^{\,*} & \overline{\eta}_{3} \vec{\eta} \\
     \eta_{3} \vec{\eta}^{\,*}   & |\eta_{3}|^{2}
@@ -1060,13 +1123,15 @@ Wówczas mamy
           \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)^{*} &
         |\eta_{3}|^{2}
  \end{pmatrix}.
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 Jeżeli $\eta_{3} = 0$, wtedy oczywiście $SP_{\eta} \geq 0$.
 W przypadku, gdy $\eta_{3} \neq 0$,
 biorąc dopełnienie Schura,
 %(por. Theorem 1.12, str.\,34 w \cite{Zhang2006}),
 dostajemy, że $SP_{\eta} \geq 0$, wtedy i tylko wtedy, gdy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{ieq:SchurForS}
    \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
     \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)
@@ -1074,9 +1139,11 @@ dostajemy, że $SP_{\eta} \geq 0$, wtedy i tylko wtedy, gdy
     \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)^{*}
     \: \leq \:
         |\eta_{3}|^{2} \, ||\vec{\eta}||^{2} \, \mathbf{1}_{2}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Łatwo jednak zauważyć, że ta nierówność jest spełniona:
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
    \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
     \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} \right)
    \left ( \overline{\eta}_{3} \hat{P}_{1} \vec{\eta} +
@@ -1088,17 +1155,20 @@ dostajemy, że $SP_{\eta} \geq 0$, wtedy i tylko wtedy, gdy
     || \eta_{3} \hat{P}_{2} \overline{\vec{\eta}} ||^{2} \right) \, \mathbf{1}_{2}
     \: = \:
 |\eta_{3}|^{2} \, ||\vec{\eta}||^{2} \, \mathbf{1}_{2}.
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 Zatem $S$ jest odwzorowaniem bistochastycznym.
 Ponadto,
 $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
 Rzeczywiście,
 z bezpośredniego rachunku wynika, że dla każdego $A \in M_{3}$:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \lim \limits_{k \rightarrow \infty} S^{k}(A) \:=\:
 \frac{1}{2} (\text{Tr} \, P_{12} A )\, P_{12} +
     (\text{Tr} \, P_{3} A)\, P_{3} \, \in K_{S}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Z definicji \eqref{def:definitionofK},
 dostajemy postać JB$^{*}$-algebry $K_{S}$.
 
@@ -1112,7 +1182,8 @@ a stąd $S_{0}(P_{3}) = \alpha P_{3}$ dla pewnego $0 \leq \alpha \leq 1$.
 Przestrzeń $M_{2}$ możemy traktować jako zanurzoną w $M_{3}$
 w następujący sposób:
 $A \in M_{2} \! \subset \! M_{3}$, o ile
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{RandomLabel:450031}
     A \: = \: \left( \begin{array}{ccc}
     a_{11} & a_{12} & 0 \\
@@ -1120,12 +1191,14 @@ $A \in M_{2} \! \subset \! M_{3}$, o ile
     0 & 0 & 0
     \end{array} \right), \quad
     a_{ij} \in \mathbb{C}, \,\, i,j = 1,2.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Chcemy pokazać, że $S_{0}(A) \in M_{2} \! \subset \! M_{3}$
 dla każdego $A \in M_{2} \! \subset \! M_{3}$.
 Niech $B \in M_{2}$; załóżmy ponadto z początku, że $B \geq 0$.
 Wówczas
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:SMapsM2intoM2}
  0 \:\leq\: S_{0} \begin{pmatrix}
                B & \vec{0} \\ \vec{0}^{t} & 0
@@ -1133,13 +1206,15 @@ Wówczas
  \begin{pmatrix}
   \hat{S}_{0}(B) & \vec{u} \\ \vec{w}^{t} & r
  \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla pewnych wektorów $\vec{u}, \vec{w} \in \mathbb{C}^{2}$ oraz $r \geq 0$.
 Odwzorowanie $\hat{S}_{0}:B \mapsto \hat{S}_{0}(B) \in M_{2}$ jest
 z konieczności dodatnie na $M_{2}$, a dodatkowo
 $\hat{S}_{0}(B) \leq \frac{1}{2} (\text{Tr} B) \mathbf{1}_{2}$.
 Z drugiej strony,
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  0 \: \leq \:
  \begin{pmatrix}
   \hat{S}_{0}(B) & \vec{u} \\ \vec{w}^{t} & r
@@ -1150,7 +1225,8 @@ Z drugiej strony,
  \begin{pmatrix}
   \frac{1}{2} (\text{Tr} B) \, \mathbf{1}_{2} & \vec{0} \\ \vec{0}^{t} & 0
  \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 a zatem $r=0$, $\vec{u}=\vec{w}=\vec{0}$.
 Ponieważ każda macierz $B \in M_{2}$ jest kombinacją liniową czterech macierzy
 dodatnich, dostajemy w istocie, że
@@ -1171,13 +1247,15 @@ $X = |z_{1}|^{2} P_{j} + z_{1} \overline{z_{2}} E_{j3} +
 dla pewnych $z_{1}, z_{2} \in \mathbb{C}$.
 Jasne jest, że $X \geq 0$.
 Ponieważ $S_{0}(E_{j3}) = S_{0}(E_{3j})^{*}$,
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 0 \: \leq \: \langle e_{i}, S_{0}(X) e_{i} \rangle \: = \:
 |z_{1}|^{2} \, \delta_{ij} +
 2 \, \text{Re} \, z_{1} \overline{z_{2}} \,
     \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle +
 |z_{2}|^{2} \, \delta_{i3},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\delta_{ij}$ jest deltą Kroneckera.
 Jako że powyższe równanie jest prawdziwe dla każdej pary
 $z_{1}, z_{2} \in \mathbb{C}$ oraz $j \neq 3$,
@@ -1195,7 +1273,8 @@ $A  =   \left( \begin{smallmatrix}
     B & \vec{u} \\
     \vec{w}^{t} & z
     \end{smallmatrix} \right) \in M_{3}$,
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     S_{0}(A) \:=\: S_{0} \begin{pmatrix}
     B & \vec{u} \\
     \vec{w}^{t} & z
@@ -1204,12 +1283,15 @@ $A  =   \left( \begin{smallmatrix}
         \hat{S}_{0}(B) & S_{1} \vec{u} + S_{2} \vec{w} \\
         (\overline{S}_{1} \vec{w} + \overline{S}_{2} \vec{u})^{t} & \alpha z
     \end{pmatrix}
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 oraz  $S_{1}, S_{2} \in M_{2}$, których elementy macierzowe dane są przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 (S_{1})_{ij} = \langle e_{i}, S(E_{j3}) e_{3} \rangle, \quad \quad
 (S_{2})_{ij} = \langle e_{i}, S(E_{3j}) e_{3} \rangle.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 
 Załóżmy, że $\alpha = 0$.
 Wówczas, skoro $S_{0} P_{\eta} \geq 0$ dla każdego
@@ -1217,7 +1299,8 @@ $\eta \in \mathbb{C}^{3}\backslash\{0\}$,
 mamy $S_{1} = S_{2} = 0$.
 Ponieważ
 $0 \leq (S - S_{0}) P(1,1,1)$,
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 0 \: \leq \: \hat{S}_{0} \begin{pmatrix}
     1 & 1 \\ 1 & 1
     \end{pmatrix} \: \leq \:
@@ -1228,7 +1311,8 @@ $0 \leq (S - S_{0}) P(1,1,1)$,
     \begin{pmatrix}
     1 & -1 \\ -1 & 1
     \end{pmatrix},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 tzn. dla pewnego $\beta \geq 0$,
 $
 \hat{S}_{0} \left( \begin{smallmatrix}
@@ -1267,11 +1351,13 @@ Zatem możemy założyć w dalszym toku, że $\alpha > 0$.
 
 Bezpośrednim rachunkiem dowodzimy, że dla każdego
 $\vec{\eta} \in \mathbb{C}^{2}$:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \label{eq:ZeroTrace}
  \text{Tr} \, P(-2\vec{\upsilon}, ||\vec{\eta}||^{2}) \, S P(\vec{\eta},1)
      \:=\: 0,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\vec{\upsilon} =
  \frac{1}{\sqrt{2}} \left(
   \hat{P}_{1} \vec{\eta} + \hat{P}_{2} \overline{\vec{\eta}}
@@ -1281,11 +1367,13 @@ Ponieważ $0 \leq S_{0} \leq S$, równanie
 \eqref{eq:ZeroTrace} zachodzi także dla $S_{0}$.
 Rozpisując to równanie oraz zakładając, że $||\vec{\eta}|| = 1$,
 dostajemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \label{eq:ZeroTraceExplicit}
  4 \, \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon} -
  4 \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} + \alpha \: = \: 0,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\vec{\upsilon_{0}} = S_{1} \vec{\eta} + S_{2} \overline{\vec{\eta}}$.
 Aby nie komplikować niepotrzebnie zapisu,
 pamiętajmy, że $\vec{\upsilon}$ i $\vec{\upsilon}_{0}$ zależą od $\vec{\eta}$,
@@ -1298,32 +1386,38 @@ a przez to
 $|\vec{\upsilon}^{\,*} \vec{\upsilon}_{0}|^{2} \leq
   \alpha \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon}$.
 Zatem
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 4 \left( \text{Im} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} \right)^{2} +
 \left( 2 \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} - \alpha \right)^{2}
  \: \leq \:
 4 \alpha \, \vec{\upsilon}^{\,*} \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{\upsilon}
     - 4 \alpha \, \text{Re} \, \vec{\upsilon}^{\,*} \vec{\upsilon}_{0} + \alpha^{2}  = 0,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 tj. $\vec{\upsilon}^{\,*} \vec{\upsilon}_{0} = \frac{\alpha}{2}$.
 Podstawiając $\vec{\upsilon}$ i $\vec{\upsilon}_{0}$,
 otrzymujemy:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:ComplicatedForEtaPlus}
 \vec{\eta}^{\,*} \left( \hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \right) \vec{\eta}
     + \vec{\eta}^{\,*} \hat{P}_{1} S_{2} \overline{\vec{\eta}}
     + \vec{\eta}^{\,t} \hat{P}_{2} S_{1} \vec{\eta} \: = \: \frac{\alpha}{\sqrt{2}}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Skoro równanie jest prawdziwe dla każdego  $\vec{\eta} \in \mathbb{C}^{2}$,
 możemy powtórzyć całą argumentację, tym razem zamieniając
 $\vec{\eta} \mapsto i \vec{\eta}$,
 i otrzymać:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:ComplicatedForEtaMinus}
 \vec{\eta}^{\,*} \left( \hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \right) \vec{\eta}
     - \vec{\eta}^{\,*} \hat{P}_{1} S_{2} \overline{\vec{\eta}}
     - \vec{\eta}^{\,t} \hat{P}_{2} S_{1} \vec{\eta} \: = \: \frac{\alpha}{\sqrt{2}}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Dodając do siebie
 \eqref{eq:ComplicatedForEtaPlus} i \eqref{eq:ComplicatedForEtaMinus},
 mamy:
@@ -1333,18 +1427,22 @@ $
 $
 dla dowolnego $\vec{\eta}$.
 Stąd
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:S1PlusS2EqualsOne}
 \hat{P}_{1} S_{1} + S_{2}^{t} \hat{P}_{2} \: = \:
      \frac{\alpha}{\sqrt{2}} \mathbf{1}_{2}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Odejmując \eqref{eq:ComplicatedForEtaMinus} od
 \eqref{eq:ComplicatedForEtaPlus},
 dostajemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     \vec{\eta}^{\,*} \hat{P}_{1} S_{2} \overline{\vec{\eta}}
     + \vec{\eta}^{\,t} \hat{P}_{2} S_{1} \vec{\eta} \: = \: 0.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Niech  $\vec{\eta}$ będzie po kolei jednym z następujących wektorów:
 $(1,0)$, $(0,1)$,
 $(i,0)$, $(0,i)$,
@@ -1353,7 +1451,8 @@ $(\frac{1}{\sqrt{2}},\frac{i}{\sqrt{2}})$.
 Otrzymujemy, że $\hat{P}_{1} S_{2} = \hat{P}_{2} S_{1} = 0$.
 Łącząc to z \eqref{eq:S1PlusS2EqualsOne},
 dostajemy
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 S_{1} = \begin{pmatrix}
     \frac{\alpha}{\sqrt{2}} & z_{0} \\ 0 & 0
 \end{pmatrix}, \quad
@@ -1361,7 +1460,8 @@ S_{2} = \begin{pmatrix}
      0 & 0 \\ - z_{0} & \frac{\alpha}{\sqrt{2}}
 \end{pmatrix}, \quad
 z_{0} \in \mathbb{C}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 
 Kładąc $\vec{\upsilon}^{\,*} \vec{\upsilon}_{0} = \frac{\alpha}{2}$
 w równaniu \eqref{eq:ZeroTraceExplicit}, mamy
@@ -1370,11 +1470,13 @@ $
 \frac{\alpha}{4}
 $.
 Stąd
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  \vec{\upsilon}^{\,*} \left(
     \alpha \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) -\vec{\upsilon}_{0} \vec{\upsilon}_{0}^{\,*}
   \right) \vec{\upsilon} \: = \: 0,
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 a ponieważ
 $\vec{\upsilon}_{0} \vec{\upsilon}_{0}^{\,*} \leq  \alpha \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*})$,
 musi być tak, że
@@ -1386,7 +1488,8 @@ Raz jeszcze powtórzmy całą argumentację, zamieniając
 $\vec{\eta} \mapsto i \vec{\eta}$,
 dodając otrzymany wynik i odejmując od poprzedniego.
 Ostatecznie dostajemy:
-\begin{subequations}
+\begin{linenomath*}
+ \begin{subequations}
     \begin{align}
 \label{eq:SZeroIsAlmostOneA}
 \eta_{1} \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{e}_{1} \: = \:
@@ -1396,18 +1499,21 @@ Ostatecznie dostajemy:
    \left(- \frac{\sqrt{2}}{2} z_{0} \overline{\eta}_{1} + \frac{\alpha}{2} \overline{\eta}_{2} \right)
        \, \vec{e}_{2},
     \end{align}
-\end{subequations}
+ \end{subequations}
+\end{linenomath*}
 gdzie $\vec{\eta} = (\eta_{1}, \eta_{2})$ oraz
 $\vec{e}_{1} = (1,0), \vec{e}_{2} = (0,1) \in \mathbb{C}^{2}$.
 Wykorzystując np. \eqref{eq:SZeroIsAlmostOneA}
 i mnożąc przez  $\overline{\eta}_{1} \vec{e}_{1}^{\,*}$,
 mamy:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 0 \: \leq \:
  |\eta_{1}|^{2} \, \vec{e}_{1}^{\,*} \, \hat{S}_{0}(\vec{\eta} \vec{\eta}^{\,*}) \vec{e}_{1}
  \: = \:
 \frac{\alpha}{2} |\eta_{1}|^{2} + \frac{\sqrt{2}}{2} z_{0} \overline{\eta}_{1} \eta_{2},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 dla dowolnego $\vec{\eta} \in \mathbb{C}^{2}$, $||\vec{\eta}|| =1$.
 Zatem $z_{0} = 0$ i
 $S_{1} = \frac{\alpha}{2} \hat{P}_{1}$,
@@ -1479,10 +1585,12 @@ Mając dane odwzorowanie dodatnie $S: M_{n} \rightarrow M_{n}$,
 świadek splątania związany z $S$ to macierz
 $W_{S} \in M_{n^{2}} = M_{n} \! \otimes \! M_{n}$,
 zdefiniowana jako
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{def:entanglement-witness}
     W_{S} = \sum \limits_{i,j =1}^{n} E_{ij} \otimes S(E_{ij}),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $\{ E_{ij}\}_{i,j=1}^{n}$ to macierze posiadające wszystkie
 zerowe elementy, oprócz elementu $ij$ równego jedności.
 Twierdzenie udowodnione przez Choi i Jamiołkowskiego
@@ -1501,7 +1609,8 @@ stowarzyszone jest odwzorowanie zadane w równaniu \eqref{eq:DefinitionOfS},
 oraz podanie rodziny stanów splątanych na
 $M_{9} = M_{3} \! \otimes \! M_{3}$, wykrywanych przez $S$.
 W tym przypadku:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{WS-C}
  W_S =  \left( \begin{array}{ccc|ccc|ccc}
  \frac{1}{2} &  \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \frac{1}{\sqrt{2}} \\
@@ -1514,18 +1623,24 @@ W tym przypadku:
  \cdot & \cdot& \cdot& \cdot& \cdot& \frac{1}{\sqrt{2}}& \cdot& \cdot& \cdot \\
  \frac{1}{\sqrt{2}}& \cdot& \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& 1
   \end{array} \right),
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie dla czytelności oznaczyliśmy elementy zerowe macierzy przez kropki.
 Macierz $W_{S}$ nie jest dodatnią macierzą w
 $M_{9} = M_{3} \! \otimes \! M_{3}$.
 Niech $U \in \text{U}(9)$ będzie macierzą unitarną, dla której
 $U^{*} W_{S} U = W_{S}^{(2)} \oplus W_{S}^{(7)}$,
 gdzie
+\begin{linenomath*}
 \begin{equation}
 \label{WS-DirectSum}
  W_{S}^{(2)} = \left(\begin{array}{cc}
     0 & \frac{1}{\sqrt{2}}  \\ \frac{1}{\sqrt{2}}  & 0
-  \end{array}\right) \in M_{2}, \quad
+  \end{array}\right) \in M_{2}
+ \end{equation}
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}
  W_S^{(7)}\ = \  \left( \begin{array}{ccccccc}
  \frac{1}{2} &  \cdot& \cdot& \cdot& \cdot& \cdot& \frac{1}{\sqrt{2}} \\
  \cdot& \frac{1}{2} &\cdot& \cdot& \cdot& \cdot& \cdot\\
@@ -1535,7 +1650,8 @@ gdzie
  \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& \cdot  \\
  \frac{1}{\sqrt{2}}& \cdot& \cdot& \cdot& \cdot& \cdot& 1
   \end{array} \right) \in M_{7}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Jasne jest, że $W_{S}^{(7)} \geq 0$.
 Niech także  $\vec{v}$ będzie jednym z wektorów własnych $W_{S}^{(2)}$:
 $\vec{v} = \frac{1}{\sqrt{2}} (1,-1)^{t} \in \mathbb{C}^{2}$,
@@ -1552,17 +1668,20 @@ $\text{Tr}\, W_{S}^{(7)} \rho_{0} < \frac{1}{\sqrt{2}}$.
 Wówczas $\rho \geq 0$ i $\text{Tr} \rho = 1$,
 tzn. $\rho$ jest macierzą gęstości.
 Co więcej,
-\begin{multline}
+\begin{linenomath*}
+ \begin{multline}
 \label{RandomLabel:851252}
     \text{Tr}\, W_{S} \rho =
 \frac{1}{2} \text{Tr}\, W_{S} U (P_{\vec{v}} \oplus \rho_{0}) U^{*} =
 \frac{1}{2} \text{Tr}\, (W_{S}^{(2)} \oplus W_{S}^{(7)}) (P_{\vec{v}} \oplus \rho_{0}) = \\ =
 \frac{1}{2} \text{Tr}\, W_{S}^{(2)} P_{\vec{v}} + \frac{1}{2} \text{Tr}\, W_{S}^{(7)} \rho_{0}
 < 0,
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 co oznacza, że $W_{S}$ wykrywa stan splątany $\rho$.
 W szczególności stan $\rho$ zadany przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{PPTstate}
  \rho =  \frac{1}{7} \left( \begin{array}{ccc|ccc|ccc}
  1 &  \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& \cdot& -1 \\
@@ -1575,7 +1694,8 @@ W szczególności stan $\rho$ zadany przez
  \cdot & \cdot& \cdot& \cdot& \cdot& -1 & \cdot& 1 & \cdot \\
  -1 & \cdot& \cdot& \cdot& \cdot & \cdot& \cdot& \cdot& 1
   \end{array} \right)
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 jest stanem PPT, tzn. $(I \otimes t)\rho$ jest wciąż macierzą gęstości,
 jednak $\text{Tr}\, W_{S} \rho = \frac{2}{7} - \frac{2\sqrt{2}}{7} < 0$.
 
@@ -1604,7 +1724,8 @@ traktowanej jako przestrzeń Hilberta z iloczynem skalarnym Hilberta-Schmidta.
 
 Wybierzmy znormalizowany zbiór macierzy Gell-Manna
 $\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \nonumber
     \lambda_{1} = \frac{1}{\sqrt{2}} \begin{pmatrix}
             0 & 1 & 0 \\
@@ -1621,8 +1742,10 @@ $\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
             0 & -1 & 0 \\
             0 & 0 & 0
         \end{pmatrix},
-\end{equation}
-\begin{equation}
+ \end{equation}
+\end{linenomath*}
+\begin{linenomath*}
+ \begin{equation}
 \nonumber
     \lambda_{4} = \frac{1}{\sqrt{2}} \begin{pmatrix}
             0 & 0 & 1 \\
@@ -1639,8 +1762,10 @@ $\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
             0 & 0 & 1 \\
             0 & 1 & 0
         \end{pmatrix},
-\end{equation}
-\begin{equation}
+ \end{equation}
+\end{linenomath*}
+\begin{linenomath*}
+ \begin{equation}
 \nonumber
     \lambda_{7} = \frac{1}{\sqrt{2}} \begin{pmatrix}
             0 & 0 & 0 \\
@@ -1652,7 +1777,8 @@ $\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
             0 & 1 & 0 \\
             0 & 0 & -2
         \end{pmatrix}
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 oraz $\lambda_{0} = \frac{1}{\sqrt{3}} \mathbf{1}_{3}$.
 Każda macierz hermitowska $A = A^{*} \in M_{3}$ może zostać przedstawiona
 jako $A = \lambda(a)$, gdzie
@@ -1670,10 +1796,12 @@ zdefiniujmy macierz $x \in M_{8}(\mathbb{R})$ poprzez
 $a_{ij} = \text{Tr} \lambda_{i} S(\lambda_{j})$,
 $i,j = 1,2,\ldots,8$.
 Wówczas łatwo zobaczyć, że $S$ działa na macierze samosprzężone jak
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
 \label{eq:isomoprhism}
 S(\lambda(a_{0}, \vec{a})) = \lambda(a_{0}, x \vec{a}).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Dla macierzy $x \in M_{8}(\mathbb{R})$,
 oznaczmy odwzorowanie liniowe na $M_{3}$,
 zachowujące ślad i macierz jednostkową
@@ -1700,10 +1828,12 @@ z inwolucją zadaną przez transpozycję macierzy: $A \mapsto A^{t}$.
 w $M_{8}(\mathbb{R})$, względem normy operatorowej,
 o środku w $\hat{0}$ i promieniu $r > 0$.
     Wówczas
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
         \overline{K}_{\frac{1}{2}}(\hat{0})
             \subset \Lambda \subset \overline{K}_{1}(\hat{0}).
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
 \end{Theorem}
 \begin{proof}
     Załóżmy, że $x \in M_{8}(\mathbb{R})$ oraz $||x|| \leq \frac{1}{2}$.
@@ -1715,30 +1845,36 @@ o środku w $\hat{0}$ i promieniu $r > 0$.
     $|| \vec{m} ||_{2} = || \vec{n} ||_{2} = \sqrt{\frac{2}{3}}$,
 gdzie  $|| \cdot||_{2}$ oznacza standardową normę euklidesową.
 Ponieważ $||x|| \leq \frac{1}{2}$, więc
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
         \text{Tr} \, P_{\vec{m}} S_{x}(P_{\vec{n}}) =
         \frac{1}{3} + \langle \vec{m}, x \vec{n} \rangle \geq
         \frac{1}{3} - |\langle \vec{m}, x \vec{n} \rangle| \geq 0.
         %\frac{1}{3} - \frac{1}{2} \frac{2}{3} = 0.
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
 Stąd $S_{x}$ jest dodatnie, co oznacza, że $x \in \Lambda$.
 
 Niech teraz $x \in \Lambda$.
 Wtedy dla każdego $A = A^{*} \in M_{3}$, $S_{x}$
 spełnia nierówność Kadisona-Schwarza \eqref{eq:SchwarzInequality}:
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
      \label{eq:KSineq}
         S(A)^{2} \leq S(A^{2}).
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
 Niech $\vec{n} \in \mathbb{R}^{8}$;
 ponieważ $\lambda(\frac{1}{\sqrt{3}}, \vec{n})$
 jest macierzą samosprzężoną, z \eqref{eq:KSineq}, dostajemy
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
         \frac{1}{\sqrt{3}} + || x \vec{n} ||_{2}^{2} = \text{Tr}\,
         \left ( S_{x}(\lambda(\frac{1}{\sqrt{3}}, \vec{n}) \right)^{2} \leq
         \text{Tr}\, \lambda(\frac{1}{\sqrt{3}}, \vec{n})^{2} =
         \frac{1}{\sqrt{3}} + ||\vec{n}||_{2}^{2},
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
 tzn. $||x\vec{n}||_{2} \leq ||\vec{n}||_{2}$
 dla każdego $\vec{n} \in \mathbb{R}^{8}$,
 co daje w rezultacie: $x \in \overline{K}_{1}(\hat{0})$.
@@ -1831,7 +1967,7 @@ pracy S.\,Schwarza, \emph{On Hausdorff bicompact semigroups}
             $\mathcal{G}(\Lambda) = \left \{ x \in \Lambda \: |  \: \exists \, y \in \Lambda, xy = yx = \mathbf{1}_{8} \right \}$.
     \end{enumerate}
    Dla elementu idempotentnego $e \in \mathcal{E}(\Lambda)$,
-   zdefiniujmy następujące podzbiory $\Lambda$:
+   zdefiniujmy następujące \mbox{podzbiory $\Lambda$}:
    \begin{enumerate}
         \item niech $H(e)$ będzie maksymalną podgrupą $\Lambda$
             zawierającą $e \in \mathcal{E}(\Lambda)$;
@@ -1947,11 +2083,13 @@ Załóżmy, że $\vec{n} \in \ker e$ oraz $\vec{m} \in \mathcal{R}(e)$,
 gdzie $\mathcal{R}(e)$ oznacza obraz operatora $e$.
 Niech $\alpha \in \mathbb{R}$.
 Wówczas
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     || \alpha \vec{m} ||^{2} = || P (\vec{n} + \alpha \vec{m}) ||^{2} \leq
     || \vec{n} + \alpha \vec{m}||^{2} \leq ||\vec{n}||^{2} +
         2 \alpha \langle \vec{n}, \vec{m} \rangle + || \alpha \vec{m}||^{2},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 tzn. $||\vec{n}||^{2} + 2 \alpha  \langle \vec{n}, \vec{m} \rangle \geq 0$,
 dla dowolnego $\alpha \in \mathbb{R}$.
 To z kolei oznacza, że
@@ -1984,12 +2122,14 @@ Na mocy takiego samego rozumowania, mamy także: $h h^{t} = e$.
 
 Przypomnijmy, że dla  bistochastycznego odwzorowania $S$
 przez $K_{S}$ oznaczamy stabilną podprzestrzeń zdefiniowaną przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
     K_{S} = \left \{ x \in M_{3} \:|\:
             \forall k \in \mathbb{N} \,\,
             || S^{k} x ||_{HS} = || S^{*k} x ||_{HS} =  ||x||_{HS}
     \right \},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 gdzie $S^{*}$ oznacza odwzorowanie sprzężone.
 Fakt, że $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$
 można uogólnić do następującego twierdzenia.
@@ -2055,9 +2195,11 @@ $\tau = P_{13468} - P_{257}$.
 \label{thm:Idempotents}
 Zbiór $\mathcal{E}(\Lambda)$
 jest sumą mnogościową siedmiu rozłącznych zbiorów:
-    \begin{equation}
+    \begin{linenomath*}
+ \begin{equation}
         \mathcal{E}(\Lambda) = \bigcup \limits_{e_{0} \in J} \mathcal{E}_{G_{3}}(e_{0}),
-    \end{equation}
+     \end{equation}
+\end{linenomath*}
     gdzie $J = \left \{ \hat{0}, P_{8}, P_{38}, P_{138}, P_{1238}, P_{13468}, \mathbf{1}_{8} \right \}$.
 \end{Theorem}
 \begin{proof}
@@ -2321,7 +2463,8 @@ $\left \{ x \in Q_{0}(\hat{0}) \:|\: ||x|| = \frac{1}{2} \right \}$.
 Jednym z przykładów takich odwzorowań jest znane przekształcenie podane
 po raz pierwszy przez M.-D.\,Choi \cite{choi1977extremal}.
 Uogólnione odwzorowanie tego typu ma postać
-\begin{multline}\label{eq:choi}
+\begin{linenomath*}
+ \begin{multline}\label{eq:choi}
 \Phi[a,b,c](X)=\\
 \frac{1}{2}
 \begin{pmatrix}
@@ -2329,12 +2472,15 @@ ax_{11}+bx_{22}+cx_{33} & -x_{12} & -x_{13} \\
 -x_{21} & cx_{11}+ax_{22}+bx_{33} & -x_{23} \\
 -x_{31} & -x_{32} & bx_{11}+cx_{22}+ax_{33}
 \end{pmatrix},
-\end{multline}
+ \end{multline}
+\end{linenomath*}
 gdzie $X = (x_{ij})_{i,j = 1}^{3}$,
 jeżeli wprowadzimy parametryzację:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  a(t)=\dfrac{(1-t)^2}{1-t+t^2},\quad b(t)=\dfrac{t^2}{1-t+t^2},\quad c(t)=\dfrac 1{1-t+t^2},
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 $0 \leq t < 1$,
 wówczas $\Phi[a(t), b(t), c(t)]$ jest odwzorowaniem bistochastycznym, ekstremalnym
 w zbiorze wszystkich odwzorowań dodatnich na $M_{3}$.
@@ -2345,7 +2491,8 @@ K.-C.\,Ha, S.-H.\,Kye \emph{Entanglement witnesses arising from exposed positive
 \cite{ha2011entanglement}).
 Rodzina macierzy $a_{t}$, dla której
 $S_{a_{t}} = \Phi[a(t), b(t), c(t)]$ jest zadana przez
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
  a_{t} = \begin{pmatrix}
      - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
      0 & - \frac{1}{2} & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -2356,7 +2503,8 @@ $S_{a_{t}} = \Phi[a(t), b(t), c(t)]$ jest zadana przez
      0 & 0 & 0 & 0 & 0 & 0 & - \frac{1}{2} & 0 \\
      0 & 0 & \frac{\sqrt{3}(1 - 4t + t^{2})}{4(1 - t + t^{2})} & 0 & 0 & 0 & 0 & \frac{1 - 4t + t^{2}}{4(1 - t + t^{2})} \\
  \end{pmatrix}.
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 Warto zaznaczyć, że każde
 $a_{t} = \frac{1}{2} R_{t}$, gdzie $R_{t} \in \text{O}(8)$,
 tak jak w twierdzeniu \ref{thm:oneHalfofOrthogonal}.
@@ -2366,12 +2514,14 @@ gdzie jednym spośród nich jest odwzorowanie zadane przez równanie
 \eqref{eq:DefinitionOfS} z poprzedniego podrozdziału.
 Macierz
 $x \in \Lambda$ w tym przypadku ma postać diagonalną:
-\begin{equation}
+\begin{linenomath*}
+ \begin{equation}
   x =
  \text{diag}(0,0,0,
  \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, \frac{-1}{\sqrt{2}},
  1).
-\end{equation}
+ \end{equation}
+\end{linenomath*}
 
 Powiemy, że dwie macierze $x, y \in \Lambda$ są równoważne,
 wtedy i tylko wtedy, gdy istnieją $g_{1}, g_{2} \in G_{3}$
