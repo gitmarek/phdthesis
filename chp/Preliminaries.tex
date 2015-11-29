@@ -23,7 +23,7 @@ obie wyposażone w naturalny iloczyn skalarny.
 Dla ogólnej przestrzeni Hilberta,
 niekoniecznie skończenie wymiarowej,
 zarezerwujmy symbol $\mathcal{H}$.
-Wektory należące do $\mathcal{H}$ oznaczamy
+Wektory należące do $\mathcal{H}$ oznaczamy:
 $\eta, \xi, \upsilon$ itd.
 Dla odróżnienia od wektorów należących do innej przestrzeni,
 będziemy czasem używać strzałek: $\vec{\eta}, \vec{\xi}, \vec{\upsilon}$ itd.
@@ -40,7 +40,8 @@ Operatory liniowe na $\mathbb{C}^{n}$ lub $\mathbb{R}^{n}$,
 a więc macierze,
 będziemy oznaczać zwykle $A, B, C$ itd.
 Przestrzeń Banacha wszystkich operatorów liniowych,
-ograniczonych w standardowej normie operatorowej,
+ograniczonych w standardowej normie operatorowej
+\eqref{eq:operatorNorm},
 będziemy oznaczać $\mathcal{B}(\mathcal{H})$.
 Dla $A \in \mathcal{B}(\mathcal{H})$,
 symbol $A^{*}$ oznacza sprzężenie Hermitowskie operatora.
@@ -51,10 +52,10 @@ Algebrę macierzy kwadratowych rozmiaru $n$ nad ciałem liczb
 rzeczywistych lub zespolonych,
 a więc gdy $\mathcal{H} = \mathbb{C}^{n}$ lub
 $\mathcal{H} = \mathbb{R}^{n}$,
-będziemy dodatkowo oznaczać symbolem $\mathcal{M}_{n}(\mathbb{R})$ lub
-$\mathcal{M}_{n}(\mathbb{C})$;
-zawsze $\mathcal{M}_{n} = \mathcal{M}_{n}(\mathbb{C})$.
-Gdy $A \in \mathcal{M}_{n}$,
+będziemy dodatkowo oznaczać symbolem $M_{n}(\mathbb{R})$ lub
+$M_{n}(\mathbb{C})$;
+zawsze $M_{n} = M_{n}(\mathbb{C})$.
+Gdy $A \in M_{n}$,
 $A^{t}$ oznacza transpozycję macierzy,
 a $\text{Tr} A$ jej ślad.
 Dla ogólnych przestrzeni liniowych $V$ i $W$,
@@ -76,9 +77,10 @@ $\xi_{1}, \xi_{2} \in \mathcal{H}_{2}$.
 
 
 \section{Algebry operatorowe}
-W niniejszym podrozdziale w celu przytoczenia ogólnie przyjętych definicji
-i znanych twierdzeń z teorii algebr operatorów posłużymy się kilkoma wybranymi
-publikacjami, między innymi
+W niniejszym podrozdziale,
+w celu przytoczenia ogólnie przyjętych definicji
+i znanych twierdzeń z teorii algebr operatorów,
+posłużymy się kilkoma wybranymi publikacjami, między innymi
 M.\,Takesaki, \emph{Theory of operator algebras}, t.\,1. \cite{Takesaki1} oraz
 O.\,Bratteli, \emph{Operator Algebras and Quantum Statistical Mechanics}, t.\,1
 \cite{Bratteli2003}.
@@ -86,7 +88,7 @@ O.\,Bratteli, \emph{Operator Algebras and Quantum Statistical Mechanics}, t.\,1
 \paragraph{C*-algebry.}
 Struktura C*-algebry i algebry von Neumanna ma kluczowe znaczenie z punktu widzenia
 zastosowań do opisu układów kwantowych.
-Przytoczmy więc podstawowe definicje i własności z tej dziedziny.
+Przytoczmy więc podstawowe definicje i własności tych obiektów.
 Algebrą Banacha nazywamy przestrzeń Banacha $\mathcal{A}$,
 tj. unormowaną przestrzeń
 liniową zupełną \cite{Rudin1991}, dla której mnożenie jest
@@ -187,12 +189,12 @@ Analogicznie do topologii mocnych, można za pomocą odpowiedniej rodziny
 półnorm
 zdefiniować na $\mathcal{B}(\mathcal{H})$ topologie \emph{słabą} i \emph{$\sigma$-słabą}.
 I tak topologię słabą
-wyznaczać będzie rodzina półnorm $A \rightarrow |(\xi, A \eta)|$,
+wyznaczać będzie rodzina półnorm $A \rightarrow |\langle \xi, A \eta \rangle|$,
 $\xi, \eta
 \in \mathcal{H}$. Z kolei topologia $\sigma$-słaba jest wyznaczona
 przez półnormy
-$A \rightarrow \left| \sum \limits_{n=1}^{\infty} (\xi_{n}, A
-\eta_{n})
+$A \rightarrow \left| \sum \limits_{n=1}^{\infty} \langle \xi_{n}, A
+\eta_{n}\rangle
 \right|$ dla ciągów $(\xi_{n})$ i $(\eta_{n})$, takich że
 $\sum \limits_{n=1}^{\infty} ||\xi_{n}||^{2} < \infty$ i
 $\sum \limits_{n=1}^{\infty} ||\eta_{n}||^{2} < \infty$.
@@ -261,7 +263,7 @@ $p \in \mathfrak{M} \cap \mathfrak{M}^{\prime}$.
 W oparciu o analizę własności projektorów centralnych,
 udało się scharakteryzować algebry von Neumanna.
 Ta wiedza okaże się dla nas niezwykle przydatna, gdy przystąpimy do próby
-uogólnienia kryterium Peresa-Horodeckich na szeroką klasę iniektywnych algebr von Neumanna.
+uogólnienia kryterium Peresa-Horodeckich na szeroką klasę algebr iniektywnych.
 
 \begin{Definition}
 Dwa projektory $p, q \in \mathfrak{M}$ są równoważne,
@@ -269,9 +271,6 @@ jeśli istnieje $u \in \mathfrak{M}$, takie że
 $p = u^{*} u$ oraz $ q = u u^{*}$
 Wówczas piszemy $p \sim q$.
 \end{Definition}
-%Wprowadźmy relację częściowego porządku w zbiorze projektorów algebry $\mathfrak{M}$
-%i napiszmy $p \preceq q$,
-%jeżeli $p$ jest równoważne projektorowi $q_{1} \leq q$.
 
 Następujący ciąg definicji i twierdzeń, podanych tutaj bez dowodu,
 pochodzi z podręcznika M.\,Takesaki, \emph{Theory of operator algebras}, t.\,1,
@@ -385,7 +384,7 @@ możliwe będzie wprowadzenie ścisłej definicji zbioru stanów separowalnych
 (p. str. \pageref{def:SeparableStates}).
 
 \section{Odwzorowania dodatnie}
-Analiza odwzorowań dodatnich na algebrach operatorów stanowią główny przedmiot
+Analiza odwzorowań dodatnich na algebrach operatorów stanowi główny przedmiot
 tej rozprawy.
 Jak już zostało wspomniane powyżej, znaczenie tego typu odwzorowań dla kwantowej
 teorii informacji kryje się w nieoczekiwanym związku pomiędzy z jednej strony
@@ -468,7 +467,7 @@ gdzie $\Lambda_{1}, \Lambda_{2}$ to odwzorowania kompletnie dodatnie
 Wiadomo, że wszystkie odwzorowania dodatnie algebry $M_{2}$
 oraz pomiędzy algebrami $M_{2}$ i $M_{3}$ są rozkładalne
 \cite{Stormer2013}.
-Jednak już w przypadku odwzorowań na $M_{3}$ można podać przykłady takich,
+Jednak już w przypadku odwzorowań $M_{3}$ można podać przykłady takich,
 które nie dają się sprowadzić do postaci odwzorowań rozkładalnych.
 
 W części poświęconej odwzorowaniom dodatnim na algebrach macierzy (p. rozdz. 3.)
@@ -498,8 +497,8 @@ $\text{Tr}\, P_{\xi} \, S(P_{\eta}) = 0$;
 wówczas mamy $T = \alpha S$, $\alpha \geq 0$.
 Dzięki ogólnemu twierdzeniu udowodnionemu przez Straszewicza
 \cite{straszewicz1935exponierte},
-zbiór odwzorowań wystających jest gęstym podzbiorem pośród zbioru odwzorowań
-ekstremalnych na $M_{n}$.
+zbiór odwzorowań wystających jest gęstym podzbiorem zbioru odwzorowań
+ekstremalnych $M_{n}$.
 
 \paragraph{}
 W następnym rozdziale wykorzystamy przedstawione powyżej podstawowe fakty
