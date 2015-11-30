@@ -17,11 +17,11 @@ ogólności dzięki znajomości struktury algebr kolejnych typów.
 Dla ogólnych przestrzeni Banacha $X$ i $Y$, przez
 $\mathcal{B}(X,Y)$
 oznaczmy przestrzeń Banacha wszystkich ograniczonych odwzorowań
-liniowych pomiędzy z $X$ w $Y$.
-Przez $X^{*}$ oznaczyliśmy przestrzeń funkcjonałów liniowych na $X$,
+liniowych z $X$ w $Y$.
+Przez $X^{*}$ wcześniej oznaczyliśmy przestrzeń funkcjonałów liniowych na $X$,
 $X^{*} = \mathcal{B}(X, \mathbb{C})$.
 Działanie funkcjonału $\varphi \in X^{*}$ na $x \in X$
-oznaczmy przez $\langle  \varphi , x \rangle = \varphi(x)$.
+zapiszemy: $\langle  \varphi , x \rangle = \varphi(x)$.
 Powiemy, że net operatorów $(T_{\lambda})$,
 $T_{\lambda} \in \mathcal{B}(X, Y^{*})$, zbiega do
 $T \in \mathcal{B}(X, Y^{*})$ w \emph{$^{*}$-słabej topologii operatorowej}, jeśli
@@ -44,8 +44,8 @@ przestrzeń $\mathcal{F}(X,Y)$
 odwzorowań skończonego rzędu z $X$ w $Y$,
 tzn. odwzorowań, których obraz jest podprzestrzenią liniową skończonego wymiaru
 przestrzeni $Y$, zawiera się w $\mathcal{CB}(X,Y)$.
-Pamiętajmy, że dla przekształcenia $T$ skończonego rzędu
-$||T||_{CB}|| = ||T||$
+Pamiętajmy też, że dla przekształcenia $T$ skończonego rzędu
+$||T||_{CB} = ||T||$.
 Przez $\mathcal{CB}(X,Y)_{+}$
 oznaczmy stożek kompletnie ograniczonych dodatnich odwzorowań
 z $X$ w $Y$, a przez $\mathcal{CP}(X,Y)$ stożek odwzorowań kompletnie dodatnich.
@@ -86,7 +86,7 @@ To prowadzi do założenia iniektywności przynajmniej jednej z rozpatrywanych a
 \label{def:injectivevNalg}
 Algebra von Neumanna $\mathfrak{M}\subset B(\mathcal{H})$ jest z definicji iniektywna,
 jeśli istnieje odwzorowanie rzutowe o normie jednostkowej (niekoniecznie normalne)
-$\pi :B(\mathcal{H})\to\mathfrak{M}$ na $\mathfrak{M}$.
+$\pi\!: B(\mathcal{H})\to\mathfrak{M}$ będące suriekcją.
 Dla takich algebr, istnieje net $(A_{\lambda})$ kompletnie dodatnich
 kontrakcji skończonego rzędu na  $\mathfrak{M}_*$,
 zbiegających w silnej topologi do odwzorowania identycznościowego:
@@ -112,9 +112,9 @@ algebry Araki-Woodsa reprezentujące nierelatywistyczny gaz bozonów w nieskońc
 faktory typu $III_1$ reprezentujące lokalne algebry $\mathcal{M}(O)$
 w algebraicznej kwantowej teorii pola \cite{yngwason2005role}.
 Ponieważ iloczyn tensorowy algebr iniektywnych pozostaje wciąż algebrą iniektywną,
-a więc również algebry o nietrywialnym centrum, wciąż należą do klasy algebr iniektywnych.
+więc również algebry o nietrywialnym centrum wciąż należą do klasy algebr iniektywnych.
 Możemy więc powiedzieć, że zaproponowane poniżej uogólnienie kryterium Peresa-Horodeckich
-pokrywa wszystkie z fizycznego punktu widzenia interesujące przypadki.
+obejmuje wszystkie z fizycznego punktu widzenia interesujące przypadki.
 
 \paragraph{}
 Zacznijmy od sformułowania twierdzenia, którego dowód przedstawimy poniżej.
@@ -170,7 +170,7 @@ są przestrzeniami Hilberta, niekoniecznie ośrodkowymi.
 Ich zbiory stanów, tj. wypukłe zbiory normalnych, dodatnich i znormalizowanych
 funkcjonałów, oznaczyliśmy odpowiednio przez
 $\mathcal{S}(\mathfrak{M})$ i $\mathcal{S}(\mathfrak{N})$.
-Pamiętajmy, że przestrzeń predualna do iloczynu tensorowy algebr von Neumanna
+Pamiętajmy, że przestrzeń predualna do iloczynu tensorowego algebr von Neumanna
 $(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{*}$
 jest izometrycznie izomorficzna z
 $\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*$, dopełnieniem
@@ -233,8 +233,8 @@ $\Rightarrow$ Załóżmy, że $\omega\notin C_1$.
 Ponieważ $C_1$ jest zbiorem normowo domkniętym i wypukłym,
 istnieje $x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}$,
 takie że $\langle x, \omega\rangle<0$ oraz $\langle x,C_1\rangle\geq 0$.
-Zatem $x\in C_1^*$, a więc istnieje $A \in \mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})_+$,
-dla którego $\langle F(A),\omega\rangle<0$, co pociąga za sobą sprzeczność.\\
+Zatem $x\in C_1^*$, a więc istnieje $S \in \mathcal{CB}(\mathfrak{M}_*,\mathfrak{N})_+$,
+dla którego $\langle F(S),\omega\rangle<0$, co pociąga za sobą sprzeczność.\\
 $\Leftarrow$ Dowód przeciwnej implikacji jest oczywisty.
 \end{proof}
 
@@ -248,7 +248,7 @@ $(A_{\lambda})$ to net kompletnie dodatnich kontrakcji skończonego rzędu na
 $\mathfrak{M}_{*}$, takich że
 $A_{\lambda} \stackrel{\lambda}{\rightarrow} \mathbf{1}$ w silnej topologii.
 Jeżeli $z \in \mathfrak{M} \bar{\otimes} \mathfrak{N}$, wówczas
-$z = {\rm w}^*-\lim_{\lambda} \, (\mathbf{1} \otimes F^{-1}(z) )
+$z = {\rm w}^*\mbox{-}\lim_{\lambda} \, (\mathbf{1} \otimes F^{-1}(z) )
 (\theta^{-1} (A_{\lambda}))$.
 \end{Lemma}
 \begin{proof}
@@ -299,7 +299,7 @@ Załóżmy, że $\mathcal{R}$ jest iniektywnym ośrodkowym faktorem typu
 II$\phantom{}_{1}$ \cite{Takesaki3};
 niech także $\tau$ będzie znormalizowanym śladem na $\mathcal{R}$,
 a więc normalnym funkcjonałem, dla którego
-$\tau(xy) = \tau(yx)$, dla każdych $x,y \mathcal{R}$
+$\tau(xy) = \tau(yx)$, dla każdych $x,y \in \mathcal{R}$
 oraz $\tau(\mathbf{1}) = 1$.
 Algebra von Neumanna jest z definicji \emph{ośrodkowa},
 jeśli działa na ośrodkowej przestrzeni Hilberta.
@@ -362,7 +362,8 @@ Pomimo że ani odwzorowanie $i$, ani $\beta$ nie są kompletnie dodatnie,
 $\beta$ nie jest nawet kompletnie ograniczone,
 pokażemy, że ich złożenie $i \circ \beta$ jest kompletnie dodatnią kontrakcją.
 Rzeczywiście, niech $x_{1}, x_{2}, \ldots x_{n}$ oraz
-$y_{1}, y_{2}, \ldots y_{n}$ będą elementami $\mathcal{R}$.
+$y_{1}, y_{2}, \ldots y_{n}$ będą elementami $\mathcal{R}$
+dla $n \in \mathbb{N}$.
 Wówczas
 \begin{linenomath*}
  \begin{multline}
@@ -428,7 +429,7 @@ Stąd, jeśli zdefiniujemy dodatni element $\mathcal{R}\otimes\mathcal{R}$ poprz
  \begin{multline}
 m_{n} = 2^{n} \sum \limits_{i_{1}, j_{1}\ldots i_{n}, j_{n}}
 \left( e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}} \otimes \ldots \otimes
-e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots \right) \otimes \nonumber\\
+e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots \right) \otimes \\
 \left( e_{i_{1} j_{1}} \otimes e_{i_{2} j_{2}}\otimes \ldots \otimes
 e_{i_{n} j_{n}} \otimes \mathbf{1} \otimes \ldots\right),
  \end{multline}
@@ -496,7 +497,7 @@ $S: \mathfrak{M} \rightarrow \mathfrak{N}$,
 wówczas $\tilde{\phi}$ jest stanem separowalnym.
 \end{Lemma}
 \begin{proof}
-Jeżeli $\mathfrak{M}$ jest faktorem typu I, tzn. $\mathfrak{M}$ jest
+Jeżeli $\mathfrak{M}$ jest skończonym faktorem typu I, tzn. $\mathfrak{M}$ jest
 w rzeczywistości skończenie wymiarową algebrą macierzy,
 wówczas dowód tezy został podany w pracy Horodeckich
 \cite{horodecki1996separability}.
@@ -533,16 +534,16 @@ funkcjonał
 $\tilde{\phi}_{p} (z) = \langle (p \otimes \mathbf{1}) z, \tilde{\phi}\rangle$
 jest separowalny na $p\mathfrak{M} \bar{\otimes} \mathfrak{N}$.
 Zatem, możemy rozpatrzeć oddzielnie algebry von Neumanna
-typu I$\phantom{}_{n}$ i II$\phantom{}_{1}$.
+typu I i II$\phantom{}_{1}$.
 \begin{Lemma}
 \label{lem:step3}
 Teza Lematu \ref{lem:step2} jest prawdziwa, gdy $\mathfrak{M}$
 jest skończoną iniektywną ośrodkową algebrą von Neumanna.
 \end{Lemma}
 \begin{proof}
-Jeśli $\mathfrak{M}$ jest algebrą von Neumanna typu I$\phantom{}_{n}$,
+Jeśli $\mathfrak{M}$ jest skończoną algebrą von Neumanna typu I,
 wówczas $\mathfrak{M}$ jest izomorficzna z algebrą
-$M_{n}(\mathbb{C}) \bar{\otimes} \mathcal{A}$,
+$M_{n}(\mathbb{C}) \bar{\otimes} \mathcal{A}$, dla pewnego $n \in \mathbb{N}$,
 gdzie $\mathcal{A}$ jest algebrą abelową
 (por. Blackaddar \cite{Blackadar2006}, III.1.5.12).
 Jeżeli zaś $\mathfrak{M}$ jest typu II$\phantom{}_{1}$,
@@ -681,7 +682,7 @@ czyli element \mbox{z $\mathcal{R}$}.
 
 Niech teraz $\tilde{\phi} =\lim_{n\to\infty}\sum_{i=1}^{n}\alpha_i(\omega_{i}\otimes\varphi_{i})$,
 gdzie granicę bierze się w projektywnej tensorowej normie przestrzeni operatorowych
-$|| \cdot ||_{\wedge}$ on $\mathfrak{M}_{*} \hat{\otimes} \mathfrak{N}_{*}$,
+$|| \cdot ||_{\wedge}$ na $\mathfrak{M}_{*} \hat{\otimes} \mathfrak{N}_{*}$,
 oraz niech $z \in C_{0}^{*}$, $z = \sum_{j=1}^{M} x_{j} \otimes y_{j}$.
 Jasne jest, że rodzina zbiorów $B_{k}^{(n)}$ we wzorze \eqref{eq:integral}
 może zostać wybrana dla każdego $x_{j}$, $j = 1,2, \ldots, M$; tzn.
@@ -727,11 +728,11 @@ $|| \sum_{i=L+1}^{\infty}\alpha_i(\omega_{i} \otimes \varphi_{i}) ||_{\wedge}
 Wtedy
 \begin{linenomath*}
  \begin{multline}
-\label{eq:Ineq}
+\label{eq:longineq}
 |\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle| =
 |\langle z, \tilde{\phi} -\sum \limits_{k=1}^{n} \tilde{\phi}
 \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} \otimes \mathbf{1})
-\rangle | \leq \nonumber\\
+\rangle | \leq \\
 \leq \Big |\langle z,\sum \limits_{i=1}^{L} \omega_{i} \otimes \varphi_{i} -
 \sum \limits_{i'=1}^{L}\sum \limits_{k=1}^{n}
 \omega_{i'} \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}})
@@ -763,7 +764,7 @@ obliczmy
  \begin{multline}
 \sum \limits_{k=1}^{n} i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}} (x_{j})
 =\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
-\pi^{*}_{B_{k}^{(n)}} (x_{j}) = \nonumber\\
+\pi^{*}_{B_{k}^{(n)}} (x_{j}) = \\
 =\sum \limits_{k=1}^{n} \chi_{B_{k}^{(n)}}(\cdot) \,
 \frac{1}{\mu(B_{k}^{(n)})}
 \int \limits_{B_{k}^{(n)}} x_{j}(\gamma) \, d\mu(\gamma)
@@ -771,7 +772,7 @@ obliczmy
 x_{j,k}^{(n)}=x_{j,n}.
  \end{multline}
 \end{linenomath*}
-Kontynuując nierówność \eqref{eq:Ineq}, otrzymujemy dla $n \geq N$:
+Kontynuując nierówność \eqref{eq:longineq}, otrzymujemy dla $n \geq N$:
 \begin{linenomath*}
  \begin{multline}
 |\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle|\leq \Big |\langle z,
@@ -800,10 +801,10 @@ c_{L}  \frac{\epsilon}{2 L M c_{L}}     + \frac{\epsilon}{2}
 =  \frac{\epsilon}{2} +  \frac{\epsilon}{2} =  \epsilon.
  \end{multline}
 \end{linenomath*}
-Dla  $\langle z , \tilde{\phi} \rangle  =
-\lim_{n} \langle z , \tilde{\phi}_{n} \rangle \geq 0$,
-skoro $z$ było dowolnym elementem z $C_{0}^{*}$,
-na mocy Wniosku \ref{cor:denseness}, $\tilde{\phi}$ stanem separowalnym.
+Zatem  $\langle z , \tilde{\phi} \rangle  =
+\lim_{n} \langle z , \tilde{\phi}_{n} \rangle \geq 0$;
+a skoro $z$ było dowolnym elementem z $C_{0}^{*}$,
+na mocy wniosku \ref{cor:denseness}, $\tilde{\phi}$ stanem separowalnym.
 \end{proof}
 
 {\it Krok 4: Skończone algebry iniektywne}.\\
@@ -994,7 +995,7 @@ są kompletnie dodatnie, mamy
  \begin{multline}
 \langle(\mathbf{1} \otimes S_{0})(z_{0}),\tilde{\phi}_{\lambda} \rangle =
 \lim \limits_{\mu} \langle(\mathbf{1} \otimes S_{\mu})(\tilde{\mathcal{E}}
-\otimes \mathbf{1})(z) ,\tilde{\phi}_{\lambda}\rangle \nonumber \\
+\otimes \mathbf{1})(z) ,\tilde{\phi}_{\lambda}\rangle = \\
 = \lim \limits_{\mu} \langle
 (\mathbf{1} \otimes S_{\mu})(\mathcal{E}_{\lambda}\circ
 \tilde{\mathcal{E}}\otimes \mathbf{1})(z) ,\tilde{\phi}\rangle \geq 0,
@@ -1020,7 +1021,7 @@ algebr będzie musiało zostać w jakiś sposób zachowane i w tym przypadku.
 Stąd potrzeba wprowadzenie tzw. algebr jądrowych (\emph{nuclear algebras}).
 Z definicji $\mathcal{A}$ jest jądrową C$^{*}$-algebrą,
 jeżeli $\mathcal{A}^{**}$, druga przestrzeń dualna,
-jest algebrą von Neumanna.
+jest izomorficzna z algebrą von Neumanna.
 Dla algebr jądrowych iloczyn tensorowy jest zdefiniowany jednoznacznie.
 Ważną własnością jądrowych C$^{*}$-algebr jest również lokalna rekfleksywność,
 która okaże się pomocna na dalszym etapie dowodu.
@@ -1169,7 +1170,7 @@ mamy
  \begin{multline}
 \langle \varphi, SA \rangle =
 \langle \varphi, P_{F} ( \tilde{S} \circ i (A)) \rangle =
-\langle  \tilde{S} \circ i (A), \varphi \rangle \nonumber\\
+\langle  \tilde{S} \circ i (A), \varphi \rangle = \\
 =\langle i(A), \tilde{S}_{*} \varphi \rangle =
 \langle \tilde{S}_{*} \varphi, A \rangle,
  \end{multline}
@@ -1182,15 +1183,17 @@ Granicę rozumie się w projektywnej normie operatorowej $|| \cdot ||_{\wedge}$,
 a więc również w słabej i *-słabej topologii na
 $(\mathcal{A} \bar{\otimes} \mathcal{B})^{*}$.
 Z głównego założenia wynika, że
-$\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$. Dodatkowo
+$\langle \tilde{\phi},(\mathbf{1} \otimes S) (a_{\lambda}) \rangle \geq 0$.
+Dodatkowo
 \begin{linenomath*}
  \begin{multline}
 \sum \limits_{i=1}^{n}\langle \omega_{i} \otimes \varphi_{i},
 (\mathbf{1} \otimes S)(a_{\lambda}) \rangle =
 \sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
 \langle \omega_{i} , T_{\lambda} x_{j} \rangle
-\langle \tilde{S}_{*} \varphi_{i}, T_{\lambda} y_{j}\rangle \nonumber\\
-\stackrel{\lambda}{\longrightarrow}\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
+\langle \tilde{S}_{*} \varphi_{i}, T_{\lambda} y_{j}\rangle
+\stackrel{\lambda}{\longrightarrow}\\
+\sum \limits_{i=1}^{n} \sum \limits_{j=1}^{N}
 \langle  x_{j}, \omega_{i} \rangle\langle  y_{j},  \tilde{S}_{*} \varphi_{i} \rangle =
 \langle (\mathbf{1} \otimes \tilde{S})(z),
 \sum \limits_{i=1}^{n} \omega_{i} \otimes \varphi_{i} \rangle .
