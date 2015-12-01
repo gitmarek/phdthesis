@@ -34,7 +34,7 @@ dla każdego $X \in M_{n}$.
 \section{Charakterystyka odwzorowań algebry $M_{2}$}
 \label{sec:M2notes}
 
-W tym podrozdziale przestawimy główny rezultat opublikowany w pracy
+W tym podrozdziale przestawimy wraz z dowodami rezultaty opublikowane w pracy
 M.\,Miller, R.\,Olkiewicz, \emph{Stable subspaces of positive maps of matrix algebras}
 \cite{miller2015stable},
 który stanowi alternatywny dowód twierdzenia udowodnionego przez
@@ -43,7 +43,7 @@ i S.\,L.\,Woronowicza \cite{woronowicz1976positive},
 podającego pełną charakterystykę odwzorowań dodatnich na algebrze $M_{2}$.
 
 Niech $\mu,\nu = 0,1,2,3$ oraz $i,j = 1,2,3$.
-Niech także $(\sigma_{\mu})$, $\mu = 0, 1, 2, 3$;
+Niech także $\left\{ \sigma_{\mu} \right\}_{\mu=0}^{3}$
 będzie bazą w  $M_{2}$, taką że
 $\sigma_{0} = \tfrac{1}{\sqrt{2}}  \mathbf{1}$ oraz
 $\sigma_{i}$
@@ -65,14 +65,18 @@ są znormalizowanymi macierzami Pauliego dla $i=1,2,3$:
 \end{linenomath*}
 Macierz hermitowska $\sigma(a) \in M_{2}$,
 $\sigma(a) = \sum_{\mu =0}^{3} a_{\mu} \sigma_{\mu}$,
-dla $x = (a_{\mu}) = (a_{0}, \vec{a}) \in \mathbb{R}^{4}$,
+dla $a = (a_{\mu}) = (a_{0}, \vec{a}) \in \mathbb{R}^{4}$,
 jest dodatnia, wtedy i tylko wtedy, gdy
 $x \in L_{4}$,
 gdzie
-$ L_{4} = \left \{
+\begin{linenomath*}
+ \begin{equation}
+L_{4} = \left \{
             a \in \mathbb{R}^{4} :
             a_{0} \geq \sqrt{(a_{1})^{2} + (a_{2})^{2} + (a_{3})^{2}} \,
-        \right \}$.
+        \right \}.
+ \end{equation}
+\end{linenomath*}
 Niech $\vec{a} = (a_{1}, a_{2}, a_{3}) \in \mathbb{R}^{3}$,
 a także niech $||\vec{a}||_{2}$ będzie normą euklidesową wektora.
 
@@ -89,8 +93,9 @@ Rzecz jasna, dla dwóch takich odwzorowań: $S_{1}, S_{2}$, mamy
 $\pi(S_{1} S_{2}) = \pi(S_{1}) \pi(S_{2})$
 oraz $\pi(S^{-1}) = \pi(S)^{-1}$, jeśli tylko $S^{-1}$ istnieje.
 Odwzorowanie $S$ jest dodatnie, wtedy i tylko wtedy, gdy
-$\pi(S)$ przekształca $L_{4}$ w siebie.
+$\pi(S)$ przekształca zbiór $L_{4}$ w siebie.
 
+\index{idx}{stożek wypukły}
 Przypomnijmy, że zbiór $\mathcal{P} \subset \mathbb{R}^{n}$
 jest z definicji stożkiem (wypukłym), jeśli
 $\alpha x + \beta y \in \mathcal{P}$,
@@ -230,9 +235,9 @@ Należy również dodać, że podobne metody zostały już wprowadzone wcześnie
 Dzięki temu udało się otrzymać pełną charakteryzację odwzorowań dodatnich
 na $M_{2}$,
 której źródeł należy się doszukiwać w szczególnej symetrii stożka
-$L_{4}$, reprezentującego macierze z $M_{2}$.
-W tym najprostszym przypadku mogliśmy wykorzystać znany wcześniej
-\cite{loewy1975positive} wynik, dotyczący
+$L_{4}$, reprezentującego macierze dodatnie z $M_{2}$.
+W tym najprostszym przypadku mogliśmy wykorzystać znany wcześniej wynik
+\cite{loewy1975positive}, dotyczący
 opisu operatorów zachowujących stożek $L_{4}$.
 Jak zobaczymy poniżej, jeśli przejdziemy do kolejnego przypadku
 odwzorowań dodatnich na $M_{3}$,
@@ -346,7 +351,7 @@ Jeśli $S(E_{12}) = 0$,
 wówczas oczywiście również $S(E_{21}) = 0$ i w rezultacie
 $S$ odwzorowuje $M_{2}$
 w przemienną algebrę macierzy diagonalnych.
-Stąd, $S$ jest kompletnie dodatnie.
+Stąd $S$ jest kompletnie dodatnie.
 Z drugiej strony, jeśli
 $S(E_{12}) =
 \left(
@@ -392,7 +397,7 @@ jest dodatnia.
 Ogólnie znany jest fakt, że odwzorowanie $X \mapsto A \circ X$
 jest kompletnie dodatnie wtedy i tylko wtedy, gdy $A$
 jest dodatnią macierzą
-(por. np. \cite{besenyei2011completely}, lemat 1).
+(por. np. lemat 1 \cite{besenyei2011completely}).
 \end{proof}
 
 \begin{Example}
@@ -449,7 +454,7 @@ twierdzenia \ref{thm:MapsPreservingIdentity} okazuje się również wystarczają
 do tego, aby takie odwzorowanie było kompletnie dodatnie dla każdego wymiaru.
 Bardziej ogólny problem, postawiony przez Robertsona
 \cite{robertson1983schwarz},
-czy istniej odwzorowanie Schwarza, które jest ekstremalne, ale
+czy istnieje odwzorowanie Schwarza, które jest ekstremalne, ale
 nie 2-dodatnie, pozostaje otwarty.
 Zauważmy, że z twierdzenia 3.3 w pracy
 M.\,Marciniak, \emph{On extremal positive maps acting between type I factors}
@@ -587,7 +592,7 @@ odwzorowań dodatnich jako stożka Lorentza $L_{4}$,
 możemy pokazać, że $\Delta_{1}$ jest zbiorem zaskakująco pojemnym.
 Dodajmy, że wyniki odnośnie tego problemu można znaleźć również w innych
 publikacjach
-(por. E\,{St{\o}rmer, \emph{A decomposition theorem for positive maps, and the projection onto a spin factor}
+(por. E.\,{St{\o}rmer, \emph{A decomposition theorem for positive maps, and the projection onto a spin factor}
 \cite{stormer2013decomposition}).
 
 Każda macierz $Y \in M_{n}(\mathbb{R})$ daje się rozłożyć względem wartości singularnych:
@@ -646,14 +651,14 @@ W dalszej części załóżmy, że $S \in \Delta_{1}$.
 Ponieważ $S$ jest kompletnie dodatnie,
 z twierdzenia 1 w pracy L.\,J.\,Landaua i R.\,F.\,Streatera
 \cite{landau1993birkhoff} wiemy, że
-$S$ wypukłą kombinacją odwzorowań unitarnych:
+$S$ jest wypukłą kombinacją odwzorowań unitarnych:
 $X \mapsto U^{*} X U$, $U \in \text{U}(2)$.
 Z dowodu twierdzenia \ref{thm:PositiveMapsOnM2},
 dla konkretnej postaci $\pi(S)$, takiej jak w równaniu \eqref{eq:Sbistochastic},
 oznacza to, że $Y$ należy do wypukłej otoczki generowanej przez elementy grupy $\text{SO}(3)$.
 Z  wniosku na str. 139 w pracy H.\,F.\,Miranda i R.\,C.\,Thompson
 \cite{miranda1994group},
-wnioskujemy, że jeśli $t_{1} \geq t_{2} \geq t_{3} \geq 0$
+dostajemy, że jeśli $t_{1} \geq t_{2} \geq t_{3} \geq 0$
 są wartościami singularnymi macierzy $Y$,
 wówczas $Y \in \text{conv} \, \text{SO}(3)$,
 wtedy i tylko wtedy, gdy
@@ -661,7 +666,7 @@ wtedy i tylko wtedy, gdy
  \begin{equation}
 \label{eq:ineqForSingVals}
 t_{1} \leq 1
-\quad \text{and} \quad
+\quad \text{oraz    } \quad
 t_{1} + t_{2} - \text{sig} (\text{det} Y) \, t_{3} \leq 1.
  \end{equation}
 \end{linenomath*}
@@ -722,8 +727,8 @@ geometryczne metody z następnego podrozdziału.
 
 Przypomnijmy tylko, że przez JB$^{*}$-algebrę $K$ rozumiemy zespoloną
 przestrzeń Banacha, która jest jednocześnie algebrą Jordana.
-W naszym przypadku przestrzeni, których elementami są zespolone macierze
-kwadratowe,
+W rozpatrywanym przez nas przypadku przestrzeni,
+których elementami są zespolone macierze kwadratowe,
 oznacza to, że dla każdego $A, B \in K$, mamy
 $AB + BA \in K$.
 Będziemy zawsze zakładać, że $\mathbf{1} \in K$.
@@ -757,12 +762,12 @@ Powtarzając w zasadzie ten sam rachunek, co w równaniu
 dostajemy, że $S$ jest kontrakcją w normie Hilberta-Schmidta.
 
 Zdefiniujmy izometryczne rozbicie (ang. \emph{isometric splitting})
-odwzorowania $S$, korzystając z wyników opublikowanych wcześniej w pracy
+odwzorowania $S$, korzystając z wyników opublikowanych wcześniej w pracy:
 R.\,Olkiewicz, \emph{Environment-induced superselection rules in Markovian regime}
 \cite{olkiewicz1999environment}.
 Ponieważ $S$ jest kontrakcją na przestrzeni Hilberta $M_{n}$
 z iloczynem tensorowym Hilberta-Schmidta,
-przestrzeń tą można rozłożyć na sumę prostą przestrzeni $K_{S}$,
+przestrzeń tę można rozłożyć na sumę prostą przestrzeni $K_{S}$,
 zdefiniowanej jako
 \begin{linenomath*}
  \begin{equation}
@@ -822,7 +827,7 @@ a) Oczywiste, ponieważ $S$ jest odwzorowaniem bistochastycznym;
 b), c) dowód tak jak w stwierdzeniu 5\,a) i 5\,b) w \cite{olkiewicz1999environment}.
 
 d)  Załóżmy na początku, że $A = A^{*} \in K_{S}$.
-Ponieważ $S^{*k} S^{k}(A) = S^{k} S^{*k}(A) = A$,
+Skoro $S^{*k} S^{k}(A) = S^{k} S^{*k}(A) = A$,
 a także na mocy nierówności Kadisona-Schwarza zastosowanej do odwzorowania
 $S^{*k} S^{k}$, mamy
 \begin{linenomath*}
@@ -851,7 +856,7 @@ Wtedy
 $A^{2} = A_{1}^{2} - A_{2}^{2} + i(A_{1} A_{2} + A_{2} A_{1}) \in K_{S}$.
 Jasne jest teraz, że $AB+BA \in K_{S}$ dla ogólnych $A,B \in K_{S}$.
 
-e) tak jak stw.. 5\,d);
+e) tak jak stw. 5\,d);
 f), g) tak jak stw. 6\,a) i 6\,c) w
 \cite{olkiewicz1999environment}.
 \end{proof}
@@ -887,7 +892,7 @@ wnioskujemy, że $S$ rozbija się na sumę prostą
 $S = S_{1} \oplus S_{2}$,
 gdzie $S_{1} = S_{| K_{S}}$, $S_{2} = S_{| K_{S}^{\perp}}$.
 Na mocy stw. 7a) w \cite{olkiewicz1999environment},
-mamy, że $S(A^{*} A) = S(A)^{*} S(A)$,
+mamy, że $S(A^{*} A) = S(A)^{*} S(A)$, dla $A \in K_{S}$,
 tzn. $S$ jest homomorfizmem Jordana na $K_{S}$.
 Co więcej, ponieważ $S^{*} S = S S^{*} = I$ na $K_{S}$,
 odwzorowanie $S_{1}$ jest odwracalne,
@@ -1042,7 +1047,7 @@ Mimo że łatwo wskazać takie odwzorowania ekstremalne, dla których
 $K_{S}=M_{3}$ (np. $S(A) = U A U^{*}$ dla macierzy unitarnej $U$)
 lub $K_{S}=\mathbb{C} \mathbf{1}$
 (weźmy np. znane odwzorowanie Choi
-\cite{choi1977extremal});
+\cite{choi1977extremal}, p. str. \pageref{eq:choi});
 należy jeszcze podać przykład ekstremalnego odwzorowania bistochastycznego,
 dla którego
 $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
@@ -1067,7 +1072,7 @@ $A = \left( \begin{smallmatrix}
     B & \vec{u} \\
     \vec{w}^{t} & z
     \end{smallmatrix} \right)$,
-dla $B \in M_{2}$, gdzie
+dla $B \in M_{2}$,
 $\vec{u},\vec{w} \in \mathbb{C}^{2}$ są wektorami kolumnowymi,
 a $z \in \mathbb{C}$,
 odwzorowanie $S$ działa jak
@@ -1087,12 +1092,12 @@ odwzorowanie $S$ działa jak
 gdzie
 $\hat{P}_{1} = \left( \begin{smallmatrix} 1 & 0 \\ 0 & 0 \end{smallmatrix} \right)$,
 $\hat{P}_{2} = \left( \begin{smallmatrix} 0 & 0 \\ 0 & 1 \end{smallmatrix} \right)$
-oraz $\mathbf{1}_{2}$ jest macierzą jednostkową na $M_{2}$.
+oraz $\mathbf{1}_{2}$ jest macierzą jednostkową w $M_{2}$.
 Zakładając, że następny lemat jest prawdziwy,
 ten przykład kończy dowód.
 \end{proof}
 
-
+\pagebreak
 \begin{Lemma}
 \label{lem:SIsExtremal}
 $S$ jest odwzorowaniem bistochastycznym i ekstremalnym.
@@ -1545,7 +1550,7 @@ odwzorowań dodatnich na $M_{3}$ i co kończy dowód.
 \end{proof}
 
 Interesujące może być ponadto zauważenie, że $S$ nie jest odwzorowaniem
-2-dodatnim.
+\mbox{2-dodatnim}.
 Rzeczywiście,
 możemy pokazać nawet więcej i uzasadnić, że $S$
 nie spełnia nierówności Kadisona-Schwarza dla każdej macierzy
@@ -1766,7 +1771,6 @@ $\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
 \end{linenomath*}
 \begin{linenomath*}
  \begin{equation}
-\nonumber
     \lambda_{7} = \frac{1}{\sqrt{2}} \begin{pmatrix}
             0 & 0 & 0 \\
             0 & 0 & -i \\
