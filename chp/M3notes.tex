@@ -1785,8 +1785,8 @@ $\left \{ \lambda_{\mu} \right \}_{\mu=0}^{8}$:
 \end{linenomath*}
 oraz $\lambda_{0} = \frac{1}{\sqrt{3}} \mathbf{1}_{3}$.
 Każda macierz hermitowska $A = A^{*} \in M_{3}$ może zostać przedstawiona
-jako $A = \lambda(a)$, gdzie
-$\lambda(a) = \sum_{\mu=0}^{8} a_{\mu} \lambda_{mu}$
+jako rzeczywista kombinacja liniowa macieży bazowych $A = \lambda(a)$,
+gdzie $\lambda(a) = \sum_{\mu=0}^{8} a_{\mu} \lambda_{\mu}$
 oraz
 $a = (a_{0}, a_{1}, \ldots, a_{8}) \in \mathbb{R}^{9}$.
 Czasem będziemy używać notacji:
@@ -1796,8 +1796,8 @@ oraz $\lambda(a) = \lambda(a_{0}, \vec{a}) = a_{0} \lambda_{0} + \vec{a} \cdot \
 Dla odwzorowania bistochastycznego $S$,
 podobnie jak powyżej w przypadku przekształceń przestrzeni $M_{2}$
 (p. str. \pageref{def:PiofSiso}),
-zdefiniujmy macierz $x \in M_{8}(\mathbb{R})$ poprzez
-$a_{ij} = \text{Tr} \lambda_{i} S(\lambda_{j})$,
+zdefiniujmy macierz $x = (x_{ij})_{i,j=1}^{8} \in M_{8}(\mathbb{R})$ poprzez
+$x_{ij} = \text{Tr} \lambda_{i} S(\lambda_{j})$,
 $i,j = 1,2,\ldots,8$.
 Wówczas łatwo zobaczyć, że $S$ działa na macierze samosprzężone jak
 \begin{linenomath*}
@@ -1816,7 +1816,7 @@ rzeczywistych $x$,
 dla których $S_{x}$ jest odwzorowaniem bistochastycznym:
 $\Lambda = \left \{ x \in M_{8}(\mathbb{R}) \: |  \: S_{x} \geq 0 \right \}$.
 Zatem, istnieje wzajemnie jednoznaczna odpowiedniość pomiędzy $\Lambda$
-i zbiorem odwzorowań bistochastycznych na $M_{3}$.
+i zbiorem odwzorowań bistochastycznych algebry $M_{3}$.
 Struktura zbioru $\Lambda$ jest skomplikowana.
 Po pierwsze, jest to zbiór wypukły,
 tzn. dla każdego $x,y \in \Lambda$,
@@ -1828,11 +1828,11 @@ z inwolucją zadaną przez transpozycję macierzy: $A \mapsto A^{t}$.
 
 \begin{Theorem}
 \label{thm:LambdaAndBalls}
-    Niech $\overline{K}_{r}(\hat{0})$ oznacza domkniętą kulę jednostkową
+Niech $\overline{K}_{r}(\hat{0})$ oznacza domkniętą kulę jednostkową
 w $M_{8}(\mathbb{R})$, względem normy operatorowej,
 o środku w $\hat{0}$ i promieniu $r > 0$.
-    Wówczas
-    \begin{linenomath*}
+Wówczas
+\begin{linenomath*}
  \begin{equation}
         \overline{K}_{\frac{1}{2}}(\hat{0})
             \subset \Lambda \subset \overline{K}_{1}(\hat{0}).
@@ -1845,17 +1845,17 @@ o środku w $\hat{0}$ i promieniu $r > 0$.
     $P_{\vec{m}} = \lambda(\frac{1}{\sqrt{3}}, \vec{n})$ i
     $P_{\vec{n}} = \lambda(\frac{1}{\sqrt{3}}, \vec{m})$
     są projektorami ortogonalnymi w $M_{3}$.
-Łatwo sprawdzić, że w tym przypadku
+    Łatwo sprawdzić, że w tym przypadku
     $|| \vec{m} ||_{2} = || \vec{n} ||_{2} = \sqrt{\frac{2}{3}}$,
-gdzie  $|| \cdot||_{2}$ oznacza standardową normę euklidesową.
-Ponieważ $||x|| \leq \frac{1}{2}$, więc
-    \begin{linenomath*}
+    gdzie  $|| \cdot||_{2}$ oznacza standardową normę euklidesową.
+    Ponieważ $||x|| \leq \frac{1}{2}$, więc
+\begin{linenomath*}
  \begin{equation}
         \text{Tr} \, P_{\vec{m}} S_{x}(P_{\vec{n}}) =
         \frac{1}{3} + \langle \vec{m}, x \vec{n} \rangle \geq
         \frac{1}{3} - |\langle \vec{m}, x \vec{n} \rangle| \geq 0.
         %\frac{1}{3} - \frac{1}{2} \frac{2}{3} = 0.
-     \end{equation}
+ \end{equation}
 \end{linenomath*}
 Stąd $S_{x}$ jest dodatnie, co oznacza, że $x \in \Lambda$.
 
@@ -1870,7 +1870,7 @@ spełnia nierówność Kadisona-Schwarza \eqref{eq:SchwarzInequality}:
 \end{linenomath*}
 Niech $\vec{n} \in \mathbb{R}^{8}$;
 ponieważ $\lambda(\frac{1}{\sqrt{3}}, \vec{n})$
-jest macierzą samosprzężoną, z \eqref{eq:KSineq}, dostajemy
+jest macierzą samosprzężoną, z \eqref{eq:KSineq} dostajemy:
     \begin{linenomath*}
  \begin{equation}
         \frac{1}{\sqrt{3}} + || x \vec{n} ||_{2}^{2} = \text{Tr}\,
@@ -1884,11 +1884,11 @@ dla każdego $\vec{n} \in \mathbb{R}^{8}$,
 co daje w rezultacie: $x \in \overline{K}_{1}(\hat{0})$.
 \end{proof}
 
-Niech $P_{8} \in M_{8}(\mathbb{R})$ oznacza macierz diagonalną
-$P_{8} = \text{diag}(0,0,0,0,0,0,0,1)$;
+Niech $P_{8} \in M_{8}(\mathbb{R})$ oznacza macierz
+$P_{8} = \text{diag}(0,0,0,0,0,0,0,1)$
 i tak dalej dla pozostałych zbiorów indeksów: np.
 $P_{38} = \text{diag}(0,0,1,0,0,0,0,1)$.
-Prawdą jest, że każda z macierzy
+Każda z macierzy
 $P_{8}, P_{38}, P_{138}, P_{1238}, P_{13468}$ jest idempotentnym elementem
 zbioru $\Lambda$.
 Ponadto, w $\Lambda$ nie ma elementów idempotentnych rzędu 6 i 7,
@@ -1935,10 +1935,9 @@ i przez to $x$ nie może być punktem ekstremalnym, co oznacza sprzeczność.
 Zatem, $x = \frac{1}{2} R$.
 \end{proof}
 
-
 Na mocy twierdzenia \ref{thm:LambdaAndBalls},
 widzimy, że $x \in \text{Ext}(\Lambda)$ implikuje
-    $||x|| \geq \frac{1}{2}$.
+$||x|| \geq \frac{1}{2}$.
 Zatem $x = \frac{1}{2} R$, $R \in \mathrm{O}(8)$,
 to jedyna możliwa postać elementów zbioru $\text{Ext}(\Lambda)$,
 a co za tym idzie, również zbioru $\text{Ext}_{0}(\Lambda)$,
@@ -2017,7 +2016,7 @@ Stąd $y^{l} \overset{l}{\rightarrow} \hat{0}$
 i $Q(\hat{0}) \subset \mathcal{N}(\Lambda)$.
 Przeciwne zawieranie jest oczywiste.
 Co więcej, ponieważ mamy $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
-z twierdzenia 8 w \cite{schwarz1955hausdorff},
+z twierdzenia 8 \cite{schwarz1955hausdorff},
 $H(\mathbf{1}_{8}) = Q(\mathbf{1}_{8}) \cdot \mathbf{1}_{8}$,
 a wiec $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
 \end{Remark}
@@ -2147,7 +2146,7 @@ można uogólnić do następującego twierdzenia.
 
 \begin{proof}
 Ponieważ $e$ jest macierzą idempotentną, na mocy
-Wniosku \ref{cor:KisJordanAlgebra},
+wniosku \ref{cor:KisJordanAlgebra},
 przestrzeń $K_{S_{e}} = S_{e}(M_{3})$ jest algebrą Jordana.
 Odwzorowanie $S_{e}$ jest w rzeczywistości
 projektorem o normie jednostkowej (\emph{conditional expectation})
@@ -2157,7 +2156,7 @@ Z twierdzenia \ref{prop:htranspose}, dla dowolnego $k\in \mathbb{N}$,
 $S_{h}^{* k} S_{h}^{k} = S_{h^{t}}^{k} S_{h}^{k} =  S_{(h^{t})^{k} h^{k}} = S_{e}$,
 i podobnie dla $S_{h}^{k} S_{h}^{* k}= S_{e}$.
 Zatem, stabilna algebra $K_{S_{h}} = K_{S_{e}}$.
-Znów na mocy Wniosku \ref{cor:KisJordanAlgebra},
+Znów na mocy wniosku \ref{cor:KisJordanAlgebra},
 $\varphi_{h} = S_{h} \big |_{K_{S_{e}}}$
 jest automorfizmem Jordana algebry $K_{S_{e}}$.
 
@@ -2210,7 +2209,7 @@ jest sumą mnogościową siedmiu rozłącznych zbiorów:
 Jeżeli $e \in \mathcal{E}(\Lambda)$, to tak, jak powyżej, $S_{e}$
 jest projektorem o normie jednostkowej na algebrę Jordana $K_{S_{e}}$.
 Tak jak na str. \pageref{page:allpossibleJalg},
-na mocy twierdzeń 5.3.8 i 6.2.3 z \cite{Hanche1984},
+na mocy twierdzeń 5.3.8 i 6.2.3 \cite{Hanche1984},
 wszystkie algebry Jordana w $M_{3}$ są izomorficzne (unitarnie równoważne) z
 jedną z następujących:
     $\mathbb{C}\mathbf{1}$,
@@ -2267,7 +2266,7 @@ Niech $h = e x e$ oraz $y = e^{\perp} x e^{\perp}$,
 gdzie $e^{\perp} = \mathbf{1}_{8} - e$.
 wtedy $h \in Q(e)$, a ponieważ
     $h =  h e = e h$,
-    $h \in H(e)$, na mocy twierdzenia 8 z cytowanej wcześniej pracy
+    $h \in H(e)$, na mocy twierdzenia 8. z cytowanej wcześniej pracy
     \cite{schwarz1955hausdorff}.
 Dla $h' \in H(e)$, mamy
     $h' y = h' e y = \hat{0} = y e h' = yh'$,
@@ -2428,22 +2427,22 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
     istnieje $g \in G_{3}$, takie że
     $g^{t} x g \in Q(e_{0})$ i $e_{0} \in J$.
     Ponieważ $S_{x}$ jest ekstremalnym odwzorowaniem dodatnim, więc na mocy
-    Twierdzenia \ref{thm:ExposedMaps},
+    twierdzenia \ref{thm:ExposedMaps},
     $e_{0} \in \left \{ \hat{0}, P_{8}, \mathbf{1}_{8} \right \}$.
     Z uwagi \ref{rem:Qof1}, $x \notin Q(\mathbf{1}_{8})$, a zatem
     $z = g^{t} x g \in Q(\hat{0}) \cup Q(P_{8})$,
     i $z \in \text{Ext}_{0}(\Lambda)$
-    (por. lemat 3.1.2 w \cite{Stormer2013}).
+    (por. lemat 3.1.2 \cite{Stormer2013}).
     Załóżmy, że $z \in Q(P_{8})$.
-    Z Twierdzenia \ref{thm:LowerIndices},
+    Z twierdzenia \ref{thm:LowerIndices},
     ponieważ $z \in \text{Ext}_{0}(\Lambda)$,
     $z \notin Q_{1}^{i}(P_{8})$
     dla $i \geq 1$.
     A zatem $z \in Q_{0}(P_{8})$ i połóżmy $g_{1} = g$ i $g_{2} = g^{t}$.
     Wówczas $x = g_{1} z g_{2}$,
-    a z Lematu \ref{lem:decomposition}, ponieważ
+    a z lematu \ref{lem:decomposition}, ponieważ
     $H(P_{8}) = \left \{ P_{8} \right \}$
-    (por. Uwaga \ref{rem:GOfLambda}),
+    (por. uwaga \ref{rem:GOfLambda}),
     $z = P_{8} + y$,  $y P_{8} = P_{8} y = \hat{0}$ i $||y|| < 1$.
     Z drugiej strony, jeśli $z \in Q(\hat{0})$,
     wtedy na mocy tego samego rozumowania albo $z \in Q_{0}(\hat{0})$
@@ -2494,7 +2493,7 @@ a dla $t = 1$ -- przekształcenie kompletnie dodatnie
 K.-C.\,Ha, S.-H.\,Kye \emph{Entanglement witnesses arising from exposed positive linear maps}
 \cite{ha2011entanglement}).
 Rodzina macierzy $a_{t}$, dla której
-$S_{a_{t}} = \Phi[a(t), b(t), c(t)]$ jest zadana przez
+$S_{a_{t}} = \Phi[a(t), b(t), c(t)]$ jest dana przez
 \begin{linenomath*}
  \begin{equation}
  a_{t} = \begin{pmatrix}
@@ -2509,12 +2508,12 @@ $S_{a_{t}} = \Phi[a(t), b(t), c(t)]$ jest zadana przez
  \end{pmatrix}.
  \end{equation}
 \end{linenomath*}
-Warto zaznaczyć, że każde
+Warto zaznaczyć, że
 $a_{t} = \frac{1}{2} R_{t}$, gdzie $R_{t} \in \text{O}(8)$,
 tak jak w twierdzeniu \ref{thm:oneHalfofOrthogonal}.
 
 Ostatnią grupą są odwzorowania reprezentowane przez elementy z $Q_{0}(P_{8})$,
-gdzie jednym spośród nich jest odwzorowanie zadane przez równanie
+a jednym spośród nich jest odwzorowanie zadane przez równanie
 \eqref{eq:DefinitionOfS} z poprzedniego podrozdziału.
 Macierz
 $x \in \Lambda$ w tym przypadku ma postać diagonalną:
