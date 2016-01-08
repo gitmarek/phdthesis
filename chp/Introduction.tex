@@ -18,7 +18,8 @@ stanowi jeden z najważniejszych i najintensywniej badanych działów nowoczesne
 teorii kwantowej:
 budzące nadzieję na niezliczone praktyczne zastosowania w przyszłości,
 w głównej mierze opartych na potencjalnych korzyściach płynących
-z wykorzystania splątania w procesach obliczeniowych i przesyłu informacji,
+z wykorzystania splątania w procesach obliczeniowych i przesyłu informacji.
+Pomimo szerokiej dyskusji,
 zjawisko to pozostaje z punktu widzenia badań podstawowych wciąż jeszcze jednym
 z najbardziej zagadkowych elementów
 \mbox{teorii \cite{horodecki2009quantum}}.
@@ -42,7 +43,7 @@ do którego będziemy się odnosić poniżej jako do
 \index{idx}{Peresa-Horodeckich kryterium} \emph{kryterium Peresa-Horodeckich}.
 Odkładając precyzyjne zdefiniowanie niezbędnych pojęć do następnego rozdziału,
 przypomnijmy jedynie, że twierdzenie głosi,
-iż stan mieszany $\rho$ złożonego układu kwantowego o skończonej ilości
+iż stan mieszany $\rho$ złożonego układu kwantowego o skończonej liczbie
 stopni swobody,
 traktowany jako macierz gęstości na skończenie wymiarowej przestrzeni
 Hilberta $\mathcal{H}_{1} \! \otimes \! \mathcal{H}_{2}$,
@@ -84,20 +85,21 @@ poczynając od układu złożonego z dwóch podukładów
 opisywanych za pomocą trójwymiarowej przestrzeni Hilberta,
 czyli tak zwanych ,,qutritów''.
 Nawet w tej,
-wydawałoby się niezbyt zawiłej,
+wydawałoby się niezbyt skomplikowanej,
 sytuacji,
 niewiele wiadomo w ogólności na temat dodatnich odwzorowań liniowych,
-a co za tym idzie --
-zastosowanie kryterium Peresa-Horodeckich do konkretnych obliczeń stanowi utrudnione zadanie.
+a co za tym idzie,
+podanie efektywnego kryterium separowalności stanów złożonych stanowi
+ciągle nierozwiązany problem.
 W niniejszej rozprawie postaramy się przedstawić rezultaty badań
-rzucających nieco światła na te właśnie problemy.
+rzucających nieco światła na te zagadnienia.
 
 \paragraph{}
 \label{par:intro:02}
 Dostępne pomiarom wielkości obserwowalne układu kwantowego o nieskończonej
-ilości stopni swobody tworzą w naturalny sposób,
+liczbie stopni swobody tworzą w naturalny sposób,
 wraz ze swoim algebraicznym domknięciem,
-strukturę określaną mianem algebry operatorów na ośrodkowej przestrzeni Hilberta
+strukturę określaną mianem algebry operatorów na przestrzeni Hilberta
 $\mathcal{H}$.
 Z reguły jednak nie jest to pełna algebra operatorów ograniczonych
 $\mathcal{B}(\mathcal{H})$,
@@ -150,7 +152,7 @@ W naszej pracy zakładany wynik otrzymaliśmy dla iloczynu tensorowego
 $\mathfrak{M} \bar{\otimes} \mathfrak{N}$
 algebr von Neumanna $\mathfrak{M}$ i $\mathfrak{N}$,
 spośród których jedna jest algebrą iniektywną.
-Tak sformułowane twierdzenie obejmuje w zasadzie wszystkie znane
+Tak sformułowane twierdzenie obejmuje wszystkie znane
 przypadki złożonych układów kwantowych.
 
 Najważniejszym obiektem matematycznym występującym w sformułowaniu
@@ -163,7 +165,7 @@ Kadisona \cite{kadison1952generalized}
 i Stinespringa
 \cite{stinespring1955positive},
 jako uogólnienie z jednej strony teorii dodatnich funkcjonałów liniowych,
-z drugiej zaś izomorfizmów algebr,
+z drugiej zaś *-homomorfizmów algebr,
 osiągnęła swój pierwszy ważny rezultat w publikacjach Størmera i Woronowicza
 \cite{stormer1963positive,woronowicz1976positive}
 wraz z podaniem pełnej charakteryzacji w nisko wymiarowym przypadku
@@ -202,7 +204,7 @@ na algebrze macierzy $\mathcal{B}(\mathbb{C}^{3})$.
 W niniejszej pracy,
 pamiętając o fizycznej motywacji badań w tej dziedzinie,
 skupimy się właśnie na tym przypadku.
-Spróbujemy wprowadzić nowe przykłady odwzorowań
+Spróbuję wprowadzić nowe przykłady odwzorowań
 ,,wykrywających'' nieznane wcześniej stany splątane układu złożonego
 z dwóch qutritów.
 Punktem wyjścia będzie położenie nacisku na geometryczny aspekt znanych
@@ -226,7 +228,7 @@ przygotowanych przez autora i promotora niniejszej rozprawy
 Zaczynając od rozdziału \ref{chp:preliminaries}.,
 poświęconego przygotowaniu
 matematycznemu i ustaleniu obowiązującej notacji,
-spróbujemy przybliżyć najważniejsze fakty dotyczące algebr operatorów,
+spróbuję przybliżyć najważniejsze fakty dotyczące algebr operatorów,
 w szczególności algebr von Neumanna,
 oraz odwzorowań dodatnich i kompletnie dodatnich,
 włączając w to geometryczne aspekty teorii,
@@ -235,7 +237,8 @@ punkty ekstremalne, ,,wystające'' (\emph{exposed}) i ich własności.
 Następnie,
 w rozdziale \ref{chp:PHcrit}.,
 przejdziemy do pełnego sformułowania i udowodnienia twierdzenia
-uogólniającego kryterium Peresa-Horodeckich na przypadek algebr von Neumanna.
+uogólniającego kryterium Peresa-Horodeckich na przypadek algebr von Neumanna
+i C*-algebr.
 W kolejnym rozdziale zajmiemy się analizą struktury odwzorowań dodatnich na
 nisko wymiarowych algebrach macierzy.
 Poczynając od pełnego scharakteryzowania odwzorowań na algebrze
@@ -256,7 +259,7 @@ czyli tzw. odwzorowań \emph{bistochastycznych}.
 Nie uściślając w pełni sformułowań na tym etapie,
 można powiedzieć,
 że dla tego rodzaju odwzorowań stabilna podprzestrzeń musi ograniczać się
-tylko do kilku możliwych przykładów.
+tylko do kilku możliwych przypadków.
 Otrzymany rezultat posłuży nam do zaprezentowania oryginalnego przykładu
 ekstremalnego odwzorowania dodatniego, niebadanego wcześniej,
 który stanowi swego rodzaju nowy element teorii,
@@ -293,8 +296,8 @@ każde wejrzenie w matematyczną strukturę analizowanych tu obiektów,
 pozostającą po większej części wciąż niezbadaną,
 przekłada się niemal natychmiast na potencjalne zastosowania w postaci
 obserwabli wykrywających splątanie szerokiej klasy stanów układów złożonych.
-Ta fascynująca i nieoczywista zależność pomiędzy z jednej strony abstrakcyjną
-teorią matematyczną,
+Ta fascynująca i nieoczywista zależność pomiędzy,
+z jednej strony abstrakcyjną teorią matematyczną,
 z drugiej zaś kwantową teorią informacji,
 bez wątpienia w przyszłości wciąż odgrywać będzie ważną rolę,
 inspirującą badaczy do dalszych poszukiwań w tej dziedzinie.
