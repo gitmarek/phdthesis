@@ -60,9 +60,24 @@ z $\mathcal{H}$ i $\mathcal{K}$.
 Ta definicja została potem uogólniona przez Wernera \cite{werner1989quantum}
 na nieskończenie wymiarowe przestrzenie Hilberta poprzez
 przejście do granicy w normie śladowej takich właśnie kombinacji wypukłych.
-W tym samym duchu, zdefiniujmy wypukły zbiór $C_1$
-stanów separowalnych w
-$\mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$ przez
+W tym samym duchu, zdefiniujmy wypukły zbiór stanów separowalnych.
+
+Należy zaznaczyć, że przestrzeń predualna do iloczynu tensorowego algebr von Neumanna
+$(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{*}$
+jest izometrycznie izomorficzna z
+$\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*$, dopełnieniem
+$\mathfrak{M}_*\otimes\mathfrak{N}_*$ w rzutowej normie operatorowej
+\label{def:projectiveoperatornorm}
+$\|\cdot\|_\wedge$,
+a więc $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*= \mathfrak{M} \bar{\otimes} \mathfrak{N}$
+(por.: Effros, Ruan \cite{Effros2000}, twierdzenie 7.2.4;
+a także wniosek 7.1.5).
+
+\begin{Definition}
+Zbiorem stanów separowalnych na $\mathfrak{M} \bar{\otimes} \mathfrak{N}$
+nazwiemy podzbiór
+$C_{1} \subset \mathcal{S}(\mathfrak{M} \bar{\otimes} \mathfrak{N})$
+zdefiniowany przez
 \begin{linenomath*}
  \begin{equation}
     \label{def:SeparableStates234}
@@ -77,6 +92,8 @@ $C_{1}^{*} = \{ x \in \mathfrak{M} \bar{\otimes} \mathfrak{N}:
 niech $C_{0}^{*}$ będzie stożkiem zawartym w
 $C_{1}^{*}$:
 $C_{0}^{*} = \{ x \in \mathfrak{M} \otimes \mathfrak{N}:\langle x , C_{1} \rangle \geq 0 \}$.
+\end{Definition}
+
 
 Aby dowieść twierdzenia uogólniającego kryterium Peresa-Horodeckich
 na stany na algebrach von Neumanna,
@@ -173,16 +190,7 @@ są przestrzeniami Hilberta, niekoniecznie ośrodkowymi.
 Ich zbiory stanów, tj. wypukłe zbiory normalnych, dodatnich i znormalizowanych
 funkcjonałów, oznaczyliśmy odpowiednio przez
 $\mathcal{S}(\mathfrak{M})$ i $\mathcal{S}(\mathfrak{N})$.
-Pamiętajmy, że przestrzeń predualna do iloczynu tensorowego algebr von Neumanna
-$(\mathfrak{M} \bar{\otimes} \mathfrak{N})_{*}$
-jest izometrycznie izomorficzna z
-$\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*$, dopełnieniem
-$\mathfrak{M}_*\otimes\mathfrak{N}_*$ w rzutowej normie operatorowej
-\label{def:projectiveoperatornorm}
-$\|\cdot\|_\wedge$,
-a więc $(\mathfrak{M}_*\hat{\otimes}\mathfrak{N}_*)^*= \mathfrak{M} \bar{\otimes} \mathfrak{N}$
-(por. raz jeszcze: Effros, Ruan \cite{Effros2000}, twierdzenie 7.2.4;
-a także wniosek 7.1.5 w związku z dowodem następnego lematu).
+
 \begin{Lemma}
 \label{thm:isometry}
 Odwzorowanie $F: \mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})
@@ -197,6 +205,9 @@ gdzie $\omega \in \mathfrak{M}_{*}$, $\varphi \in \mathfrak{N}_{*}$,
 rozszerza się do kompletnie izometrycznego izomorfizmu pomiędzy przestrzeniami
 operatorowymi.
 \end{Lemma}
+\begin{proof}
+  Por.: Effros, Ruan \cite{Effros2000}, wniosek 7.1.5.
+\end{proof}
 
 Z powyższego lematu w prosty sposób wynika, że
 $F(\mathcal{CB}(\mathfrak{M}_{*}, \mathfrak{N})_{+}) = C_{1}^{*}$ oraz
