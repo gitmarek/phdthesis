@@ -540,6 +540,7 @@ To oznacza, że $S$ jest sumą dwóch dodatnich odwzorowań działających na
 jednowymiarowy projektor ortogonalny jak poniżej:
 \begin{linenomath*}
  \begin{equation}
+   \label{eq:decompose2e34}
  SP_{u} \:=\:
  \begin{pmatrix}
       S_{1} \vec{u} \vec{u}^{*} S_{1}^{*}  &
@@ -554,6 +555,7 @@ jednowymiarowy projektor ortogonalny jak poniżej:
  \end{equation}
 \end{linenomath*}
 Skoro $S$ jest z założenia ekstremalne i  $S(P_{n}) = P_{n}$,
+więc drugi wyraz w \eqref{eq:decompose2e34} znika i otrzymujemy:
 \begin{linenomath*}
  \begin{equation}
  SP_{u} \:=\:
@@ -607,7 +609,7 @@ W przestrzeni operatorów $M_{n}(\mathbb{R})$ możemy wyróżnić wiele norm;
 jedną z nich jest norma operatorowa: $|| \cdot ||$;
 drugą nazwiemy normą śladową i zdefiniujemy przez
 $||Y||_{1} = \sqrt{\text{Tr} \, Y^{t} \, Y }$.
-domkniętą kulę o jednostkowym promieniu w normie operatorowej oznaczmy:
+Domkniętą kulę o jednostkowym promieniu w normie operatorowej oznaczmy:
 $K_{\infty} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y|| \leq 1 \right \}$;
 natomiast kulę w normie śladowej jako
 $K_{1} = \left \{ Y \in M_{3}(\mathbb{R}): \, ||Y||_{1} \leq 1 \right \}$.
@@ -1033,7 +1035,8 @@ Istnieje więc macierz unitarna $U \in M_{3}$, taka że
 $U^{*} S(P_{i}) U = P_{i}$, dla $i = 1,2,3$.
 Zdefiniujmy $\tilde{S}(A) = U^{*} S(A) U$.
 Wówczas $\tilde{S}$ jest odwzorowaniem ekstremalnym
-(por. E.\,St{\o}rmer, \emph{Positive maps...} \cite{Stormer2013}, lemat 3.1.2b, str.\,27)
+(por. E.\,St{\o}rmer, \emph{Positive Linear Maps of Operator Algebras}
+\cite{Stormer2013}, lemat 3.1.2b, str.\,27)
 i bistochastycznym, dla którego
 $\tilde{S}(P_{i}) = P_{i}$, $i = 1,2,3$.
 Na mocy twierdzenia 4.1 z pracy
@@ -1304,6 +1307,7 @@ $\eta \in \mathbb{C}^{3}\backslash\{0\}$,
 mamy $S_{1} = S_{2} = 0$.
 Ponieważ
 $0 \leq (S - S_{0}) P(1,1,1)$,
+więc korzystając z dopełnienia Schura:
 \begin{linenomath*}
  \begin{equation}
 0 \: \leq \: \hat{S}_{0} \begin{pmatrix}
@@ -1582,7 +1586,7 @@ Dalej dowód można przeprowadzić dokładnie tak samo, jak w
 lemacie \ref{lem:SIsExtremal},
 poczynając od \eqref{eq:SMapsM2intoM2}.
 To dowodzi zatem, że $S$ jest odwzorowaniem nie tylko ekstremalnym,
-ale również ,,wystającym'' (\emph{exposed}).
+ale również ,,wystającym'' (ang. \emph{exposed}).
 
 \vspace{0.5cm}
 
@@ -1811,10 +1815,14 @@ oznaczmy odwzorowanie liniowe na $M_{3}$,
 zachowujące ślad i macierz jednostkową
 oraz zdefiniowane przez równanie \eqref{eq:isomoprhism},
 przez $S_{x}$.
-Niech $\Lambda \subset \mathbb{R}^{8}$ będzie zbiorem tych macierzy
+Niech $\Lambda \subset M_{8}(\mathbb{R})$ będzie zbiorem tych macierzy
 rzeczywistych $x$,
 dla których $S_{x}$ jest odwzorowaniem bistochastycznym:
-$\Lambda = \left \{ x \in M_{8}(\mathbb{R}) \: |  \: S_{x} \geq 0 \right \}$.
+\begin{linenomath*}
+ \begin{equation}
+\Lambda = \left \{ x \in M_{8}(\mathbb{R}) \: |  \: S_{x} \geq 0 \right \}.
+ \end{equation}
+\end{linenomath*}
 Zatem, istnieje wzajemnie jednoznaczna odpowiedniość pomiędzy $\Lambda$
 i zbiorem odwzorowań bistochastycznych algebry $M_{3}$.
 Struktura zbioru $\Lambda$ jest skomplikowana.
@@ -1841,7 +1849,7 @@ Wówczas
 \end{Theorem}
 \begin{proof}
     Załóżmy, że $x \in M_{8}(\mathbb{R})$ oraz $||x|| \leq \frac{1}{2}$.
-    Niech $\vec{m}, \vec{n} \in \mathbb{R}^{8}$ będą takie że
+    Niech $\vec{m}, \vec{n} \in \mathbb{R}^{8}$ będą takie, że
     $P_{\vec{m}} = \lambda(\frac{1}{\sqrt{3}}, \vec{n})$ i
     $P_{\vec{n}} = \lambda(\frac{1}{\sqrt{3}}, \vec{m})$
     są projektorami ortogonalnymi w $M_{3}$.
@@ -1891,7 +1899,8 @@ $P_{38} = \text{diag}(0,0,1,0,0,0,0,1)$.
 Każda z macierzy
 $P_{8}, P_{38}, P_{138}, P_{1238}, P_{13468}$ jest idempotentnym elementem
 zbioru $\Lambda$.
-Ponadto, w $\Lambda$ nie ma elementów idempotentnych rzędu 6 i 7,
+Ponadto, w $\Lambda$ nie ma elementów idempotentnych rzędu 6 i 7
+(p. tw. \ref{thm:Idempotents}),
 a jedyny idempotent rzędu 8 to macierz jednostkowa $\mathbf{1}_{8}$.
 Niech także $G_{3} = \text{Ad} \, \text{SU}(3) \subset \Lambda$ oznacza
 grupę tych macierzy $g \in \Lambda$, dla których
