@@ -1253,28 +1253,70 @@ Ustalmy $i,j$ oraz
 $X = |z_{1}|^{2} P_{j} + z_{1} \overline{z_{2}} E_{j3} +
 \overline{z_{1}} z_{2} E_{3j} + |z_{2}|^{2} P_{3}$,
 dla pewnych $z_{1}, z_{2} \in \mathbb{C}$.
-Jasne jest, że $X \geq 0$.
-Ponieważ $S_{0}(E_{j3}) = S_{0}(E_{3j})^{*}$,
+Jasne jest, że $X \geq 0$, a więc:
 \begin{linenomath*}
- \begin{equation}
+ \begin{multline}
 0 \: \leq \: \langle e_{i}, S_{0}(X) e_{i} \rangle \: = \:
-|z_{1}|^{2} \, \delta_{ij} +
-2 \, \text{Re} \, z_{1} \overline{z_{2}} \,
+|z_{1}|^{2} \, \langle e_{i}, S_{0}(P_{j}) e_{i} \rangle +\\
++ 2 \, \text{Re} \, z_{1} \overline{z_{2}} \,
     \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle +
-|z_{2}|^{2} \, \delta_{i3},
- \end{equation}
+|z_{2}|^{2} \, \langle e_{i}, S_{0}(P_{3}) e_{i} \rangle,
+ \end{multline}
 \end{linenomath*}
-gdzie $\delta_{ij}$ jest deltą Kroneckera.
 Jako że powyższe równanie jest prawdziwe dla każdej pary
-$z_{1}, z_{2} \in \mathbb{C}$ oraz $j \neq 3$,
-dostajemy, że $\langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle =0$.
-Skoro $X \geq 0$, więc również $Y = P_{12} \, S_{0}(X) P_{12}$.
-A zatem $Y_{jj} = |z_{1}|^{2}$;
-jednak drugi element diagonalny $Y$ wynosi 0, a więc również
-$Y_{12} = Y_{21} = 0$,
+$z_{1}, z_{2} \in \mathbb{C}$,
+dostajemy, że poniższa macierz musi być dodatnio określona:
+\begin{linenomath*}
+\begin{equation}
+  \begin{pmatrix}
+    \langle e_{i}, S_{0}(P_{j}) e_{i} \rangle & \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle \\
+    \langle e_{i}, S_{0}(E_{3j}) e_{i} \rangle & \delta_{i3},
+  \end{pmatrix}
+\end{equation}
+\end{linenomath*}
+skoro $\langle e_{i}, S_{0}(P_{3}) e_{i} \rangle = \delta_{i3}$.
+Ponieważ $S_{0}(E_{j3}) = S_{0}(E_{3j})^{*}$,
+obliczjąc wyznacznik tej macierzy, otrzymujemy:
+$ | \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle |^{2} \leq \delta_{i3} \langle e_{i}, S_{0}(P_{j}) e_{i} \rangle$.
+Z uwagi na to, że $j \neq 3$,
+widzimy, że dla $i = 1,2,3$, $\langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle = 0$.
+
+Niech teraz $z_{1} =  \frac{1}{k}$ oraz $z_{2} = u k$ dla dowolnego
+$k \in \mathbb{N}$ oraz $u \in \{ 1, i \}$, tzn. $|u| = 1, u^{2} = \pm 1$.
+Wówczas
+$S(X) = \frac{1}{k^{2}} S(P_{j}) + \bar{u} S(E_{j3}) + u S(E_{3j}) + k^{2} P_{3}$.
+Ponieważ $S(X)$ jest dodatnio określoną macierzą, więc jej drugi główny minor
+jest liczbą nieujemną:
+\begin{linenomath*}
+\begin{equation}
+  \nonumber
+    0 \leq \det \Bigg[ \frac{1}{k^{2}} \begin{pmatrix}
+          \langle e_{1} , S(P_{j}) e_{1} \rangle &  \langle e_{1} , S(P_{j}) e_{2} \rangle  \\
+          \langle e_{2} , S(P_{j}) e_{1} \rangle &  \langle e_{2} , S(P_{j}) e_{2} \rangle
+                \end{pmatrix}
+                +
+\end{equation}
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}
+                \begin{pmatrix}
+          0 & \langle e_{1} , \bar{u} S(E_{j3}) + u S(E_{3j})  e_{2} \rangle \\
+          \langle e_{2} , \bar{u} S(E_{j3}) + u S(E_{3j})  e_{1} \rangle & 0
+              \end{pmatrix}
+          \Bigg],
+\end{equation}
+\end{linenomath*}
+dla każdego $k \in \mathbb{N}$,
 co oznacza, że
-$\langle e_{1}, S_{0}(E_{j3}) e_{2} \rangle
-    = \langle e_{2}, S_{0}(E_{j3}) e_{1} \rangle = 0$.
+\begin{linenomath*}
+\begin{equation}
+ \langle e_{1} , \bar{u} S(E_{j3}) + u S(E_{3j})  e_{2} \rangle \
+\langle e_{2} , \bar{u} S(E_{j3}) + u S(E_{3j})  e_{1} \rangle  \leq 0,
+\end{equation}
+\end{linenomath*}
+a ponieważ $S(E_{j3}) = S(E_{j3})^{*}$ oraz $u$ przyjmuje wartości $\pm 1$,
+dostajemy, że
+$\langle e_{1}, S(E_{j3}) e_{2} \rangle = \langle e_{2}, S(E_{j3}) e_{1} \rangle = 0$.
 
 Na mocy powyższego możemy napisać:
 $A  =   \left( \begin{smallmatrix}
