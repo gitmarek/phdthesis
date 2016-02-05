@@ -1856,7 +1856,9 @@ dla których $S_{x}$ jest odwzorowaniem bistochastycznym:
 \end{linenomath*}
 Zatem, istnieje wzajemnie jednoznaczna odpowiedniość pomiędzy $\Lambda$
 i zbiorem odwzorowań bistochastycznych algebry $M_{3}$.
-Struktura zbioru $\Lambda$ jest skomplikowana.
+Odwzorowanie $S_{x} \mapsto x$ jest izomorfizmem półgrup,
+dla którego  $S_{x}^{*} = S_{x^{t}}$.
+Niestety, struktura zbioru $\Lambda$ jest skomplikowana.
 Po pierwsze, jest to zbiór wypukły,
 tzn. dla każdego $x,y \in \Lambda$,
 $\lambda x + (1-\lambda)y \in \Lambda$,
@@ -1909,16 +1911,19 @@ spełnia nierówność Kadisona-Schwarza \eqref{eq:SchwarzInequality}:
 \end{linenomath*}
 Niech $\vec{n} \in \mathbb{R}^{8}$;
 ponieważ $\lambda(\frac{1}{\sqrt{3}}, \vec{n})$
-jest macierzą samosprzężoną, z \eqref{eq:KSineq} dostajemy:
+jest macierzą samosprzężoną z \eqref{eq:KSineq}
+oraz z faktu, że $S_{x}$ zachowuje ślad,
+dostajemy:
     \begin{linenomath*}
- \begin{equation}
-        \frac{1}{\sqrt{3}} + || x \vec{n} ||_{2}^{2} = \text{Tr}\,
-        \left ( S_{x}(\lambda(\frac{1}{\sqrt{3}}, \vec{n}) \right)^{2} \leq
+ \begin{multline}
+        \frac{1}{3} + || x \vec{n} ||_{2}^{2} = \text{Tr}\,
+        \left ( S_{x}(\lambda(\frac{1}{\sqrt{3}}, \vec{n}) \right)^{2} \leq \\
+   \leq \text{Tr}\, S \left( \lambda(\frac{1}{\sqrt{3}}, \vec{n})^{2} \right) =
         \text{Tr}\, \lambda(\frac{1}{\sqrt{3}}, \vec{n})^{2} =
-        \frac{1}{\sqrt{3}} + ||\vec{n}||_{2}^{2},
-     \end{equation}
+        \frac{1}{3} + ||\vec{n}||_{2}^{2},
+     \end{multline}
 \end{linenomath*}
-tzn. $||x\vec{n}||_{2} \leq ||\vec{n}||_{2}$
+zatem $||x\vec{n}||_{2} \leq ||\vec{n}||_{2}$
 dla każdego $\vec{n} \in \mathbb{R}^{8}$,
 co daje w rezultacie: $x \in \overline{K}_{1}(\hat{0})$.
 \end{proof}
@@ -2029,15 +2034,31 @@ w oczywisty sposób:
 $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
 a także $H(P_{8}) = \left \{ P_{8} \right \}$.
 Rzeczywiście,
-jeśli $x = (a_{ij})_{i,j=1}^{8} \in H(P_{8})$,
-wówczas
-$x = x P_{8} = P_{8} x P_{8} = a_{88} P_{8}$.
+jeśli $x = (x_{ij})_{i,j=1}^{8} \in H(P_{8})$
+wówczas z faktu, że $x \in H(P_{8})$, wynika:
+$x = x P_{8} = P_{8} x$
+($x$ należy do maksymalnej grupy zawierającej $P_{8}$,
+a macierz idempotentna $P_{8}$ jest elementem jednostkowym tej grupy).
+Stąd $x = P_{8} \, x P_{8} = x_{88} P_{8}$.
 Ponieważ istnieje ciąg liczb naturalnych  $n_{k}$, $k=1,2,3,\ldots$,
 taki że $x^{n_{k}} \overset{k}{\rightarrow} P_{8}$,
 więc
-$|a_{88}| = 1$. Jednakże $- P_{8} \notin \Lambda$,
+$|x_{88}| = 1$. Jednakże $- P_{8} \notin \Lambda$,
 a stąd $x = P_{8}$.
 \end{Remark}
+
+Będziemy powoływać się niejednokrotnie na następujące twierdzenie,
+udowodnione w ogólności w pracy
+\cite{schwarz1955hausdorff}:
+\begin{Theorem}
+    \label{prop:SchwarzSemigroups}
+    Niech $e \in  \mathcal{E}(\Lambda)$.
+    Wówczas $H(e) = e \, Q(e) = Q(e) \, e$.
+\end{Theorem}
+\begin{proof}
+    Zauważmy, że półgrupa $\Lambda$ spełnia założenia Twierdzenia 8
+    w pracy \cite{schwarz1955hausdorff}.
+\end{proof}
 
 \begin{Remark}
     \label{rem:Qof1}
@@ -2046,16 +2067,16 @@ Rzeczywiście, niech $x \in Q(\hat{0})$;
 wówczas na mocy definicji,
 istnieje ciąg liczb naturalnych $n_{k}$, taki że
 $x^{n_{k}} \overset{k}{\rightarrow} \hat{0}$.
-Dla każdego $l \in \mathbb{N}$, istnieje $k(l)$, dla którego
-$l \leq n_{k(l)}$, a ponieważ
-$||x|| \leq 1 $, na mocy twierdzenia \ref{thm:LambdaAndBalls}, mamy
-$||y^{l}|| \leq ||y^{l - n_{k(l)}}|| \, ||y^{n_{k(l)}}|| \leq ||y^{n_{k(l)}}||
-\overset{l}{\rightarrow} 0$.
-Stąd $y^{l} \overset{l}{\rightarrow} \hat{0}$
+Dla pewnego ustalonego $k$ i dla każdego $l \geq n_{k}$,
+skoro $||x|| \leq 1 $
+(por. tw. \ref{thm:LambdaAndBalls}),
+mamy
+$||x^{l}|| \leq ||x^{l - n_{k}}|| \, ||x^{n_{k}}|| \leq ||x^{n_{k}}||$.
+Zatem $x^{l} \overset{l}{\rightarrow} \hat{0}$
 i $Q(\hat{0}) \subset \mathcal{N}(\Lambda)$.
 Przeciwne zawieranie jest oczywiste.
 Co więcej, ponieważ mamy $H(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$,
-z twierdzenia 8 \cite{schwarz1955hausdorff},
+z twierdzenia \ref{prop:SchwarzSemigroups},
 $H(\mathbf{1}_{8}) = Q(\mathbf{1}_{8}) \cdot \mathbf{1}_{8}$,
 a wiec $Q(\mathbf{1}_{8}) = \mathcal{G}(\Lambda)$.
 \end{Remark}
@@ -2080,6 +2101,14 @@ zbiory $Q(e_{1})$ i $Q(e_{2})$ muszą być rozłączne.
 Dla $x \in \Lambda$ mamy, że $x \in Q(e_{x}) \subset \Lambda$,
 co dowodzi tezy.
 \end{proof}
+
+Należy dodatkowo zaznaczyć, że dla $g \in \mathcal{G}(\Lambda)$,
+ponieważ $||g|| \leq 1$ (por. tw. \ref{thm:LambdaAndBalls}),
+i $g^{-1}  \in \Lambda$, więc $|| g || = 1$.
+Zatem $g$ jest macierzą ortogonalną.
+W szczególności,
+dla każdego $e \in \mathcal{E}(\Lambda)$,
+$g e g^{t} \in \mathcal{E}(\Lambda)$.
 
 \begin{Lemma}
     \label{lem:equivClassesOfQe}
@@ -2147,7 +2176,7 @@ Niech $e \in \mathcal{E}(\Lambda)$ i $h \in H(e)$.
 Wtedy $h^{t} \in H(e)$, a także $h^{t} h = h h^{t} = e$.
 \end{Theorem}
 \begin{proof}
-    Z twierdzenia 8  w \cite{schwarz1955hausdorff}, mamy:
+    Z twierdzenia \ref{prop:SchwarzSemigroups} mamy:
     $H(e) = Q(e) e = e \, Q(e)$.
 Jeśli $x \in Q(e)$, to $x^{t} \in Q(e)$,
 na mocy lematu \ref{lem:eIsProj}.
@@ -2293,7 +2322,7 @@ zbioru $Q(e)$.
 \end{Lemma}
 
 \begin{proof}
-    Załóżmy, że $h + y \in \Lambda$, $h \in H(e)$, $y^{k}  \overset{k}{\rightarrow}  \hat{0}$
+    Załóżmy, że $x = h + y \in \Lambda$, $h \in H(e)$, $y^{k}  \overset{k}{\rightarrow}  \hat{0}$
     oraz $hy = yh = \hat{0}$.
 Ponieważ $h \in H(e)$, istnieje ciąg $n_{k} \in \mathbb{N}$ dla $k =1,2,3,\ldots$,
 taki że $h^{n_{k}} \overset{k}{\rightarrow} e$.
@@ -2301,23 +2330,31 @@ Wówczas $x^{n_{k}}  = h^{n_{k}} + y^{n_{k}}  \overset{k}{\rightarrow}  e$, tzn.
     $x \in Q(e)$.
 Z drugiej strony
 załóżmy, że $x \in Q(e) \subset \Lambda$.
-Niech $h = e x e$ oraz $y = e^{\perp} x e^{\perp}$,
+Mamy  $x = e x e + e^{\perp} x e + e x e^{\perp} + e^{\perp} x ^{\perp}$,
 gdzie $e^{\perp} = \mathbf{1}_{8} - e$.
-wtedy $h \in Q(e)$, a ponieważ
+Na mocy tw. \ref{prop:SchwarzSemigroups},
+obie macierze $x e, x e \in H(e)$.
+Zatem, $e x e = x e = e x$, co oznacza, że $e^{\perp} x e = \hat{0}$
+oraz $e x e^{\perp} = \hat{0}$.
+Niech $h = e x e$, and $y = e^{\perp} x e^{\perp}$.
+Wiemy, że $x = h + y$ i $h y = y h = \hat{0}$.
+Wówczas $h^{k} = e x^{k} e$, dla $k \in \mathbb{N}$,
+co implikuje: $h \in Q(e)$.
+Ponieważ
     $h =  h e = e h$,
-    $h \in H(e)$, na mocy twierdzenia 8. z cytowanej wcześniej pracy
-    \cite{schwarz1955hausdorff}.
+więc również
+    $h \in H(e)$, na mocy twierdzenia \ref{prop:SchwarzSemigroups}.
 Dla $h' \in H(e)$, mamy
     $h' y = h' e y = \hat{0} = y e h' = yh'$,
 tzn. $H(e) y = y H (e) = \hat{0}$.
 Istnieje ciąg $n_{k}$ liczb naturalnych, taki że
     $x^{n_{k}}  \overset{k}{\rightarrow}  e$.
 Stąd
-    $h^{n_{k}} = e h^{n_{k}}  = e x^{n_{k}}  \overset{k}{\rightarrow} e^{2}  = e$.
+    $h^{n_{k}} = e x^{n_{k}} e  \overset{k}{\rightarrow} e^{3}  = e$.
 W konsekwencji dostajemy $y^{n_{k}}  \overset{k}{\rightarrow}  \hat{0}$,
 co wystarcza, aby powiedzieć, że $y^{k} \overset{k}{\rightarrow} \hat{0}$.
 Dalej załóżmy, że $x = h + y = h_{2} + y_{2}$,
-    gdzie $h_{2} \in H(e)$ i $y_{2}$,
+    gdzie $h_{2} \in H(e)$, a $y_{2}$ jest takie, że
     $h_{2} y_{2} = y_{2} h_{2} = \hat{0}$.
 Dla pewnego ciągu liczb naturalnych $m_{k}$, mamy
     $e y_{2} = \lim_{k} h_{2}^{m_{k}} y_{2} = \hat{0}$.
@@ -2327,23 +2364,22 @@ Wtedy $h = e x = e h_{2} + e y_{2} = h_{2}$, a więc również $y = y_{2}$.
 Dla $x \in Q(e)$, ponieważ rozkład opisany powyżej jest jedyny,
 oznaczmy przez $h_{x}$ i $y_{x}$ macierze, dla których
 $x = h_{x} + y_{x}$,
-$h_{x} \in H(e)$, $H(e) y_{x} = y_{x} H(e)$ oraz
+$h_{x} \in H(e)$, $H(e) y_{x} = y_{x} H(e) = \hat{0}$ oraz
 $y_{x}^{k} \overset{k}{\rightarrow} \hat{0}$.
 Powyższy lemat uzasadnia następującą definicję.
 
 \begin{Definition}
     Niech $e \in \mathcal{E}(\Lambda)$;
     zdefiniujmy:
-    $Q_{0}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || < 1 \right \}$ i
-    $Q_{1}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || = 1 \right \}$.
-    Niech także $Q_{1}^{i}(e)$ będzie zbiorem składającym się z tych
-    $x = h_{x} + y_{x} \in Q_{1}(e)$,
-    dla których wielokrotność największej wartości singularnej $y_{x}$
-    jest równa $i$.
+    $Q_{0}(e) = \left \{ x \in Q(e) \: | \: || y_{x} || < 1 \right \}$.
+    Niech także $Q_{i}(e)$ będzie zbiorem składającym się z tych
+    $x = h_{x} + y_{x} \in Q(e)$,
+    dla których największa wartość singularna $y_{x}$ jest równa 1 i
+    posiada wielokrotność $i$.
 \end{Definition}
 
 Jasne jest, że
-$Q(e) = \bigcup \left \{ Q_{1}^{i}(e), i=1,2,\ldots,8 \right \} \cup Q_{0}(e)$
+$Q(e) = \bigcup \left \{ Q_{i}(e), i=1,2,\ldots,8 \right \} \cup Q_{0}(e)$
 oraz że te zbiory są rozłączne (być może niektóre z nich są również puste).
 
 \begin{Theorem}
@@ -2353,7 +2389,7 @@ wówczas
 $Q(e) = Q_{0}(e)$.
 Jeżeli zaś $\mathrm{dim} \, e \leq 4$,
 to
-$Q_{1}^{i}(e) = \emptyset$ dla $i \geq 5 - \mathrm{dim} \, e$.
+$Q_{i}(e) = \emptyset$ dla $i \geq 5 - \mathrm{dim} \, e$.
 \end{Theorem}
 \begin{proof}
     Gdy $\mathrm{dim} \, e = 8$,
@@ -2381,7 +2417,7 @@ rzędu $6$ lub $7$.
 Stąd $||y|| < 1$ i $x \in Q_{0}(e)$.
 Dzięki praktycznie tej samej argumentacji, dla $\textrm{dim}\, e \leq 4$,
 nie jest możliwe, aby $\mathrm{dim} \, p  + \mathrm{dim}\, e \geq 5$,
-a więc $Q_{1}^{i}(e) = \emptyset$, dla $i \geq 5 - \mathrm{dim} \, e$,
+a więc $Q_{i}(e) = \emptyset$, dla $i \geq 5 - \mathrm{dim} \, e$,
 ponieważ z definicji, $i = \textrm{dim}\,p$.
 \end{proof}
 
@@ -2393,12 +2429,12 @@ $p_{3} = P_{138}$, $p_{4} = P_{1238}$, $p_{5} = P_{13468}$.
 \label{thm:LowerIndices}
     Niech $i,j$ będą liczbami całkowitymi, takimi że
     $1 \leq i \leq 4$, $0 \leq j \leq 4$ oraz $i+j \leq 5$.
-Jeśli $x \in Q_{1}^{i}(p_{j})$,
+Jeśli $x \in Q_{i}(p_{j})$,
 wówczas istnieją $g_{1}, g_{2} \in G_{3}$ i $z \in Q_{0}(p_{i+j})$,
 dla których $x = g_{1} z g_{2}$.
 \end{Theorem}
 \begin{proof}
-    Niech $x \in Q_{1}^{i}(p_{j})$ i
+    Niech $x \in Q_{i}(p_{j})$ i
     $x = h_{x} + y_{x}$, jak wyżej.
     Ponieważ taki rozkład jest jedyny, możemy napisać jak w dowodzie
     lematu \ref{lem:decomposition}:
@@ -2475,7 +2511,7 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
     Załóżmy, że $z \in Q(P_{8})$.
     Z twierdzenia \ref{thm:LowerIndices},
     ponieważ $z \in \text{Ext}_{0}(\Lambda)$,
-    $z \notin Q_{1}^{i}(P_{8})$
+    $z \notin Q_{i}(P_{8})$
     dla $i \geq 1$.
     A zatem $z \in Q_{0}(P_{8})$ i połóżmy $g_{1} = g$ i $g_{2} = g^{t}$.
     Wówczas $x = g_{1} z g_{2}$,
@@ -2486,7 +2522,7 @@ Niech $x \in  \text{Ext}_{0}(\Lambda)$.
     Z drugiej strony, jeśli $z \in Q(\hat{0})$,
     wtedy na mocy tego samego rozumowania albo $z \in Q_{0}(\hat{0})$
     i $||z|| < 1$, ponieważ $H(\hat{0}) = \left \{ \hat{0} \right \}$; albo
-    $z \in Q_{1}^{1}(\hat{0})$ i wówczas istnieją $g_{01}, g_{02} \in G_{3}$,
+    $z \notin Q_{0}(\hat{0})$ i wówczas istnieją $g_{01}, g_{02} \in G_{3}$,
     takie że $g_{01} z g_{02} \in Q_{0}(P_{8})$.
     Wtedy połóżmy $g_{1} = g g_{01}^{t}$ i $g_{2} = g_{02}^{t} g^{t}$,
     co kończy dowód.
