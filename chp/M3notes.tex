@@ -87,7 +87,7 @@ możemy zdefiniować macierz rzeczywistą $\pi(S) \in M_{4}(\mathbb{R})$ poprzez
   \sigma(\pi(S) x) = S \sigma(a), \quad x \in \mathbb{R}^{4}
  \end{equation}
 \end{linenomath*}
-lub też $\pi(S)_{\mu \nu} = \text{Tr} \sigma_{\mu} S(\sigma_{\nu})$.
+lub też $\pi(S)_{\mu \nu} = \text{Tr} \, \sigma_{\mu} S(\sigma_{\nu})$.
 Rzecz jasna, dla dwóch takich odwzorowań: $S_{1}, S_{2}$, mamy
 $\pi(S_{1} S_{2}) = \pi(S_{1}) \pi(S_{2})$
 oraz $\pi(S^{-1}) = \pi(S)^{-1}$, jeśli tylko $S^{-1}$ istnieje.
@@ -575,7 +575,7 @@ $S(X) = U X U^{*}$, $X \in M_{n}$, co kończy dowód.
 \end{proof}
 
 Przedstawiwszy geometryczny dowód twierdzenia \ref{thm:PositiveMapsOnM2}
-o rozkładzie odwzorowań dodatnich na $M_{2}$, możemy pokusić się o
+o rozkładzie odwzorowań dodatnich na $M_{2}$, możemy pokusić się
 o udowodnienie dodatkowych faktów dotyczących odwzorowań bistochastycznych.
 Odznaczmy przez $\Delta_{\infty}$ zbiór wszystkich bistochastycznych odwzorowań na
 $M_{2}$.
@@ -586,7 +586,7 @@ Korzystając z tego samego geometrycznego przedstawienia zbioru
 odwzorowań dodatnich jako stożka Lorentza $L_{4}$,
 możemy pokazać, że $\Delta_{1}$ jest zbiorem zaskakująco pojemnym.
 Dodajmy, że wyniki odnośnie tego problemu można znaleźć również w innych
-publikacjach \cite{stormer2013decomposition}.
+publikacjach (por. np. \cite{stormer2013decomposition}).
 
 Każda macierz $Y \in M_{n}(\mathbb{R})$ daje się rozłożyć względem wartości singularnych:
 $Y = O_{1} D O_{2}$, gdzie
@@ -642,14 +642,14 @@ Zatem $F(\Delta_{\infty}) = K_{\infty}$, a ponadto $F$ jest homeomorfizmem.
 
 W dalszej części załóżmy, że $S \in \Delta_{1}$.
 Ponieważ $S$ jest kompletnie dodatnie,
-z twierdzenia 1 w pracy L.\,J.\,Landaua i R.\,F.\,Streatera
+z twierdzenia 1 w pracy
 \cite{landau1993birkhoff} wiemy, że
 $S$ jest wypukłą kombinacją odwzorowań unitarnych:
 $X \mapsto U^{*} X U$, $U \in \text{U}(2)$.
 Z dowodu twierdzenia \ref{thm:PositiveMapsOnM2},
 dla konkretnej postaci $\pi(S)$, takiej jak w równaniu \eqref{eq:Sbistochastic},
 oznacza to, że $Y$ należy do wypukłej otoczki generowanej przez elementy grupy $\text{SO}(3)$.
-Z  wniosku na str. 139 w pracy H.\,F.\,Miranda i R.\,C.\,Thompson
+Z  wniosku na str. 139 w pracy
 \cite{miranda1994group},
 dostajemy, że jeśli $t_{1} \geq t_{2} \geq t_{3} \geq 0$
 są wartościami singularnymi macierzy $Y$,
@@ -725,7 +725,7 @@ których elementami są zespolone macierze kwadratowe,
 oznacza to, że dla każdego $A, B \in K$, mamy
 $AB + BA \in K$.
 Będziemy zawsze zakładać, że $\mathbf{1} \in K$.
-Dokładne przedstawienie teorii JB$^{*}$-algebr można odnaleźć w książce
+Dokładne przedstawienie teorii JB$^{*}$-algebr można odnaleźć w książce:
 H.\,Hanche-Olsen, E.\,St{\o}rmer,
 \mbox{\emph{Jordan operator algebras} \cite{Hanche1984}}.
 
@@ -849,7 +849,7 @@ $A^{2} = A_{1}^{2} - A_{2}^{2} + i(A_{1} A_{2} + A_{2} A_{1}) \in K_{S}$.
 Jasne jest teraz, że $AB+BA \in K_{S}$ dla ogólnych $A,B \in K_{S}$.
 
 e) tak jak stw. 5\,d);
-f), g) tak jak stw. 6\,a) i 6\,c) w
+f), g) tak jak stw. 6\,a) i 6\,c) w pracy
 \cite{olkiewicz1999environment}.
 \end{proof}
 
@@ -1037,8 +1037,8 @@ co stoi w sprzeczności z faktem, że $S$ jest ekstremalne albo $K_{S} \neq M_{3
 Mimo że łatwo wskazać takie odwzorowania ekstremalne, dla których
 $K_{S}=M_{3}$ (np. $S(A) = U A U^{*}$ dla macierzy unitarnej $U$)
 lub $K_{S}=\mathbb{C} \mathbf{1}$
-(weźmy np. znane odwzorowanie Choi
-\cite{choi1977extremal}, p. str. \pageref{eq:choi});
+(weźmy np. znane odwzorowanie Choi,
+p. str. \pageref{eq:choi} w pracy \cite{choi1977extremal});
 należy jeszcze podać przykład ekstremalnego odwzorowania bistochastycznego,
 dla którego
 $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
@@ -1088,7 +1088,6 @@ Zakładając, że następny lemat jest prawdziwy,
 ten przykład kończy dowód.
 \end{proof}
 
-\pagebreak
 \begin{Lemma}
 \label{lem:SIsExtremal}
 $S$ jest odwzorowaniem bistochastycznym i ekstremalnym.
@@ -1098,7 +1097,7 @@ $S$ jest odwzorowaniem bistochastycznym i ekstremalnym.
 Aby udowodnić, że $S$ jest odwzorowaniem dodatnim,
 wystarczy pokazać, że dla każdego $\eta \in \mathbb{C}^{3}\backslash\{0\}$,
 $SP_{\eta} \geq 0$,
-gdzie $P_{\eta}$ jest dodatnim operatorem rzędu 1,
+gdzie $P_{\eta}$ jest dowolnym dodatnim operatorem rzędu 1,
 $P_{\eta} = \eta \eta^{*}$.
 Niech więc
 $\eta = (\eta_{1}, \eta_{2}, \eta_{3}) = (\vec{\eta}, \eta_{3})$,
@@ -1246,9 +1245,9 @@ Jasne jest, że $X \geq 0$, a więc:
  \begin{multline}
 0 \: \leq \: \langle e_{i}, S_{0}(X) e_{i} \rangle \: = \:
 |z_{1}|^{2} \, \langle e_{i}, S_{0}(P_{j}) e_{i} \rangle +\\
-+ 2 \, \text{Re} \, z_{1} \overline{z_{2}} \,
-    \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle +
-|z_{2}|^{2} \, \langle e_{i}, S_{0}(P_{3}) e_{i} \rangle,
++ z_{1} \overline{z_{2}} \, \langle e_{i}, S_{0}(E_{j3}) e_{i} \rangle +
++ \overline{z_{1}} z_{2} \, \langle e_{i}, S_{0}(E_{3j}) e_{i} \rangle +
+|z_{2}|^{2} \, \langle e_{i}, S_{0}(P_{3}) e_{i} \rangle.
  \end{multline}
 \end{linenomath*}
 Jako że powyższe równanie jest prawdziwe dla każdej pary
@@ -1589,14 +1588,14 @@ Interesujące może być ponadto zauważenie, że $S$ nie jest odwzorowaniem
 Rzeczywiście,
 możemy pokazać nawet więcej i uzasadnić, że $S$
 nie spełnia nierówności Kadisona-Schwarza dla każdej macierzy
-$B \in M_{3}$ (por. stwierdzenie \,4.1 \cite{choi1980some}).
+$X \in M_{3}$ (por. stwierdzenie \,4.1 \cite{choi1980some}).
 Niech
-$B = P_{12} + E_{32}$.
+$X = P_{12} + E_{32}$.
 Wówczas łatwo pokazać, że
-$S(B^{*} B) - S(B)^{*} S(B)$
+$S(X^{*} X) - S(X)^{*} S(X)$
 nie jest dodatnie.
 Oczywiście, odwzorowanie $S$ nie jest również 2-\emph{ko}dodatnie:
-aby to zobaczyć, weźmy $B = P_{12} + E_{31}$.
+aby to zobaczyć, weźmy $X = P_{12} + E_{31}$.
 Stąd, ponieważ $S$ jest ekstremalne,
 wynika, że jest również odwzorowaniem atomowym
 \cite{ha1998atomic}.
@@ -1628,7 +1627,7 @@ zdefiniowana jako
 \begin{linenomath*}
  \begin{equation}
 \label{def:entanglement-witness}
-    W_{S} = \sum \limits_{i,j =1}^{n} E_{ij} \otimes S(E_{ij}),
+    W_{S} = \sum \limits_{i,j =1}^{n} E_{ij}^{*} \otimes S(E_{ij}),
  \end{equation}
 \end{linenomath*}
 gdzie $\{ E_{ij}\}_{i,j=1}^{n}$ to macierze posiadające wszystkie
@@ -1743,7 +1742,7 @@ jednak $\text{Tr}\, W_{S} \rho = \frac{2}{7} - \frac{2\sqrt{2}}{7} < 0$.
 
 Dla odwzorowania $S$ zadanego przez \eqref{eq:DefinitionOfS}, mamy
 $K_{S}= \mathbb{C} P_{12} \oplus \mathbb{C} P_{3}$.
-Według autora, jest to jak dotąd jedyny znany przykład ekstremalnego
+Według autora, jest to jak dotąd jedyny opublikowany przykład ekstremalnego
 odwzorowania na $M_{3}$,
 które posiada tę właśnie stabilną podprzestrzeń $K_S$
 (por. komentarz poniżej na str. \pageref{com:onlyOneExample}).
@@ -2057,7 +2056,7 @@ udowodnione w ogólności w pracy
 \end{Theorem}
 \begin{proof}
     Zauważmy, że półgrupa $\Lambda$ spełnia założenia Twierdzenia 8
-    w pracy \cite{schwarz1955hausdorff}.
+    zawartego w \mbox{pracy \cite{schwarz1955hausdorff}}.
 \end{proof}
 
 \begin{Remark}

@@ -394,7 +394,7 @@ Wówczas
 co dowodzi, że $i \circ \beta$ jest kompletnie dodatnie.
 Ponieważ oba odwzorowania, $i$ oraz $\beta$ są kontraktywne,
 zatem również $i\circ\beta$ ma normę mniejszą od jedności.
-Od tego momentu będziemy używać skrótowej notacji $i\beta$.
+Od tego momentu będziemy używać skrótowej notacji: $i\beta$.
 
 Załóżmy obecnie, że
 $T: \mathcal{R} \rightarrow M_{2}(\mathbb{C})^{\otimes n}\subset \mathcal{R}$
@@ -513,6 +513,7 @@ w rzeczywistości skończenie wymiarową algebrą macierzy,
 wówczas dowód tezy został podany w pracy Horodeckich
 \cite{horodecki1996separability}.
 W takim przypadku, zamiast ciągu $(m_{n(\lambda)})$,
+tak jak powyżej
 wystarczy rozważyć jedynie pojedynczy,
 ,,maksymalnie splątany'' element iloczynu tensorowego.
 Przypuśćmy zatem, że $\mathfrak{M} = \mathcal{R}$.
@@ -609,7 +610,7 @@ dla każdego $E \subset \Gamma$, $0<\mu(E)<\infty$.
 Wówczas $\tilde{\phi}$ jest separowalny, wtedy i tylko wtedy, gdy
 każdy funkcjonał $\tilde{\phi}_{E}$ jest z dokładnością do stałej
 normującej separowalnym stanem na $\mathcal{R} \bar{\otimes} \mathfrak{N}$.
-Aby nie zaciemniać aktualnej linii rozumowania,
+Aby nie zaciemniać aktualnego rozumowania,
 odłóżmy dowód tego raczej technicznego faktu do następnego lematu.
 
 Niech $S_{0}: \mathcal{R} \rightarrow \mathfrak{N}$ będzie dodatnim normalnym
@@ -786,6 +787,7 @@ x_{j,k}^{(n)}=x_{j,n}.
 Kontynuując nierówność \eqref{eq:longineq}, otrzymujemy dla $n \geq N$:
 \begin{linenomath*}
  \begin{multline}
+   \nonumber
 |\langle z, \tilde{\phi} - \tilde{\phi}_{n} \rangle|\leq \Big |\langle z,
 \sum \limits_{i=1}^{L} \omega_{i} \otimes \varphi_{i} -\sum \limits_{i'=1}^{L}
 \sum \limits_{k=1}^{n}\omega_{i'} \circ (i_{B_{k}^{(n)}} \pi^{*}_{B_{k}^{(n)}})
@@ -803,14 +805,18 @@ Kontynuując nierówność \eqref{eq:longineq}, otrzymujemy dla $n \geq N$:
 = \Big | \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
 \left(\langle x_{j}, \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle  -
 \langle x_{j,n} , \omega_{i} \rangle \langle y_{j}, \varphi_{i} \rangle
-\right) \Big |  + \frac{\epsilon}{2} \leq \\
+\right) \Big |  + \frac{\epsilon}{2} \leq\\
 \leq \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
 c_{L}  \, \left | \langle    x_{j}, \omega_{i} \rangle -
-\langle x_{j,n} , \omega_{i} \rangle\right | + \frac{\epsilon}{2} \leq \\
+\langle x_{j,n} , \omega_{i} \rangle\right | + \frac{\epsilon}{2} \leq
+\end{multline}
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}
 \leq \sum \limits_{j=1}^{M} \sum \limits_{i=1}^{L}
 c_{L}  \frac{\epsilon}{2 L M c_{L}}     + \frac{\epsilon}{2}
 =  \frac{\epsilon}{2} +  \frac{\epsilon}{2} =  \epsilon.
- \end{multline}
+ \end{equation}
 \end{linenomath*}
 Zatem  $\langle z , \tilde{\phi} \rangle  =
 \lim_{n} \langle z , \tilde{\phi}_{n} \rangle \geq 0$;
@@ -1032,7 +1038,7 @@ algebr będzie musiało zostać w jakiś sposób zachowane i w tym przypadku.
 Stąd potrzeba wprowadzenie tzw. algebr jądrowych (\emph{nuclear algebras}).
 Z definicji $\mathcal{A}$ jest jądrową C$^{*}$-algebrą,
 jeżeli $\mathcal{A}^{**}$, druga przestrzeń dualna,
-jest izomorficzna z algebrą von Neumanna.
+jest izomorficzna z iniektywną algebrą von Neumanna.
 Dla algebr jądrowych iloczyn tensorowy jest zdefiniowany jednoznacznie.
 Ważną własnością jądrowych C$^{*}$-algebr jest również lokalna rekfleksywność,
 która okaże się pomocna na dalszym etapie dowodu.

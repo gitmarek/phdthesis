@@ -55,7 +55,7 @@ a więc gdy $\mathcal{H} = \mathbb{C}^{n}$ lub
 $\mathcal{H} = \mathbb{R}^{n}$,
 będziemy dodatkowo oznaczać symbolem $M_{n}(\mathbb{R})$ lub
 $M_{n}(\mathbb{C})$;
-zawsze $M_{n} = M_{n}(\mathbb{C})$.
+zawsze: $M_{n} = M_{n}(\mathbb{C})$.
 Gdy $A \in M_{n}$,
 $A^{t}$ oznacza transpozycję macierzy,
 a $\text{Tr} A$ jej ślad.
@@ -64,7 +64,7 @@ których bazy to odpowiednio
 $\{ \eta_{i} \}_{i \in I}$ i
 $\{ \xi_{j} \}_{j \in J}$,
 algebraiczny iloczyn tensorowy
-jest przestrzenią liniową $V \! \otimes \! W$, generowaną przez wektory
+jest przestrzenią liniową $V \! \otimes \! W$, rozpiętą przez wektory
 $\{\eta_{i} \otimes \xi_{j}\}_{i\in I, j \in J}$.
 Iloczyn tensorowy przestrzeni Hilberta $\mathcal{H}_{1}$ i $\mathcal{H}_{2}$,
 oznaczany przez $\mathcal{H}_{1} \bar{\otimes} \mathcal{H}_{2}$,
@@ -92,7 +92,7 @@ zastosowań do opisu układów kwantowych.
 Przytoczmy więc podstawowe definicje i własności tych obiektów.
 Algebrą Banacha nazywamy przestrzeń Banacha $\mathcal{A}$,
 tj. unormowaną przestrzeń liniową zupełną \cite{Rudin1991},
-dla której mnożenie spełnia warunek
+w której zdefiniowane jest mnożenie elementów, spełniające warunek:
 \begin{linenomath*}
  \begin{equation}
  \label{eq:algBanachMultiplication}
@@ -292,7 +292,7 @@ Jest jasne, że projektor przemienny jest skończony, a projektor minimalny jest
 \begin{Definition}
     \label{def:typesofvNalg}
     Algebra von Neumanna jest \emph{typu I}, jeżeli każdy niezerowy centralny
-    projektor w $\mathfrak{M}$ majoryzuje pewien niezerowy projektor abelowy
+    projektor w $\mathfrak{M}$ majoryzuje pewien niezerowy projektor przemienny
     w $\mathfrak{M}$.
     Jeżeli dla algebry $\mathfrak{M}$ nie istnieją niezerowe skończone projektory,
     wówczas $\mathfrak{M}$ jest \emph{typu III}.
@@ -339,11 +339,6 @@ elementów algebry przez odwzorowania skończonego rzędu
 (p. str. \pageref{def:injectivevNalgebras}).
 
 \paragraph{Iloczyny tensorowe algebr operatorów.}
-Dla dwóch zespolonych przestrzeni liniowych $V$ i $W$,
-przez $V \! \otimes \! W$ oznaczmy algebraiczny iloczyn tensorowy tych przestrzeni,
-rozpięty przez skończone kombinacje liniowe wektorów postaci
-$v \otimes w$, $v \in V$, $w \in W$.
-
 W nieskończenie wymiarowych zupełnych przestrzeniach unormowanych,
 jakimi są w ogólności algebry operatorów,
 pojęcie iloczynu tensorowego musi zostać doprecyzowane, tak aby
@@ -357,7 +352,7 @@ wcześniej dla algebr von Neumanna (p. str. \pageref{sec:HorCstar}).
 Z kolei algebry von Neumann mają tę własność, że ich iloczyn
 tensorowy można zdefiniować jednoznacznie,
 co czyni je wygodnym narzędziem do opisu złożonych układów kwantowych
-o nieskończonej ilości stopni swobody.
+o nieskończonej liczbie stopni swobody.
 Niech $\mathfrak{M}$, $\mathfrak{N}$ będą algebrami von Neumanna,
 a $\mathfrak{M}_{*}$, $\mathfrak{N}_{*}$ ich przestrzeniami predualnymi.
 Wówczas istnieje dokładnie jedna algebra von Neumanna $\mathcal{A}$,
@@ -494,11 +489,11 @@ Dlatego wprowadźmy dodatkową definicję odwzorowań ,,wystających''
 Odwzorowanie dodatnie $S: M_{n} \rightarrow M_{n}$ jest wystające,
 jeżeli dla każdego dodatniego odwzorowania $T: M_{n} \rightarrow M_{n}$,
 takiego że $\text{Tr}\, P_{\xi} \, T(P_{\eta}) = 0$,
-gdzie $\mathbb{C}^{n} \ni \eta, \xi \neq 0$ jest parą wektorów,
+gdzie $\mathbb{C}^{n} \ni \eta, \xi \neq 0$ jest dowolną parą wektorów,
 dla których projektory ortogonalne $P_{\xi}, P_{\eta}$ na jednowymiarowe
 podprzestrzenie rozpięte przez $\xi$ i $\eta$ dają
 $\text{Tr}\, P_{\xi} \, S(P_{\eta}) = 0$;
-wówczas mamy $T = \alpha S$, $\alpha \geq 0$.
+mamy $T = \alpha S$, $\alpha \geq 0$.
 Dzięki ogólnemu twierdzeniu udowodnionemu przez Straszewicza
 \cite{straszewicz1935exponierte},
 zbiór odwzorowań wystających jest gęstym podzbiorem zbioru odwzorowań
